@@ -1,0 +1,10 @@
+{
+  "configPrefix":"MAS",
+  "name":"QAFA_BatchRun",
+  "batchRunJobs" : [ {
+    "name" : "QA_MASFA"
+  }, { 
+    "name" : "QA_MASSTATIC",
+    "abortOnFailure" : "false"
+  } ]
+}

@@ -1,0 +1,9 @@
+{
+  "configPrefix":"HKMA",
+  "name":"Error_Lookup",
+  "batchRunJobs" : [{
+   
+    "name" : "ERROR_LOOKUP",
+    "abortOnFailure" : "false"
+  }
+}

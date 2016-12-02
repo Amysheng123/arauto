@@ -1,0 +1,9 @@
+{
+  "configPrefix":"HKMA",
+  "name":"FileLoadJob_fixlen",
+  "batchRunJobs" : [ {
+   
+    "name" : "FIXLENGTH_INPUT"
+    
+  } ]
+}

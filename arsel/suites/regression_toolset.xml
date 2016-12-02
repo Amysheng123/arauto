@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression_test_suite" verbose="1" parallel="tests" thread-count="3" preserve-order="true">
+    <test name="test_Rules">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="53" />
+        <classes>
+            <class name="com.lombardrisk.testCase.CheckRule" />
+        </classes>
+    </test>
+
+    <test name="test_CreateForm">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="53" />
+        <classes>
+            <class name="com.lombardrisk.testCase.CreateForm" />
+        </classes>
+    </test>
+
+
+    <test name="test_ImportForm">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="53" />
+        <classes>
+            <class name="com.lombardrisk.testCase.ImportForm" />
+        </classes>
+    </test>
+
+
+    <test name="test_Export Form">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="firefox" />
+        <parameter name="browser_version" value="48" />
+        <parameter name="fileName1" value="ExportForm.xls" />
+        <parameter name="fileName2" value="ExportForm_Arbitrary.xls" />
+        <classes>
+            <class name="com.lombardrisk.testCase.ExportForm" />
+        </classes>
+    </test>
+
+    <test name="test_HighLight" preserve-order="true">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="53" />
+        <classes>
+            <class name="com.lombardrisk.testCase_TS.HighLight"/>
+        </classes>
+    </test>
+
+
+    <test name="test_workFlow" preserve-order="true">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="53" />
+        <classes>
+            <class name="com.lombardrisk.testCase_TS.Workflow"/>
+        </classes>
+    </test>
+    
+    <test name="test_ValidationStatus">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="53" />
+        <classes>
+            <class name="com.lombardrisk.testCase_TS.ReturnList"/>
+        </classes>
+    </test>
+
+</suite>

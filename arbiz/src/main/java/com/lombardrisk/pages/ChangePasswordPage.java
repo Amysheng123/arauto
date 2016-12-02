@@ -3,40 +3,75 @@ package com.lombardrisk.pages;
 import org.yiwan.webcore.web.IWebDriverWrapper;
 
 /**
- * Created by Kevin Ling on 2/25/15.
- * Refactored by Leo Tu on 1/25/16
+ * Created by Leo Tu on 1/25/16
  */
-public class ChangePasswordPage extends AbstractPage {
+public class ChangePasswordPage extends AbstractPage
+{
 
-    public ChangePasswordPage(IWebDriverWrapper webDriverWrapper) {
-        super(webDriverWrapper);
+	/**
+	 * 
+	 * @param webDriverWrapper
+	 */
+	public ChangePasswordPage(IWebDriverWrapper webDriverWrapper)
+	{
+		super(webDriverWrapper);
+	}
 
-    }
+	/**
+	 * input current password
+	 * 
+	 * @param password
+	 * @throws Exception
+	 */
+	private void setCurrentPassword(String password) throws Exception
+	{
+		element("cpw.curPD").type(password);
+	}
 
-    public ChangePasswordPage setCurrentPassword(String password) throws Exception {
-        element("cpw.curPD").type(password);
-        return this;
-    }
+	/**
+	 * input new password
+	 * 
+	 * @param password
+	 * @throws Exception
+	 */
+	private void setNewPassword(String password) throws Exception
+	{
+		element("cpw.newPD").type(password);
+	}
 
-    public ChangePasswordPage setNewPassword(String password) throws Exception {
-        element("cpw.newPD").type(password);
-        return this;
-    }
+	/**
+	 * input new password again
+	 * 
+	 * @param password
+	 * @throws Exception
+	 */
+	private void setConfirmPassword(String password) throws Exception
+	{
+		element("cpw.conPD").type(password);
+	}
 
-    public ChangePasswordPage setConfirmPassword(String password) throws Exception {
-        element("cpw.conPD").type(password);
-        return this;
-    }
+	/**
+	 * save settings
+	 * 
+	 * @return ListPage
+	 * @throws Exception
+	 */
+	public ListPage saveSetting() throws Exception
+	{
+		element("cpw.save").click();
+		return new ListPage(getWebDriverWrapper());
+	}
 
-    public ListPage saveSetting() throws Exception {
-        element("cpw.save").click();
-        return new ListPage(getWebDriverWrapper());
-    }
-
-    public ListPage cancelSetting() throws Exception {
-        element("cpw.cancel").click();
-        return new ListPage(getWebDriverWrapper());
-    }
-
+	/**
+	 * cancel settings
+	 * 
+	 * @return ListPage
+	 * @throws Exception
+	 */
+	public ListPage cancelSetting() throws Exception
+	{
+		element("cpw.cancel").click();
+		return new ListPage(getWebDriverWrapper());
+	}
 
 }

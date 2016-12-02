@@ -1,0 +1,9 @@
+{
+  "name":"Wrong_Entity",
+  "configPrefix" : "MAS",
+  "computeJobs" : [{
+    "formName" : "MAS1105",
+    "formVersion" : 1,
+    "entityCode" : "00013"
+  }]
+}

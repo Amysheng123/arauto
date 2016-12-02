@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormVariabel>
+	<C6673>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>NSF v4</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<instanceName1>Albania Lek</instanceName1>
+		<instanceName2>Total currencies</instanceName2>
+		<cellName1>NSFAR040C020</cellName1>
+		<cellName2>NSFAR040C030</cellName2>
+		<cellName3>NSFAR050C010</cellName3>
+		<value1>2</value1>
+		<value2>3</value2>
+		<value3>4</value3>
+		<value4>5</value4>
+		<value5>84</value5>
+		<ColumnName>ITEM</ColumnName>
+		<expression>NSFAR040C010*ENTITYVAR[Monetary_Scale]</expression>
+		<itemName>Monetary_Scale</itemName>
+		<EntityValue>3</EntityValue>
+	</C6673>
+
+	<C6674>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>NSF v4</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<Page>Required Funding Page 2</Page>
+		<cellName1>NSFAR040C070</cellName1>
+		<cellName2>NSFAR040C060</cellName2>
+		<value1>1000</value1>
+		<value2>1,000</value2>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(LENGTH(ENTITYVAR[Accounting_Standard])>3, NSFAR040C070, 2000)</expression>
+		<itemName>Accounting_Standard</itemName>
+		<EntityValue>abcdef</EntityValue>
+	</C6674>
+
+	<C6675>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>NSF v4</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<instanceName1>Albania Lek</instanceName1>
+		<instanceName2>Total currencies</instanceName2>
+		<cellName1>NSFAR060C020</cellName1>
+		<cellName2>NSFAR060C030</cellName2>
+		<cellName3>NSFAR070C010</cellName3>
+		<value1>10</value1>
+		<value2>20</value2>
+		<value3>30</value3>
+		<value4>40</value4>
+		<value5>250</value5>
+		<ColumnName>ITEM</ColumnName>
+		<expression>NSFAR060C010+FORMVAR[NSFTotalRatio]</expression>
+		<itemName>NSFTotalRatio</itemName>
+		<EntityValue>50</EntityValue>
+	</C6675>
+
+	<C6676>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>NSF v4</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<Page>Required Funding Page 2</Page>
+		<cellName1>NSFAR060C070</cellName1>
+		<cellName2>NSFAR060C060</cellName2>
+		<value1>111</value1>
+		<value2>6</value2>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(NSFAR060C070>3, LENGTH(FORMVAR[NSFReportingName]), 2000)</expression>
+		<itemName>NSFReportingName</itemName>
+		<EntityValue>abcdef</EntityValue>
+	</C6676>
+
+	<C6748>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>FI40 v2</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<Page>Table 40.1 P2</Page>
+		<cellName1>ExtDBGrid149FI4001C060</cellName1>
+		<cellName2>ExtDBGrid149FI4001C070</cellName2>
+		<cellName3>ExtDBGrid149FI4001C080</cellName3>
+		<value1>2</value1>
+		<value2>3</value2>
+		<value3>8</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>FI4001C050+ENTITYVAR[Monetary_Scale]</expression>
+		<itemName>Monetary_Scale</itemName>
+		<EntityValue>3</EntityValue>
+		<cellId>ExtDBGrid1FI4001C020</cellId>
+	</C6748>
+
+	<C6751>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>FI40 v2</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<Page>Table 40.1 P3</Page>
+		<cellName1>ExtDBGrid149FI4001C170</cellName1>
+		<cellName2>ExtDBGrid149FI4001C180</cellName2>
+		<cellName3>ExtDBGrid149FI4001C190</cellName3>
+		<value1>20</value1>
+		<value2>30</value2>
+		<value3>75</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>FI4001C160+FORMVAR[FI40V2TotalRatio]</expression>
+		<itemName>FI40V2TotalRatio</itemName>
+		<EntityValue>25</EntityValue>
+		<cellId>ExtDBGrid1FI4001C170</cellId>
+	</C6751>
+
+	<C6759>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>FI40 v2</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<Page>Table 40.1 P2</Page>
+		<cellName1>ExtDBGrid149FI4001C120</cellName1>
+		<cellName2>ExtDBGrid149FI4001C110</cellName2>
+		<value1>1000</value1>
+		<value2>1,000.00</value2>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(MONTH(ENTITYVAR[Financial Year End])>3, FI4001C120, 2000)</expression>
+		<itemName>Financial_Year_End</itemName>
+		<EntityValue>31/05/2016</EntityValue>
+		<cellId>ExtDBGrid1FI4001C080</cellId>
+	</C6759>
+
+	<C6760>
+		<entity>2999</entity>
+		<regulator>European Common Reporting</regulator>
+		<returnName>FI40 v2</returnName>
+		<referenceDate>16/11/2016</referenceDate>
+		<Page>Table 40.2</Page>
+		<cellName1>ExtDBGrid149FI4002C070</cellName1>
+		<cellName2>ExtDBGrid149FI4002C060</cellName2>
+		<value1>1000</value1>
+		<value2>2,016.00</value2>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(FI4002C070>3, YEAR(FORMVAR[FI40V2ReportingDate]), 2000)</expression>
+		<itemName>FI40V2ReportingDate</itemName>
+		<EntityValue>30/06/2016</EntityValue>
+		<cellId>ExtDBGrid1FI4002C070</cellId>
+	</C6760>
+</FormVariabel>		
+		
+		
+		

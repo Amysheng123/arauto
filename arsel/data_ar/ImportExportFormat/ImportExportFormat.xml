@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportExportFormat>
+    <C6504>
+		<language>zh_CN</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>2015-10-31</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<cellID>DS02P04</cellID>
+		<cellValue>2015-12-31</cellValue>
+		<comment>--DateFormat[yyyy-mm-dd](dd/mm/yyyy|mm/dd/yyyy|yyyy-mm-dd)</comment>
+	</C6504>
+
+	<C6505>
+		<language>en_GB</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>31/10/2015</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<cellID>DS02P04</cellID>
+		<cellValue>31/10/2015</cellValue>
+		<comment>--DateFormat[dd/mm/yyyy](dd/mm/yyyy|mm/dd/yyyy|yyyy-mm-dd)</comment>
+	</C6505>
+
+	<C6506>
+		<language>en_US</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>10/31/2015</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<cellID>DS02P04</cellID>
+		<cellValue>10/31/2015</cellValue>
+		<comment>--DateFormat[mm/dd/yyyy](dd/mm/yyyy|mm/dd/yyyy|yyyy-mm-dd)</comment>
+	</C6506>
+
+	<C6518>
+		<language>zh_CN</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>2015-10-31</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<fileName>FED_DS_0001_DSFR02_v1_20151031_zh_cn.csv</fileName>
+		<cellID>DS02P04</cellID>
+		<Value>2015-10-31</Value>
+	</C6518>
+
+    <C6514>
+        <language>en_GB</language>
+        <regulator>US1 FED Reserve DS</regulator>
+        <entity>0001</entity>
+        <referenceDate>31/10/2015</referenceDate>
+        <returnName>DSFR02 v1</returnName>
+        <fileName>FED_DS_0001_DSFR02_v1_20151031_en_gb.csv</fileName>
+        <cellID>DS02P04</cellID>
+        <Value>31/10/2015</Value>
+    </C6514>
+
+    <C6517>
+        <language>en_US</language>
+        <regulator>US1 FED Reserve DS</regulator>
+        <entity>0001</entity>
+        <referenceDate>10/31/2015</referenceDate>
+        <returnName>DSFR02 v1</returnName>
+        <fileName>FED_DS_0001_DSFR02_v1_20151031_en_US.csv</fileName>
+        <cellID>DS02P04</cellID>
+        <Value>10/31/2015</Value>
+    </C6517>
+
+    <C6563>
+        <language>en_US</language>
+        <regulator>US1 FED Reserve DS</regulator>
+        <entity>0001</entity>
+        <referenceDate>10/31/2015</referenceDate>
+        <returnName>DSFR02 v1</returnName>
+        <fileName>FED_DS_0001_DSFR02_v1_20151031_zh_cn_short.csv</fileName>
+        <cellID>DS02P04</cellID>
+        <Value>10/31/2015</Value>
+    </C6563>
+
+	<C6521>
+		<language>en_GB</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>31/10/2015</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<fileName>FED_DS_0001_DSFR02_v1_20151031_en_gb_nocommentary.csv</fileName>
+		<Value>The date format line is missing, please check your file!</Value>
+	</C6521>
+
+	<C6564>
+		<language>en_GB</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>31/10/2015</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<fileName>FED_DS_0001_DSFR02_v1_20151031_en_gb_wrongformat_1.csv</fileName>
+		<Value>The date format line is not in the expected form. Please check your file!</Value>
+		<fileName2>FED_DS_0001_DSFR02_v1_20151031_en_gb_wrongformat_2.csv</fileName2>
+		<value2>The date format line is missing, please check your file!</value2>
+	</C6564>
+
+	<C6534>
+		<language>zh_CN</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>2015-10-31</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<fileName>FED_DS_0001_DSFR02_v1_20151031_zh_cn_nosupportformat.csv</fileName>
+		<Value>Date format defined in the square brackets of the date format line is not supported!</Value>
+	</C6534>
+
+	<C6529>
+		<language>en_US</language>
+		<regulator>US1 FED Reserve DS</regulator>
+		<entity>0001</entity>
+		<referenceDate>10/31/2015</referenceDate>
+		<returnName>DSFR02 v1</returnName>
+		<fileName>FED_DS_0001_DSFR02_v1_20151031_en_gb_nomatchformat.csv</fileName>
+		<Value>The record contains date in invalid form,line number : 6,CellName : DS02P04,the correct date formats : dd/mm/yyyy, Please check your file!</Value>
+	</C6529>
+
+	<C6615>
+		<regulator>US1 FED Reserve SP0</regulator>
+		<entity>0001</entity>
+		<referenceDate>21/10/2015</referenceDate>
+		<returnName>CRIR v6</returnName>
+		<time>M/d/yy</time>
+		<timeZone>UTC+08:00</timeZone>
+	</C6615>
+
+	<C6627>
+		<regulator>US1 FED Reserve SP0</regulator>
+		<entity>0001</entity>
+		<referenceDate>21/10/2015</referenceDate>
+		<returnName>FRY14ASUMM v5</returnName>
+		<module>FRY14ASUMMV5</module>
+		<format>yyyy-MM-dd</format>
+	</C6627>
+
+	<C6702>
+		<regulator>US1 FED Reserve SP0</regulator>
+		<entity>0001</entity>
+		<referenceDate>21/10/2015</referenceDate>
+		<returnName>FRY9C v1</returnName>
+	</C6702>
+</ImportExportFormat>
+		
+		
+		

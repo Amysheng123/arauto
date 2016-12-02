@@ -1,0 +1,9 @@
+{
+  "configPrefix":"MAS",
+  "name":"BatchRun2",
+  "batchRunJobs" : [ {
+   
+    "name" : "MASPREPRO",
+    "abortOnFailure" : "false"
+  }]
+}

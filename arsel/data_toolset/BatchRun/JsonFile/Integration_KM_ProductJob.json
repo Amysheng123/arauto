@@ -1,0 +1,26 @@
+{
+  "configPrefix":"HKMA",
+  "name":"INTEGRATION_KM",
+  "batchRunJobs" : [ {
+   
+    "name" : "CREATE_HKMA",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "HKINT",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "PREPROCESS",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "KM",
+    "abortOnFailure" : "false"
+  } ],
+  "computeJobs" : [{
+    "formName" : "KM",
+    "formVersion" : 0,
+    "entityCode" : "0015"
+  }]
+}

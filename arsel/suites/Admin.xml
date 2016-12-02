@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Admin_suite" verbose="1" parallel="false" thread-count="1">
+    <test name="test_user" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_User">
+                <methods>
+                    <include name="test4631" />
+                    <include name="test5145" />
+                    <include name="addUser" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test_UserGroup" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_UserGroup">
+                <methods>
+                    <include name="test4630" />
+                    <include name="test4635" />
+                    <include name="test4636" />
+                    <include name="test4647" />
+                    <include name="test4643" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test_Entity" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_Entity">
+                <methods>
+                    <include name="test4772" />
+                    <include name="test4773" />
+                    <include name="test4774" />
+                    <include name="test4778" />
+                    <include name="test4782" />
+                    <include name="test4786" />
+                    <include name="test4787" />
+                    <include name="test4788" />
+                    <include name="test4789" />
+                    <include name="test4790" />
+                    <include name="test4791" />
+                    <include name="test4794" />
+                    <include name="test4795" />
+                    <include name="test4798" />
+                    <include name="test4799" />
+                    <include name="test4801" />
+                    <include name="test4804" />
+                    <include name="test4891" />
+                    <include name="test4975" />
+                    <include name="test4637" />
+                    <include name="test4747" />
+                    <include name="test4749" />
+                    <include name="test4752" />
+                    <include name="test4757" />
+                    <include name="test4759" />
+                    <include name="test4760" />
+                    <include name="test4761" />
+                    <include name="test5589" />
+                    <include name="test5590" />
+                    <include name="test5609" />
+                    <include name="test4638" />
+                    <include name="test4752" />
+                    <include name="test4891" />
+                    <include name="test5588" />
+                    <include name="test5587" />
+                    <include name="test6046" />
+                    <include name="test6048" />
+                    <include name="test4792" />
+                    <include name="test4793" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test_PrivilegeGroup" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_PrivilegeGroup">
+                <methods>
+                    <include name="preCondition" />
+                    <include name="test4555" />
+                    <include name="test4565" />
+                    <include name="test4566" />
+                    <include name="test4679" />
+                    <include name="test4684" />
+                    <include name="test4685" />
+                    <include name="test4689" />
+                    <include name="test4688" />
+                    <include name="test4686" />
+                    <include name="test4690" />
+                    <include name="test4691" />
+                    <include name="test4692" />
+                    <include name="test5097" />
+                    <include name="test5146" />
+                    <include name="test4556" />
+                    <include name="test4696" />
+                    <include name="test4655" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test_Admin_ImportExport" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_ImportExport">
+                <methods>
+                    <include name="test5108" />
+                    <include name="test5109" />
+                    <include name="test5115" />
+                    <include name="test5116" />
+                    <include name="test5118" />
+                    <include name="test5128" />
+                    <include name="test5129" />
+                    <include name="test5131" />
+                    <include name="test5132" />
+                    <include name="test5133" />
+                    <include name="test5134" />
+                    <include name="test5135" />
+                    <include name="test5136" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test_network_file_location" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_NetworkFileLocation">
+                <methods>
+                    <include name="testLocationWithWindowsFormat" />
+                    <include name="testLocationWithLinuxFormat" />
+                    <include name="testEditLocation" />
+                    <include name="testDeleteLocation" />
+                    <include name="testAddDuplicatedLocation" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="test_calendar" preserve-order="true">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_Calendar" />
+        </classes>
+    </test>
+
+
+    <test name="test_FormVariable">
+        <parameter name="os" value="windows" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="browser_version" value="52" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Admin_FormVariable" />
+        </classes>
+    </test>
+</suite>

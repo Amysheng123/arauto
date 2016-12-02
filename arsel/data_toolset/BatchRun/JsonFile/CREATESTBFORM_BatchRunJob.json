@@ -1,0 +1,9 @@
+{
+  "configPrefix":"MAS",
+  "name":"CREATE_STBFORM",
+  "batchRunJobs" : [ {
+    "name" : "CREATE_STBFORM",
+    "abortOnFailure" : "false"
+    }
+   ]
+}

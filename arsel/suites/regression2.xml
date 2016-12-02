@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression_test_suite" verbose="1" parallel="tests" thread-count="5" >
+    <test name="test_Rules">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.CheckRule" />
+        </classes>
+    </test>
+
+    <test name="test_CreateForm">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.CreateForm" />
+        </classes>
+    </test>
+
+    <test name="test_RetrieveFrom">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.RetrieveForm" />
+        </classes>
+    </test>
+
+    <test name="test_ImportForm">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.ImportForm" />
+        </classes>
+    </test>
+
+    <test name="test_EditForm">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.EditForm" />
+        </classes>
+    </test>
+
+
+    <test name="test_Export Form">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="firefox" />
+        <parameter name="fileName1" value="ExportForm.xls" />
+        <parameter name="fileName2" value="ExportForm_Arbitrary.xls" />
+        <classes>
+            <class name="com.lombardrisk.testCase.ExportForm" />
+        </classes>
+    </test>
+
+
+    <test name="test_DataSschdule" preserve-order="true">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.DataSchedule" />
+            <class name="com.lombardrisk.testCase.Job" />
+        </classes>
+    </test>
+
+    <test name="test_DeleteReturn" preserve-order="true">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.DeleteReturn"/>
+        </classes>
+    </test>
+
+    <test name="test_HighLight" preserve-order="true">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.HighLight"/>
+        </classes>
+    </test>
+
+
+    <test name="test Precision_Edition">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <parameter name="fileName" value="Precision.xls" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Precision" />
+            <class name="com.lombardrisk.testCase.EditionManage" />
+        </classes>
+    </test>
+
+    <test name="test_workFlow" preserve-order="true">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Workflow"/>
+        </classes>
+    </test>
+
+    <test name="test_Contextual">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Contextual" />
+        </classes>
+    </test>
+
+    <test name="test_GridWithinGrid">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.GridWithinGrid" />
+        </classes>
+    </test>
+
+    <test name="test_RowLimit">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.RowLimit" />
+        </classes>
+    </test>
+
+    <test name="test_Threshold">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.Threshold" />
+        </classes>
+    </test>
+
+    <test name="test_DropDown">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.DropDown" />
+        </classes>
+    </test>
+
+    <test name="test_Other modules">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.OtherModule" />
+            <class name="com.lombardrisk.testCase.Utility" />
+        </classes>
+    </test>
+
+    <test name="test_UpdateForm">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.UpdateForm" />
+        </classes>
+    </test>
+
+    <test name="test_ValidationStatus">
+        <parameter name="os" value="WINDOWS" />
+        <parameter name="os_version" value="7" />
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.lombardrisk.testCase.ReturnList"/>
+        </classes>
+    </test>
+</suite>

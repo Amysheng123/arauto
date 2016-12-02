@@ -1,0 +1,9 @@
+{
+  "configPrefix":"HKMA",
+  "name":"STBINPUTCUST",
+  "batchRunJobs" : [ {
+    "name" : "CONF_INPUTCUST",
+    "abortOnFailure" : "false"
+    }
+   ]
+}

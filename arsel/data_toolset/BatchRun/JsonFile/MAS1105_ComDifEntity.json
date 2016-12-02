@@ -1,0 +1,13 @@
+{
+  "name":"MAS1105_CompDifEntity",
+  "configPrefix" : "MAS",
+  "computeJobs" : [{
+    "formName" : "MAS1105",
+    "formVersion" : 1,
+    "entityCode" : "0015"
+  },{
+    "formName" : "MAS1105",
+    "formVersion" : 1,
+    "entityCode" : "0001"
+  }]
+}

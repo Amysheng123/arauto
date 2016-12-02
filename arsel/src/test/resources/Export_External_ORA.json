@@ -1,0 +1,36 @@
+[
+  {
+    "applicationServers": [
+      {
+        "id": 0,
+        "name": "default",
+        "url": "http://172.20.30.246:8082/",
+        "username": "admin",
+        "password": "password"
+      }
+    ],
+    "databaseServers": [
+      {
+        "id": 0,
+        "name": "ar_database",
+        "driver": "oracle",
+        "host": "172.20.31.239@ora12c",
+        "schema": "AR_AUTO_OWNER"
+      },
+      {
+        "id": 1,
+        "name": "toolset_database",
+        "driver": "oracle",
+        "host": "172.20.20.49@ora12c",
+        "schema": "ECR_12501_SYSTEM_MARRY"
+      },
+      {
+        "id": 2,
+        "name": "toolset_database",
+        "driver": "sqlserver",
+        "host": "172.20.20.230\\sql12",
+        "schema": "MAS_22103_2K8T55U_SYSTEM"
+      }
+    ]
+  }
+]

@@ -6,10 +6,10 @@
     <parent>
         <groupId>com.lombardrisk</groupId>
         <artifactId>arauto</artifactId>
-        <version>1.8.0-SNAPSHOT</version>
+        <version>1.15.0-SNAPSHOT</version>
     </parent>
     <artifactId>arsel</artifactId>
-    <version>1.8.0-SNAPSHOT</version>
+    <version>1.15.0-SNAPSHOT</version>
 
     <name>AgileREPORTER Test Repository</name>
     <url>http://maven.apache.org</url>
@@ -79,7 +79,7 @@
                         <property>
                             <name>listener</name>
                             <value>
-                                org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter,org.yiwan.webcore.testng.ResultListener,org.yiwan.webcore.testng.RetryListener,org.yiwan.webcore.testng.Hook
+                                org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter,org.yiwan.webcore.testng.ResultListener,org.yiwan.webcore.testng.RetryListener
                             </value>
                         </property>
                     </properties>

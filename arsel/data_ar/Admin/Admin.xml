@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Administration>
+        <C4631>
+            <UserName>test1</UserName>
+            <Email>admin2@admin.com</Email>
+            <Password>12345</Password>
+            <ConfimPassword>12345</ConfimPassword>
+        </C4631>
+
+        <C5145>
+            <UserName>test1</UserName>
+            <Password1>password</Password1>
+            <ConfimPassword1>passwor</ConfimPassword1>
+            <Message1>Please confirm your New Password</Message1>
+            <Password2></Password2>
+            <ConfimPassword2></ConfimPassword2>
+            <Message2>New Password cannot be Blank or Spaces</Message2>
+            <Password3>password</Password3>
+            <ConfimPassword3></ConfimPassword3>
+            <Message3>Please confirm New Password</Message3>
+			<Password4>password</Password4>
+            <ConfimPassword4>password</ConfimPassword4>
+        </C5145>
+
+        <C4630>
+            <!-- AddGroup -->
+            <GroupName>GroupTest</GroupName>
+            <Desc>Test add user group</Desc>
+        </C4630>
+
+        <C4635>
+            <!-- EditGroup -->
+            <GroupName>GroupTest</GroupName>
+            <NewName>Team1</NewName>
+            <NewDesc>Test edit user group Edit</NewDesc>
+        </C4635>
+
+        <C4636>
+            <!-- AssignUserToGroup -->
+            <GroupName>Team1</GroupName>
+            <UserName>test1</UserName>
+        </C4636>
+
+        <C4647>
+            <!-- AssignUserToDifferentGroups -->
+            <GroupNames>Team1#rpadmin_grp</GroupNames>
+            <UserName>test2</UserName>
+        </C4647>
+
+        <C4643>
+            <!-- DeleteUserFromGroup -->
+            <GroupName>Team1</GroupName>
+            <UserName>test1</UserName>
+        </C4643>
+
+        <C4772>
+            <!-- AddRootEntityToParent -->
+            <EntityName>2999#3999#4999#5999#6100#61000</EntityName>
+            <Code>G2999#G3999#G4999#G5999#6100#61000</Code>
+            <Desc>2999#3999#4999#5999#6100#61000</Desc>
+        </C4772>
+
+        <C4773>
+            <!-- AddChildEntityToParent -->
+            <Parent>2999</Parent>
+            <EntityName>2500#2600#2700</EntityName>
+            <Code>G2500#G2600#G2700</Code>
+            <Desc>2500#2600#2700</Desc>
+        </C4773>
+
+        <C4774>
+            <!-- AddChildEntityToChild -->
+            <Child>2500</Child>
+			<EntityName>2510#2520</EntityName>
+            <Code>G2510#G2520</Code>
+            <Desc>2510#2520</Desc>
+        </C4774>
+
+        <C4778>
+            <!-- Update Entity-->
+            <Entity>2520</Entity>
+            <NewName>25201</NewName>
+            <NewCode>25201</NewCode>
+            <NewDesc>25201</NewDesc>
+        </C4778>
+
+        <C4782>
+            <!-- Delete Entity without child & form instance-->
+            <Entity>25201</Entity>
+        </C4782>
+
+        <C4786>
+            <!-- Delete Entity with child-->
+            <Entity>2500</Entity>
+        </C4786>
+
+        <C4787>
+            <!-- Delete Entity without child but with form instance-->
+            <Entity>2510</Entity>
+			<Product>TESTPRODUCT</Product>
+            <Return>CREI v3</Return>
+			<UG>rpadmin_grp</UG>
+			<PG>Return Maker</PG>
+        </C4787>
+
+        <C4788>
+            <!-- Entity reused active_same tree-->
+            <Child>2600</Child>
+            <EntityName>2700#27001</EntityName>
+            <Code>27001#G2700</Code>
+            <Desc>Test 4788#Test 4788</Desc>
+        </C4788>
+
+        <C4789>
+            <!-- Entity reused active_different tree-->
+            <Child>3999</Child>
+            <EntityName>2700#27001</EntityName>
+            <Code>27001#G2700</Code>
+            <Desc>Test 4788#Test 4788</Desc>
+        </C4789>
+
+        <C4790>
+            <!-- Entity reused deleted_same tree-->
+            <Child>2600</Child>
+            <EntityName>25201</EntityName>
+            <Code>25201</Code>
+            <Desc>Test 4790</Desc>
+        </C4790>
+
+        <C4791>
+            <!-- Entity reused deleted_different tree-->
+            <Child>3999</Child>
+            <EntityName>25201</EntityName>
+            <Code>25201</Code>
+            <Desc>Test 4791</Desc>
+        </C4791>
+
+        <C4792>
+            <!-- Entity used for reporting-->
+            <Entity>2700</Entity>
+            <Product>TESTPRODUCT</Product>
+            <Return>CAR v5</Return>
+            <Privilege>Return Maker</Privilege>
+            <UserGroup>rpadmin_grp</UserGroup>
+        </C4792>
+
+        <C4793>
+            <!-- Verity disable the reporting function of a parent entity will not impact the child entity-->
+            <Parent>2700</Parent>
+            <Child>2701</Child>
+			<Product>TESTPRODUCT</Product>
+            <Return>CAR v5</Return>
+            <Privilege>Return Maker</Privilege>
+            <UserGroup>rpadmin_grp</UserGroup>
+        </C4793>
+
+        <C4794>
+            <Entity>4794</Entity>
+        </C4794>
+
+        <C4795>
+            <Entity>4794</Entity>
+        </C4795>
+
+        <C4798>
+            <Entity>4798</Entity>
+            <ECR>CAGS v4#CAR v4#CAR v5#CREI v3#CRGB v3#CRGB v4</ECR>
+            <FED>FFIEC002S v1#FFIEC009A v1#FFIEC009A v2#FFIEC009 v1#FFIEC030 v1#FFIEC030 v2#FFIEC031 v1</FED>
+        </C4798>
+
+        <C4799>
+            <Entity>25201</Entity>
+			<ParentEntity>2500</ParentEntity>
+        </C4799>
+
+        <C4801>
+            <Entity>4801</Entity>
+            <Regulator>TESTPRODUCT</Regulator>
+            <Return>CAGS v4</Return>
+            <Privilege>Return Maker</Privilege>
+            <UserGroup>rpadmin_grp</UserGroup>
+        </C4801>
+
+        <C4975>
+            <Entity>4975</Entity>
+            <Child>49751</Child>
+        </C4975>
+
+        <C4637>
+            <EntityName>4637</EntityName>
+            <Product>TESTPRODUCT</Product>
+            <ReturnNums>87</ReturnNums>
+        </C4637>
+
+        <C4747>
+			<Product>TESTPRODUCT</Product>
+            <EntityName>4747</EntityName>
+			<UserGroup>Team1</UserGroup>
+            <Return1>CAR v5</Return1>
+			<Privilege1>Return Viewer</Privilege1>
+            <Return2>CVA v4</Return2>
+			<Privilege2>Return Maker</Privilege2>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+        </C4747>
+
+        <C4749>
+			<Product>TESTPRODUCT</Product>
+            <EntityName1>3999</EntityName1>
+			<EntityName2>2999</EntityName2>
+			<UserGroup>Team1</UserGroup>
+            <Return1>CAR v5</Return1>
+			<Privilege1>Return Maker</Privilege1>
+            <Return2>CVA v4</Return2>
+			<Privilege2>Return Maker</Privilege2>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+        </C4749>
+
+        <C4757>
+            <Regulator>Test Product</Regulator>
+            <EntityName>3999</EntityName>
+            <File>CVA_v4_4999_31072015.xlsx</File>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+        </C4757>
+
+
+        <C4760>
+            <EntityName>3999</EntityName>
+            <Product>TESTPRODUCT</Product>
+            <Return>CAR v5</Return>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+        </C4760>
+
+        <C4761>
+            <Regulator>Test Product</Regulator>
+            <EntityName>4761</EntityName>
+            <Product>TESTPRODUCT</Product>
+            <Return>CAR v5</Return>
+            <Message>There is active return, the link between form (CAR v5) and entity (4761) cannot be removed</Message>
+            <ProcessDate>31/08/2016</ProcessDate>
+        </C4761>
+
+        <C5589>
+            <EntityName>C5589</EntityName>
+            <Code>29!@#$%^*()_+93</Code>
+            <Desc>special characters</Desc>
+        </C5589>
+
+        <C5590>
+            <EntityName>C55|90</EntityName>
+            <Code>C55|90</Code>
+            <Desc>restricting characters</Desc>
+        </C5590>
+
+        <C5609>
+            <NewName>C5609</NewName>
+            <NewCode>C56|09</NewCode>
+            <NewDesc>restricting characters</NewDesc>
+        </C5609>
+		
+		<C4638>
+            <Entity>4638</Entity>
+            <Code>4638</Code>
+            <Desc>4638</Desc>
+			<Regulator>OSFAA_DW_DT_NEW</Regulator>
+        </C4638>
+		
+		<C4752>
+            <Entity>4752</Entity>
+            <Regulator>FED_SP0#TESTPRODUCT</Regulator>
+            <Return>FRY9C v1#CAR v5</Return>
+			<UserGroup>rpadmin_grp</UserGroup>
+			<Privilege>Return Viewer#Return Maker</Privilege>
+        </C4752>
+		
+		<C4891>
+            <Entity>4891</Entity>
+            <Regulator>FED_SP0</Regulator>
+			<RegulatorPrefix>FED_SP0</RegulatorPrefix>
+            <Return>FRY9C v1</Return>
+			<UserGroup>rpadmin_grp#Team1</UserGroup>
+			<Privilege>Return Maker#Return Viewer</Privilege>
+			<User>test1</User>
+        </C4891>
+		
+		<C5588>
+            <Entity>5588</Entity>
+			<Code>1.A%2@B(3~C</Code>
+            <Regulator>FED_SP0</Regulator>
+            <Return>FRY9C v1</Return>
+			<UserGroup>rpadmin_grp</UserGroup>
+			<Privilege>Return Maker</Privilege>
+        </C5588>
+		
+		<C5587>
+            <Entity>5587</Entity>
+			<Code>J|K|L</Code>
+        </C5587>
+
+		<C6046>
+            <Entity>6046</Entity>
+            <Regulator>TESTPRODUCT</Regulator>
+            <Return>CAR v4</Return>
+			<ActiveDate>01/09/2013</ActiveDate>
+			<DeActiveDate>30/11/2013</DeActiveDate>
+        </C6046>
+		
+		<C6048>
+            <Entity>6048</Entity>
+            <Regulator>TESTPRODUCT</Regulator>
+            <Return>CAR v4</Return>
+			<ActiveDate>2013-09-01#09/01/2013#01/09/2013</ActiveDate>
+			<LanguageRegion>China / Chinese#United States / English#United Kingdom / English</LanguageRegion>
+        </C6048>
+		
+        <C4555>
+            <GroupName>TestAddGP</GroupName>
+            <Description>Test add privilege group</Description>
+            <Type>General User Privileges</Type>
+        </C4555>
+
+        <C4565>
+            <GroupName>TestAddGP</GroupName>
+            <NewGroupName>Administrator2</NewGroupName>
+            <NewDescription>Test add privilege group</NewDescription>
+            <AddPrivilege>Add Entity Structure#Create calculation engine#Edit Entity Structure#Delete Entity Structure
+            </AddPrivilege>
+            <DeletePrivilege>Create calculation engine</DeletePrivilege>
+        </C4565>
+
+        <C4566>
+			<GroupWithoutReturn>PG_WithReturn</GroupWithoutReturn>
+			<Entity>C5589</Entity>
+			<Product>TESTPRODUCT</Product>
+			<Return>CAR v5</Return>
+			<UserGroup>Team1</UserGroup>
+			<GroupWithReturn>PG_WithoutReturn</GroupWithReturn>
+		</C4566>
+
+		<C4679>
+            <GroupName>PG4679</GroupName>
+            <Description>Test add privilege group</Description>
+            <Type>General User Privileges</Type>
+        </C4679>
+
+        <C4684>
+            <GroupName>Administrator2</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <DeletePrivilege>Add Entity Structure#Edit Entity Structure#Delete Entity Structure</DeletePrivilege>
+			<Entity>2999</Entity>
+        </C4684>
+
+        <C4685>
+            <GroupName>Admin1</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1999</Entity>
+            <Return>CAR v5</Return>
+            <ProcessDate>31/12/2015</ProcessDate>
+            <DeletePrivilege>Import Return Data from Excel/CSV</DeletePrivilege>
+        </C4685>
+
+
+        <C4686>
+            <GroupName>Admin1</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1999</Entity>
+            <Return>CAR v5</Return>
+            <ProcessDate>31/12/2015</ProcessDate>
+            <DeletePrivilege>Export Return Data to Excel#Export Return Data to CSV</DeletePrivilege>
+        </C4686>
+
+        <C4688>
+            <GroupName>Admin1</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1999</Entity>
+            <Return>CAR v5</Return>
+            <ProcessDate>31/12/2015</ProcessDate>
+            <DeletePrivilege>Create New Return Instance#Copy Return Data#Edit Return Instance#Lock or Un-lock a Return Instance#Overwrite a Return Instance</DeletePrivilege>
+            <CellName>CAOFR040</CellName>
+        </C4688>
+
+
+        <C4689>
+            <GroupName>Admin1</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1999</Entity>
+            <ImportFile>CAR_v5_1999_31122015.xlsx</ImportFile>
+            <DeletePrivilege>Import Adjustments</DeletePrivilege>
+        </C4689>
+
+        <C4690>
+            <GroupName>Admin1</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1999</Entity>
+            <Return>CAR v5</Return>
+            <ProcessDate>31/12/2015</ProcessDate>
+            <DeletePrivilege>Add page instance#Delete page instance</DeletePrivilege>
+        </C4690>
+
+        <C4691>
+            <GroupName>Admin1</GroupName>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1999</Entity>
+            <Return>CAR v5</Return>
+            <ProcessDate>31/12/2015</ProcessDate>
+            <DeletePrivilege>Approve/Reject a Return</DeletePrivilege>
+        </C4691>
+
+        <C4692>
+            <UserName>test1</UserName>
+            <Password>password</Password>
+            <Entity>1998</Entity>
+            <Return>CAR v5</Return>
+            <ImportFile>CAR_v5_1998_31122015.xlsx</ImportFile>
+        </C4692>
+
+        <C5097>
+            <GroupName>5097</GroupName>
+            <Product>TESTPRODUCT</Product>
+            <NewName>50971</NewName>
+            <Return>CAR v5</Return>
+        </C5097>
+
+        <C5146>
+            <PG_User>uPG</PG_User>
+            <PG_Entity>ePG</PG_Entity>
+            <File>C5146.xlsx</File>
+        </C5146>
+		
+		<C4556>
+            <GroupName>Administrator2</GroupName>
+        </C4556>
+		
+		<C4696>
+            <GroupName>CPG1</GroupName>
+            <Description>CPG1</Description>
+            <Type>General User Privileges</Type>
+			<Privilege>Add Entity structure#Delete Entity structure#Edit Entity structure</Privilege>
+			<User>test2</User>
+			<Entity>2999</Entity>
+        </C4696>
+
+        <C5108>
+            <UserName>testUser1</UserName>
+            <Password>password</Password>
+        </C5108>
+
+        <C5109>
+            <SheetName>Entities</SheetName>
+        </C5109>
+
+        <C5115>
+            <SheetName>Users (Export Only)</SheetName>
+        </C5115>
+
+        <C5116>
+            <SheetName>User Groups</SheetName>
+        </C5116>
+
+        <C5118>
+            <SheetName>User Group Membership</SheetName>
+        </C5118>
+
+        <C5127>
+            <SheetName>Privilege Groups</SheetName>
+        </C5127>
+
+        <C5128>
+            <SheetName>Privilege Group Membership</SheetName>
+        </C5128>
+
+        <C5128>
+            <SheetName>Privilege Group User Mapping</SheetName>
+        </C5128>
+
+        <C5131>
+            <ImportFile>AccessSettingsExport_22012016.xlsx</ImportFile>
+            <SheetName>Entities</SheetName>
+            <BaseLineFile>AccessSettingsExport_22012016.xlsx</BaseLineFile>
+        </C5131>
+
+        <C5132>
+            <ImportFile>AccessSettingsExport_22012016.xlsx</ImportFile>
+            <SheetName>User Groups</SheetName>
+            <BaseLineFile>AccessSettingsExport_22012016.xlsx</BaseLineFile>
+        </C5132>
+
+        <C5133>
+            <ImportFile>AccessSettingsExport_22012016.xlsx</ImportFile>
+            <SheetName>User Group Membership</SheetName>
+        </C5133>
+
+        <C5134>
+            <ImportFile>AccessSettingsExport_22012016.xlsx</ImportFile>
+            <SheetName>PrivilegeGroup</SheetName>
+            <BaseLineFile>AccessSettingsExport_22012016.xlsx</BaseLineFile>
+        </C5134>
+
+        <C5135>
+            <ImportFile>AccessSettingsExport_22012016.xlsx</ImportFile>
+            <SheetName>Privilege Group Membership</SheetName>
+            <BaseLineFile>AccessSettingsExport_22012016.xlsx</BaseLineFile>
+        </C5135>
+
+        <C5136>
+            <ImportFile>AccessSettingsExport_22012016.xlsx</ImportFile>
+            <SheetName>Privilege Group User Mapping</SheetName>
+            <BaseLineFile>AccessSettingsExport_22012016.xlsx</BaseLineFile>
+        </C5136>
+
+        <C5138>
+            <ImportFile1>AccessSettingsExport_22012016.xlsx</ImportFile1>
+            <ImportFile2>RC_FRY9C-FED-1.0.0-RepCentral-FRY9C.txt</ImportFile2>
+        </C5138>
+
+    
+		<C5872>
+			<NetworkLocation>d:\temp</NetworkLocation>
+			<UserPath>d:\\</UserPath>
+			<EntityName>2001</EntityName>
+			<Type>Submission</Type>
+			<Count>1</Count>
+            <Entity1>2001</Entity1>
+            <Entity2>2998</Entity2>
+		</C5872>   
+		 
+		<C5900>
+			<NetworkLocation>opt\test\DSLOCATION</NetworkLocation>
+			<UserPath>d:\\</UserPath>
+			<EntityName>2001</EntityName>
+			<Type>Submission</Type>
+			<Count>1</Count>
+		</C5900>    
+		
+		<C5874>
+			<InitNetworkLocation>c:\temp</InitNetworkLocation>
+			<InitUserPath>c:\\</InitUserPath>
+			<InitEntityName>2001</InitEntityName>
+			<Type>Submission</Type>
+			<InitCount>1</InitCount>
+			<ModifiedNetworkLocation>d:\temp</ModifiedNetworkLocation>
+			<ModifiedUserPath>d:\\</ModifiedUserPath>
+			<ModifiedEntityName>2998</ModifiedEntityName>
+		</C5874>  
+		  
+		<C5875>
+			<InitNetworkLocation>c:\temp</InitNetworkLocation>
+			<InitUserPath>c:\\</InitUserPath>
+			<InitEntityName>2001</InitEntityName>
+			<Type>Submission</Type>
+			<Count>0</Count>
+		</C5875>    
+		
+		<C5954>
+			<InitNetworkLocation>c:\temp</InitNetworkLocation>
+			<InitUserPath>c:\\</InitUserPath>
+			<InitEntityName>2001</InitEntityName>
+			<Type>Submission</Type>
+			<SecondNetworkLocation>d:\temp</SecondNetworkLocation>
+			<Message>Physical Location with entity 2001, type Submission already exists.</Message>
+		</C5954>
+		   
+</Administration>

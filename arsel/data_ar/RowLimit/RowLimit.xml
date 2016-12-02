@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RowLimit>
+    <C6304>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<Step4_1>Securities OTTI by CUSIP[1]#4</Step4_1>
+		<Step4_2>Securities OTTI by CUSIP[2]#4</Step4_2>
+		<Step5>OpRisk Scenario ~ Projections#4</Step5>
+		<Step6_1>FEDFRY14ASUMP072R0010C0010@Trading#abcd</Step6_1>
+		<Step6_2>OpRisk Scenario ~ Projections#5</Step6_2>
+	</C6304>
+
+	<C6305>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v5</Form>
+		<ReferenceDate>04/08/2015</ReferenceDate>
+		<FileName>FRY14ASUMM_v5_0001_04082015.csv</FileName>
+		<Step4_1>Securities OTTI by CUSIP[1]#4</Step4_1>
+		<Step4_2>Securities OTTI by CUSIP[2]#4</Step4_2>
+		<Step5>OpRisk Scenario ~ Projections#4</Step5>
+		<Step6_1>FEDFRY14ASUMP072R0010C0010@Trading#abcd</Step6_1>
+		<Step6_2>OpRisk Scenario ~ Projections#5</Step6_2>
+	</C6305> 
+
+	<C6324>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v5</Form>
+		<ReferenceDate>30/09/2014</ReferenceDate>
+		<Step3_1>PPNR Metrics 6 of 6@ExtDBGrid43[100]#20</Step3_1>
+		<Step3_2>PPNR Metrics 6 of 6@ExtDBGrid44[100]#9</Step3_2>
+		<Step4_1>FEDFRY14ASUMP072R0010C0010@Trading[100]#8.4</Step4_1>
+		<Step4_2>PPNR Metrics 6 of 6@ExtDBGrid43[100]#19</Step4_2>
+	</C6324>
+	
+	 <C6306>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<Step6>FEDFRY14ASUMP072R0010C0010@Trading#abcd</Step6>
+		<CSV>FRY14ASUMM_v5_0001_BASE.csv</CSV>
+		<Module>FRY14ASUMMV5</Module>
+		<Vanilla>vanilla-FED-1.2.0-FRY14ASUMMV5.xml</Vanilla>
+	</C6306>
+	
+	<C6307>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<Step5>Counterparty Credit Risk#2</Step5>
+		<Step6_1>Securities OTTI by CUSIP[1]#4</Step6_1>
+		<Step6_2>Securities OTTI by CUSIP[2]#5</Step6_2>
+	</C6307>
+	
+	<C6309>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<Step4>OpRisk Scenario ~ Projections#4</Step4>
+		<Step5_1>FEDFRY14ASUMP072R0010C0010@Trading#abcd</Step5_1>
+		<Step5_2>OpRisk Scenario ~ Projections#5</Step5_2>
+		<Step6_1>OpRisk Scenario ~ Projections#ExtDBGrid3952FEDFRY14ASUMP074R0010KEY</Step6_1>
+		<Step6_2>OpRisk Scenario ~ Projections#5</Step6_2>
+		<Step7_1>ExtDBGrid3956FEDFRY14ASUMP074R0010C0040#22</Step7_1>
+		<Step7_2>OpRisk Scenario ~ Projections#5</Step7_2>
+	</C6309>
+	
+	<C6316>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<Step6>PPNR Projections 5 of 6#8</Step6>
+	</C6316>
+	
+	<C6319>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<Step6>PPNR NII 5 of 5@ExtDBGrid41#8</Step6>
+	</C6319>
+	
+	<C6392>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<ValidationData>VAL_FRY14ASUMMv5.xlsx</ValidationData>
+	</C6392>
+	
+	<C6439>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v5</Form>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<FileName2>FRY14ASUMM_v5_0001_08052015.xlsx</FileName2>
+		<Step5>FEDFRY14ASUMP072R0010C0010@Trading#abcd</Step5>
+		<Step6>OpRisk Scenario ~ Projections#ExtDBGrid3952FEDFRY14ASUMP074R0010KEY</Step6>
+		<Step7_1>OpRisk Scenario ~ Projections#ExtDBGrid3949FEDFRY14ASUMP074R0010KEY</Step7_1>
+		<Step7_2>ExtDBGrid3956FEDFRY14ASUMP074R0010C0040#3</Step7_2>
+		<Data1>FRY14ASUMM_v5_data1.xlsx</Data1>
+		<Data2>FRY14ASUMM_v5_data2.xlsx</Data2>
+		<Data3>FRY14ASUMM_v5_data3.xlsx</Data3>
+	</C6439>
+	
+	<C6446>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v5</Form>
+		<FileName>FRY14ASUMM_v5_0001_04082015.xlsx</FileName>
+		<FileName2>FRY14ASUMM_v5_0001_02012015.csv</FileName2>
+		<Step5>FEDFRY14ASUMP072R0010C0010@Trading#abcd</Step5>
+		<Step6>OpRisk Scenario ~ Projections#ExtDBGrid3952FEDFRY14ASUMP074R0010KEY</Step6>
+		<Step7_1>OpRisk Scenario ~ Projections#ExtDBGrid3949FEDFRY14ASUMP074R0010KEY</Step7_1>
+		<Step7_2>ExtDBGrid3956FEDFRY14ASUMP074R0010C0040#3</Step7_2>
+		<Data1>FRY14ASUMM_v5_data1_2.xlsx</Data1>
+		<Data2>FRY14ASUMM_v5_data2_2.xlsx</Data2>
+		<Data3>FRY14ASUMM_v5_data3_2.xlsx</Data3>
+	</C6446>
+	
+	
+	<C6365>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v5</Form>
+		<ReferenceDate>30/09/2014</ReferenceDate>
+		<Page>PPNR Metrics 6 of 6</Page>
+		<Instance>100</Instance>
+		<Edit>ExtDBGrid4454FEDFRY14ASUMP091R1500C0020#1000</Edit>
+		<Step4_1>ExtDBGrid44#9</Step4_1>
+		<Step4_2>ExtDBGrid441601FEDFRY14ASUMP091R1500C0020#1,000.00</Step4_2>
+		<Step4_3>23</Step4_3>
+	</C6365>
+	
+</RowLimit>		
+		
+		
+		

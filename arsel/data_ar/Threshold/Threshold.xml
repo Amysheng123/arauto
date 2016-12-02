@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Theshold>
+    <C6218>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>Securities OTTI by CUSIP</Page>
+		<Strikethrough>3,4,5,6,7[1]#3[2]</Strikethrough>
+		<NoStrikethrough>1,2[1]#1,2[2]</NoStrikethrough>
+	</C6218>
+
+	<C6220>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>OpRisk Scenario ~ Projections</Page>
+		<Strikethrough>4,5,6,7[1]#3,4[2]</Strikethrough>
+		<NoStrikethrough>1,2,3[1]#1,2[2]</NoStrikethrough>
+	</C6220>
+
+	<C6221>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>PPNR NII 5 of 5</Page>
+		<Strikethrough>2[1]</Strikethrough>
+		<NoStrikethrough>1[1]</NoStrikethrough>
+	</C6221>
+	
+	<C6299>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<FileName2>FRY14ASUMM_v4_0001_31082016_ImportAdjustment.xlsx</FileName2>
+		<Page>Securities OTTI by CUSIP</Page>
+		<Strikethrough>3,4,5,6,7[1]</Strikethrough>
+		<NoStrikethrough>1,2[1]</NoStrikethrough>
+	</C6299>
+	
+	<C6301>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<FileName2>FRY14ASUMM_v4_0001_31082016_ImportAdjustment.xlsx</FileName2>
+		<Page>Securities OTTI by CUSIP</Page>
+		<Strikethrough>3,4[1]</Strikethrough>
+		<NoStrikethrough>1,2[1]</NoStrikethrough>
+	</C6301>
+	
+	
+	<C6313>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<FileName2>FRY14ASUMM_v4_0001_31082016_ImportAdjustment.csv</FileName2>
+		<Page>Securities OTTI by CUSIP</Page>
+		<Strikethrough>3,4,5,6,7[1]</Strikethrough>
+		<NoStrikethrough>1,2[1]</NoStrikethrough>
+	</C6313>
+	
+	<C6314>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<FileName2>FRY14ASUMM_v4_0001_31082016_ImportAdjustment.csv</FileName2>
+		<Page>Securities OTTI by CUSIP</Page>
+		<Strikethrough>3,4[1]</Strikethrough>
+		<NoStrikethrough>1,2[1]</NoStrikethrough>
+	</C6314>
+	
+	<C6229>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>Securities OTTI by CUSIP</Page>
+		<EditCell>FEDFRY14ASUMP072R0010C0010@Trading[1]#1500</EditCell>
+		<Strikethrough>4,5,6,7[1]</Strikethrough>
+		<NoStrikethrough>1,2,3[1]</NoStrikethrough>
+		<EditCell2>ExtDBGrid4055FEDFRY14ASUMP063R0010C0010#fgg</EditCell2>
+		<NoStrikethrough2>4</NoStrikethrough2>
+	</C6229>
+	
+	
+	<C6302>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>OpRisk Scenario ~ Projections</Page>
+		<Insert>ExtDBGrid3949FEDFRY14ASUMP074R0010KEY</Insert>
+		<Edit1>ExtDBGrid3956FEDFRY14ASUMP074R0010C0010#TEST/ExtDBGrid3956FEDFRY14ASUMP074R0010C0020#ABCDEF/ExtDBGrid3956FEDFRY14ASUMP074R0010C0030#XY/ExtDBGrid3956FEDFRY14ASUMP074R0010C0040#400</Edit1>
+		<CheckCell>ExtDBGrid3955FEDFRY14ASUMP074R0010C0040#400.00</CheckCell>
+		<Edit2>ExtDBGrid3957FEDFRY14ASUMP074R0010C0010#TEST/ExtDBGrid3957FEDFRY14ASUMP074R0010C0020#SSSSSS/ExtDBGrid3957FEDFRY14ASUMP074R0010C0030#QW/ExtDBGrid3957FEDFRY14ASUMP074R0010C0040#300.33/ExtDBGrid3955FEDFRY14ASUMP074R0010C0050#1000</Edit2>
+		<CheckCel2>ExtDBGrid3951FEDFRY14ASUMP074R0010C0040#300.33</CheckCel2>
+	</C6302>
+	
+	
+	<C6308>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>Securities OTTI by CUSIP</Page>
+		<AddInstance1>Trading#5</AddInstance1>
+		<Edit1>FEDFRY14ASUMP072R0010C0010#200/FEDFRY14ASUMP072R0010C0020#300/FEDFRY14ASUMP072R0010C0030#individually</Edit1>
+		<AddInstance2>Securities OTTI by CUSIP#5</AddInstance2>
+		<Insert1>ExtDBGrid40FEDFRY14ASUMP063R0010KEY</Insert1>
+		<Insert2>ExtDBGrid4049FEDFRY14ASUMP063R0010KEY</Insert2>
+		<Edit2_1>ExtDBGrid4049FEDFRY14ASUMP063R0010C0010#ABC/ExtDBGrid4049FEDFRY14ASUMP063R0010C0020#-400/ExtDBGrid4049FEDFRY14ASUMP063R0010C0030#300/ExtDBGrid4049FEDFRY14ASUMP063R0010C0040#200/ExtDBGrid4049FEDFRY14ASUMP063R0010C0050#600</Edit2_1>
+		<Edit2_2>ExtDBGrid4050FEDFRY14ASUMP063R0010C0010#789/ExtDBGrid4050FEDFRY14ASUMP063R0010C0020#500/ExtDBGrid4050FEDFRY14ASUMP063R0010C0030#100/ExtDBGrid4050FEDFRY14ASUMP063R0010C0040#200/ExtDBGrid4050FEDFRY14ASUMP063R0010C0050#800</Edit2_2>
+		<Edit2_3>ExtDBGrid4050FEDFRY14ASUMP063R0010C0010#xyz/ExtDBGrid4050FEDFRY14ASUMP063R0010C0020#600/ExtDBGrid4050FEDFRY14ASUMP063R0010C0030#300/ExtDBGrid4050FEDFRY14ASUMP063R0010C0040#200/ExtDBGrid4050FEDFRY14ASUMP063R0010C0050#400</Edit2_3>
+		<Strikethrough>2,3[5]</Strikethrough>
+		<NoStrikethrough>1[5]</NoStrikethrough>
+	</C6308>
+	
+	
+	<C6310>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>PPNR Projections 5 of 6</Page>
+		<Strikethrough>4[2]#3[3]</Strikethrough>
+		<NoStrikethrough>1,2,3[2]#1,2[3]</NoStrikethrough>
+	</C6310>
+	
+	<C6330>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>Counterparty Credit Risk</Page>
+		<Cell>FEDFRY14ASUMP073R0020C0010</Cell>
+		<Value>1,200.00</Value>
+	</C6330>
+	
+	<C6331>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>Counterparty Credit Risk</Page>
+		<Edit>FEDFRY14ASUMP073R0030C0010[1]#1000</Edit>
+		<ValidationData>VAL_FRY14ASUMMv4.xlsx</ValidationData>
+	</C6331>
+	
+	<C6223>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Module>FRY14ASUMMV4</Module>
+		<CSV>FRY14ASUMM_v4_0001_31082016.csv</CSV>
+		<Vanilla>vanilla-FED-1.2.0-FRY14ASUMMV4.xml</Vanilla>
+	</C6223>
+	
+	<C6228>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v4</Form>
+		<ReferenceDate>30/09/2014</ReferenceDate>
+		<Page>PPNR Metrics 6 of 6</Page>
+		<Strikethrough>3,4,5,6@ExtDBGrid43#10,11,12@ExtDBGrid44</Strikethrough>
+		<NoStrikethrough>1,2@ExtDBGrid43#1,2,3,4,5,6,7,8,9@ExtDBGrid44</NoStrikethrough>
+	</C6228>
+	
+	<C6372>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<FileName>FRY14ASUMM_v4_0001_31082016.xlsx</FileName>
+		<Page>PPNR Projections 5 of 6[1]</Page>
+		<Cell>ExtDBGrid3052FEDFRY14ASUMP079R1060C0060#600</Cell>
+		<Label>456</Label>
+	</C6372>
+	
+	
+</Theshold>		
+		
+		
+		

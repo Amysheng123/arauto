@@ -1,0 +1,13 @@
+{
+  "configPrefix":"MAS",
+  "name":"Product1",
+  "batchRunJobs" : [ {
+   
+    "name" : "MASMAPEDM",
+    "abortOnFailure" : "false"
+  },{
+   
+    "name" : "MASPREPRO",
+    "abortOnFailure" : "false"
+  } ]
+}

@@ -1,0 +1,9 @@
+{
+  "name":"KM_Compute",
+  "configPrefix" : "HKMA",
+  "computeJobs" : [{
+    "formName" : "KM",
+    "formVersion" : 0,
+    "entityCode" : "0015"
+  }]
+}

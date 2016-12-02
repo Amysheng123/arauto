@@ -1,0 +1,21 @@
+{
+  "configPrefix":"HKMA",
+  "name":"ERRORNOTABORT",
+  "batchRunJobs" : [{
+   
+    "name" : "CREATE_HKMA",
+    "abortOnFailure" : "false"
+  },  {
+   
+    "name" : "ERROR_MESSAGE",
+    "abortOnFailure" : "false"
+  },{
+   
+    "name" : "HKINT",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "PREPROCESS",
+    "abortOnFailure" : "false"
+  } ]
+}

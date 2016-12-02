@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OtherModule>
+	<C6361>
+		<Regulator>European Common Reporting XBRL</Regulator>
+		<Entity>2600</Entity>
+		<NewEntity>G2600</NewEntity>
+		<Form>FI01 v1</Form>
+		<RerenceDate>31/07/2015</RerenceDate>
+	</C6361>
+	
+	<C4371>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v4</Form>
+		<RerenceDate>31/12/2015</RerenceDate>
+		<Page>PPNR Metrics 6 of 6</Page>
+		<Insert>ExtDBGrid44FEDFRY14ASUMP091R1500KEY</Insert>
+		<Cell>ExtDBGrid4449FEDFRY14ASUMP091R1500C0090</Cell>
+		<Format>zh_CN#en_US#en_GB</Format>
+		<ExpectedValue>2016-09-30#09/30/2016#30/09/2016</ExpectedValue>
+	</C4371>
+	
+	<C6692>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY14ASUMM v1</Form>
+		<RerenceDate>17/10/2016</RerenceDate>
+		<Page>Balance Sheet 1 of 7</Page>
+		<Cell>FEDFRY14ASUMP006R0010C0010</Cell>
+		<EditValue>123456789</EditValue>
+		<ExpectedValue>123,456,789.00</ExpectedValue>
+	</C6692>
+	
+	<C6693>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>CIMACPIS v1</Form>
+		<RerenceDate>17/10/2016</RerenceDate>
+		<Page>Country#Notes</Page>
+	</C6693>
+	
+	<C6115>
+		<Regulator>European Common Reporting XBRL</Regulator>
+		<Entity>2999</Entity>
+		<Form>CVA v4</Form>
+		<ReturnID>360089</ReturnID>
+		<CreateFile>ECR_2999_CVA_v4_20161001.xlsx</CreateFile>
+		<ConsolidationType>I</ConsolidationType>
+		<Cell>CVAR020C010</Cell>
+		<Scale>2</Scale>
+		<Baseline>ECR_2999_COREP_Ind_20161001.xbrl</Baseline>
+	</C6115>
+	
+	<C4862>
+		<Regulator>US1 FED Reserve</Regulator>
+		<Entity>0002</Entity>
+		<Form>FFIEC009A v2</Form>
+		<RerenceDate>31/10/2015</RerenceDate>
+		<Module>RepCentral-FFIEC009A</Module>
+	</C4862>
+	
+	<C4863>
+		<Regulator>US1 FED Reserve</Regulator>
+		<Entity>0002</Entity>
+		<Form>FFIEC009A v2</Form>
+		<RerenceDate>31/10/2015</RerenceDate>
+		<Module>RepCentral-FFIEC009A</Module>
+	</C4863>
+	
+</OtherModule>

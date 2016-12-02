@@ -1,0 +1,9 @@
+{
+  "configPrefix":"HKMA",
+  "name":"SpecificDate",
+  "batchRunJobs" : [ {
+    "name" : "CONFL_SPECDATE",
+    "abortOnFailure" : "false"
+    }
+   ]
+}

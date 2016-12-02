@@ -1,0 +1,21 @@
+{
+  "name":"Compute_Fail",
+  "configPrefix" : "MAS",
+  "computeJobs" : [{
+    "formName" : "MAS649",
+    "formVersion" : 1,
+    "entityCode" : "0013"
+  },{
+    "formName" : "MAS1105",
+    "formVersion" : 1,
+    "entityCode" : "0015"
+  },{
+    "formName" : "MAS755",
+    "formVersion" : 1,
+    "entityCode" : "0013"
+  },{
+    "formName" : "MAS757",
+    "formVersion" : 1,
+    "entityCode" : "0013"
+  }]
+}

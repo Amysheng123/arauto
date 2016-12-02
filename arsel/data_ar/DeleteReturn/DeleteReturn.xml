@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeleteReturn>
+    <C5595>
+        <Regulator>Test Product</Regulator>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>01/04/2016</ReferenceDate>
+        <EditionAmt>1</EditionAmt>
+    </C5595>
+
+    <C5610>
+        <Regulator>Test Product</Regulator>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>02/04/2016</ReferenceDate>
+        <EditionAmt>4</EditionAmt>
+    </C5610>
+    
+    <C5596>
+        <Regulator>Test Product</Regulator>
+        <Entity>2999</Entity>
+        <Form>CREI v3</Form>
+        <ReferenceDate>01/04/2016</ReferenceDate>
+    </C5596>
+    
+    <C5598>
+        <Regulator>Test Product</Regulator>
+		<UserName>jes</UserName>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>03/04/2016</ReferenceDate>
+    </C5598>
+    
+    <C5597>
+        <Regulator>Test Product</Regulator>
+        <Entity>2999</Entity>
+        <Form>CREI v3</Form>
+        <ReferenceDate>01/04/2016</ReferenceDate>
+    </C5597>
+    
+    <C5650>
+        <Regulator>Test Product</Regulator>
+        <Entity>0001</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>01/04/2016</ReferenceDate>
+    </C5650>
+    
+     <C5604>
+        <Regulator>Test Product</Regulator>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>01/04/2016</ReferenceDate>
+        <EditionNo>1,ACTIVE</EditionNo>
+    </C5604>
+    
+    <C5615>
+        <Regulator>Test Product</Regulator>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>02/04/2016</ReferenceDate>
+        <RestoreEditionNo1>1</RestoreEditionNo1>
+		<DeletedEditionNo1>2#3#4</DeletedEditionNo1>
+		<RestoreEditionNo2>4</RestoreEditionNo2>
+		<DeletedEditionNo2>2#3</DeletedEditionNo2>
+    </C5615>
+	
+	<C6083>
+        <Regulator>Test Product</Regulator>
+        <Entity>0001</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>03/04/2015</ReferenceDate>
+    </C6083>
+	
+	
+	<C6084>
+        <Regulator>Test Product</Regulator>
+        <Entity>0001</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>04/04/2016</ReferenceDate>
+    </C6084>
+    
+</DeleteReturn>

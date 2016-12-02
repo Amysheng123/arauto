@@ -1,0 +1,14 @@
+{
+  "configPrefix":"ECR",
+  "name":"INTEGRATION_CVA",
+  "batchRunJobs" : [  {
+   
+    "name" : "CVAV4",
+    "abortOnFailure" : "false"
+  } ],
+  "computeJobs" : [{
+    "formName" : "CVA",
+    "formVersion" : 4,
+    "entityCode" : "0001"
+  }]
+}

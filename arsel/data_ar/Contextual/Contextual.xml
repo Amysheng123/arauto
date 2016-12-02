@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contextual>
+    <C4011>
+		<DWName>OFSAA_Icon</DWName>
+		<Name>OBIEE</Name>
+		<URL>https://www.baidu.com/#cellId#entityName#formCode#formVersion</URL>
+		<Description>OBIEE</Description>
+	</C4011>
+	
+	<C4012>
+		<DWName>OFSAA_Icon</DWName>
+		<Name>OBIEE</Name>
+		<NewName>BAIDU</NewName>
+		<NewURL>https://www.baidu.com/#cellId#entityName#formCode#formVersion#regulatoryPrefix#run</NewURL>
+		<NewDescription>BAIDU</NewDescription>
+	</C4012>
+	
+	<C4013>
+		<DWName>OFSAA_Icon</DWName>
+		<Name>OBIEE1</Name>
+		<URL>https://www.baidu.com/#cellId#entityName#formCode#formVersion</URL>
+		<Description>OBIEE1</Description>
+	</C4013>
+	
+	<C4014>
+		<DWName>OFSAA_Icon</DWName>
+		<Name>OBIEE2</Name>
+		<URL>https://www.baidu.com/#cellId#entityName#formCode#formVersion</URL>
+		<Description>OBIEE2</Description>
+	</C4014>
+	
+	<C4015>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY9C v1</Form>
+		<ReferenceDate>30/09/2016</ReferenceDate>
+		<DWName>OFSAA_Icon</DWName>
+		<Name>OBIEE</Name>
+		<URL>https://www.baidu.com/#cellId#entityName#formCode#formVersion</URL>
+		<Description>OBIEE</Description>
+		<Cell>BHCAP864A1</Cell>
+		<ExpectedURL>https://www.baidu.com/?cellId=BHCAP864A1~entityName=0001~formCode=FRY9C~formVersion=1</ExpectedURL>
+	</C4015>
+	
+</Contextual>		
+		
+		
+		

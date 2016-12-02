@@ -4,24 +4,23 @@
       {
         "id": 0,
         "name": "default",
-        "url": "http://172.20.30.95:8099",
+        "url": "http://172.20.30.95:8086",
         "username": "admin",
-        "password": "MONDAY"
+        "password": "password"
       }
     ],
     "databaseServers": [
       {
         "id": 0,
-        "name": "ap_database",
-        "driver": "oracle",
-        "host": "172.20.31.239",
-        "instance": "ora12c",
-        "schema": "AR_AUTO_1_8_OWNER"
+        "name": "ar_database",
+        "driver": "sqlserver",
+        "host": "172.20.20.230\\sql12",
+        "schema": "AR_AUTO_OWNER"
       },
       {
-      	"id": 1,
+        "id": 1,
         "name": "toolset_database",
-        "driver": "oracle",
+        "driver": "sqlserver",
         "host": "172.20.30.95",
         "schema": "ECR_HKMA_AUTO_SYSTEM"
       }

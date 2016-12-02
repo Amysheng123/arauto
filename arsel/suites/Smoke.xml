@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression_test_suite" verbose="1" parallel="tests" thread-count="3" preserve-order="true">
+	<test name="test_Rules">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<parameter name="fileName" value="CheckRule_Smoke.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.CheckRule" />
+		</classes>
+	</test>
+	
+	<test name="test_CreateForm">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<parameter name="fileName" value="CreateForm_Smoke.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.CreateForm" />
+		</classes>
+	</test>
+	
+	<test name="test_RetrieveFrom">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<parameter name="fileName" value="RetrieveForm_Smoke.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.RetrieveForm" />
+		</classes>
+	</test>
+	
+	<test name="test_ImportForm">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<parameter name="fileName" value="ImportForm_Smoke.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.ImportForm" />
+		</classes>
+	</test>
+	
+	<test name="test_EditForm">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<classes>
+			<class name="com.lombardrisk.testCase.EditForm" />
+			<methods>
+					<include name="testC5469" />
+					<include name="testC5470" />
+			</methods>
+		</classes>
+	</test>
+	
+
+	<test name="test_Export Form">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="browser_version" value="43" />
+		<parameter name="fileName" value="ExportForm_Smoke.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.ExportForm" />
+			<methods>
+					<include name="testExportFormToFile" />
+			</methods>
+		</classes>
+	</test>
+
+ 
+	<test name="test_DataSschdule" preserve-order="true">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<parameter name="fileName" value="DSRetrieve_Smoke.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.DataSchedule" />
+			<methods>
+					<include name="DsReturnRetrieve" />
+			</methods>
+		</classes>
+	</test>
+	
+
+	<test name="test_DeleteReturn" preserve-order="true">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<classes>
+			<class name="com.lombardrisk.testCase.DeleteReturn">
+				<methods>
+					<include name="testC5595" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="test_HighLight" preserve-order="true">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<classes>
+			<class name="com.lombardrisk.testCase.HighLight">
+				<methods>
+					<include name="testC5769" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="test Precision_Edition">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<parameter name="fileName" value="Precision.xls" />
+		<classes>
+			<class name="com.lombardrisk.testCase.Precision" />
+			<class name="com.lombardrisk.testCase.EditionManage" />
+		</classes>
+	</test>
+
+	<test name="test_workFlow" preserve-order="true">
+		<parameter name="os" value="WINDOWS" />
+		<parameter name="os_version" value="7" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="browser_version" value="52" />
+		<classes>
+			<class name="com.lombardrisk.testCase.Workflow">
+				<methods>
+					<include name="testC3945" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>

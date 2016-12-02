@@ -1,0 +1,500 @@
+<Root Form="DSFR02" Version="2" EntityCode="0001" ReferenceDate="20151231">
+
+<EntityLevelVariables>
+       <variableName>F_Reporting_Currency</variableName>
+        <label>FED Reporting Currency</label>
+        <description>FED Reporting Currency</description >
+               <value></value>
+       <variableName>F_Financial_Year_End</variableName>
+        <label>FED Financial Year End</label>
+        <description>FED Financial Year End</description >
+                <value>20201231</value>
+</EntityLevelVariables>
+
+<FormLevelVariables>
+      <variableName>9C_Reporting_Date</variableName>
+        <label>9C Reporting Date</label>
+        <description>9C Reporting Date</ description >
+		
+      <variableName>9C_Buffer</variableName>
+        <label>9C Buffer</label>
+        <description>9C Buffer</ description >
+		
+               <value>2,000,000</value>
+</FormLevelVariables>
+<Table2 Form="DSFR02" Version="2" EntityCode="0001" ReferenceDate="20151231">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>-0</test>
+</FormLevelVariables>
+<Record>
+
+Field2="A,1,B,2"
+Field12="-100"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="1" Case2="4">
+    <Case1>no</Case1>
+    <Case2>104</Case2>
+    
+<Number Case1="100" Case2="1" Case3="0.5">
+    <Case1>100</Case1>
+    <Case2>a</Case2>
+    <Case3>0</Case3>
+    <Case4>1</Case4>
+    <Case5>1</Case5>
+    <Case6>-100</Case6>
+    <Case7>-100</Case7>
+    <Case8>-£100.00</Case8>
+    <Case9>0.5</Case9>    
+    <Case10>0.5</Case10>
+    <Case11>00.500</Case11>
+
+<String Field1="" Field2="01A" Field3="A,1,B,2" Field4="STARWOOD HOTELS &amp; RE">
+    
+    
+    
+    
+    
+    <Case6>01A</Case6>
+    <Case7>A</Case7><Case7>1</Case7><Case7>B</Case7><Case7>2</Case7>
+    <Case8>STARWOOD HOTELS &amp; RE</Case8>
+	
+<keyword Field1="" Field2="22/07/2016 00:00:00" Field3="Apple" Field4="5">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>0</test>
+</FormLevelVariables>
+<Record>
+Field2="testabcdefg3"
+Field2="E,1,F,2"
+Field12="500"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="3" Case2="5">
+    <Case1>no</Case1>
+    <Case2>105</Case2>
+    
+<Number Case1="500" Case2="3" Case3="0">
+    <Case1>500</Case1>
+    <Case2>c</Case2>
+    <Case3>0</Case3>
+    <Case4>0</Case4>
+    <Case5>0</Case5>
+    <Case6>500</Case6>
+    <Case7>500</Case7>
+    <Case8>£500.00</Case8>
+    <Case9>0</Case9>    
+    <Case10>0</Case10>
+    <Case11>00.000</Case11>
+
+<String Field1="testabcdefg3" Field2="NA" Field3="E,1,F,2" Field4="&apos;123&apos;Test">
+    <Case1>Testabcdefg3</Case1>
+    <Case2>abcdefg3</Case2>
+    <Case3>testabcdefg3</Case3>
+    <Case4>12</Case4>
+    <Case5>testabcdefg3</Case5>
+    <Case6>NA</Case6>
+    <Case7>E</Case7><Case7>1</Case7><Case7>F</Case7><Case7>2</Case7>
+    <Case8>&apos;123&apos;Test</Case8>
+	
+<keyword Field1="testabcdefg3" Field2="" Field3="" Field4="">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>-0</test>
+</FormLevelVariables>
+<Record>
+
+Field2=""
+Field12="-200"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="2" Case2="1">
+    <Case1>yes</Case1>
+    <Case2>102</Case2>
+    
+<Number Case1="200" Case2="2" Case3="1.5">
+    <Case1>200</Case1>
+    <Case2>b</Case2>
+    <Case3>1</Case3>
+    <Case4>2</Case4>
+    <Case5>2</Case5>
+    <Case6>-200</Case6>
+    <Case7>-200</Case7>
+    <Case8>-£200.00</Case8>
+    <Case9>1.5</Case9>    
+    <Case10>1.5</Case10>
+    <Case11>01.500</Case11>
+
+<String Field1="" Field2=" 01BC  " Field3="" Field4="&gt;">
+    
+    
+    
+    
+    
+    <Case6>01BC</Case6>
+    
+    <Case8>&gt;</Case8>
+	
+<keyword Field1="" Field2="22/07/2016 00:00:00" Field3="ttt" Field4="2">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>-0</test>
+</FormLevelVariables>
+<Record>
+
+Field2="C,1,D,2"
+Field12="-300"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="2" Case2="2">
+    <Case1>no</Case1>
+    <Case2>102</Case2>
+    
+<Number Case1="300" Case2="2" Case3="0.25">
+    <Case1>300</Case1>
+    <Case2>b</Case2>
+    <Case3>0</Case3>
+    <Case4>1</Case4>
+    <Case5>0</Case5>
+    <Case6>-300</Case6>
+    <Case7>-300</Case7>
+    <Case8>-£300.00</Case8>
+    <Case9>0.2</Case9>    
+    <Case10>0.25</Case10>
+    <Case11>00.250</Case11>
+
+<String Field1="" Field2=" 02AC  " Field3="C,1,D,2" Field4="&lt;">
+    
+    
+    
+    
+    
+    <Case6>02AC</Case6>
+    <Case7>C</Case7><Case7>1</Case7><Case7>D</Case7><Case7>2</Case7>
+    <Case8>&lt;</Case8>
+	
+<keyword Field1="" Field2="22/07/2016 00:00:00" Field3="aaa" Field4="1">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>-0</test>
+</FormLevelVariables>
+<Record>
+
+Field2=""
+Field12="-400"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="2" Case2="3">
+    <Case1>no</Case1>
+    <Case2>103</Case2>
+    
+<Number Case1="400" Case2="2" Case3="-0.25">
+    <Case1>400</Case1>
+    <Case2>b</Case2>
+    <Case3>-1</Case3>
+    <Case4>0</Case4>
+    <Case5>0</Case5>
+    <Case6>-400</Case6>
+    <Case7>-400</Case7>
+    <Case8>-£400.00</Case8>
+    <Case9>-0.2</Case9>    
+    <Case10>-0.25</Case10>
+    <Case11>-00.250</Case11>
+
+<String Field1="" Field2=" 03A  " Field3="" Field4="&quot;&quot;">
+    
+    
+    
+    
+    
+    <Case6>03A</Case6>
+    
+    <Case8>&quot;&quot;</Case8>
+	
+<keyword Field1="" Field2="22/07/2016 00:00:00" Field3="aa" Field4="1">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>-0</test>
+</FormLevelVariables>
+<Record>
+Field2="curry,lerbon"
+Field2="E,1,F,2"
+Field12="-501"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="3" Case2="5">
+    <Case1>no</Case1>
+    <Case2>105</Case2>
+    
+<Number Case1="501" Case2="3" Case3="1.736">
+    <Case1>501</Case1>
+    <Case2>c</Case2>
+    <Case3>1</Case3>
+    <Case4>2</Case4>
+    <Case5>2</Case5>
+    <Case6>-501</Case6>
+    <Case7>-501</Case7>
+    <Case8>-£501.00</Case8>
+    <Case9>1.7</Case9>    
+    <Case10>1.74</Case10>
+    <Case11>01.736</Case11>
+
+<String Field1="curry,lerbon" Field2=" 03 B " Field3="E,1,F,2" Field4="&apos;&apos;">
+    <Case1>Curry,lerbon</Case1>
+    <Case2></Case2>
+    <Case3>curry,lerbon</Case3>
+    <Case4>12</Case4>
+    <Case5>curry,lerbon</Case5>
+    <Case6>03 B</Case6>
+    <Case7>E</Case7><Case7>1</Case7><Case7>F</Case7><Case7>2</Case7>
+    <Case8>&apos;&apos;</Case8>
+	
+<keyword Field1="curry,lerbon" Field2="22/07/2016 00:00:00" Field3="aa" Field4="666">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>0</test>
+</FormLevelVariables>
+<Record>
+Field2="AAAAAAnyone!"
+Field2="E,1,F,2"
+Field12="500"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="3" Case2="5">
+    <Case1>no</Case1>
+    <Case2>105</Case2>
+    
+<Number Case1="500" Case2="3" Case3="-1.736">
+    <Case1>500</Case1>
+    <Case2>c</Case2>
+    <Case3>-2</Case3>
+    <Case4>-1</Case4>
+    <Case5>-2</Case5>
+    <Case6>500</Case6>
+    <Case7>500</Case7>
+    <Case8>£500.00</Case8>
+    <Case9>-1.7</Case9>    
+    <Case10>-1.74</Case10>
+    <Case11>-01.736</Case11>
+
+<String Field1="AAAAAAnyone!" Field2=" 03C  " Field3="E,1,F,2" Field4="H&amp;J">
+    <Case1>Aaaaaanyone!</Case1>
+    <Case2></Case2>
+    <Case3>AAAAAAnyone!</Case3>
+    <Case4>12</Case4>
+    <Case5>XAAnyone!</Case5>
+    <Case6>03C</Case6>
+    <Case7>E</Case7><Case7>1</Case7><Case7>F</Case7><Case7>2</Case7>
+    <Case8>H&amp;J</Case8>
+	
+<keyword Field1="AAAAAAnyone!" Field2="22/07/2016 00:00:00" Field3="bbbb" Field4="55">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>0</test>
+</FormLevelVariables>
+<Record>
+Field2="AAAAAAple"
+Field2="C,1,D,2"
+Field12="300"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="2" Case2="2">
+    <Case1>no</Case1>
+    <Case2>102</Case2>
+    
+<Number Case1="300" Case2="2" Case3="20.123">
+    <Case1>300</Case1>
+    <Case2>b</Case2>
+    <Case3>20</Case3>
+    <Case4>21</Case4>
+    <Case5>20</Case5>
+    <Case6>300</Case6>
+    <Case7>300</Case7>
+    <Case8>£300.00</Case8>
+    <Case9>20.1</Case9>    
+    <Case10>20.12</Case10>
+    <Case11>20.123</Case11>
+
+<String Field1="AAAAAAple" Field2="  02AC  " Field3="C,1,D,2" Field4="1 &gt; = 0">
+    <Case1>Aaaaaaple</Case1>
+    <Case2></Case2>
+    <Case3>AAAAAAple</Case3>
+    <Case4>9</Case4>
+    <Case5>XAAple</Case5>
+    <Case6>02AC</Case6>
+    <Case7>C</Case7><Case7>1</Case7><Case7>D</Case7><Case7>2</Case7>
+    <Case8>1 &gt; = 0</Case8>
+	
+<keyword Field1="AAAAAAple" Field2="22/07/2016 00:00:00" Field3="" Field4="">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>0</test>
+</FormLevelVariables>
+<Record>
+Field2="testabcdefg1"
+Field2=""
+Field12="400"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="2" Case2="3">
+    <Case1>no</Case1>
+    <Case2>103</Case2>
+    
+<Number Case1="400" Case2="2" Case3="-20.123">
+    <Case1>400</Case1>
+    <Case2>b</Case2>
+    <Case3>-21</Case3>
+    <Case4>-20</Case4>
+    <Case5>-20</Case5>
+    <Case6>400</Case6>
+    <Case7>400</Case7>
+    <Case8>£400.00</Case8>
+    <Case9>-20.1</Case9>    
+    <Case10>-20.12</Case10>
+    <Case11>-20.123</Case11>
+
+<String Field1="testabcdefg1" Field2="  03A  " Field3="" Field4="9 &lt; = 100">
+    <Case1>Testabcdefg1</Case1>
+    <Case2>abcdefg1</Case2>
+    <Case3>testabcdefg1</Case3>
+    <Case4>12</Case4>
+    <Case5>testabcdefg1</Case5>
+    <Case6>03A</Case6>
+    
+    <Case8>9 &lt; = 100</Case8>
+	
+<keyword Field1="testabcdefg1" Field2="22/07/2016 00:00:00" Field3="" Field4="22">
+<Test Form="DSFR02" >
+<FormLevelVariables>
+               <value>2,000,000</value>
+               <test>0</test>
+</FormLevelVariables>
+<Record>
+Field2="testabcdefg2"
+Field2="E,1,F,2"
+Field12="500"
+</Record> 
+
+<Date Case1="03/06/2016 02:13:51" Case2="06-Mar-2016" Case3="02:13:51" Case4="06.03.2016,02:13" Case5="2016-03-05T20:13:51">
+    <Case1>03/06/2016 02:13:51</Case1>
+    <Case2>06-Mar-2016</Case2>
+    <Case3>02:13:51</Case3>
+    <Case4>06.03.2016,02:13</Case4>
+    <Case5>2016-03-05T20:13:51</Case5>
+    
+
+<Boolean Case1="3" Case2="5">
+    <Case1>no</Case1>
+    <Case2>105</Case2>
+    
+<Number Case1="500" Case2="3" Case3="99.123">
+    <Case1>500</Case1>
+    <Case2>c</Case2>
+    <Case3>99</Case3>
+    <Case4>100</Case4>
+    <Case5>99</Case5>
+    <Case6>500</Case6>
+    <Case7>500</Case7>
+    <Case8>£500.00</Case8>
+    <Case9>99.1</Case9>    
+    <Case10>99.12</Case10>
+    <Case11>99.123</Case11>
+
+<String Field1="testabcdefg2" Field2="  03B  " Field3="E,1,F,2" Field4="L&quot;E&quot;">
+    <Case1>Testabcdefg2</Case1>
+    <Case2>abcdefg2</Case2>
+    <Case3>testabcdefg2</Case3>
+    <Case4>12</Case4>
+    <Case5>testabcdefg2</Case5>
+    <Case6>03B</Case6>
+    <Case7>E</Case7><Case7>1</Case7><Case7>F</Case7><Case7>2</Case7>
+    <Case8>L&quot;E&quot;</Case8>
+	
+<keyword Field1="testabcdefg2" Field2="22/07/2016 00:00:00" Field3="" Field4="22">
+
+<Test Form="DSFR02" >
+</Table2>
+<Test Form="2" >
+</Root>

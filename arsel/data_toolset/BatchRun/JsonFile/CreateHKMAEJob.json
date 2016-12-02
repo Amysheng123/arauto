@@ -1,0 +1,47 @@
+{
+    "configPrefix": "HKMA",
+    "name": "CreateHKMAEJob",
+    "batchRunJobs": [
+
+        {
+            "name": "CSV_INPUT",
+            "abortOnFailure" : "false"  
+
+        }
+,
+ {
+            "name": "QAHKCOMMON",
+            "abortOnFailure" : "false" 
+
+        }
+,
+ {
+            "name": "HKINT",
+            "abortOnFailure" : "false" 
+
+        }
+
+,
+ {
+            "name": "PREPROCESS",
+            "abortOnFailure" : "false" 
+
+        }
+
+,
+        {
+            "name": "E",
+            "properties": {
+                "HKCAPBASE": "12345678"
+            }
+        }
+    ],
+"name":"E_Compute",
+"configPrefix":"HKMA",
+    "computeJobs": [{
+        "formName": "E",
+        "formVersion": 0,
+        "entityCode": "0027"
+    }]
+}
+

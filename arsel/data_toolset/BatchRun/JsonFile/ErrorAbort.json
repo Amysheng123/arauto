@@ -1,0 +1,21 @@
+{
+  "configPrefix":"HKMA",
+  "name":"ERRORABORT",
+  "batchRunJobs" : [ {
+   
+    "name" : "CREATE_HKMA"
+    
+  },  {
+   
+    "name" : "ERROR_MESSAGE"
+
+  },{
+   
+    "name" : "HKINT"
+    
+  }, {
+   
+    "name" : "PREPROCESS"
+    
+  } ]
+}

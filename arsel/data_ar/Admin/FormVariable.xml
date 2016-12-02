@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormVariabel>
+    <C6085>
+		<Entity>6085</Entity>
+		<Regulator>ECR</Regulator>
+        <Prefix>ECR</Prefix>
+	</C6085>
+
+	<C6086>
+		<Entity>6086</Entity>
+		<Regulator>ECR</Regulator>
+		<EntityID>A6086</EntityID>
+		<MonetaryScale>566</MonetaryScale>
+		<TransmissionRef>0.01</TransmissionRef>
+		<FinancialYearEnd>11/11/2015</FinancialYearEnd>
+		<EntityIdEdit>test</EntityIdEdit>
+		<Value>a</Value>
+	</C6086>
+
+	<C6089>
+		<Entity>6089</Entity>
+		<Regulator>ECR</Regulator>
+		<AccountingStandard>National GAAP</AccountingStandard>
+		<ScopeOfConsolidation>Individual</ScopeOfConsolidation>
+		<Currency>AOA (Kwanza)</Currency>
+		<EntityId>A6089</EntityId>
+		<Value>a</Value>
+	</C6089>
+
+	<C6090>
+		<Entity>6090</Entity>
+		<Regulator>ECR</Regulator>
+		<EntityId>A6090</EntityId>
+		<Msg>The variable(Entity ID Value) is mandatory, its value can't be empty.</Msg>
+		<TransmissionRef>0.01</TransmissionRef>
+		<Value>a</Value>
+	</C6090>
+
+    <C6093>
+        <Entity>6093</Entity>
+        <Regulator>ECR</Regulator>
+        <EntityId>A6093</EntityId>
+        <FinancialYearEnd>31/12/2015</FinancialYearEnd>
+        <FinancialYearEndEdit>22/10/2015</FinancialYearEndEdit>
+        <MonetaryScale>3</MonetaryScale>
+        <MonetaryScaleEdit>15</MonetaryScaleEdit>
+		<Value>a</Value>
+    </C6093>
+
+    <C6094>
+        <Entity>6094</Entity>
+        <Regulator>ECR</Regulator>
+        <RegulatorNew>FED_SP0</RegulatorNew>
+    </C6094>
+
+    <C6097>
+        <Entity>6097</Entity>
+        <Regulator>ECR</Regulator>
+        <EntityId>A6097</EntityId>
+        <FinancialYearEnd>31/12/2015</FinancialYearEnd>
+        <MonetaryScale>566</MonetaryScale>
+        <TransmissionRef>0.01</TransmissionRef>
+		<Value>a</Value>
+    </C6097>
+
+	<C6095>
+		<Entity>6095</Entity>
+	</C6095>
+
+	<C6100>
+		<EntityName>6100</EntityName>
+		<ConfigName>US</ConfigName>
+		<FormName>LR</FormName>
+		<VariableName>9C</VariableName>
+		<Value>Re</Value>
+	</C6100>
+
+	<C6101>
+		<EntityName>6100</EntityName>
+		<ConfigName>European Common Reporting XBRL</ConfigName>
+		<FormName>CAR v5</FormName>
+		<CRGBName>CRGB Existing</CRGBName>
+		<CRGBValue>av12</CRGBValue>
+		<CALimLicName>CA LimLic</CALimLicName>
+		<CALimLicValue>123</CALimLicValue>
+		<CACombinedBufferName>CA Combined Buffer</CACombinedBufferName>
+		<CACombinedBufferValue>1.2</CACombinedBufferValue>
+		<ReferenceDateName>Reference Date</ReferenceDateName>
+		<ReferenceDateValue>11/11/2015</ReferenceDateValue>
+		<ReferenceDateValueNew>22/12/2015</ReferenceDateValueNew>
+		<FormNameNew>LR v3</FormNameNew>
+	</C6101>
+
+	<C6104>
+		<EntityName>6100</EntityName>
+		<ConfigName>European Common Reporting XBRL</ConfigName>
+		<FormName>LR v3</FormName>
+		<VariableName>Scope of consolidation</VariableName>
+		<VariableValue>Individual</VariableValue>
+		<Type>Select</Type>
+	</C6104>
+
+	<C6103>
+		<EntityName>6100</EntityName>
+		<ConfigName>European Common Reporting XBRL</ConfigName>
+		<FormName1>CAR v5</FormName1>
+		<FormName2>CAR v6</FormName2>
+		<VariableName>CRGB Existing</VariableName>
+		<VariableValue>automation</VariableValue>
+		<Type>Input</Type>
+		<VariableValueNew>new</VariableValueNew>
+	</C6103>
+
+	<C6105>
+		<EntityName>6100</EntityName>
+		<ConfigName>European Common Reporting XBRL</ConfigName>
+		<FormName1>CAR v5</FormName1>
+		<VariableName>CRGB Existing</VariableName>
+		<VariableValue>automation</VariableValue>
+		<Type>Input</Type>
+		<Msg>The variable(CRGB Existing) is mandatory, its value can't be empty.</Msg>
+	</C6105>
+
+	<C6106>
+		<EntityName>6106</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>CAR v5#LR v3</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker</Pg>
+		<FormName1>CAR v5</FormName1>
+		<FormName2>LR v3</FormName2>
+		<Variable1>CA Systemic Risk Buffer</Variable1>
+		<Value1>2000</Value1>
+		<Variable2>Maturity Date</Variable2>
+		<Value2>11/11/2015</Value2>
+		<Variable3>Institution Type</Variable3>
+		<Value3>automation</Value3>
+	</C6106>
+
+	<C6109>
+		<EntityName>6109</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker</Pg>
+		<EntityName2>61090</EntityName2>
+		<Pg2>Return Viewer</Pg2>
+		<Variable>Scope of consolidation</Variable>
+		<Value>Individual</Value>
+	</C6109>
+
+	<C6112>
+		<EntityName>6112</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker</Pg>
+		<Variable>Scope of consolidation</Variable>
+		<Value>Individual</Value>
+	</C6112>
+
+	<C6117>
+		<EntityName>6117</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3#FI43 v1</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker#Return Submitter</Pg>
+		<Value>a</Value>
+		<EntityIDScheme>http://www.fca.org.uk/register</EntityIDScheme>
+		<EntityIDValue>980057</EntityIDValue>
+		<Regulator>European Common Reporting XBRL</Regulator>
+		<FieldFilter>All</FieldFilter>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<Form1>LR v3</Form1>
+		<Form2>FI43 v1</Form2>
+		<FileType>XBRL</FileType>
+		<Framework1>COREP</Framework1>
+		<Taxonomy1>COREP 2015-A</Taxonomy1>
+		<Module1>COREP_Con</Module1>
+		<Framework2>FINREP</Framework2>
+		<Taxonomy2>FINREP 2015-A</Taxonomy2>
+		<Module2>FINREP_Con_IFRS</Module2>
+		<Regulator2>US1 FED Reserve SP0</Regulator2>
+	</C6117>
+
+	<C6118>
+		<EntityName>6118</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3#CAR v6</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker#Return Submitter</Pg>
+		<Value>a</Value>
+		<EntityIDScheme>http://www.fca.org.uk/register</EntityIDScheme>
+		<EntityIDValue>980057</EntityIDValue>
+		<Regulator>European Common Reporting XBRL</Regulator>
+		<FieldFilter>All</FieldFilter>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<Form1>LR v3</Form1>
+		<Form2>CAR v6</Form2>
+		<Regulator2>US1 FED Reserve SP0</Regulator2>
+		<FileType>XBRL</FileType>
+	</C6118>
+
+	<C6119>
+		<PGName>6119</PGName>
+		<Type>Entity Related Privileges</Type>
+		<Privilege>Export File Format</Privilege>
+		<EntityName>6119</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3</Return>
+		<Ug>6119</Ug>
+		<Value>a</Value>
+		<EntityIDScheme>http://www.fca.org.uk/register</EntityIDScheme>
+		<EntityIDValue>980057</EntityIDValue>
+		<Regulator>European Common Reporting XBRL</Regulator>
+		<FieldFilter>All</FieldFilter>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<Form1>LR v3</Form1>
+		<Regulator2>US1 FED Reserve SP0</Regulator2>
+		<Menu>Export To XBRL</Menu>
+		<UserName>6119</UserName>
+		<Email>6119@gmail.com</Email>
+		<Password>password</Password>
+		<PGs>Administrator</PGs>
+	</C6119>
+
+	<C6116>
+		<EntityName>6116</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker#Return Submitter</Pg>
+		<Value>a</Value>
+		<EntityIDScheme>http://www.fca.org.uk/register</EntityIDScheme>
+		<EntityIDValue>980057</EntityIDValue>
+		<Regulator>European Common Reporting XBRL</Regulator>
+		<FieldFilter>All</FieldFilter>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<Form1>LR v3</Form1>
+		<Regulator2>US1 FED Reserve SP0</Regulator2>
+		<FileType>XBRL</FileType>
+	</C6116>
+
+	<C6147>
+		<UserName>6147</UserName>
+		<Email>6147@gmail.com</Email>
+		<Password>password</Password>
+		<PGs>Administrator</PGs>
+		<EntityName>6147</EntityName>
+		<ProductPrefix>ECR</ProductPrefix>
+		<Return>LR v3</Return>
+		<Ug>6147</Ug>
+		<PGName>Return Maker</PGName>
+		<VariableName>Reference Date</VariableName>
+		<Value>11/11/2015</Value>
+		<Type>Date</Type>
+		<AdminUserName>rpadmin</AdminUserName>
+	</C6147>
+
+	<C6201>
+		<EntityName>62019</EntityName>
+		<ProductPrefix>FED_SP0</ProductPrefix>
+		<Return>FRY14ASUMM v1#FRY9C v1</Return>
+		<Ug>rpadmin_grp</Ug>
+		<Pg>Return Maker#Return Viewer#Return Submitter#Return Approver</Pg>
+		<ProductPrefix2>FED_DS</ProductPrefix2>
+		<Return2>DSFR02 v1</Return2>
+		<Form1>FRY9C v1</Form1>
+		<Form2>FRY14ASUMM v1</Form2>
+		<Form3>DSFR03 v1</Form3>
+	</C6201>
+
+	<C6110>
+		<UserName1>61100</UserName1>
+		<Email1>61100@gmail.com</Email1>
+		<Password>password</Password>
+		<UserName2>61101</UserName2>
+		<Email2>61101@gmail.com</Email2>
+		<UserName3>61102</UserName3>
+		<Email3>61102@gmail.com</Email3>
+		<PGs>Administrator</PGs>
+		<EntityName1>61102</EntityName1>
+		<EntityName2>61103</EntityName2>
+		<ProductPrefixFED>FED_SP0</ProductPrefixFED>
+		<ProductPrefixECR>ECR</ProductPrefixECR>
+		<PG1>Return Maker</PG1>
+		<PG2>Return Viewer</PG2>
+		<Return1>CAR v5</Return1>
+		<Return2>FI43 v1</Return2>
+		<Return3>LR v3</Return3>
+		<Return4>FRY9C v1</Return4>
+		<Return5>FRY14ASUMM v1</Return5>
+		<Variable1>9C Buffer</Variable1>
+		<Variable2>Reference Date</Variable2>
+		<Variable3>FI43 Last Reporting Date</Variable3>
+		<Variable4>CA LimLic</Variable4>
+		<Variable5>14AS Type</Variable5>
+		<Admin>rpadmin</Admin>
+	</C6110>
+
+	<C6636>
+		<entity>6636</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CIMACPIS v1</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfMC>500</valueOfMC>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>CPIS2g</page>
+		<cellName1>L_AF_C02</cellName1>
+		<cellName2>L_AF_C03</cellName2>
+		<cellName3>L_AL_C01</cellName3>
+		<value1>100</value1>
+		<value2>200</value2>
+		<value3>800</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>L_AF_C01+ENTITYVAR[F_Monetary_Scale]</expression>
+		<itemName>F_Monetary_Scale</itemName>
+		<desc>FED Monetary Scale</desc>
+	</C6636>
+
+    <C6671>
+        <entity>6671</entity>
+        <regulator>FED_SP0</regulator>
+        <returnName>CIMACPIS v1</returnName>
+        <ugs>rpadmin_grp</ugs>
+        <pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+        <value>111</value>
+        <valueOfCB>50</valueOfCB>
+        <regulator1>Test Product</regulator1>
+        <regulator2>US1 FED Reserve SP0</regulator2>
+        <referenceDate>16/11/2016</referenceDate>
+        <page>CPIS2g</page>
+        <cellName1>L_AS_C02</cellName1>
+        <cellName2>L_AS_C03</cellName2>
+        <cellName3>L_AD_C01</cellName3>
+        <value1>10</value1>
+        <value2>20</value2>
+        <value3>80</value3>
+        <ColumnName>ITEM</ColumnName>
+        <expression>L_AS_C01+FORMVAR[CIMACPIS_Buffer]</expression>
+        <itemName>CIMACPIS_Buffer</itemName>
+        <desc>CIMACPIS Buffer</desc>
+    </C6671>
+
+	<C6670>
+		<entity>6670</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CIMACPIS v1</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfCB>31/05/2016</valueOfCB>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>CPIS2g</page>
+		<cellName1>L_DZ_C02</cellName1>
+		<InstanceName>2</InstanceName>
+		<cellName3>L_DZ_C01</cellName3>
+		<value1>1000</value1>
+		<value2>1500</value2>
+		<value3>2,500</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(MONTH(ENTITYVAR[F_Financial_Year_End])>3, L_DZ_C02, 2000)</expression>
+		<itemName>F_Financial_Year_End</itemName>
+		<desc>FED Financial Year End</desc>
+		<InstanceName2>1</InstanceName2>
+		<ValueOfAll>05/31/2016</ValueOfAll>
+	</C6670>
+
+	<C6672>
+		<entity>6672</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CIMACPIS v1</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfCB>30/06/2016</valueOfCB>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>CPIS2g</page>
+		<cellName1>L_AO_C02</cellName1>
+		<InstanceName>2</InstanceName>
+		<cellName3>L_AO_C01</cellName3>
+		<value1>111</value1>
+		<value2>222</value2>
+		<value3>2,016</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(L_AO_C02>3, YEAR(FORMVAR[CIMACPIS_Reporting_Date]), 2000)</expression>
+		<itemName>CIMACPIS_Reporting_Date</itemName>
+		<desc>CIMACPIS Reporting Date</desc>
+		<InstanceName2>1</InstanceName2>
+		<ValueOfAll>06/30/2016</ValueOfAll>
+	</C6672>
+
+	<C6742>
+		<entity>6742</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CRIR v6</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfCB>500</valueOfCB>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>Page 4</page>
+		<cellName1>ExtDBGrid149CRIRC020</cellName1>
+		<cellName2>ExtDBGrid149CRIRC030</cellName2>
+		<cellName3>ExtDBGrid149CRIRC040</cellName3>
+		<value1>100</value1>
+		<value2>200</value2>
+		<value3>800</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>CRIRC010+ENTITYVAR[F_Monetary_Scale]</expression>
+		<itemName>F_Monetary_Scale</itemName>
+		<desc>FED Monetary Scale</desc>
+		<cellID>ExtDBGrid1CRIRC020</cellID>
+	</C6742>
+
+	<C6743>
+		<entity>6743</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CRIR v6</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfCB>50</valueOfCB>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>Page 5</page>
+		<cellName1>ExtDBGrid149CRIRC120</cellName1>
+		<cellName2>ExtDBGrid149CRIRC130</cellName2>
+		<cellName3>ExtDBGrid149CRIRC140</cellName3>
+		<value1>10</value1>
+		<value2>20</value2>
+		<value3>80</value3>
+		<ColumnName>ITEM</ColumnName>
+		<expression>CRIRC110+FORMVAR[CRIR_Buffer]</expression>
+		<itemName>CRIR_Buffer</itemName>
+		<desc>CRIR Buffer</desc>
+		<cellID>ExtDBGrid1CRIRC120</cellID>
+	</C6743>
+
+	<C6756>
+		<entity>6756</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CRIR v6</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfCB>31/05/2016</valueOfCB>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>Page 5</page>
+		<cellName1>ExtDBGrid149CRIRC160</cellName1>
+		<cellName2>ExtDBGrid149CRIRC150</cellName2>
+		<value1>1000</value1>
+		<value2>1,000</value2>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(MONTH(ENTITYVAR[F_Financial_Year_End])>3, CRIRC160, 2000)</expression>
+		<itemName>F_Financial_Year_End</itemName>
+		<desc>FED Financial Year End</desc>
+		<cellID>ExtDBGrid1CRIRC120</cellID>
+		<ValueOfAl>05/31/2016</ValueOfAl>
+	</C6756>
+
+	<C6757>
+		<entity>6757</entity>
+		<regulator>FED_SP0</regulator>
+		<returnName>CRIR v6</returnName>
+		<ugs>rpadmin_grp</ugs>
+		<pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</pgs>
+		<value>111</value>
+		<valueOfCB>30/06/2016</valueOfCB>
+		<regulator1>Test Product</regulator1>
+		<regulator2>US1 FED Reserve SP0</regulator2>
+		<referenceDate>16/11/2016</referenceDate>
+		<page>Page 5</page>
+		<cellName1>ExtDBGrid149CRIRC180</cellName1>
+		<cellName2>ExtDBGrid149CRIRC170</cellName2>
+		<value1>1000</value1>
+		<value2>2,016</value2>
+		<ColumnName>ITEM</ColumnName>
+		<expression>IF(CRIRC180>3, YEAR(FORMVAR[CRIR_Reporting_Date]), 2000)</expression>
+		<itemName>CRIR_Reporting_Date</itemName>
+		<desc>CRIR Reporting Date</desc>
+		<cellID>ExtDBGrid1CRIRC120</cellID>
+		<ValueOfAl>06/30/2016</ValueOfAl>
+	</C6757>
+</FormVariabel>		
+		
+		
+		

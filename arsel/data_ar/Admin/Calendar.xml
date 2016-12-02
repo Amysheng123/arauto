@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Calendar>
+    <C3462>
+        <CalendarName>US - Federal</CalendarName>
+        <Label1>Name</Label1>
+        <Label2>Weekends</Label2>
+        <Label3>Non working days - List</Label3>
+        <Label3>Non working days - Pattern</Label3>
+    </C3462>
+
+    <C3463>
+        <ScheduleName>3463</ScheduleName>
+        <RecPatternType>Every day of month</RecPatternType>
+        <LabelName>Name</LabelName>
+        <LabelDesc>Description</LabelDesc>
+        <LabelRecPattern>Recurring Pattern</LabelRecPattern>
+        <LabelBasedOnCal>Based on calendar</LabelBasedOnCal>
+        <LableDaily1>Every day of month</LableDaily1>
+        <LableDaily2>Last day of month</LableDaily2>
+        <LableDaily3>Last work day of month</LableDaily3>
+        <LableDaily4>Nearest weekday</LableDaily4>
+        <DailyDropdown1>dayFrom</DailyDropdown1>
+        <DailyDropdown2>dayTo</DailyDropdown2>
+        <DailyDropdown3>dayFromNearest</DailyDropdown3>
+        <RecPattTab1>Weekly</RecPattTab1>
+        <RecPattTab2>Monthly</RecPattTab2>
+        <RecPattTab3>Yearly</RecPattTab3>
+        <LabelWeekly1>Every day of week</LabelWeekly1>
+        <LabelWeekly2>Last day of week</LabelWeekly2>
+        <WeeklyDropdown1>weekFrom</WeeklyDropdown1>
+        <WeeklyDropdown2>weekTo</WeeklyDropdown2>
+        <WeeklyDropdown3>weekNthSelect</WeeklyDropdown3>
+        <WeeklyDropdown4>weekDayNthSelect</WeeklyDropdown4>
+        <LabelMonthly1>Every month</LabelMonthly1>
+        <MonthlyDropdown1>monthFrom</MonthlyDropdown1>
+        <MonthlyDropdown1>monthTo</MonthlyDropdown1>
+        <LabelYearly>Every year</LabelYearly>
+        <LabelBOC1>On this day exactly</LabelBOC1>
+        <LabelBOC2>Last working day before</LabelBOC2>
+        <LabelBOC3>First working day after</LabelBOC3>
+    </C3463>
+
+    <C3531>
+        <ScheduleName1>3531</ScheduleName1>
+        <Description1>sch1</Description1>
+        <DailyAddButton1>Every day of month</DailyAddButton1>
+        <DailyAddButton2>From</DailyAddButton2>
+        <DailyAddButton3>Last day of month</DailyAddButton3>
+        <DailyAddButton4>Last work day of month</DailyAddButton4>
+        <DailyFrom>1</DailyFrom>
+        <DailyTo>25</DailyTo>
+        <DailyInterval>3</DailyInterval>
+        <BasedOnCal1>On this day exactly</BasedOnCal1>
+        <DailyDropdown1>dayFrom</DailyDropdown1>
+        <DailyDropdown2>dayTo</DailyDropdown2>
+        <DailyInput1>dayIncrement</DailyInput1>
+        <Description2>sch2</Description2>
+        <RecPatternTab>Weekly</RecPatternTab>
+        <WeeklyAddButton>Every day of week</WeeklyAddButton>
+        <BasedOnCal2>First working day after</BasedOnCal2>
+        <Msg>The schedule 3531 is used</Msg>
+    </C3531>
+
+    <C3530>
+        <CalName>3530</CalName>
+        <Saturday>Saturday</Saturday>
+        <Sunday>Sunday</Sunday>
+        <Monday>Monday</Monday>
+        <Msg>The calendar 3530 is used</Msg>
+    </C3530>
+
+    <C3494>
+        <CalName1>34941</CalName1>
+        <Saturday>Saturday</Saturday>
+        <Sunday>Sunday</Sunday>
+        <NonWorkingDaysListDesc>auto</NonWorkingDaysListDesc>
+        <Date1>30/10/2016</Date1>
+        <CalName2>34942</CalName2>
+        <Monday>Monday</Monday>
+        <NonWorkingDayPatDesc>autoo</NonWorkingDayPatDesc>
+        <DailyAddButton>Every day of month</DailyAddButton>
+        <Msg>Are you sure you want to remove this calendar?</Msg>
+    </C3494>
+
+    <C3529>
+        <EntityName>35292</EntityName>
+        <Prefix>ECR</Prefix>
+        <Returns>C101 v1#C102 v1#C103 v1#C104 v1#C105 v1#C106 v1#C107 v1#C108 v1#C109 v1#C110 v1#C66 v1#C67 v1#C68 v1#C69 v1#C70 v1#C71 v1</Returns>
+        <Ugs>rpadmin_grp</Ugs>
+        <Pgs>Return Maker#Return Viewer#Return Submitter#Return Approver</Pgs>
+        <SchName>35292</SchName>
+        <DailyType>Every day of month</DailyType>
+        <Regulator>European Common Reporting XBRL</Regulator>
+    </C3529>
+
+    <C3528>
+        <SchName1>35281</SchName1>
+        <Desc1>35281</Desc1>
+        <DailyAddBtn1>Every day of month</DailyAddBtn1>
+        <DailyFromDropdown>dayFrom</DailyFromDropdown>
+        <DailyToDropdown>dayTo</DailyToDropdown>
+        <DailyInput>dayIncrement</DailyInput>
+        <DailyFromValue>1</DailyFromValue>
+        <DailyToValue>5</DailyToValue>
+        <DailyIntervalValue>2</DailyIntervalValue>
+        <DailyAddBtn2>From</DailyAddBtn2>
+        <BasedOnCalendar1>On this day exactly</BasedOnCalendar1>
+        <SchName2>35282</SchName2>
+        <Desc2>35282</Desc2>
+        <RecPatternTab>Weekly</RecPatternTab>
+        <WeeklyAddBtn1>Every day of week</WeeklyAddBtn1>
+        <BasedOnCal2>Last working day before</BasedOnCal2>
+        <Value>UK - Northern Ireland</Value>
+        <ExistPat1>every day of week</ExistPat1>
+        <WeeklyAddBtn2>Last day of week</WeeklyAddBtn2>
+        <ExistPat2>every last day of week</ExistPat2>
+        <DeleteMsg>Are you sure you want to remove this schedule?</DeleteMsg>
+    </C3528>
+</Calendar>

@@ -1,0 +1,9 @@
+{
+  "name":"Z_Compute",
+  "configPrefix" : "HKMA",
+  "computeJobs" : [{
+    "formName" : "Z",
+    "formVersion" : 0,
+    "entityCode" : "0007"
+  }]
+}

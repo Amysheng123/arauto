@@ -4,7 +4,7 @@
 
     <groupId>com.lombardrisk</groupId>
     <artifactId>arauto</artifactId>
-    <version>1.8.0-SNAPSHOT</version>
+    <version>1.15.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>AgileREPORTER Automation Test Project</name>

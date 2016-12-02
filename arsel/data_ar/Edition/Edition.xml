@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Edition>
+    <C4042>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4042>
+	
+	<C4043>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+		<ImportFile>FRY10_v1_2999_01062016.xlsx</ImportFile>
+    </C4043>
+	
+	<C4044>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4044>
+	
+	<C4045>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4045>
+	
+	<C4046>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4046>
+	
+	<C4303>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4303>
+	
+	<C4048>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4048>
+	
+	<C4050>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4050>
+	
+	<C4282>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4282>
+	
+	<C4051>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+		<CellName>REPORTNAME</CellName>
+    </C4051>
+	
+	<C4052>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+		<CellName>REPORTNAME</CellName>
+    </C4052>
+	
+	<C4053>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4053>
+	
+	<C4054>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>FRY10 v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4054>
+	
+	<C4287>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>2999</Entity>
+        <Form>TICS v1</Form>
+        <ReferenceDate>01/06/2016</ReferenceDate>
+    </C4287>
+	
+</Edition>		
+		
+		
+		

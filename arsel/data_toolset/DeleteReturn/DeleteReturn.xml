@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DeleteReturn>
+    <C5629>
+        <Regulator>European Common Reporting</Regulator>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>04/04/2016</ReferenceDate>
+    </C5629>
+    
+     <C5632>
+        <Regulator>European Common Reporting</Regulator>
+        <Entity>2999</Entity>
+        <Form>CREI v3</Form>
+        <ReferenceDate>31/07/2015</ReferenceDate>
+    </C5632>
+    
+    <C5631>
+        <Regulator>European Common Reporting</Regulator>
+        <Entity>2999</Entity>
+        <Form>CAGS v4</Form>
+        <ReferenceDate>04/04/2016</ReferenceDate>
+    </C5631>
+    
+</DeleteReturn>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow>
+    <C3945>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>A1</Group>
+        <Form>FR2052B v1</Form>
+        <ProcessDate>30/05/2016</ProcessDate>
+        <UserNameA>UserA</UserNameA>
+        <ExpectedCountA>(0/3)</ExpectedCountA>
+        <UserNameB>UserB</UserNameB>
+        <ExpectedCountB>(1/3)</ExpectedCountB>
+        <UserNameC>UserC</UserNameC>
+        <ExpectedCountC>(2/3)</ExpectedCountC>
+        <UserNameD>UserD</UserNameD>
+        <ExpectedCountD>(3/3)</ExpectedCountD>
+    </C3945>
+
+
+    <C3960>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>A1</Group>
+        <Form>FR2052B v1</Form>
+        <ProcessDate>31/05/2016</ProcessDate>
+        <UserName>UserA</UserName>
+        <Status1>unlock#unknown#unknown#not attested</Status1>
+        <CellName>LMCX8901</CellName>
+        <Status2>unlock#unknown#unknown#not attested</Status2>
+    </C3960>
+
+
+    <C3961>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>A1</Group>
+        <Form>FR2052B v1</Form>
+        <ProcessDate>30/05/2016</ProcessDate>
+        <UserName>UserA</UserName>
+        <Status1>unlock#unknown#unknown#not attested</Status1>
+        <CellName>LMCX8901</CellName>
+        <Status2>unlock#unknown#unknown#not attested</Status2>
+    </C3961>
+    
+    <C6125>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>A1</Group>
+        <Form>FR2052B v1</Form>
+        <ProcessDate>31/05/2016</ProcessDate>
+        <UserNameA>UserA</UserNameA>
+        <UserNameB>UserB</UserNameB>
+        <Status1>unlock#unknown#unknown#not attested</Status1>
+        <CellName>LMCX8901</CellName>
+        <Status2>unlock#unknown#unknown#not attested</Status2>
+    </C6125>
+    
+
+    <C3966>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>A1</Group>
+        <Form>FR2052B v1</Form>
+        <ProcessDate>31/05/2016</ProcessDate>
+        <UserNameA>UserA</UserNameA>
+        <UserNameB>UserB</UserNameB>
+        <ApproveMsg>Cannot be approved twice by the same user.</ApproveMsg>
+        <RejectMsg>Cannot be rejected by the user who has approved the return.</RejectMsg>
+    </C3966>
+    
+     <C3915>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+    </C3915>
+
+	<C3916>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FR2644 v2</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+		<Message>Cannot submit attestation due to validation failure.</Message>
+    </C3916>
+    
+	<C3917>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserNameA>maker</UserNameA>
+		<UserNameB>Submitter</UserNameB>
+		 <Message>Cannot be approved twice by the same user.</Message>
+    </C3917>
+    
+    <C3955>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>full</UserName>
+		 <ApproveMessage>Cannot be approved by the user who has created or modified the return.</ApproveMessage>
+		 <RejectMessage>Cannot be rejected by the user who has created or modified the return.</RejectMessage>
+    </C3955>
+    
+    <C3965>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>full</UserName>
+		<ImportFile>FFIEC030_v1_002_31052016.xlsx</ImportFile>
+    </C3965>
+    
+     <C3929>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserNameA>maker</UserNameA>
+		<UserNameB>Submitter</UserNameB>
+    </C3929>
+    
+    <C3931>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>full</UserName>
+    </C3931>
+    
+    <C3932>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserNameA>maker</UserNameA>
+		<UserNameB>Submitter</UserNameB>
+		<UserNameC>full</UserNameC>
+    </C3932>
+    
+    
+	<C3943>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+    </C3943>
+    
+    <C6067>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+    </C6067>
+    
+    <C3919>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+    </C3919>
+    
+    <C3918>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+    </C3918>
+    
+    <C3926>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+    </C3926>
+
+	<C3930>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Group>002</Group>
+        <Form>FFIEC030 v1</Form>
+		<ProcessDate>31/05/2016</ProcessDate>
+		<UserName>maker</UserName>
+    </C3930>    
+    
+</Workflow>
+		
+		
+		

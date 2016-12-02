@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DropDown>
+    <C6298>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>GeneralInformation_P1</Page>
+		<Cell>RBIRLCREPSTATUS</Cell>
+		<Setp6>RA</Setp6>
+		<Step9>RAB1</Step9>
+		<Step9_2>!@#$%^~*()_+</Step9_2>
+		<Step10>RAB1</Step10>
+	</C6298>
+	
+	<C6300>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>SectionA_P2</Page>
+		<Insert>RBIRLCV2P002GRDRBIRLCP002C0010</Insert>
+		<Cell>RBIRLCV2P002GRD49RBIRLCP002C0040</Cell>
+		<Setp6>RA</Setp6>
+		<Step9>RAB1</Step9>
+		<Step10>RAB1</Step10>
+	</C6300>
+	
+	<C6303>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>GeneralInformation_P1</Page>
+		<Edit1>RBIRLCNILREP#A</Edit1>
+		<Cell>RBIRLCBANKCAT</Cell>
+		<Setp7_1>1</Setp7_1>
+		<Setp7_2>A1,A10,A11,A12,A13,A14,A15,A16,A17,A18</Setp7_2>
+		<Edit2>RBIRLCNILREP#B</Edit2>
+		<Setp9_1>B</Setp9_1>
+		<Setp9_2>B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,B13,B14,B15,B16,B17,B18</Setp9_2>
+	</C6303>
+	
+	<C6318>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>SectionA_P2</Page>
+		<Insert>RBIRLCV2P002GRDRBIRLCP002C0010</Insert>
+		<Edit1>RBIRLCV2P002GRD49RBIRLCP002C0060#A</Edit1>
+		<Cell>RBIRLCV2P002GRD49RBIRLCP002C0070</Cell>
+		<Setp7_1>1</Setp7_1>
+		<Setp7_2>A1,A10,A11,A12,A13,A14,A15,A16,A17,A18</Setp7_2>
+		<Edit2>RBIRLCV2P002GRD49RBIRLCP002C0060#B</Edit2>
+		<Setp9_1>B</Setp9_1>
+		<Setp9_2>B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,B13,B14,B15,B16,B17,B18</Setp9_2>
+	</C6318>
+	
+	
+	<C6374>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>SectionA_P2</Page>
+		<Insert>RBIRLCV2P002GRDRBIRLCP002C0010</Insert>
+		<Edit>RBIRLCV2P002GRD49RBIRLCP002C0060#A/RBIRLCV2P002GRD49RBIRLCP002C0070#A1</Edit>
+		<FileName>RLC_v2_0001_31082016.xlsx</FileName>
+		<ExpectCellValue>RBIRLCV2P002GRD49RBIRLCP002C0060#D/RBIRLCV2P002GRD49RBIRLCP002C0070#D1</ExpectCellValue>
+		<CheckCellFile>RLCv2_ExpectedValue.xlsx</CheckCellFile>
+	</C6374>
+	
+	
+	<C6605>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>SectionB_P3</Page>
+		<Insert>RBIRLCV2P003GRDRBIRLCP003C0010</Insert>
+		<EditCell>RBIRLCV2P003GRD_INNER49RBIRLCP003C0130</EditCell>
+		<EditValue>1/2~ab / 1</EditValue>
+	</C6605>
+	
+	<C6606>
+		<Regulator>Reserve Bank of India For Auto</Regulator>
+		<Entity>0001</Entity>
+		<Form>RLC v2</Form>
+		<ReferenceDate>31/08/2016</ReferenceDate>
+		<Page>SectionB_P3</Page>
+		<Insert>RBIRLCV2P003GRDRBIRLCP003C0010</Insert>
+		<EditCell>RBIRLCV2P003GRD49RBIRLCP003C0060</EditCell>
+		<EditValue>999.00~Not selected</EditValue>
+		<ExpectedValue>1000~NULL</ExpectedValue>
+	</C6606>
+
+</DropDown>		
+		
+		
+		

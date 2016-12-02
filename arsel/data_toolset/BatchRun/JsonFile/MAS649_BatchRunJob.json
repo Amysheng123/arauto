@@ -1,0 +1,17 @@
+{
+  "configPrefix":"MAS",
+  "name":"MAS649_BatchRun",
+  "batchRunJobs" : [ {
+   
+    "name" : "MASMAPEDM",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "MASPREPRO",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "MAS649",
+    "abortOnFailure" : "false"
+  }  ]
+}

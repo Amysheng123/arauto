@@ -1,0 +1,22 @@
+{
+  "configPrefix":"MAS",
+  "name":"MAS649_Product",
+  "batchRunJobs" : [ {
+   
+    "name" : "MASMAPEDM",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "MASPREPRO",
+    "abortOnFailure" : "false"
+  }, {
+   
+    "name" : "MAS649",
+    "abortOnFailure" : "false"
+  } ],
+  "computeJobs" : [{
+    "formName" : "MAS649",
+    "formVersion" : 1,
+    "entityCode" : "0013"
+  }]
+}

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UpdateForm>
+    <C4102>
+    	<Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+    </C4102>
+    
+    <C4345>
+    	<Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+    </C4345>
+    
+    <C4099>
+    	<Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>600</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>800</CellValueNew>
+    </C4099>
+
+    <C4100>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>600</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>8000</CellValueNew>
+        <Type>discard</Type>
+    </C4100>
+
+    <C4101>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>600</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>7000</CellValueNew>
+        <Type>preserve</Type>
+    </C4101>
+
+    <C4343>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>0</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>6000</CellValueNew>
+        <Type>discard</Type>
+    </C4343>
+
+    <C4344>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>0</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>7000</CellValueNew>
+        <Type>preserve</Type>
+    </C4344>
+
+    <C4441>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>0</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>7000</CellValueNew>
+        <InstanceId>5</InstanceId>
+    </C4441>
+
+    <C6452>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>0</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>7000</CellValueNew>
+        <InstanceId>5</InstanceId>
+        <Type>preserve</Type>
+    </C6452>
+
+    <C6453>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>0</CellValue>
+        <CellValueEdit>7000</CellValueEdit>
+        <CellValueNew>7000</CellValueNew>
+        <InstanceId>5</InstanceId>
+        <Type>discard</Type>
+    </C6453>
+
+    <C4444>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>600</CellValue>
+        <InstanceId>411</InstanceId>
+    </C4444>
+
+    <C6455>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>600</CellValue>
+        <InstanceId>411</InstanceId>
+        <Type>preserve</Type>
+    </C6455>
+
+    <C6454>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <CellValue>600</CellValue>
+        <InstanceId>411</InstanceId>
+        <Type>discard</Type>
+    </C6454>
+
+    <C4447>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY14ASUMM v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY14ASUMM</FormCode>
+        <PageName>PPNR Metrics 6 of 6</PageName>
+        <CellName>FEDFRY14ASUMP091R1500C0010</CellName>
+        <CellValue>automation</CellValue>
+        <InstanceId>416</InstanceId>
+        <RowNO>5</RowNO>
+    </C4447>
+
+    <C6457>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY14ASUMM v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY14ASUMM</FormCode>
+        <PageName>PPNR Metrics 6 of 6</PageName>
+        <CellName>FEDFRY14ASUMP091R1500C0010</CellName>
+        <CellValue>automation</CellValue>
+        <InstanceId>416</InstanceId>
+        <RowNO>5</RowNO>
+        <Type>preserve</Type>
+    </C6457>
+
+    <C6456>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY14ASUMM v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY14ASUMM</FormCode>
+        <PageName>PPNR Metrics 6 of 6</PageName>
+        <CellName>FEDFRY14ASUMP091R1500C0010</CellName>
+        <CellValue>automation</CellValue>
+        <InstanceId>416</InstanceId>
+        <RowNO>5</RowNO>
+        <Type>discard</Type>
+    </C6456>
+
+    <C4450>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY14ASUMM v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY14ASUMM</FormCode>
+        <PageName>PPNR Metrics 6 of 6</PageName>
+        <CellName>FEDFRY14ASUMP091R1500C0030</CellName>
+        <CellValue>46.50</CellValue>
+        <InstanceId>416</InstanceId>
+        <RowNO>5</RowNO>
+    </C4450>
+
+    <C6459>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY14ASUMM v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY14ASUMM</FormCode>
+        <PageName>PPNR Metrics 6 of 6</PageName>
+        <CellName>FEDFRY14ASUMP091R1500C0030</CellName>
+        <CellValue>46.50</CellValue>
+        <InstanceId>416</InstanceId>
+        <RowNO>5</RowNO>
+        <Type>preserve</Type>
+    </C6459>
+
+    <C6458>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY14ASUMM v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY14ASUMM</FormCode>
+        <PageName>PPNR Metrics 6 of 6</PageName>
+        <CellName>FEDFRY14ASUMP091R1500C0030</CellName>
+        <CellValue>46.50</CellValue>
+        <InstanceId>416</InstanceId>
+        <RowNO>5</RowNO>
+        <Type>discard</Type>
+    </C6458>
+
+    <C4373>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <UpdateCellValue>7000</UpdateCellValue>
+        <InitCellValue>6000</InitCellValue>
+    </C4373>
+
+    <C6451>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <UpdateCellValue>7000</UpdateCellValue>
+        <InitCellValue>6000</InitCellValue>
+        <Type>discard</Type>
+    </C6451>
+
+    <C6450>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <PageName>Sch HI (1 of 4)</PageName>
+        <CellId>BHCK4020</CellId>
+        <UpdateCellValue>7000</UpdateCellValue>
+        <InitCellValue>6000</InitCellValue>
+        <Type>preserve</Type>
+    </C6450>
+
+    <C4417>
+        <Regulator>US1 FED Reserve SP0</Regulator>
+        <Group>0001</Group>
+        <Form>FRY9C v1</Form>
+        <ReferenceDate>30/09/2014</ReferenceDate>
+        <Version>1</Version>
+        <FormCode>FRY9C</FormCode>
+        <WarningMsg>Current return is locked and cannot be overridden. Open and unlock the form first.</WarningMsg>
+    </C4417>
+</UpdateForm>		
+		
+		
+		

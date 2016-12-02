@@ -1,0 +1,314 @@
+<Root Form="DSFR10" Version="1" EntityCode="0001" ReferenceDate="20151231">
+
+<EntityLevelVariables>
+       <variableName>F_Reporting_Currency</variableName>
+        <label>FED Reporting Currency</label>
+        <description>FED Reporting Currency</description >
+               <value></value>
+       <variableName>F_Financial_Year_End</variableName>
+        <label>FED Financial Year End</label>
+        <description>FED Financial Year End</description >
+                <value>20201231</value>
+</EntityLevelVariables>
+
+<FormLevelVariables>
+</FormLevelVariables>
+<Table10 Form="DSFR10" Version="1" EntityCode="0001" ReferenceDate="20151231">
+
+<EntityLevelVariables>
+       <variableName>F_Reporting_Currency</variableName>
+        <label>FED Reporting Currency</label>
+        <description>FED Reporting Currency</description >
+               <value></value>
+       <variableName>F_Financial_Year_End</variableName>
+        <label>FED Financial Year End</label>
+        <description>FED Financial Year End</description >
+                <value>20201231</value>
+</EntityLevelVariables>
+
+<FormLevelVariables>
+</FormLevelVariables>
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2="A,1,B,2"
+Field12="-100"
+Field44="28/07/2016 00:00:00"
+Field45="apple"
+Field46="20"
+</Record> 
+	
+<keyword Field1="" Field2="28/07/2016 00:00:00" Field3="apple" Field4="20">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="testabcdefg3"
+Field2="E,1,F,2"
+Field12="500"
+Field44="06/07/2016 00:00:00"
+Field45="grubby"
+Field46="4"
+</Record> 
+	
+<keyword Field1="testabcdefg3" Field2="06/07/2016 00:00:00" Field3="grubby" Field4="4">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2="A,1,B,2"
+Field12="-100"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2=""
+Field12="-200"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2="C,1,D,2"
+Field12="-300"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2=""
+Field12="-400"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="curry,lerbon"
+Field2="E,1,F,2"
+Field12="-501"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="curry,lerbon" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="AAAAAAnyone!"
+Field2="E,1,F,2"
+Field12="500"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="AAAAAAnyone!" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="AAAAAAple"
+Field2="C,1,D,2"
+Field12="300"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="AAAAAAple" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="testabcdefg1"
+Field2=""
+Field12="400"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="testabcdefg1" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="testabcdefg2"
+Field2="E,1,F,2"
+Field12="500"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="testabcdefg2" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2=""
+Field12="-200"
+Field44="28/07/2016 00:00:00"
+Field45="Gua"
+Field46="10"
+</Record> 
+	
+<keyword Field1="" Field2="28/07/2016 00:00:00" Field3="Gua" Field4="10">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="testabcdefg3"
+Field2="E,1,F,2"
+Field12="500"
+Field44=""
+Field45=""
+Field46=""
+</Record> 
+	
+<keyword Field1="testabcdefg3" Field2="" Field3="" Field4="">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2="C,1,D,2"
+Field12="-300"
+Field44="28/07/2016 00:00:00"
+Field45="cao"
+Field46="28"
+</Record> 
+	
+<keyword Field1="" Field2="28/07/2016 00:00:00" Field3="cao" Field4="28">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+
+Field2=""
+Field12="-400"
+Field44="28/07/2016 00:00:00"
+Field45="li"
+Field46="22"
+</Record> 
+	
+<keyword Field1="" Field2="28/07/2016 00:00:00" Field3="li" Field4="22">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="curry,lerbon"
+Field2="E,1,F,2"
+Field12="-501"
+Field44="28/07/2016 00:00:00"
+Field45="geng"
+Field46="1"
+</Record> 
+	
+<keyword Field1="curry,lerbon" Field2="28/07/2016 00:00:00" Field3="geng" Field4="1">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="AAAAAAnyone!"
+Field2="E,1,F,2"
+Field12="500"
+Field44="28/07/2016 00:00:00"
+Field45="wulei"
+Field46="7"
+</Record> 
+	
+<keyword Field1="AAAAAAnyone!" Field2="28/07/2016 00:00:00" Field3="wulei" Field4="7">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="AAAAAAple"
+Field2="C,1,D,2"
+Field12="300"
+Field44="28/07/2016 00:00:00"
+Field45="nedved"
+Field46="11"
+</Record> 
+	
+<keyword Field1="AAAAAAple" Field2="28/07/2016 00:00:00" Field3="nedved" Field4="11">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="testabcdefg1"
+Field2=""
+Field12="400"
+Field44="28/07/2016 00:00:00"
+Field45="rocisky"
+Field46="10"
+</Record> 
+	
+<keyword Field1="testabcdefg1" Field2="28/07/2016 00:00:00" Field3="rocisky" Field4="10">
+<Test Form="DSFR10" >
+<FormLevelVariables>
+</FormLevelVariables>
+
+<Record>
+Field2="testabcdefg2"
+Field2="E,1,F,2"
+Field12="500"
+Field44="28/07/2016 00:00:00"
+Field45="cech"
+Field46="1"
+</Record> 
+	
+<keyword Field1="testabcdefg2" Field2="28/07/2016 00:00:00" Field3="cech" Field4="1">
+<Test Form="1" >
+</table10>
+<Test Form="1" >
+</Root>

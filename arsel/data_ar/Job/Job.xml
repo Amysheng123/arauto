@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Job>
+	<C5749>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Form>DSFR07 v1</Form>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+		<Status>FAILURE</Status>
+	</C5749>
+	
+	<C5800>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Form>DSFR04 v2</Form>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+		<Status>SUCCESS</Status>
+	</C5800>
+	
+	<C5738>
+		<Regulator>US1 FED Reserve DS</Regulator>
+	</C5738>
+	
+	<C5819>
+		<Regulator>US1 FED Reserve DS</Regulator>
+	</C5819>
+	
+	<C5991>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C5991>
+	
+	<C5912>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Form>DSFR02 v1</Form>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+		<BackupTable1>MV_DSFR02_DS_BAK</BackupTable1>
+		<BackupTable2>MV_DSFR02_DS_AUTO</BackupTable2>
+		<PhysicalViewName>MV_DSFR02_DS</PhysicalViewName>
+	</C5912>
+	
+	<C6009>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C6009>
+	
+	<C6011>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C6011>
+	
+	<C6012>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C6012>
+	
+	<C6014>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C6014>
+	
+	<C6015>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C6015>
+	
+	<C5728>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C5728>
+	
+	<C5895>
+		<Columns>NAME#REFERENCE DATE#RUN TYPE#STARTED#COMPLETED#STATUS#STARTED BY#STATUS MESSAGE#PROGRESS (%)</Columns>
+	</C5895>
+	
+	<C5897>
+		<Columns>NAME#REFERENCE DATE#RUN TYPE#STARTED#COMPLETED#STATUS#STARTED BY#STATUS MESSAGE#PROGRESS (%)</Columns>
+	</C5897>
+	
+	<C5989>
+		<Regulator>US1 FED Reserve SP0</Regulator>
+		<Entity>0001</Entity>
+		<Form>FRY9C v1</Form>
+		<RerenceDate>31/12/2015</RerenceDate>
+	</C5989>
+	
+	<C5982>
+		<Entity>0001</Entity>
+		<Location>C:\Documents\DSExport</Location>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Form>DSFR03 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ExportType>DS</ExportType>
+		<Module>DataSchedule-DSFR03</Module>
+		<ErrorMessage>Can not find the network location by the entity code: 0001</ErrorMessage>
+	</C5982>
+	
+	<C6030>
+		<Entity>0001</Entity>
+		<Location>C:\Documents\DSExport</Location>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Form>DSFR03 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ExportType>DS</ExportType>
+		<Module>DataSchedule-DSFR03</Module>
+		<JobStatus>FAILURE</JobStatus>
+		<ErrorMessage>Access network location C:\Documents\DSExport2\Submission\FED_DS\0001\20151231 is denied.</ErrorMessage>
+		<Location2>C:\Documents\DSExport2</Location2>
+	</C6030>
+	
+	<C6033>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<Form>DSFR08 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ExportType>DS</ExportType>
+		<Module>DataSchedule-DSFR08</Module>
+		<Filed>S_A_1#S_A_2_1#N_SCENARIO_CD</Filed>
+		<JobStatus>FAILURE</JobStatus>
+		<ErrorMessage>Export Job failed due to Field ': "S_A_2_1"' not found in view 'MV_DSFR08'.</ErrorMessage>
+	</C6033>
+	
+	<C6049>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<Form>DSFR08 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ExportType>DS</ExportType>
+		<Module>DataSchedule-DSFR08</Module>
+		<ErrorMessage>The physical table or view {MV_DSFR08_DS} is not exist!</ErrorMessage>
+	</C6049>
+	
+	<C5948>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<Form>DSFR02 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ExportType>DS(csv)</ExportType>
+		<Module>DataSchedule-DSFR02</Module>
+		<BackupTable1>MV_DSFR02_DS_BAK</BackupTable1>
+		<BackupTable2>MV_DSFR02_DS_AUTO2</BackupTable2>
+		<PhysicalViewName>MV_DSFR02_DS</PhysicalViewName>
+	</C5948>
+	
+	<C6126>
+		<Regulator>US1 FED Reserve DS</Regulator>
+		<Entity>0001</Entity>
+		<Form>DSFR02 v2</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ExportType>DS</ExportType>
+		<Module>DataSchedule-DSFR02v2</Module>
+		<PhysicalViewName>MV_DSFR02_DSV2</PhysicalViewName>
+	</C6126>
+	
+</Job>

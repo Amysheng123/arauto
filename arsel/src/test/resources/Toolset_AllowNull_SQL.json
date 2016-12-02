@@ -1,0 +1,29 @@
+[
+  {
+    "applicationServers": [
+      {
+        "id": 0,
+        "name": "default",
+        "url": "http://172.20.31.33:8082",
+        "username": "rpadmin",
+        "password": "password"
+      }
+    ],
+    "databaseServers": [
+      {
+        "id": 0,
+        "name": "ap_database",
+        "driver": "sqlserver",
+        "host": "172.20.20.230\\sql12",
+        "schema": "AR_AUTO_TOOLSET_OWNER"
+      },
+      {
+        "id": 1,
+        "name": "toolset_database",
+        "driver": "sqlserver",
+        "host": "172.20.20.230\\sql12",
+        "schema": "AR_AUTO_TOOLSET_SYSTEM_ALLOWNULL"
+      }
+    ]
+  }
+]

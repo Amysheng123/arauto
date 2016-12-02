@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HighLight>
+    <C5769>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA045 v2</Form>
+        <ReferenceDate>21/01/2013</ReferenceDate>
+        <Red>F45R5C3#F45R5C4#F45R11C8</Red>
+        <Yellow>F45R11C3#F45R17C4</Yellow>
+    </C5769>
+
+    <C5772>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA045 v2</Form>
+        <ReferenceDate>22/01/2013</ReferenceDate>
+        <Orange>F45R5C3[all]</Orange>
+        <Yellow>F45R29C4[all]</Yellow>
+    </C5772>
+	
+    <C5775>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA001 v2</Form>
+        <ReferenceDate>25/01/2013</ReferenceDate>
+        <Red>F1R5C1#F1R5C2</Red>
+        <Yellow>F1R21C1</Yellow>
+    </C5775>
+
+    <C5776>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA001 v2</Form>
+        <ReferenceDate>26/01/2013</ReferenceDate>
+        <EditCell>F1R55C1</EditCell>
+        <Purple>F1R54C1[all]</Purple>
+    </C5776>
+
+    <C5777>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA001 v2</Form>
+        <ReferenceDate>27/01/2013</ReferenceDate>
+        <Rule>Validation 2#Validation 3#Validation 7</Rule>
+        <Page>Page 1#Page 1/Page 2#Page 2</Page>
+    </C5777>
+
+    <C5778>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA001 v2</Form>
+        <ReferenceDate>28/01/2013</ReferenceDate>
+        <Cell>F1R5C1#F1R21C1</Cell>
+        <Rule>Validation 2/Validation 3#Validation 3/Validation 4/Validation 8</Rule>
+    </C5778>
+
+    <C5779>
+        <Regulator>Test Product IMP</Regulator>
+        <Entity>2999</Entity>
+        <Form>FSA001 v2</Form>
+        <ReferenceDate>29/01/2013</ReferenceDate>
+        <Cell>F1R5C1</Cell>
+        <Rule>Validation 2#Validation 3#Validation 8</Rule>
+    </C5779>
+
+</HighLight>

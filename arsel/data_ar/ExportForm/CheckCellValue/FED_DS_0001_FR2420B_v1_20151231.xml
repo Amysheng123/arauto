@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formInstancesExport xmlns="http://www.lombardrisk.com/message/ocelot-exp-imp">
+    <reportingEntities>
+        <reportingEntity id="id_10052">
+            <name>0001</name>
+            <description>0001</description>
+            <canReport>true</canReport>
+            <reportingEntityVariables/>
+        </reportingEntity>
+    </reportingEntities>
+    <formInstances>
+        <formInstance referenceDate="2015-12-31" reportingEntityId="id_10052">
+            <formId>
+                <toolsetFormId>
+                    <returnId>30035</returnId>
+                </toolsetFormId>
+            </formId>
+            <formInstanceIds>
+                <toolsetFormInstanceId>
+                    <processDate>2015-12-31</processDate>
+                    <returnId>30035</returnId>
+                    <entityId>10052</entityId>
+                </toolsetFormInstanceId>
+            </formInstanceIds>
+            <tables>
+                <table tableCode="F2420BP1">
+                    <openYKeyColumns>
+                        <openKeyColumn>F2420AP2KEY</openKeyColumn>
+                    </openYKeyColumns>
+                    <tableCell xOrd="F2420AP2KEY" yOrd="665a3abd55c0eb9242ae61187b48cd7b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="F2420AP27333" yOrd="665a3abd55c0eb9242ae61187b48cd7b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">960024</tableCell>
+                    <tableCell xOrd="F2420AP29914" yOrd="665a3abd55c0eb9242ae61187b48cd7b" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2015-12-30</tableCell>
+                    <tableCell xOrd="F2420AP2N187" yOrd="665a3abd55c0eb9242ae61187b48cd7b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">800000</tableCell>
+                    <tableCell xOrd="F2420AP2N186" yOrd="665a3abd55c0eb9242ae61187b48cd7b" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">US</tableCell>
+                    <tableCell xOrd="F2420AP2KEY" yOrd="3644a684f98ea8fe223c713b77189a77" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="F2420AP27333" yOrd="3644a684f98ea8fe223c713b77189a77" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1600</tableCell>
+                    <tableCell xOrd="F2420AP29914" yOrd="3644a684f98ea8fe223c713b77189a77" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2015-01-31</tableCell>
+                    <tableCell xOrd="F2420AP2N187" yOrd="3644a684f98ea8fe223c713b77189a77" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">569268</tableCell>
+                    <tableCell xOrd="F2420AP2N186" yOrd="3644a684f98ea8fe223c713b77189a77" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">56</tableCell>
+                    <tableCell xOrd="F2420AP2KEY" yOrd="b7a782741f66721b54880c925faec4b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="F2420AP27333" yOrd="b7a782741f66721b54880c925faec4b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">160000</tableCell>
+                    <tableCell xOrd="F2420AP29914" yOrd="b7a782741f66721b54880c925faec4b" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2015-12-30</tableCell>
+                    <tableCell xOrd="F2420AP2N187" yOrd="b7a782741f66721b54880c925faec4b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1987983</tableCell>
+                    <tableCell xOrd="F2420AP2N186" yOrd="b7a782741f66721b54880c925faec4b" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">US</tableCell>
+                    <tableCell xOrd="F2420AP2KEY" yOrd="8f9c1a417155361a5c4b8d297ed78" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="F2420AP27333" yOrd="8f9c1a417155361a5c4b8d297ed78" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">16000</tableCell>
+                    <tableCell xOrd="F2420AP29914" yOrd="8f9c1a417155361a5c4b8d297ed78" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2015-12-31</tableCell>
+                    <tableCell xOrd="F2420AP2N187" yOrd="8f9c1a417155361a5c4b8d297ed78" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">16000</tableCell>
+                    <tableCell xOrd="F2420AP2N186" yOrd="8f9c1a417155361a5c4b8d297ed78" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="F2420AP2KEY" yOrd="144fdd8be805ab7206deaaedc515e71" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">5</tableCell>
+                    <tableCell xOrd="F2420AP27333" yOrd="144fdd8be805ab7206deaaedc515e71" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">640000</tableCell>
+                    <tableCell xOrd="F2420AP29914" yOrd="144fdd8be805ab7206deaaedc515e71" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2015-12-31</tableCell>
+                    <tableCell xOrd="F2420AP2N187" yOrd="144fdd8be805ab7206deaaedc515e71" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">175933</tableCell>
+                    <tableCell xOrd="F2420AP2N186" yOrd="144fdd8be805ab7206deaaedc515e71" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">100</tableCell>
+                    <tableCell xOrd="F2420AP2KEY" yOrd="c4d8eae871684a2bddeb72d46fe8a030" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="F2420AP27333" yOrd="c4d8eae871684a2bddeb72d46fe8a030" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1113650</tableCell>
+                    <tableCell xOrd="F2420AP29914" yOrd="c4d8eae871684a2bddeb72d46fe8a030" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2015-12-31</tableCell>
+                    <tableCell xOrd="F2420AP2N187" yOrd="c4d8eae871684a2bddeb72d46fe8a030" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">2500000</tableCell>
+                    <tableCell xOrd="F2420AP2N186" yOrd="c4d8eae871684a2bddeb72d46fe8a030" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">US</tableCell>
+                    <rows/>
+                </table>
+            </tables>
+            <items>
+                <item itemCode="FEDFR2420BP001DATE" decimals="0" isNull="true" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0"/>
+            </items>
+            <formVariables/>
+        </formInstance>
+    </formInstances>
+</formInstancesExport>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BatchRun>
+	<executeBatchRun>
+		<ARPath>D:\TestEnv\AR_REG_AUTO_ORA</ARPath>
+	</executeBatchRun>
+
+	<C6544>
+		<Type>Alias</Type>
+		<Alias>QATESTDATA#STB HKMA SysLkTxt#QATESTDATAMAS#STB SysLkTxt MAS</Alias>
+		<Path>C:\AUTOTESTDATA\#C:\AUTOTESTDATA\HKMALookup\#C:\AUTOTESTDATA\#C:\AUTOTESTDATA\MASLookup</Path>
+	</C6544>
+
+	<C6552>
+		<JsonFile>FileLoadJob_fixlen.json</JsonFile>
+		<ReferenceDate>2021-12-31</ReferenceDate>
+		<T-Table>T_QAHKMAFA_311221_QHKMA_QHCH</T-Table>
+		<X-Table>X_QAHKMAFA_311221_QHKMA_QHCH</X-Table>
+		<DBIndex>1</DBIndex>
+		<TestDataPath>C:\AUTOTESTDATA\QAHKMAFA</TestDataPath>
+	</C6552>
+
+	<C6609>
+		<JsonFile>CreateHKMAEJob.json</JsonFile>
+		<ReferenceDate>2021-12-31</ReferenceDate>
+		<T-Table>T_HKLEBK_311221_REG_HKMA2004</T-Table>
+		<DBIndex>1</DBIndex>
+	</C6609>
+
+	<C6762>
+		<Type>Alias</Type>
+		<Alias>QATESTDATA</Alias>
+		<Path>C:\AUTOTESTDATA2\</Path>
+		<Message>Physical Location with entity , type StandardAlias already exists.</Message>
+	</C6762>
+
+	<C6492>
+		<JsonFile>BatchRunJob1.json#BatchRunJob1.json</JsonFile>
+		<ReferenceDate>2014-12-31#2015-12-31</ReferenceDate>
+	</C6492>
+
+	<C6493>
+		<JsonFile>KM_ProductJob.json#MAS1105_ProductJob.json </JsonFile>
+		<ReferenceDate>2014-12-31#2015-12-31</ReferenceDate>
+	</C6493>
+
+</BatchRun>

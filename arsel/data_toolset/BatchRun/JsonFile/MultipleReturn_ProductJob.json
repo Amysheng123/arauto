@@ -1,0 +1,13 @@
+{
+  "configPrefix":"HKMA",
+  "name":"Multiple_Return",
+  "computeJobs" : [{
+    "formName" : "KM",
+    "formVersion" : 0,
+    "entityCode" : "0015"
+  },{
+    "formName" : "AA",
+    "formVersion" : 0,
+    "entityCode" : "0001"
+  }]
+}

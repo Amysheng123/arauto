@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export>
+	<C6586>
+		<Regulator>European Common Reporting</Regulator>
+		<Entity>2999</Entity>
+		<Form>CAR v6</Form>
+		<ReferenceDate>02/01/2016</ReferenceDate>
+		<Framework>COREP</Framework>
+		<Taxonomy>COREP 2015-A</Taxonomy>
+		<Module>COREP_Con</Module>
+		<BaseLine>ECR_2999_CAR_v6_20160102.xml</BaseLine>
+		<DBIndex>1</DBIndex>
+
+	</C6586>
+	
+	<C6591>
+		<Regulator>European Common Reporting</Regulator>
+		<Entity>2999</Entity>
+		<Form>CAR v6</Form>
+		<ReferenceDate>02/01/2016</ReferenceDate>
+		<Framework>COREP</Framework>
+		<Taxonomy>COREP 2015-A</Taxonomy>
+		<Module>COREP_Con</Module>
+		<BaseLine>ECR_2999_CAR_v6_20160102.xml</BaseLine>
+		<DBIndex>1</DBIndex>
+	</C6591>
+	
+	<C6697>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0001</Entity>
+		<Form>FC v1</Form>
+		<ReferenceDate>31/12/2014</ReferenceDate>
+	</C6697>
+
+	<C6695>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0001</Entity>
+		<Form>MAS639A v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<ImportFile>MAS_0001_MAS639A_v1_20151231.xlsx</ImportFile>
+		<Module>MAS639A</Module>
+		<CheckCellValue>MAS639A.xlsx</CheckCellValue>
+		<DBIndex>2</DBIndex>
+	</C6695>
+
+	<C6691>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0001</Entity>
+		<Form>MAS1111 v1</Form>
+		<ReferenceDate>31/12/2019</ReferenceDate>
+		<ImportFile>MAS_0001_MAS1111_v1_20161109.xlsx</ImportFile>
+		<Module>MAS1111</Module>
+		<CheckCellValue>MMAS1111.xlsx</CheckCellValue>
+		<DBIndex>2</DBIndex>
+	</C6691>
+
+	<C6696>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0001</Entity>
+		<Form>MAS1111 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<User>NOTransmit</User>
+	</C6696>
+
+	<C6532>
+		<Regulator>European Common Reporting</Regulator>
+		<Entity>2999</Entity>
+		<Form>CRSA v6#MKSE v3</Form>
+		<ReferenceDate>31/07/2015</ReferenceDate>
+		<CreateFile>CRSA_V6_2999_20131231_20140526_16-35-20.xlsx#MKSE_V3_2999_20131231_20140521_22-20-57.xlsx</CreateFile>
+		<Framework>COREP</Framework>
+		<Taxonomy>COREP 2015-A</Taxonomy>
+		<Module>COREP_Ind</Module>
+		<BaseLine>baseline_COREP_Ind_ECR_2999_2015-07-31.xbrl</BaseLine>
+		<DBIndex>1</DBIndex>
+		<Group_Consolidation_Type>I</Group_Consolidation_Type>
+	</C6532>
+
+	<C6567>
+		<Regulator>European Common Reporting</Regulator>
+		<Entity>2999</Entity>
+		<Form>MKSE v3</Form>
+		<Forms>CRSA v6#MKSE v3</Forms>
+		<ReferenceDate>31/07/2015</ReferenceDate>
+		<CreateFile>CRSA_V6_2999_20131231_20140526_16-35-20.xlsx#MKSE_V3_2999_20131231_20140521_22-20-57.xlsx</CreateFile>
+		<Module>COREP_Con</Module>
+		<BaseLine>baseline_COREP_Con_ECR_2999_2015-07-31.xbrl</BaseLine>
+		<DBIndex>1</DBIndex>
+		<Group_Consolidation_Type>P</Group_Consolidation_Type>
+	</C6567>
+
+	<C6568>
+		<Regulator>European Common Reporting</Regulator>
+		<Entity>2999</Entity>
+		<Form>MKSE v3</Form>
+		<ReferenceDate>31/07/2015</ReferenceDate>
+		<Framework>COREP</Framework>
+		<Taxonomy>COREP 2015-A</Taxonomy>
+		<Module>COREP_Ind</Module>
+		<DBIndex>1</DBIndex>
+		<Group_Consolidation_Type>I</Group_Consolidation_Type>
+	</C6568>
+
+	<C6688>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0013</Entity>
+		<Form>AMR2011 v1</Form>
+		<ReferenceDate>31/12/2015</ReferenceDate>
+		<CreateFile>AMR2011_V1_0013_20151231_20160920_15-34-47.xlsx</CreateFile>
+		<ExportTyep>Text(MAS_AMR2011)</ExportTyep>
+		<Module>MAS-AMR2011</Module>
+		<BaseLine>MAS_0013_MAS-AMR2011_20151231.txt</BaseLine>
+	</C6688>
+</Export>

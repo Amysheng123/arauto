@@ -1,0 +1,25 @@
+{
+  "configPrefix":"ECR",
+  "name":"INTEGRATION_ECR",
+  "computeJobs" : [{
+    "formName" : "CVA",
+    "formVersion" : 4,
+    "entityCode" : "0001"
+  },{
+    "formName" : "CAR",
+    "formVersion" : 6,
+    "entityCode" : "0001"
+  },{
+    "formName" : "CRIP",
+    "formVersion" : 2,
+    "entityCode" : "0001"
+  },{
+    "formName" : "CRGB",
+    "formVersion" : 5,
+    "entityCode" : "0001"
+  },{
+    "formName" : "CRIR",
+    "formVersion" : 6,
+    "entityCode" : "0001"
+  } ]
+}

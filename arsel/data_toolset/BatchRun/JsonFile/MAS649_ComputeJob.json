@@ -1,0 +1,9 @@
+{
+  "name":"MAS649_Compute",
+  "configPrefix" : "MAS",
+  "computeJobs" : [{
+    "formName" : "MAS649",
+    "formVersion" : 1,
+    "entityCode" : "0013"
+  }]
+}

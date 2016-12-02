@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EditForm>
+    <C5469>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/12/2015</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5469</Sheet>
+    </C5469>
+
+    <C5470>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/12/2015</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5470</Sheet>
+    </C5470>
+
+    <C5472>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2016</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5472</Sheet>
+    </C5472>
+
+    <C5471>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2016</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5471</Sheet>
+    </C5471>
+
+    <C5473>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>04/01/2016</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5473</Sheet>
+    </C5473>
+
+    <C1903>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/12/2015</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>1903</Sheet>
+    </C1903>
+
+    <C3278>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/12/2015</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>3278</Sheet>
+    </C3278>
+
+    <C3274>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/12/2015</ProcessDate>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>3274</Sheet>
+    </C3274>
+
+
+    <C5540>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>MKCM_v2_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5540</Sheet>
+    </C5540>
+
+    <C5548>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>MKCM_v2_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5548</Sheet>
+    </C5548>
+
+    <C5541>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5541</Sheet>
+    </C5541>
+
+    <C5555>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5555</Sheet>
+    </C5555>
+
+    <C5542>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5542</Sheet>
+    </C5542>
+
+    <C5543>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5543</Sheet>
+    </C5543>
+
+    <C5575>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>MKCM_v2_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5575</Sheet>
+    </C5575>
+
+    <C5576>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>MKCM_v2_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5576</Sheet>
+    </C5576>
+
+    <C5577>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5577</Sheet>
+    </C5577>
+
+    <C5580>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5580</Sheet>
+    </C5580>
+
+    <C5581>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5581</Sheet>
+    </C5581>
+
+    <C5584>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5584</Sheet>
+    </C5584>
+
+    <C5564>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>MKCM_v2_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5564</Sheet>
+    </C5564>
+
+
+    <C5565>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5565</Sheet>
+    </C5565>
+
+    <C5566>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>FI40 v1</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>FI40_v1_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5566</Sheet>
+    </C5566>
+
+    <C5567>
+        <Regulator>European Common Reporting</Regulator>
+        <Group>2500</Group>
+        <Form>MKCM v2</Form>
+        <ProcessDate>31/01/2015</ProcessDate>
+        <ImportFile>MKCM_v2_2500_31012015.xlsx</ImportFile>
+        <DataFile>EditForm_Data_Log.xlsx</DataFile>
+        <Sheet>5567</Sheet>
+    </C5567>
+
+</EditForm>		
+		
+		
+		

@@ -1,0 +1,22 @@
+[
+  {
+    "applicationServers": [
+      {
+        "id": 0,
+        "name": "default",
+        "url": "http://172.20.30.175:8091/",
+        "username": "rpadmin",
+        "password": "password"
+      }
+    ],
+    "databaseServers": [
+      {
+        "id": 0,
+        "name": "ar_database",
+        "driver": "oracle",
+        "host": "172.20.31.239@ora12c",
+        "schema": "AR_AUTO_ADMIN_OWNER"
+      }
+    ]
+  }
+]

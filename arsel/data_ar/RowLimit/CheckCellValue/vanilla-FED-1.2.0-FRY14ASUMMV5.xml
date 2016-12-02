@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<formInstancesExport xmlns="http://www.lombardrisk.com/message/ocelot-exp-imp">
+    <reportingEntities>
+        <reportingEntity id="id_1">
+            <name>0001</name>
+            <description></description>
+            <canReport>true</canReport>
+            <reportingEntityVariables/>
+        </reportingEntity>
+    </reportingEntities>
+    <formInstances>
+        <formInstance referenceDate="2015-08-05" reportingEntityId="id_1">
+            <formId>
+                <toolsetFormId>
+                    <returnId>60002</returnId>
+                </toolsetFormId>
+            </formId>
+            <formInstanceIds>
+                <toolsetFormInstanceId>
+                    <processDate>2015-08-05</processDate>
+                    <returnId>60002</returnId>
+                    <entityId>1</entityId>
+                </toolsetFormInstanceId>
+            </formInstanceIds>
+            <tables>
+                <table tableCode="FASMV263EX">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP063R0010KEY</openKeyColumn>
+                    </openYKeyColumns>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="0b052485-9aa6-4355-8791-7c05a41af2c6" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">aaaaa</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="0b052485-9aa6-4355-8791-7c05a41af2c6" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="0b052485-9aa6-4355-8791-7c05a41af2c6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">987456</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="0b052485-9aa6-4355-8791-7c05a41af2c6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-56</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="0b052485-9aa6-4355-8791-7c05a41af2c6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1234</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="0b052485-9aa6-4355-8791-7c05a41af2c6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">100</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="6780c597-0b72-4f73-b093-a7fd17eb5aef" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">bbbb</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="6780c597-0b72-4f73-b093-a7fd17eb5aef" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="6780c597-0b72-4f73-b093-a7fd17eb5aef" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="6780c597-0b72-4f73-b093-a7fd17eb5aef" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="6780c597-0b72-4f73-b093-a7fd17eb5aef" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">500</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="6780c597-0b72-4f73-b093-a7fd17eb5aef" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">25</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="bfd5c325-35db-4c17-a861-75be58a822cb" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">fffffff</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="bfd5c325-35db-4c17-a861-75be58a822cb" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="bfd5c325-35db-4c17-a861-75be58a822cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="bfd5c325-35db-4c17-a861-75be58a822cb" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">123456</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="bfd5c325-35db-4c17-a861-75be58a822cb" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">98</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="bfd5c325-35db-4c17-a861-75be58a822cb" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">123</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="2a5e4db0-5ef6-4b41-8f2e-a1de12077d7f" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">hh</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="2a5e4db0-5ef6-4b41-8f2e-a1de12077d7f" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="2a5e4db0-5ef6-4b41-8f2e-a1de12077d7f" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">20</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="2a5e4db0-5ef6-4b41-8f2e-a1de12077d7f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="2a5e4db0-5ef6-4b41-8f2e-a1de12077d7f" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-12</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="2a5e4db0-5ef6-4b41-8f2e-a1de12077d7f" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">678</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="ad998f11-a014-4a0b-bcb7-0365b6cacfa5" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="2" presentationScale="0">aaaa</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="ad998f11-a014-4a0b-bcb7-0365b6cacfa5" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="2" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="ad998f11-a014-4a0b-bcb7-0365b6cacfa5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="ad998f11-a014-4a0b-bcb7-0365b6cacfa5" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">99</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="ad998f11-a014-4a0b-bcb7-0365b6cacfa5" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">90</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="ad998f11-a014-4a0b-bcb7-0365b6cacfa5" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">880</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="6d0b9eef-1b6a-4225-a7d0-369b6e136878" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="2" presentationScale="0">ccc</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="6d0b9eef-1b6a-4225-a7d0-369b6e136878" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="2" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="6d0b9eef-1b6a-4225-a7d0-369b6e136878" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="6d0b9eef-1b6a-4225-a7d0-369b6e136878" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">89</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="6d0b9eef-1b6a-4225-a7d0-369b6e136878" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">-930</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="6d0b9eef-1b6a-4225-a7d0-369b6e136878" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">170</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="26bf3724-4e65-42b0-9a1e-d4e20764a799" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="2" presentationScale="0">oooo</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="26bf3724-4e65-42b0-9a1e-d4e20764a799" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="2" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="26bf3724-4e65-42b0-9a1e-d4e20764a799" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="26bf3724-4e65-42b0-9a1e-d4e20764a799" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">-789</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="26bf3724-4e65-42b0-9a1e-d4e20764a799" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">5604</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="26bf3724-4e65-42b0-9a1e-d4e20764a799" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">230</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0010" yOrd="2bb76e82-9c87-47be-be94-d16084e79a65" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="2" presentationScale="0">qqq</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010KEY" yOrd="2bb76e82-9c87-47be-be94-d16084e79a65" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="2" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0050" yOrd="2bb76e82-9c87-47be-be94-d16084e79a65" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">1230</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0040" yOrd="2bb76e82-9c87-47be-be94-d16084e79a65" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0030" yOrd="2bb76e82-9c87-47be-be94-d16084e79a65" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">789</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP063R0010C0020" yOrd="2bb76e82-9c87-47be-be94-d16084e79a65" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">200</tableCell>
+                </table>
+                <table tableCode="FASMV274EX">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP074R0010KEY</openKeyColumn>
+                    </openYKeyColumns>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0030" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0090" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0080" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0070" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">23</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0060" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">8900</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0050" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">100</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0040" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-25</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010KEY" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0020" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0010" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">aa</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0130" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0120" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0110" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0100" yOrd="3e6bae4e-ca68-4c7c-afbe-eff9a99a829a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0030" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ccc</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0090" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0080" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">45</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0070" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0060" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">89</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0050" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">556</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0040" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010KEY" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0020" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0010" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0130" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0120" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0110" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0100" yOrd="e62c03f9-8842-4f1d-a170-2d692199b468" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0030" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0090" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">90</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0080" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0070" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0060" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1200</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0050" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">5</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0040" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010KEY" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0020" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">gg</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0010" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0130" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0120" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0110" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0100" yOrd="9b1ac8ac-93aa-4e2d-a1e2-235a516ed2cf" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0030" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0090" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0080" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-98</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0070" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0060" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">4500</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0050" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">3600</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0040" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">22</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010KEY" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0020" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ooo</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0010" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0130" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0120" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0110" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0100" yOrd="1b5d0eb8-269e-4252-b634-9b53a160bb4c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0030" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0090" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0080" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0070" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0060" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">4567</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0050" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">89</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0040" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">56</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010KEY" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">5</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0020" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0010" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">qq</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0130" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0120" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">77</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0110" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP074R0010C0100" yOrd="b3d43095-7fea-4e18-8dac-d26ea8b507e9" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                </table>
+                <table tableCode="FASMV279EX">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP079R1060KEY</openKeyColumn>
+                    </openYKeyColumns>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">67</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">99</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">aa</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="8bc16785-3bc0-495f-b936-82ae73cc54b6" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">34567</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-222</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">bbb</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="2a469284-4a53-4fc8-826a-1d1d270f02a1" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">333</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">66</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ccc</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="f0286198-1571-4e14-8a89-1e18d85336ac" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">990</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">12345</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ddd</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="30051206-c23f-4b30-bcbd-e891c263d480" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">456</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">23456</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">eee</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="fd228d05-54e1-4b40-a5b8-bdeb535ea2cb" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">5</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">789</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-5</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">fffff</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="e2bbf183-724a-4a15-b2e2-283a57c22cd8" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">67890</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-24</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ggg</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="541f6ac5-1059-4faa-b3ee-404bb8aebf9f" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">7</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0100" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0090" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-122</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0080" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0070" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0060" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0050" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0040" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0030" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0020" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">890</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060C0010" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">hhh</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP079R1060KEY" yOrd="6be3c878-d3f9-43af-9e52-a8c8c111fa4b" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">8</tableCell>
+                </table>
+                <table tableCode="FASMV285A">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP085R0830KEY</openKeyColumn>
+                    </openYKeyColumns>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">677</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">aaa</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="43f6ec76-b4d3-4918-80af-78d89f876511" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">657</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">6123</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">bbb</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="66a278f5-5de3-464a-9364-3e7999d5312a" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">90</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">456778</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ddd</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="a675cf1c-3b76-45e2-9a90-26d52cc4aa13" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-88</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-23</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">eee</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="bcdd9869-868c-4977-a4ea-f6d3434dc73a" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">76543</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-34</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">fff</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="ffa5d0de-ce95-4c1e-ac7c-3b22049500cd" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">5</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">900</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">99900</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">hhh</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="d2580a05-a8dd-4a76-af50-520dc9f3412c" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">541</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">88</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">kkkk</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="c74f7c31-3b16-43f9-98ce-3b07ee32b02e" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">7</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0100" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0090" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-33</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0080" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0070" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0060" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0050" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0040" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0030" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0020" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-33</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830C0010" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">sss</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0830KEY" yOrd="db0fc107-5842-4433-b8c1-96336b948795" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">8</tableCell>
+                </table>
+                <table tableCode="FASMV285B">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP085R0840KEY</openKeyColumn>
+                    </openYKeyColumns>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">777</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">aaa</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="05a33bd4-a18d-4fcf-b97c-5e2d952045b4" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">70</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-33</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">bbb</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">2</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="144ed51f-7b98-45c1-8799-0950858862d5" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">1</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ccc</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">3</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">90</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="ca7aaf4e-e477-466b-88c9-2564cbaa8aad" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">56</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ddd</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">4</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="f687ddaa-aa16-4f8c-aa5f-a28843ddc0f6" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">888</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-80</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">50</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">eee</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">5</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="97ef38a7-b218-4ce3-a1be-c99367bf3359" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">999</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">888</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">fff</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="b99ba455-0d61-482f-90e6-12f7cf727dff" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">6</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-566</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">ggg</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">7</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="20c91f0c-c485-4813-ae40-3b8b968b42dd" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0080" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0070" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0060" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">33</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0050" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0040" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0030" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0020" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">8</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0010" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">kkk</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840KEY" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="false" isNaN="false" type="xsd:int" zOrd="1" presentationScale="0">8</tableCell>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0100" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                    <tableCell xOrd="FEDFRY14ASUMP085R0840C0090" yOrd="8d2c2e38-a1d8-4c75-8bc2-f0d3ccb81742" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                </table>
+                <table tableCode="FASMV291B">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP091R1490KEY</openKeyColumn>
+                    </openYKeyColumns>
+                </table>
+                <table tableCode="FASMV291C">
+                    <openYKeyColumns>
+                        <openKeyColumn>FEDFRY14ASUMP091R1500KEY</openKeyColumn>
+                    </openYKeyColumns>
+                </table>
+            </tables>
+            <items>
+                <item itemCode="FEDFRY14ASUMP063R0020C0050" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0050" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0040" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0040" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP063R0020C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0100C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0100C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0090C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0090C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0080C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0080C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0070C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0070C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0070C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0060C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0060C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0060C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">sss</item>
+                <item itemCode="FEDFRY14ASUMP072R0050C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0050C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0050C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0040C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0040C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0040C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"> aaaaa</item>
+                <item itemCode="FEDFRY14ASUMP072R0030C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0030C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0030C0010" decimals="0" isNull="false" isNaN="false" type="xsd:date" zOrd="1" presentationScale="0">2016-06-01</item>
+                <item itemCode="FEDFRY14ASUMP072R0020C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0020C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0020C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">-10</item>
+                <item itemCode="FEDFRY14ASUMP072R0010C0030" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0010C0020" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP072R0010C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">abcd</item>
+                <item itemCode="FEDFRY14ASUMP072R0080C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">3</item>
+                <item itemCode="FEDFRY14ASUMP073R0080C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">900</item>
+                <item itemCode="FEDFRY14ASUMP073R0080C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">1400</item>
+                <item itemCode="FEDFRY14ASUMP073R0070C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">926</item>
+                <item itemCode="FEDFRY14ASUMP073R0070C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">1480</item>
+                <item itemCode="FEDFRY14ASUMP073R0060C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP073R0060C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP073R0050C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="1" presentationScale="0">3.6</item>
+                <item itemCode="FEDFRY14ASUMP073R0050C0010" decimals="0" isNull="false" isNaN="false" type="xsd:decimal" zOrd="2" presentationScale="0">3</item>
+                <item itemCode="FEDFRY14ASUMP073R0040C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP073R0040C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP073R0030C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">sssss</item>
+                <item itemCode="FEDFRY14ASUMP073R0030C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="2" presentationScale="0">ff</item>
+                <item itemCode="FEDFRY14ASUMP073R0020C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0">abcdabcdabcd</item>
+                <item itemCode="FEDFRY14ASUMP073R0020C0010" decimals="0" isNull="false" isNaN="false" type="xsd:string" zOrd="2" presentationScale="0">fffff</item>
+                <item itemCode="FEDFRY14ASUMP073R0010C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP073R0010C0010" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="2" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0120" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0110" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0100" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0090" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0080" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0070" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0060" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0050" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0040" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP074R0050C0130" decimals="0" isNull="true" isNaN="true" type="xsd:decimal" zOrd="1" presentationScale="0"/>
+                <item itemCode="FEDFRY14ASUMP079R1180C0010" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></item>
+                <item itemCode="FEDFRY14ASUMP079R1170C0010" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></item>
+                <item itemCode="FEDFRY14ASUMP091R1485C0010" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></item>
+                <item itemCode="FEDFRY14ASUMP091R1630C0010" decimals="0" isNull="true" isNaN="false" type="xsd:string" zOrd="1" presentationScale="0"></item>
+            </items>
+            <formVariables/>
+        </formInstance>
+    </formInstances>
+</formInstancesExport>
