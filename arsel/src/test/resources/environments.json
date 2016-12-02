@@ -1,0 +1,30 @@
+[
+  {
+    "applicationServers": [
+      {
+        "id": 0,
+        "name": "default",
+        "url": "http://172.20.30.95:8099",
+        "username": "admin",
+        "password": "MONDAY"
+      }
+    ],
+    "databaseServers": [
+      {
+        "id": 0,
+        "name": "ap_database",
+        "driver": "oracle",
+        "host": "172.20.31.239",
+        "instance": "ora12c",
+        "schema": "AR_AUTO_1_8_OWNER"
+      },
+      {
+      	"id": 1,
+        "name": "toolset_database",
+        "driver": "oracle",
+        "host": "172.20.30.95",
+        "schema": "ECR_HKMA_AUTO_SYSTEM"
+      }
+    ]
+  }
+]

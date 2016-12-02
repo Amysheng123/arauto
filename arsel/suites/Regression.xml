@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression_test_suite" verbose="1" parallel="false" thread-count="1" preserve-order="true">
+    <test name="test_Rules">
+        <parameter name="os" value="windows"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="browser" value="chrome"/>
+        <!-- <parameter name="browser_version" value="11" /> -->
+        <!-- <parameter name="resolution" value="1024x768" /> -->
+        <parameter name="url" value="http://172.20.30.175:8092/"/>
+        <classes>
+            <class name="com.lombardrisk.testCase.CheckRule">
+            </class>
+        </classes>
+    </test>
+    <test name="test_CreateForm">
+        <parameter name="os" value="windows"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="browser" value="chrome"/>
+        <!-- <parameter name="browser_version" value="11" /> -->
+        <!-- <parameter name="resolution" value="1024x768" /> -->
+        <parameter name="url" value="http://172.20.30.175:8092/"/>
+        <classes>
+            <class name="com.lombardrisk.testCase.CreateForm">
+            </class>
+        </classes>
+    </test>
+ 
+    <test name="test_Import and Export Form">
+        <parameter name="os" value="windows"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="browser" value="chrome"/>
+        <!-- <parameter name="browser_version" value="11" /> -->
+        <!-- <parameter name="resolution" value="1024x768" /> -->
+        <parameter name="url" value="http://172.20.30.175:8092/"/>
+        <classes>
+            <class name="com.lombardrisk.testCase.ImportForm">
+            </class>
+            <class name="com.lombardrisk.testCase.ExportForm">
+            </class>
+        </classes>
+    </test>
+
+        <parameter name="os" value="windows"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="browser" value="chrome"/>
+        <!-- <parameter name="browser_version" value="11" /> -->
+        <!-- <parameter name="resolution" value="1024x768" /> -->
+        <parameter name="url" value="http://172.20.30.175:8092/"/>
+        <classes>
+            <class name="com.lombardrisk.testCase.Precision">
+            </class>
+            <class name="com.lombardrisk.testCase.Workflow">
+            </class>
+            <class name="com.lombardrisk.testCase.TestDefectRegression">
+            </class>
+            <class name="com.lombardrisk.testCase.Utility">
+            </class>
+        </classes>
+    </test>
+</suite>
