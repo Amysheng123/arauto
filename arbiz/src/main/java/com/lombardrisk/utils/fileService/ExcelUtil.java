@@ -8,6 +8,7 @@ import java.util.*;
 
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackageAccess;
+import org.apache.poi.ss.formula.functions.Intercept;
 import org.apache.poi.ss.usermodel.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -473,7 +474,7 @@ public class ExcelUtil
 
 	/**
 	 * get cell(plain or extend) value from exported excel
-	 *
+	 * 
 	 * @param file
 	 * @param cellName
 	 * @param instance
@@ -617,7 +618,7 @@ public class ExcelUtil
 
 	/**
 	 * get plain cell value from exported excel
-	 *
+	 * 
 	 * @param file
 	 * @param cellName
 	 * @return
@@ -922,17 +923,19 @@ public class ExcelUtil
 	private static String getCellValue(Cell cell) throws Exception
 	{
 		String cellValue = "";
-		DataFormatter formatter = new DataFormatter();
 		switch (cell.getCellType())
 		{
 			case Cell.CELL_TYPE_NUMERIC:
 				if (DateUtil.isCellDateFormatted(cell))
 				{
+					DataFormatter formatter = new DataFormatter();
 					cellValue = formatter.formatCellValue(cell);
 				}
 				else
 				{
-					cellValue = String.valueOf(cell.getNumericCellValue());
+					double value = cell.getNumericCellValue();
+					int intValue = (int) value;
+					cellValue = value - intValue == 0 ? String.valueOf(intValue) : String.valueOf(value);
 				}
 				break;
 			case Cell.CELL_TYPE_STRING:
@@ -956,5 +959,4 @@ public class ExcelUtil
 		}
 		return cellValue;
 	}
-
 }
