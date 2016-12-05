@@ -1,6 +1,5 @@
 package com.lombardrisk.pages;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -211,20 +210,7 @@ public class JobDetailsPage extends AbstractPage
 			element("dwp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			String oldName = new File(exportedFile).getName();
-			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-			String file = null;
-			if (fileName == null || fileName.length() == 0)
-			{
-				file = downloadFile(null, latestFile, null);
-			}
-			else
-			{
-				renameFile(path, oldName, fileName);
-				file = path + fileName;
-			}
-			return file;
+			return getOriginalFile(exportedFile, latestFile);
 		}
 		else
 		{

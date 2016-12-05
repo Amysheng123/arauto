@@ -1,6 +1,5 @@
 package com.lombardrisk.pages;
 
-import java.io.File;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -145,20 +144,7 @@ public class AllocationPage extends AbstractPage
 			element("fp.hidDrillDownTable").click();
 			waitStatusDlg();
 			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			String oldName = new File(exportedFile).getName();
-			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-			String file = null;
-			if (fileName == null || fileName.length() == 0)
-			{
-				file = downloadFile(null, latestFile, null);
-			}
-			else
-			{
-				renameFile(path, oldName, fileName);
-				file = path + fileName;
-			}
-			return file;
+			return getOriginalFile(exportedFile, latestFile);
 		}
 		else
 		{
@@ -187,16 +173,18 @@ public class AllocationPage extends AbstractPage
 
 	/**
 	 * Get the sum table header
-     */
-	public List<String> getSumTabHeader() throws Exception {
+	 */
+	public List<String> getSumTabHeader() throws Exception
+	{
 		waitStatusDlg();
 		return element("ac.sumHeader").getAllInnerTexts();
 	}
 
 	/**
 	 * Check the sum row of form variable
-     */
-	public boolean checkSumRowOfFormVariable(String itemName, String value, String instance, String description, String expression) throws Exception {
+	 */
+	public boolean checkSumRowOfFormVariable(String itemName, String value, String instance, String description, String expression) throws Exception
+	{
 		waitStatusDlg();
 		boolean isIta = element("ac.sumRowOfVar", itemName, "1").getAttribute("style").contains("italic");
 		boolean isValueEquals = element("ac.sumRowOfVar", itemName, "2").getInnerText().equals(value);

@@ -1293,7 +1293,6 @@ public class FormInstancePage extends AbstractPage
 	public EditionManagePage openEditionManage() throws Exception
 	{
 		logger.info("Open edition manage in form page");
-		waitStatusDlg();
 		element("fp.editionIcon").click();
 		waitStatusDlg();
 		return new EditionManagePage(getWebDriverWrapper());
@@ -1689,18 +1688,7 @@ public class FormInstancePage extends AbstractPage
 			if (httpDownload)
 			{
 				String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-				String oldName = new File(exportedFile).getName();
-				String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-				String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-				if (fileName == null || fileName.length() == 0)
-				{
-					filePath = downloadFile(null, latestFile, null);
-				}
-				else
-				{
-					renameFile(path, oldName, fileName);
-					filePath = path + fileName;
-				}
+				filePath = getOriginalFile(exportedFile, latestFile);
 			}
 			else
 				filePath = downloadFile(fileType, latestFile, null);
@@ -2797,18 +2785,7 @@ public class FormInstancePage extends AbstractPage
 			element("fp.validationExport").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			String oldName = new File(exportedFile).getName();
-			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-			if (fileName == null || fileName.length() == 0)
-			{
-				file = downloadFile(null, latestFile, null);
-			}
-			else
-			{
-				renameFile(path, oldName, fileName);
-				file = path + fileName;
-			}
+			file = getOriginalFile(exportedFile, latestFile);
 		}
 		else
 		{
@@ -2845,18 +2822,7 @@ public class FormInstancePage extends AbstractPage
 			element("fp.problemExport").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			String oldName = new File(exportedFile).getName();
-			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-			if (fileName == null || fileName.length() == 0)
-			{
-				file = downloadFile(null, latestFile, null);
-			}
-			else
-			{
-				renameFile(path, oldName, fileName);
-				file = path + fileName;
-			}
+			file = getOriginalFile(exportedFile, latestFile);
 		}
 		else
 		{
@@ -2912,18 +2878,7 @@ public class FormInstancePage extends AbstractPage
 			element("fp.firstExportBrn").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			String oldName = new File(exportedFile).getName();
-			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-			if (fileName == null || fileName.length() == 0)
-			{
-				file = downloadFile(null, latestFile, null);
-			}
-			else
-			{
-				renameFile(path, oldName, fileName);
-				file = path + fileName;
-			}
+			file = getOriginalFile(exportedFile, latestFile);
 		}
 		else
 		{

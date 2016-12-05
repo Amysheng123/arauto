@@ -10,10 +10,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import com.lombardrisk.pages.JobDetailsPage;
 import org.apache.commons.io.FileUtils;
 import org.testng.annotations.Test;
 
+import com.lombardrisk.pages.JobDetailsPage;
 import com.lombardrisk.pages.JobManagerPage;
 import com.lombardrisk.pages.ListPage;
 import com.lombardrisk.pages.PhysicalLocationPage;
@@ -258,21 +258,20 @@ public class BatchRun extends TestTemplate
 			String JsonFiles = testData.get(0);
 			String ReferenceDates = testData.get(1);
 
-			DateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-			Date date=sdf.parse(ReferenceDates.split("#")[0]);
-			DateFormat sdf2=new SimpleDateFormat("dd/MM/yyy");
-			String date1=sdf2.format(date);
+			DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Date date = sdf.parse(ReferenceDates.split("#")[0]);
+			DateFormat sdf2 = new SimpleDateFormat("dd/MM/yyy");
+			String date1 = sdf2.format(date);
 
-			sdf=new SimpleDateFormat("yyyy-MM-dd");
-			date=sdf.parse(ReferenceDates.split("#")[1]);
-			sdf2=new SimpleDateFormat("dd/MM/yyy");
-			String date2=sdf2.format(date);
+			sdf = new SimpleDateFormat("yyyy-MM-dd");
+			date = sdf.parse(ReferenceDates.split("#")[1]);
+			sdf2 = new SimpleDateFormat("dd/MM/yyy");
+			String date2 = sdf2.format(date);
 
 			for (int i = 0; i < JsonFiles.split("#").length; i++)
 			{
 				executeBatchRun(JsonFiles.split("#")[i], ReferenceDates.split("#")[i]);
 			}
-
 
 			ListPage listPage = m.listPage;
 			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
@@ -311,21 +310,20 @@ public class BatchRun extends TestTemplate
 			String JsonFiles = testData.get(0);
 			String ReferenceDates = testData.get(1);
 
-			DateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-			Date date=sdf.parse(ReferenceDates.split("#")[0]);
-			DateFormat sdf2=new SimpleDateFormat("dd/MM/yyy");
-			String date1=sdf2.format(date);
+			DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Date date = sdf.parse(ReferenceDates.split("#")[0]);
+			DateFormat sdf2 = new SimpleDateFormat("dd/MM/yyy");
+			String date1 = sdf2.format(date);
 
-			sdf=new SimpleDateFormat("yyyy-MM-dd");
-			date=sdf.parse(ReferenceDates.split("#")[1]);
-			sdf2=new SimpleDateFormat("dd/MM/yyy");
-			String date2=sdf2.format(date);
+			sdf = new SimpleDateFormat("yyyy-MM-dd");
+			date = sdf.parse(ReferenceDates.split("#")[1]);
+			sdf2 = new SimpleDateFormat("dd/MM/yyy");
+			String date2 = sdf2.format(date);
 
 			for (int i = 0; i < JsonFiles.split("#").length; i++)
 			{
 				executeBatchRun(JsonFiles.split("#")[i], ReferenceDates.split("#")[i]);
 			}
-
 
 			ListPage listPage = m.listPage;
 			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
@@ -342,7 +340,7 @@ public class BatchRun extends TestTemplate
 			jobInfo1 = jobManagerPage.getJobInfo(1);
 			assertThat(jobInfo1.get(8)).isEqualTo("SUCCESS");
 
-			JobDetailsPage jobDetailsPage=jobManagerPage.enterJobDetailsPage(1);
+			JobDetailsPage jobDetailsPage = jobManagerPage.enterJobDetailsPage(1);
 			String status = jobDetailsPage.getStatus();
 			assertThat(status).isEqualTo("SUCCESS");
 			testRst = true;

@@ -9,6 +9,7 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.yiwan.webcore.test.TestCaseManager;
 import org.yiwan.webcore.util.PropHelper;
 import org.yiwan.webcore.web.IWebDriverWrapper;
 import org.yiwan.webcore.web.PageBase;
@@ -602,5 +603,31 @@ public abstract class AbstractPage extends PageBase
 		String id = DBQuery.queryRecordSpecDB("ar", null, SQL);
 		SQL = "SELECT \"PREFERENCE_CODE\" FROM \"USR_PREFERENCE\" WHERE \"USER_ID\"='" + UserName.toLowerCase() + "' and \"ID\"=" + id;
 		return DBQuery.queryRecordSpecDB("ar", null, SQL);
+	}
+
+	public String getOriginalFile(String exportedFile, String latestFile) throws Exception
+	{
+		String file;
+		if (PropHelper.getProperty("getOriginalName").trim().equalsIgnoreCase("true"))
+		{
+			String oldName = new File(exportedFile).getName();
+			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
+			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
+			if (fileName == null || fileName.length() == 0)
+			{
+				file = downloadFile(null, latestFile, null);
+			}
+			else
+			{
+				renameFile(path, oldName, fileName);
+				file = path + fileName;
+			}
+		}
+		else
+		{
+			file = exportedFile;
+		}
+		logger.info("Exported file is:" + file);
+		return file;
 	}
 }
