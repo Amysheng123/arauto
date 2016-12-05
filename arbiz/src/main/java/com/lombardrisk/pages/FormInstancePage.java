@@ -1293,6 +1293,7 @@ public class FormInstancePage extends AbstractPage
 	public EditionManagePage openEditionManage() throws Exception
 	{
 		logger.info("Open edition manage in form page");
+		waitStatusDlg();
 		element("fp.editionIcon").click();
 		waitStatusDlg();
 		return new EditionManagePage(getWebDriverWrapper());
