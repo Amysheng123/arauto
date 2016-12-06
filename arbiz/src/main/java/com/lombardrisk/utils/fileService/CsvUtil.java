@@ -7,6 +7,9 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.*;
+import java.util.*;
+
 /**
  * Created by Leo Tu on 6/17/2015.
  */
@@ -182,9 +185,7 @@ public class CsvUtil
 	{
 		try
 		{
-
 			Collections.sort(list, new Comparator<String>() {
-
 				public int compare(String str1, String str2)
 				{
 					String[] str1s = str1.split(",");
