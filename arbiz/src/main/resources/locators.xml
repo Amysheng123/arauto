@@ -765,6 +765,15 @@
             <locator id="dwp.stopJob.cancel" type="WebElement" by="xpath" expression=".//*[@id='stopJobForm']/div[2]/button[2]" name="stopJob.cancel" description="stopJob.cancel" />
             <locator id="dwp.backtoJobManager" type="WebElement" by="id" expression="formJobManagerDetailsHeadingsBar:errorBarBtn" name="backtoJobManager" description="backtoJobManager" />
             <locator id="dwp.jobDetailsLabel" type="WebElement" by="xpath" expression="//*[@id='formJobDetailsHeadingsBar:pgJobDetails']/tbody/tr/td[1]/label" name="jobDetailsLabel" description="jobDetailsLabel" />
+            <locator id="dwp.showBatchRun" type="WebElement" by="xpath" expression="//*[@id='formJobManagerListForm:formJobManagerListTable_node_?']/td/span" name="showBatchRun" description="show batchRun" />
+            <locator id="dwp.showMap" type="WebElement" by="xpath" expression="//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td/span[2]" name="showMap" description="showMap" />
+            <locator id="dwp.cellText" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_data']/tr[?]/td[?]" name="cell text" description="cell text" />
+            <locator id="dwp.cellText2" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_data']/tr[?]/td[?]/span" name="cell text" description="cell text" />
+            <locator id="dwp.cellText3" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?_?']/td[?]/span" name="cell text" description="cell text" />
+            <locator id="dwp.mapMessage" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?_?']/td[10]/input" name="mapMessage" description="mapMessage" />
+            <locator id="dwp.cellText4" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[?]/span" name="cell text" description="cell text" />
+            <locator id="dwp.cellRow" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_data']/tr[?]" name="cell row" description="cell row" />
+            <locator id="dwp.batchRunName" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable:?_?:jobExecutionName']" name="batchRunName" description="batchRunName" />
         </page>
         <page id="rrp" name="RetrieveResultPage" description="ListImportFile Page">
             <locator id="rrp.showLogBtn" type="WebButton" by="id" expression="retriveResConfirmForm:showLog" name="showLogBtn" description="show log button" />
@@ -962,10 +971,19 @@
             <locator id="nwdp.dailyAddBtn" type="WebElement" by="xpath" expression="//tr[td[1]//label[contains(text(), '?')]]/td[2]/button" name="daily add button" description="daily add button" />
         </page>
 
-         <page id="abp" name="aboutPage" description="aboutPage">
+        <page id="abp" name="aboutPage" description="aboutPage">
             <locator id="abp.sortColumn" type="WebElement" by="xpath" expression=".//*[@id='installedConfigurationList']/div/div[1]/table/thead/tr/th[?]/span[3]" name="sortColumn" description="sort column" />
             <locator id="abp.rows" type="WebElement" by="xpath" expression=".//*[@id='installedConfigurationList']/div/div[1]/table/tbody/tr" name="rows" description="rows" />
             <locator id="abp.cell" type="WebElement" by="xpath" expression=".//*[@id='installedConfigurationList']/div/div[1]/table/tbody/tr[?]/td[?]/span" name="cell" description="cell" />
+        </page>
+
+        <page id="jrp" name="jobResultPagr" description="jobResultPagr">
+            <locator id="jrp.showLog" type="WebElement" by="id" expression="dwImportForm:showDetail" name="showLog" description="showLog" />
+            <locator id="jrp.logTable" type="WebElement" by="xpath" expression=".//*[@id='dwImportForm:detailLogTable_data']/tr" name="logTable" description="logTable" />
+            <locator id="jrp.logMessage" type="WebElement" by="xpath" expression=".//*[@id='dwImportForm:detailLogTable_data']/tr[?]/td[?]/span" name="logMessage" description="logMessage" />
+            <locator id="jrp.exportLog" type="WebElement" by="id" expression="dwImportForm:batchrunExport" name="exportLog" description="exportLog" />
+            <locator id="jrp.firtRow" type="WebElement" by="xpath" expression=".//*[@id='dwImportForm:dwLogPanelGrid']/tbody/tr[2]/td[?]" name="firtRow" description="firtRow" />
+            <locator id="jrp.secondRow" type="WebElement" by="xpath" expression=".//*[@id='dwImportForm:dwLogPanelGrid']/tbody/tr[5]/td[?]" name="secondRow" description="secondRow" />
         </page>
 
     </locatorBean>

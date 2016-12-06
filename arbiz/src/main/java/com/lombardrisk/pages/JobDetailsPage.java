@@ -281,6 +281,12 @@ public class JobDetailsPage extends AbstractPage
 			return false;
 	}
 
+	/**
+	 * get error log
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
 	public List<String> getErrorLogs() throws Exception
 	{
 		List<String> errors = new ArrayList<>();
@@ -297,6 +303,12 @@ public class JobDetailsPage extends AbstractPage
 		return errors;
 	}
 
+	/**
+	 * stop job
+	 * 
+	 * @param rowIndex
+	 * @throws Exception
+	 */
 	public void stopJob(int rowIndex) throws Exception
 	{
 		String id = String.valueOf(rowIndex - 1);
@@ -304,6 +316,201 @@ public class JobDetailsPage extends AbstractPage
 		waitStatusDlg();
 		element("dwp.stopJob.confirm").click();
 		waitStatusDlg();
+	}
+
+	/**
+	 * open sub item
+	 * 
+	 * @param jobIndex
+	 * @param openMap
+	 * @throws Exception
+	 */
+	public void openSubItem(int jobIndex, boolean openMap) throws Exception
+	{
+		String id = String.valueOf(jobIndex - 1);
+		if (element("dwp.showBatchRun", id).getAttribute("class").contains("ui-icon-triangle-1-e"))
+		{
+			element("dwp.showBatchRun", id).click();
+			waitStatusDlg();
+		}
+		if (openMap)
+		{
+			int mapIndex = 0;
+			String[] list =
+			{ id, String.valueOf(mapIndex) };
+			while (element("dwp.showMap", list).isDisplayed() && element("dwp.showMap", list).getAttribute("class").contains("ui-icon-triangle-1-e"))
+			{
+				element("dwp.showMap", list).click();
+				waitStatusDlg();
+				mapIndex = mapIndex + 1;
+				list[1] = String.valueOf(mapIndex);
+			}
+		}
+	}
+
+	/**
+	 * show detail batch run
+	 * 
+	 * @param jobIndex
+	 * @throws Exception
+	 */
+	public void showBatchRun(int jobIndex) throws Exception
+	{
+		String id = String.valueOf(jobIndex - 1);
+		if (element("dwp.showBatchRun", id).getAttribute("class").contains("ui-icon-triangle-1-e"))
+		{
+			element("dwp.showBatchRun", id).click();
+			waitStatusDlg();
+		}
+	}
+
+	/**
+	 * show detail map
+	 * 
+	 * @param jobIndex
+	 * @param batchRunIndex
+	 * @throws Exception
+	 */
+	private void showMap(int jobIndex, int batchRunIndex) throws Exception
+	{
+		String[] list =
+		{ String.valueOf(jobIndex - 1), String.valueOf(batchRunIndex - 1) };
+		if (element("dwp.showMap", list).getAttribute("class").contains("ui-icon-triangle-1-e"))
+		{
+			element("dwp.showMap", list).click();
+			waitStatusDlg();
+		}
+	}
+
+	/**
+	 * get cell text in specific column
+	 * 
+	 * @param rowIndex
+	 * @param columnIndex
+	 * @param openMap
+	 * @return List<String>
+	 * @throws Exception
+	 */
+	public List<String> getColumnCellText(int rowIndex, int columnIndex, boolean openMap) throws Exception
+	{
+		List<String> columnCell = new ArrayList<>();
+		openSubItem(rowIndex, openMap);
+		String normal = String.valueOf(rowIndex - 1);
+		int rowId = 1;
+		while (element("dwp.cellRow", String.valueOf(rowId)).isDisplayed()
+				&& element("dwp.cellRow", String.valueOf(rowId)).getAttribute("id").startsWith("formJobManagerListForm:formJobManagerListTable_node_" + normal))
+		{
+			String[] list =
+			{ String.valueOf(rowId), String.valueOf(columnIndex) };
+			if (element("dwp.cellText", list).isDisplayed())
+				columnCell.add(element("dwp.cellText", list).getInnerText());
+			else if (element("dwp.cellText2", list).isDisplayed())
+				columnCell.add(element("dwp.cellText2", list).getInnerText());
+			rowId++;
+		}
+		return columnCell;
+	}
+
+	/**
+	 * get all batch run status under specific job
+	 * 
+	 * @param JobIndex
+	 * @return List
+	 * @throws Exception
+	 */
+	public List<String> getBatchRunStatus(int JobIndex) throws Exception
+	{
+		List<String> BatchRunStatus = new ArrayList<>();
+		showBatchRun(JobIndex);
+		int BatchRunIndex = 1;
+		String[] list =
+		{ String.valueOf(JobIndex - 1), String.valueOf(BatchRunIndex - 1), "8" };
+		while (element("dwp.cellText4", list).isDisplayed())
+		{
+			BatchRunStatus.add(element("dwp.cellText4", list).getInnerText());
+			BatchRunIndex++;
+			list[1] = String.valueOf(BatchRunIndex - 1);
+		}
+		return BatchRunStatus;
+	}
+
+	/**
+	 * get all map status under specific job and batch run
+	 * 
+	 * @param JobIndex
+	 * @param BatchRunIndex
+	 * @return List
+	 * @throws Exception
+	 */
+	public List<String> getMapStatus(int JobIndex, int BatchRunIndex) throws Exception
+	{
+		List<String> mapStatus = new ArrayList<>();
+		showBatchRun(JobIndex);
+		showMap(JobIndex, BatchRunIndex);
+		int mapID = 1;
+		String[] list =
+		{ String.valueOf(JobIndex), String.valueOf(BatchRunIndex - 1), String.valueOf(mapID - 1), "8" };
+		while (element("dwp.cellText3", list).isDisplayed())
+		{
+			mapStatus.add(element("dwp.cellText3", list).getInnerText());
+			mapID++;
+			list[2] = String.valueOf(mapID - 1);
+		}
+
+		return mapStatus;
+	}
+
+	public List<String> getMapMessage(int JobIndex, int BatchRunIndex) throws Exception
+	{
+		List<String> messages = new ArrayList<>();
+		showBatchRun(JobIndex);
+		showMap(JobIndex, BatchRunIndex);
+		int mapID = 1;
+		String[] list =
+		{ String.valueOf(JobIndex - 1), String.valueOf(BatchRunIndex - 1), String.valueOf(mapID - 1) };
+		while (element("dwp.mapMessage", list).isDisplayed())
+		{
+			messages.add(element("dwp.mapMessage", list).getAttribute("value"));
+			mapID++;
+			list[2] = String.valueOf(mapID - 1);
+		}
+
+		return messages;
+	}
+
+	/**
+	 * if batchRub link exist
+	 * 
+	 * @param jobIndex
+	 * @param batchRunIndex
+	 * @return boolean
+	 * @throws Exception
+	 */
+	public boolean isBatchRunLinkExits(int jobIndex, int batchRunIndex) throws Exception
+	{
+		String[] list =
+		{ String.valueOf(jobIndex - 1), String.valueOf(batchRunIndex - 1) };
+		if (element("dwp.batchRunName", list).isDisplayed())
+			return true;
+		else
+			return false;
+	}
+
+	/**
+	 * enter job result page
+	 * 
+	 * @param jobIndex
+	 * @param batchRunIndex
+	 * @return JobResultPage
+	 * @throws Exception
+	 */
+	public JobResultPage enterJobResultPage(int jobIndex, int batchRunIndex) throws Exception
+	{
+		String[] list =
+		{ String.valueOf(jobIndex - 1), String.valueOf(batchRunIndex - 1) };
+		element("dwp.batchRunName", list).click();
+		waitStatusDlg();
+		return new JobResultPage(getWebDriverWrapper());
 	}
 
 }
