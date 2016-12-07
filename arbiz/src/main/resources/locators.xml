@@ -772,6 +772,7 @@
             <locator id="dwp.cellText3" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?_?']/td[?]/span" name="cell text" description="cell text" />
             <locator id="dwp.mapMessage" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?_?']/td[10]/input" name="mapMessage" description="mapMessage" />
             <locator id="dwp.cellText4" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[?]/span" name="cell text" description="cell text" />
+            <locator id="dwp.cellText5" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[?]" name="cell text" description="cell text" />
             <locator id="dwp.cellRow" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_data']/tr[?]" name="cell row" description="cell row" />
             <locator id="dwp.batchRunName" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable:?_?:jobExecutionName']" name="batchRunName" description="batchRunName" />
         </page>
@@ -977,7 +978,7 @@
             <locator id="abp.cell" type="WebElement" by="xpath" expression=".//*[@id='installedConfigurationList']/div/div[1]/table/tbody/tr[?]/td[?]/span" name="cell" description="cell" />
         </page>
 
-        <page id="jrp" name="jobResultPagr" description="jobResultPagr">
+        <page id="jrp" name="jobResultPage" description="jobResultPagr">
             <locator id="jrp.showLog" type="WebElement" by="id" expression="dwImportForm:showDetail" name="showLog" description="showLog" />
             <locator id="jrp.logTable" type="WebElement" by="xpath" expression=".//*[@id='dwImportForm:detailLogTable_data']/tr" name="logTable" description="logTable" />
             <locator id="jrp.logMessage" type="WebElement" by="xpath" expression=".//*[@id='dwImportForm:detailLogTable_data']/tr[?]/td[?]/span" name="logMessage" description="logMessage" />

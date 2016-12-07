@@ -432,7 +432,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param extendCell
 	 * @return page name(List)
 	 */
-	protected List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell)
+	protected List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getPageNames(Regulator, form, version, cellName, extendCell);

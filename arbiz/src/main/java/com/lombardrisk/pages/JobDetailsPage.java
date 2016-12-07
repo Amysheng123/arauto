@@ -438,7 +438,7 @@ public class JobDetailsPage extends AbstractPage
 	 * get all map status under specific job and batch run
 	 * 
 	 * @param JobIndex
-	 * @param BatchRunIndex
+	 * @param
 	 * @return List
 	 * @throws Exception
 	 */
@@ -476,6 +476,29 @@ public class JobDetailsPage extends AbstractPage
 		}
 
 		return messages;
+	}
+
+	/**
+	 * get batchRun progress
+	 * 
+	 * @param JobIndex
+	 * @return
+	 * @throws Exception
+	 */
+	public List<String> getBatchRunProgress(int JobIndex) throws Exception
+	{
+		List<String> BatchRunProgress = new ArrayList<>();
+		showBatchRun(JobIndex);
+		int BatchRunIndex = 1;
+		String[] list =
+		{ String.valueOf(JobIndex - 1), String.valueOf(BatchRunIndex - 1), "11" };
+		while (element("dwp.cellText5", list).isDisplayed())
+		{
+			BatchRunProgress.add(element("dwp.cellText5", list).getInnerText());
+			BatchRunIndex++;
+			list[1] = String.valueOf(BatchRunIndex - 1);
+		}
+		return BatchRunProgress;
 	}
 
 	/**

@@ -235,15 +235,16 @@ public class FormInstancePage extends AbstractPage
 	 */
 	public String getCellText(String Regulator, String formCode, String version, String instance, String cellId, String extendCell) throws Exception
 	{
-		String cellPage = getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
-		logger.info("Cell[" + cellId + "] in page[" + cellPage + "]");
-
-		String cellName = null;
+		String cellName;
+		if (!element("fp.inputCell", cellId).isDisplayed() && !element("fp.inputCell", extendCell).isDisplayed())
+		{
+			String cellPage = getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
+			logger.info("Cell[" + cellId + "] in page[" + cellPage + "]");
+		}
 		if (extendCell != null)
 			cellName = extendCell;
 		else
 			cellName = cellId;
-
 		return getCellText(cellName);
 	}
 

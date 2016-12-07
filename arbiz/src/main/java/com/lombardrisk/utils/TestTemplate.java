@@ -269,7 +269,7 @@ public class TestTemplate extends TestBase
 		logger.info("Begin setup test folder and test data");
 		List<String> Files = new ArrayList<String>();
 		List<String> FuncList = Arrays.asList("CheckRule", "CreateForm", "ExportForm", "ImportForm", "RetrieveForm", "ImportExport", "Precision", "ComputeForm", "DataSchedule", "RowLimit",
-				"Threshold", "DropDown", "GridWithinGrid", "Contextual", "ReturnList", "ExportForm_External");
+				"Threshold", "DropDown", "GridWithinGrid", "Contextual", "ReturnList", "ExportForm_External", "BatchRun");
 
 		if (FuncList.contains(Function))
 		{
@@ -831,7 +831,7 @@ public class TestTemplate extends TestBase
 
 	}
 
-	public List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell)
+	public List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell) throws Exception
 	{
 		String SQL, refTable;
 		if (ConnectDBType.equalsIgnoreCase("ar"))
@@ -851,6 +851,13 @@ public class TestTemplate extends TestBase
 		else
 		{
 			String RegPrefix = getToolsetRegPrefix(Regulator);
+			SQL = "SELECT \"USERNAME\",\"SQLENGINE\",\"DB_HOST\",\"DB_INSTANCE\",\"DATABASENAME\" FROM \"ALIASES\" WHERE \"CONFIG_PREFIX\"='" + RegPrefix + "' AND \"ALIAS\"='STB Work'";
+			String server = AR_Server;
+			if (AR_DBType.equalsIgnoreCase("oracle"))
+				server = AR_IP + "@" + AR_SID;
+
+			List<String> dbInfo = DBAction.queryRecord(AR_DBType, server, AR_DBName, SQL).get(0);
+
 			if (extendCell == null)
 				refTable = RegPrefix + "Ref";
 			else
@@ -858,7 +865,24 @@ public class TestTemplate extends TestBase
 			SQL = "select \"PageName\" from \"" + RegPrefix + "List\" " + "where \"ReturnId\" IN(SELECT \"ReturnId\" FROM \"" + RegPrefix + "Rets\" where \"Return\"='" + form + "' "
 					+ "and \"TabName\" in (select \"TabName\" from \"" + refTable + "\" " + "where \"ReturnId\" IN(SELECT \"ReturnId\" FROM \"" + RegPrefix + "Rets\" where \"Return\"='" + form + "' "
 					+ "and \"Version\"='" + version + "') and \"Item\"='" + cellName + "'))";
-			return DBQuery.queryRecords(SQL);
+			List<String> pages = new ArrayList<>();
+			String DB;
+			if (dbInfo.get(1).equalsIgnoreCase("oracle"))
+			{
+				server = dbInfo.get(2) + "@" + dbInfo.get(4);
+				DB = dbInfo.get(0);
+			}
+			else
+			{
+				server = dbInfo.get(2) + "@" + dbInfo.get(3);
+				DB = dbInfo.get(4);
+			}
+			List<List<String>> rsts = DBAction.queryRecord(dbInfo.get(1), server, DB, SQL);
+			for (List<String> r : rsts)
+			{
+				pages.add(r.get(0));
+			}
+			return pages;
 		}
 
 	}

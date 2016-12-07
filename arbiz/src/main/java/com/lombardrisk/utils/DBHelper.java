@@ -157,6 +157,47 @@ public class DBHelper
 		return value;
 	}
 
+	protected List<List<String>> queryRecord(String sql)
+	{
+		if (conn == null)
+			return null;
+		ResultSet rs;
+		List<List<String>> value = new ArrayList<>();
+		;
+		try
+		{
+			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			rs = stmt.executeQuery(sql);
+			ResultSetMetaData rsmd = rs.getMetaData();
+			int columnNum = rsmd.getColumnCount();
+			while (rs.next())
+			{
+				List<String> rowData = new ArrayList<>();
+				;
+				for (int columnIndex = 1; columnIndex <= columnNum; columnIndex++)
+				{
+					String cellValue = "";
+					String type = rsmd.getColumnClassName(columnIndex).toString();
+					if (type.equals("oracle.jdbc.OracleClob"))
+						cellValue = rs.getClob(columnIndex).getSubString((long) 1, (int) rs.getClob(columnIndex).length());
+					else if (type.equals("java.math.BigDecimal"))
+						cellValue = String.valueOf(rs.getBigDecimal(columnIndex));
+					else
+						cellValue = rs.getString(columnIndex);
+					rowData.add(cellValue);
+				}
+				value.add(rowData);
+			}
+
+		}
+		catch (SQLException e)
+		{
+			logger.info("SQLException in [" + sql + "]");
+			logger.error(e.getMessage());
+		}
+		return value;
+	}
+
 	protected List<String> queryRecords(String sql)
 	{
 		if (conn == null)
