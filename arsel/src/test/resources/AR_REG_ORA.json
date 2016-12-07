@@ -25,7 +25,7 @@
         "id": 0,
         "name": "default",
         "url": "http://172.20.30.246:8082/",
-        "username": "rpadmin2",
+        "username": "rpadmin",
         "password": "password"
       }
     ],
@@ -45,7 +45,7 @@
         "id": 0,
         "name": "default",
         "url": "http://172.20.30.246:8082/",
-        "username": "rpadmin3",
+        "username": "rpadmin",
         "password": "password"
       }
     ],
@@ -65,7 +65,7 @@
         "id": 0,
         "name": "default",
         "url": "http://172.20.30.246:8082/",
-        "username": "rpadmin4",
+        "username": "rpadmin",
         "password": "password"
       }
     ],
@@ -85,7 +85,7 @@
         "id": 0,
         "name": "default",
         "url": "http://172.20.30.246:8082/",
-        "username": "rpadmin5",
+        "username": "rpadmin",
         "password": "password"
       }
     ],

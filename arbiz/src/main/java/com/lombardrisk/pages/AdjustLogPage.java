@@ -1,7 +1,5 @@
 package com.lombardrisk.pages;
 
-import java.io.File;
-
 import org.apache.commons.io.FileUtils;
 import org.yiwan.webcore.test.TestCaseManager;
 import org.yiwan.webcore.web.IWebDriverWrapper;
@@ -305,20 +303,7 @@ public class AdjustLogPage extends AbstractPage
 			element("alp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			String oldName = new File(exportedFile).getName();
-			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-			String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-			String file = null;
-			if (fileName == null || fileName.length() == 0)
-			{
-				file = downloadFile(null, latestFile, null);
-			}
-			else
-			{
-				renameFile(path, oldName, fileName);
-				file = path + fileName;
-			}
-			return file;
+			return getOriginalFile(exportedFile, latestFile);
 		}
 		else
 		{

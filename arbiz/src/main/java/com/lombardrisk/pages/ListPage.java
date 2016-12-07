@@ -1543,18 +1543,7 @@ public class ListPage extends AbstractPage
 			if (httpDownload)
 			{
 				String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-				String oldName = new File(exportedFile).getName();
-				String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
-				String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-				if (fileName == null || fileName.length() == 0)
-				{
-					filePath = downloadFile(null, latestFile, null);
-				}
-				else
-				{
-					renameFile(path, oldName, fileName);
-					filePath = path + fileName;
-				}
+				filePath = getOriginalFile(exportedFile, latestFile);
 			}
 			else
 				filePath = downloadFile(FileType, latestFile, null);

@@ -185,9 +185,7 @@ public class CsvUtil
 	{
 		try
 		{
-
 			Collections.sort(list, new Comparator<String>() {
-
 				public int compare(String str1, String str2)
 				{
 					String[] str1s = str1.split(",");

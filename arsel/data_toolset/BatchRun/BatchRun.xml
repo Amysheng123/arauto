@@ -43,4 +43,39 @@
 		<ReferenceDate>2014-12-31#2015-12-31</ReferenceDate>
 	</C6493>
 
+	<C6546>
+		<JsonFile>MAS1105_BatchRunJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6546>
+
+	<C6547>
+		<JsonFile>MAS649_ComputeJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6547>
+
+	<C6545>
+		<JsonFile>MAS1105_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6545>
+
+	<C6542>
+		<JsonFile>ErrorAbort.json</JsonFile>
+		<ReferenceDate>2018-12-31</ReferenceDate>
+	</C6542>
+
+	<C6543>
+		<JsonFile>ErrorNotAbort.json</JsonFile>
+		<ReferenceDate>2018-12-31</ReferenceDate>
+	</C6543>
+
+	<C6548>
+		<JsonFile>MAS1105_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6548>
+
+	<C6549>
+		<JsonFile>Integration_ECR.json</JsonFile>
+		<ReferenceDate>2015-12-02</ReferenceDate>
+	</C6549>
+
 </BatchRun>

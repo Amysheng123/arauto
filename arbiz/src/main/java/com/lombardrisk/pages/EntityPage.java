@@ -1647,12 +1647,15 @@ public class EntityPage extends AbstractImportPage
 
 	/**
 	 * Input all required form variable field.
-     */
-	public void inputRequiredFieldsOfVariable(String prefix, String value) throws Exception {
+	 */
+	public void inputRequiredFieldsOfVariable(String prefix, String value) throws Exception
+	{
 		List<IWebDriverWrapper.IWebElementWrapper> list = element("emp.variable.requiredField").getAllMatchedElements();
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			IWebDriverWrapper.IWebElementWrapper element = list.get(i);
-			if (!StringUtils.isNotBlank(element.getInnerText())) {
+			if (!StringUtils.isNotBlank(element.getInnerText()))
+			{
 				String id = element.getAttribute("id").substring(0, element.getAttribute("id").indexOf("Output"));
 				element.clickByJavaScript();
 				waitStatusDlg();
@@ -1666,26 +1669,28 @@ public class EntityPage extends AbstractImportPage
 
 	/**
 	 * Update the column value of input
-     */
-	public void updateColumnValueOfInput(String prefix, String columnName, String value) throws Exception {
-		element("emp.variable.column",prefix, columnName).clickByJavaScript();
+	 */
+	public void updateColumnValueOfInput(String prefix, String columnName, String value) throws Exception
+	{
+		element("emp.variable.column", prefix, columnName).clickByJavaScript();
 		waitStatusDlg();
-		element("emp.variable.columnInput",prefix, columnName).input(value);
+		element("emp.variable.columnInput", prefix, columnName).input(value);
 		waitStatusDlg();
-		element("emp.variable.columnName",prefix, columnName).click();
+		element("emp.variable.columnName", prefix, columnName).click();
 		waitStatusDlg();
 	}
 
-    /**
-     * Update the column value of date
-     */
-    public void updateColumnValueOfDate(String prefix, String columnName, String value) throws Exception {
-        element("emp.variable.column",prefix, columnName).clickByJavaScript();
-        waitStatusDlg();
-        element("emp.variable.columnInput",prefix, columnName).input(value);
-        selectDate(value);
-        waitStatusDlg();
-        element("emp.variable.columnName",prefix, columnName).click();
-        waitStatusDlg();
-    }
+	/**
+	 * Update the column value of date
+	 */
+	public void updateColumnValueOfDate(String prefix, String columnName, String value) throws Exception
+	{
+		element("emp.variable.column", prefix, columnName).clickByJavaScript();
+		waitStatusDlg();
+		element("emp.variable.columnInput", prefix, columnName).input(value);
+		selectDate(value);
+		waitStatusDlg();
+		element("emp.variable.columnName", prefix, columnName).click();
+		waitStatusDlg();
+	}
 }

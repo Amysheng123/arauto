@@ -1,9 +1,7 @@
 package com.lombardrisk.testCase;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
@@ -12,10 +10,6 @@ import org.testng.annotations.Test;
 import com.lombardrisk.pages.*;
 import com.lombardrisk.utils.DBQuery;
 import com.lombardrisk.utils.TestTemplate;
-
-import static com.sun.corba.se.spi.activation.IIOP_CLEAR_TEXT.value;
-import static com.sun.imageio.plugins.jpeg.JPEG.version;
-import static sun.plugin.javascript.navig.JSType.Form;
 
 /**
  * Create by Leo Tu on 8/19/2016
@@ -1556,13 +1550,15 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6636() throws Exception {
+	public void test6636() throws Exception
+	{
 		String caseID = "6636";
 		logger.info("====Verify entity variable in sum rule work well for each instance [case id=" + caseID + "]====");
 		boolean testRst = true;
 		EntityPage entityManagePage = null;
 		FormInstancePage formInstancePage = null;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -1620,500 +1616,535 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfMC, "", desc, ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
 		}
 	}
 
-    @Test
-    public void test6671() throws Exception {
-        String caseID = "6671";
-        logger.info("====Verify form variable in sum rule work well for each instance[case id=" + caseID + "]====");
-        boolean testRst = true;
-        EntityPage entityManagePage = null;
-        try {
-            String nodeName = "C" + caseID;
-            List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
-            String entity = testdata.get(0);
-            String regulator = testdata.get(1);
-            String returnName = testdata.get(2).trim();
-            String ugs = testdata.get(3).trim();
-            String pgs = testdata.get(4).trim();
-            String value = testdata.get(5).trim();
-            String valueOfCB = testdata.get(6).trim();
-            String regulator1 = testdata.get(7).trim();
-            String regulator2 = testdata.get(8).trim();
-            String referenceDate = testdata.get(9).trim();
-            String page = testdata.get(10).trim();
-            String cellName1 = testdata.get(11).trim();
-            String cellName2 = testdata.get(12).trim();
-            String cellName3 = testdata.get(13).trim();
-            String value1 = testdata.get(14).trim();
-            String value2 = testdata.get(15).trim();
-            String value3 = testdata.get(16).trim();
-            String columnName = testdata.get(17).trim();
-            String expression = testdata.get(18).trim();
-            String itemName = testdata.get(19).trim();
-            String desc = testdata.get(20).trim();
+	@Test
+	public void test6671() throws Exception
+	{
+		String caseID = "6671";
+		logger.info("====Verify form variable in sum rule work well for each instance[case id=" + caseID + "]====");
+		boolean testRst = true;
+		EntityPage entityManagePage = null;
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			String entity = testdata.get(0);
+			String regulator = testdata.get(1);
+			String returnName = testdata.get(2).trim();
+			String ugs = testdata.get(3).trim();
+			String pgs = testdata.get(4).trim();
+			String value = testdata.get(5).trim();
+			String valueOfCB = testdata.get(6).trim();
+			String regulator1 = testdata.get(7).trim();
+			String regulator2 = testdata.get(8).trim();
+			String referenceDate = testdata.get(9).trim();
+			String page = testdata.get(10).trim();
+			String cellName1 = testdata.get(11).trim();
+			String cellName2 = testdata.get(12).trim();
+			String cellName3 = testdata.get(13).trim();
+			String value1 = testdata.get(14).trim();
+			String value2 = testdata.get(15).trim();
+			String value3 = testdata.get(16).trim();
+			String columnName = testdata.get(17).trim();
+			String expression = testdata.get(18).trim();
+			String itemName = testdata.get(19).trim();
+			String desc = testdata.get(20).trim();
 
-            ListPage listPage = super.m.listPage;
-            entityManagePage = listPage.EnterEntityPage();
+			ListPage listPage = super.m.listPage;
+			entityManagePage = listPage.EnterEntityPage();
 
-            // Add entity and assign return
-            entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
-            entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
+			// Add entity and assign return
+			entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
+			entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
 
-            // Edit the form variable
-            entityManagePage.openFormVariablePage(entity);
-            entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
-            entityManagePage = entityManagePage.assignVariable(regulator);
-            listPage = entityManagePage.backToDashboard();
+			// Edit the form variable
+			entityManagePage.openFormVariablePage(entity);
+			entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
+			entityManagePage = entityManagePage.assignVariable(regulator);
+			listPage = entityManagePage.backToDashboard();
 
-            // Navigate to form variable page.
-            FormVariablePage formVariablePage = listPage.openFormVariablePage();
-            formVariablePage = formVariablePage.filterByEntityColume(entity);
-            formVariablePage.editVariableValue(entity, returnName, desc, valueOfCB, "input");
-            listPage = formVariablePage.backToDashboard();
+			// Navigate to form variable page.
+			FormVariablePage formVariablePage = listPage.openFormVariablePage();
+			formVariablePage = formVariablePage.filterByEntityColume(entity);
+			formVariablePage.editVariableValue(entity, returnName, desc, valueOfCB, "input");
+			listPage = formVariablePage.backToDashboard();
 
-            // Create the new return CIMACPIS
-            listPage.getProductListPage(regulator1, null, null, null);
-            listPage.getProductListPage(regulator2, entity, "All", "All");
-            FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
+			// Create the new return CIMACPIS
+			listPage.getProductListPage(regulator1, null, null, null);
+			listPage.getProductListPage(regulator2, entity, "All", "All");
+			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-            // Edit the cell value
-            formInstancePage.selectPage(page);
-            formInstancePage.editCellValue(cellName1, value1);
-            formInstancePage.editCellValue(cellName2, value2);
+			// Edit the cell value
+			formInstancePage.selectPage(page);
+			formInstancePage.editCellValue(cellName1, value1);
+			formInstancePage.editCellValue(cellName2, value2);
 
-            // Check the cell value
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+			// Check the cell value
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
 
-            // Double click the cell
-            AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
-            Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
-            Assert.assertEquals(allocationPage.getSumRule(), expression);
-            Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfCB, "", desc, ""));
-        }
-        catch (Throwable e) {
-            testRst = false;
-            e.printStackTrace();
-        } finally {
-            // package com.lombardrisk.testCase;
-            closeFormInstance();
-            writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
-        }
-    }
-
-    @Test
-    public void test6670() throws Exception {
-        String caseID = "6670";
-        logger.info("==== Verify entity variable in sum rule work well for all instance[case id=" + caseID + "]====");
-        boolean testRst = true;
-        EntityPage entityManagePage = null;
-        try {
-            String nodeName = "C" + caseID;
-            List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
-            String entity = testdata.get(0);
-            String regulator = testdata.get(1);
-            String returnName = testdata.get(2).trim();
-            String ugs = testdata.get(3).trim();
-            String pgs = testdata.get(4).trim();
-            String value = testdata.get(5).trim();
-            String valueOfCB = testdata.get(6).trim();
-            String regulator1 = testdata.get(7).trim();
-            String regulator2 = testdata.get(8).trim();
-            String referenceDate = testdata.get(9).trim();
-            String page = testdata.get(10).trim();
-            String cellName1 = testdata.get(11).trim();
-            String instanceName = testdata.get(12).trim();
-            String cellName3 = testdata.get(13).trim();
-            String value1 = testdata.get(14).trim();
-            String value2 = testdata.get(15).trim();
-            String value3 = testdata.get(16).trim();
-            String columnName = testdata.get(17).trim();
-            String expression = testdata.get(18).trim();
-            String itemName = testdata.get(19).trim();
-            String desc = testdata.get(20).trim();
-            String instanceName2 = testdata.get(21).trim();
-            String valueOfAll = testdata.get(22).trim();
-
-            ListPage listPage = super.m.listPage;
-            entityManagePage = listPage.EnterEntityPage();
-
-            // Add entity and assign return
-            entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
-            entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
-
-            // Edit the form variable
-            entityManagePage.openFormVariablePage(entity);
-            entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
-            entityManagePage.updateColumnValueOfDate(regulator, desc, valueOfCB);
-            entityManagePage = entityManagePage.assignVariable(regulator);
-            listPage = entityManagePage.backToDashboard();
-
-            // Create the new return CIMACPIS
-            listPage.getProductListPage(regulator1, null, null, null);
-            listPage.getProductListPage(regulator2, entity, "All", "All");
-            FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
-
-            // Edit the cell value
-            formInstancePage.selectPage(page);
-            formInstancePage.editCellValue(cellName1, value1);
-
-            // Add new instance 2
-            formInstancePage.addInstance(instanceName);
-            formInstancePage.editCellValue(cellName1, value2);
-
-            // Check the cell value
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
-            formInstancePage.selectInstance(instanceName2);
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
-
-            // Double click the cell
-            AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
-            Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
-            Assert.assertEquals(allocationPage.getSumRule(), expression);
-            Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
-        }
-        catch (Throwable e) {
-            testRst = false;
-            e.printStackTrace();
-        } finally {
-            // package com.lombardrisk.testCase;
-            closeFormInstance();
-            writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
-        }
-    }
-
-    @Test
-    public void test6672() throws Exception {
-        String caseID = "6672";
-        logger.info("==== Dashboard FV-01-04 Verify form variable in sum rule work well for all instance[case id=" + caseID + "]====");
-        boolean testRst = true;
-        EntityPage entityManagePage = null;
-        try {
-            String nodeName = "C" + caseID;
-            List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
-            String entity = testdata.get(0);
-            String regulator = testdata.get(1);
-            String returnName = testdata.get(2).trim();
-            String ugs = testdata.get(3).trim();
-            String pgs = testdata.get(4).trim();
-            String value = testdata.get(5).trim();
-            String valueOfCB = testdata.get(6).trim();
-            String regulator1 = testdata.get(7).trim();
-            String regulator2 = testdata.get(8).trim();
-            String referenceDate = testdata.get(9).trim();
-            String page = testdata.get(10).trim();
-            String cellName1 = testdata.get(11).trim();
-            String instanceName = testdata.get(12).trim();
-            String cellName3 = testdata.get(13).trim();
-            String value1 = testdata.get(14).trim();
-            String value2 = testdata.get(15).trim();
-            String value3 = testdata.get(16).trim();
-            String columnName = testdata.get(17).trim();
-            String expression = testdata.get(18).trim();
-            String itemName = testdata.get(19).trim();
-            String desc = testdata.get(20).trim();
-            String instanceName2 = testdata.get(21).trim();
-            String valueOfAll = testdata.get(22).trim();
-
-            ListPage listPage = super.m.listPage;
-            entityManagePage = listPage.EnterEntityPage();
-
-            // Add entity and assign return
-            entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
-            entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
-
-            // Edit the form variable
-            entityManagePage.openFormVariablePage(entity);
-            entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
-            entityManagePage = entityManagePage.assignVariable(regulator);
-            listPage = entityManagePage.backToDashboard();
-
-            // Navigate to form variable page.
-            FormVariablePage formVariablePage = listPage.openFormVariablePage();
-            formVariablePage = formVariablePage.filterByEntityColume(entity);
-            formVariablePage.editVariableValue(entity, returnName, desc, valueOfCB, "Date");
-            listPage = formVariablePage.backToDashboard();
-
-            // Create the new return CIMACPIS
-            listPage.getProductListPage(regulator1, null, null, null);
-            listPage.getProductListPage(regulator2, entity, "All", "All");
-            FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
-
-            // Edit the cell value
-            formInstancePage.selectPage(page);
-            formInstancePage.editCellValue(cellName1, value1);
-
-            // Add new instance 2
-            formInstancePage.addInstance(instanceName);
-            formInstancePage.editCellValue(cellName1, value2);
-
-            // Check the cell value
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
-            formInstancePage.selectInstance(instanceName2);
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
-
-            // Double click the cell
-            AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
-            Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
-            Assert.assertEquals(allocationPage.getSumRule(), expression);
-            Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
-        }
-        catch (Throwable e) {
-            testRst = false;
-            e.printStackTrace();
-        } finally {
-            // package com.lombardrisk.testCase;
-            closeFormInstance();
-            writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
-        }
-    }
-
-    @Test
-    public void test6742() throws Exception {
-        String caseID = "6742";
-        logger.info("==== Verify entity variable in sum rule of extend grid work well[case id=" + caseID + "]====");
-        boolean testRst = true;
-        EntityPage entityManagePage = null;
-        try {
-            String nodeName = "C" + caseID;
-            List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
-            String entity = testdata.get(0);
-            String regulator = testdata.get(1);
-            String returnName = testdata.get(2).trim();
-            String ugs = testdata.get(3).trim();
-            String pgs = testdata.get(4).trim();
-            String value = testdata.get(5).trim();
-            String valueOfCB = testdata.get(6).trim();
-            String regulator1 = testdata.get(7).trim();
-            String regulator2 = testdata.get(8).trim();
-            String referenceDate = testdata.get(9).trim();
-            String page = testdata.get(10).trim();
-            String cellName1 = testdata.get(11).trim();
-            String cellName2 = testdata.get(12).trim();
-            String cellName3 = testdata.get(13).trim();
-            String value1 = testdata.get(14).trim();
-            String value2 = testdata.get(15).trim();
-            String value3 = testdata.get(16).trim();
-            String columnName = testdata.get(17).trim();
-            String expression = testdata.get(18).trim();
-            String itemName = testdata.get(19).trim();
-            String desc = testdata.get(20).trim();
-            String cellId = testdata.get(21).trim();
-
-            ListPage listPage = super.m.listPage;
-            entityManagePage = listPage.EnterEntityPage();
-
-            // Add entity and assign return
-            entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
-            entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
-
-            // Edit the form variable
-            entityManagePage.openFormVariablePage(entity);
-            entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
-            entityManagePage.updateColumnValueOfInput(regulator, desc, valueOfCB);
-            entityManagePage = entityManagePage.assignVariable(regulator);
-            listPage = entityManagePage.backToDashboard();
-
-            // Create the new return CRIR
-            listPage.getProductListPage(regulator1, null, null, null);
-            listPage.getProductListPage(regulator2, entity, "All", "All");
-            FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
-
-            // Edit the cell value
-            formInstancePage.selectPage(page);
-            formInstancePage.insertRow(cellId);
-            formInstancePage.editCellValue(cellName1, value1);
-            formInstancePage.editCellValue(cellName2, value2);
-
-            // Check the cell value
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
-
-            // Double click the cell
-            AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
-            Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
-            Assert.assertEquals(allocationPage.getSumRule(), expression);
-            Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfCB, "", desc, ""));
-        }
-        catch (Throwable e) {
-            testRst = false;
-            e.printStackTrace();
-        } finally {
-            // package com.lombardrisk.testCase;
-            closeFormInstance();
-            writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
-        }
-    }
-
-    @Test
-    public void test6743() throws Exception {
-        String caseID = "6743";
-        logger.info("==== Verify form variable in sum rule of extend grid work well[case id=" + caseID + "]====");
-        boolean testRst = true;
-        EntityPage entityManagePage = null;
-        try {
-            String nodeName = "C" + caseID;
-            List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
-            String entity = testdata.get(0);
-            String regulator = testdata.get(1);
-            String returnName = testdata.get(2).trim();
-            String ugs = testdata.get(3).trim();
-            String pgs = testdata.get(4).trim();
-            String value = testdata.get(5).trim();
-            String valueOfCB = testdata.get(6).trim();
-            String regulator1 = testdata.get(7).trim();
-            String regulator2 = testdata.get(8).trim();
-            String referenceDate = testdata.get(9).trim();
-            String page = testdata.get(10).trim();
-            String cellName1 = testdata.get(11).trim();
-            String cellName2 = testdata.get(12).trim();
-            String cellName3 = testdata.get(13).trim();
-            String value1 = testdata.get(14).trim();
-            String value2 = testdata.get(15).trim();
-            String value3 = testdata.get(16).trim();
-            String columnName = testdata.get(17).trim();
-            String expression = testdata.get(18).trim();
-            String itemName = testdata.get(19).trim();
-            String desc = testdata.get(20).trim();
-            String cellId = testdata.get(21).trim();
-
-            ListPage listPage = super.m.listPage;
-            entityManagePage = listPage.EnterEntityPage();
-
-            // Add entity and assign return
-            entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
-            entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
-
-            // Edit the form variable
-            entityManagePage.openFormVariablePage(entity);
-            entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
-            entityManagePage = entityManagePage.assignVariable(regulator);
-            listPage = entityManagePage.backToDashboard();
-
-            // Navigate to form variable page
-            FormVariablePage formVariablePage = listPage.openFormVariablePage();
-            formVariablePage = formVariablePage.filterByEntityColume(entity);
-            formVariablePage.editVariableValue(entity, returnName, desc, valueOfCB, "Input");
-            listPage = formVariablePage.backToDashboard();
-
-            // Create the new return CRIR
-            listPage.getProductListPage(regulator1, null, null, null);
-            listPage.getProductListPage(regulator2, entity, "All", "All");
-            FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
-
-            // Edit the cell value
-            formInstancePage.selectPage(page);
-            formInstancePage.insertRow(cellId);
-            formInstancePage.editCellValue(cellName1, value1);
-            formInstancePage.editCellValue(cellName2, value2);
-
-            // Check the cell value
-            Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
-
-            // Double click the cell
-            AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
-            Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
-            Assert.assertEquals(allocationPage.getSumRule(), expression);
-            Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfCB, "", desc, ""));
-        }
-        catch (Throwable e) {
-            testRst = false;
-            e.printStackTrace();
-        } finally {
-            // package com.lombardrisk.testCase;
-            closeFormInstance();
-            writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
-        }
-    }
-
-    @Test
-    public void test6756() throws Exception {
-        String caseID = "6756";
-        logger.info("==== Verify entity variable in function sum rule of extend grid work well[case id=" + caseID + "]====");
-        boolean testRst = true;
-        EntityPage entityManagePage = null;
-        try {
-            String nodeName = "C" + caseID;
-            List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
-            String entity = testdata.get(0);
-            String regulator = testdata.get(1);
-            String returnName = testdata.get(2).trim();
-            String ugs = testdata.get(3).trim();
-            String pgs = testdata.get(4).trim();
-            String value = testdata.get(5).trim();
-            String valueOfCB = testdata.get(6).trim();
-            String regulator1 = testdata.get(7).trim();
-            String regulator2 = testdata.get(8).trim();
-            String referenceDate = testdata.get(9).trim();
-            String page = testdata.get(10).trim();
-            String cellName1 = testdata.get(11).trim();
-            String cellName2 = testdata.get(12).trim();
-            String value1 = testdata.get(13).trim();
-            String value2 = testdata.get(14).trim();
-            String columnName = testdata.get(15).trim();
-            String expression = testdata.get(16).trim();
-            String itemName = testdata.get(17).trim();
-            String desc = testdata.get(18).trim();
-            String cellId = testdata.get(19).trim();
-			String valueOfAll = testdata.get(20).trim();
-
-            ListPage listPage = super.m.listPage;
-            entityManagePage = listPage.EnterEntityPage();
-
-            // Add entity and assign return
-            entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
-            entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
-
-            // Edit the form variable
-            entityManagePage.openFormVariablePage(entity);
-            entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
-			entityManagePage.updateColumnValueOfDate(regulator, desc, valueOfCB);
-            entityManagePage = entityManagePage.assignVariable(regulator);
-            listPage = entityManagePage.backToDashboard();
-
-            // Create the new return CRIR
-            listPage.getProductListPage(regulator1, null, null, null);
-            listPage.getProductListPage(regulator2, entity, "All", "All");
-            FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
-
-            // Edit the cell value
-            formInstancePage.selectPage(page);
-            formInstancePage.insertRow(cellId);
-            formInstancePage.editCellValue(cellName1, value1);
-
-            // Check the cell value
-            Assert.assertEquals(formInstancePage.getCellText(cellName2), value2);
-
-            // Double click the cell
-            AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName2);
-            Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
-            Assert.assertEquals(allocationPage.getSumRule(), expression);
-            Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
-        }
-        catch (Throwable e) {
-            testRst = false;
-            e.printStackTrace();
-        } finally {
-            // package com.lombardrisk.testCase;
-            closeFormInstance();
-            writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
-        }
-    }
+			// Double click the cell
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
+			Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
+			Assert.assertEquals(allocationPage.getSumRule(), expression);
+			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfCB, "", desc, ""));
+		}
+		catch (Throwable e)
+		{
+			testRst = false;
+			e.printStackTrace();
+		}
+		finally
+		{
+			// package com.lombardrisk.testCase;
+			closeFormInstance();
+			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
+		}
+	}
 
 	@Test
-	public void test6757() throws Exception {
+	public void test6670() throws Exception
+	{
+		String caseID = "6670";
+		logger.info("==== Verify entity variable in sum rule work well for all instance[case id=" + caseID + "]====");
+		boolean testRst = true;
+		EntityPage entityManagePage = null;
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			String entity = testdata.get(0);
+			String regulator = testdata.get(1);
+			String returnName = testdata.get(2).trim();
+			String ugs = testdata.get(3).trim();
+			String pgs = testdata.get(4).trim();
+			String value = testdata.get(5).trim();
+			String valueOfCB = testdata.get(6).trim();
+			String regulator1 = testdata.get(7).trim();
+			String regulator2 = testdata.get(8).trim();
+			String referenceDate = testdata.get(9).trim();
+			String page = testdata.get(10).trim();
+			String cellName1 = testdata.get(11).trim();
+			String instanceName = testdata.get(12).trim();
+			String cellName3 = testdata.get(13).trim();
+			String value1 = testdata.get(14).trim();
+			String value2 = testdata.get(15).trim();
+			String value3 = testdata.get(16).trim();
+			String columnName = testdata.get(17).trim();
+			String expression = testdata.get(18).trim();
+			String itemName = testdata.get(19).trim();
+			String desc = testdata.get(20).trim();
+			String instanceName2 = testdata.get(21).trim();
+			String valueOfAll = testdata.get(22).trim();
+
+			ListPage listPage = super.m.listPage;
+			entityManagePage = listPage.EnterEntityPage();
+
+			// Add entity and assign return
+			entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
+			entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
+
+			// Edit the form variable
+			entityManagePage.openFormVariablePage(entity);
+			entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
+			entityManagePage.updateColumnValueOfDate(regulator, desc, valueOfCB);
+			entityManagePage = entityManagePage.assignVariable(regulator);
+			listPage = entityManagePage.backToDashboard();
+
+			// Create the new return CIMACPIS
+			listPage.getProductListPage(regulator1, null, null, null);
+			listPage.getProductListPage(regulator2, entity, "All", "All");
+			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
+
+			// Edit the cell value
+			formInstancePage.selectPage(page);
+			formInstancePage.editCellValue(cellName1, value1);
+
+			// Add new instance 2
+			formInstancePage.addInstance(instanceName);
+			formInstancePage.editCellValue(cellName1, value2);
+
+			// Check the cell value
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+			formInstancePage.selectInstance(instanceName2);
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+
+			// Double click the cell
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
+			Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
+			Assert.assertEquals(allocationPage.getSumRule(), expression);
+			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
+		}
+		catch (Throwable e)
+		{
+			testRst = false;
+			e.printStackTrace();
+		}
+		finally
+		{
+			// package com.lombardrisk.testCase;
+			closeFormInstance();
+			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
+		}
+	}
+
+	@Test
+	public void test6672() throws Exception
+	{
+		String caseID = "6672";
+		logger.info("==== Dashboard FV-01-04 Verify form variable in sum rule work well for all instance[case id=" + caseID + "]====");
+		boolean testRst = true;
+		EntityPage entityManagePage = null;
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			String entity = testdata.get(0);
+			String regulator = testdata.get(1);
+			String returnName = testdata.get(2).trim();
+			String ugs = testdata.get(3).trim();
+			String pgs = testdata.get(4).trim();
+			String value = testdata.get(5).trim();
+			String valueOfCB = testdata.get(6).trim();
+			String regulator1 = testdata.get(7).trim();
+			String regulator2 = testdata.get(8).trim();
+			String referenceDate = testdata.get(9).trim();
+			String page = testdata.get(10).trim();
+			String cellName1 = testdata.get(11).trim();
+			String instanceName = testdata.get(12).trim();
+			String cellName3 = testdata.get(13).trim();
+			String value1 = testdata.get(14).trim();
+			String value2 = testdata.get(15).trim();
+			String value3 = testdata.get(16).trim();
+			String columnName = testdata.get(17).trim();
+			String expression = testdata.get(18).trim();
+			String itemName = testdata.get(19).trim();
+			String desc = testdata.get(20).trim();
+			String instanceName2 = testdata.get(21).trim();
+			String valueOfAll = testdata.get(22).trim();
+
+			ListPage listPage = super.m.listPage;
+			entityManagePage = listPage.EnterEntityPage();
+
+			// Add entity and assign return
+			entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
+			entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
+
+			// Edit the form variable
+			entityManagePage.openFormVariablePage(entity);
+			entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
+			entityManagePage = entityManagePage.assignVariable(regulator);
+			listPage = entityManagePage.backToDashboard();
+
+			// Navigate to form variable page.
+			FormVariablePage formVariablePage = listPage.openFormVariablePage();
+			formVariablePage = formVariablePage.filterByEntityColume(entity);
+			formVariablePage.editVariableValue(entity, returnName, desc, valueOfCB, "Date");
+			listPage = formVariablePage.backToDashboard();
+
+			// Create the new return CIMACPIS
+			listPage.getProductListPage(regulator1, null, null, null);
+			listPage.getProductListPage(regulator2, entity, "All", "All");
+			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
+
+			// Edit the cell value
+			formInstancePage.selectPage(page);
+			formInstancePage.editCellValue(cellName1, value1);
+
+			// Add new instance 2
+			formInstancePage.addInstance(instanceName);
+			formInstancePage.editCellValue(cellName1, value2);
+
+			// Check the cell value
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+			formInstancePage.selectInstance(instanceName2);
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+
+			// Double click the cell
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
+			Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
+			Assert.assertEquals(allocationPage.getSumRule(), expression);
+			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
+		}
+		catch (Throwable e)
+		{
+			testRst = false;
+			e.printStackTrace();
+		}
+		finally
+		{
+			// package com.lombardrisk.testCase;
+			closeFormInstance();
+			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
+		}
+	}
+
+	@Test
+	public void test6742() throws Exception
+	{
+		String caseID = "6742";
+		logger.info("==== Verify entity variable in sum rule of extend grid work well[case id=" + caseID + "]====");
+		boolean testRst = true;
+		EntityPage entityManagePage = null;
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			String entity = testdata.get(0);
+			String regulator = testdata.get(1);
+			String returnName = testdata.get(2).trim();
+			String ugs = testdata.get(3).trim();
+			String pgs = testdata.get(4).trim();
+			String value = testdata.get(5).trim();
+			String valueOfCB = testdata.get(6).trim();
+			String regulator1 = testdata.get(7).trim();
+			String regulator2 = testdata.get(8).trim();
+			String referenceDate = testdata.get(9).trim();
+			String page = testdata.get(10).trim();
+			String cellName1 = testdata.get(11).trim();
+			String cellName2 = testdata.get(12).trim();
+			String cellName3 = testdata.get(13).trim();
+			String value1 = testdata.get(14).trim();
+			String value2 = testdata.get(15).trim();
+			String value3 = testdata.get(16).trim();
+			String columnName = testdata.get(17).trim();
+			String expression = testdata.get(18).trim();
+			String itemName = testdata.get(19).trim();
+			String desc = testdata.get(20).trim();
+			String cellId = testdata.get(21).trim();
+
+			ListPage listPage = super.m.listPage;
+			entityManagePage = listPage.EnterEntityPage();
+
+			// Add entity and assign return
+			entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
+			entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
+
+			// Edit the form variable
+			entityManagePage.openFormVariablePage(entity);
+			entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
+			entityManagePage.updateColumnValueOfInput(regulator, desc, valueOfCB);
+			entityManagePage = entityManagePage.assignVariable(regulator);
+			listPage = entityManagePage.backToDashboard();
+
+			// Create the new return CRIR
+			listPage.getProductListPage(regulator1, null, null, null);
+			listPage.getProductListPage(regulator2, entity, "All", "All");
+			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
+
+			// Edit the cell value
+			formInstancePage.selectPage(page);
+			formInstancePage.insertRow(cellId);
+			formInstancePage.editCellValue(cellName1, value1);
+			formInstancePage.editCellValue(cellName2, value2);
+
+			// Check the cell value
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+
+			// Double click the cell
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
+			Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
+			Assert.assertEquals(allocationPage.getSumRule(), expression);
+			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfCB, "", desc, ""));
+		}
+		catch (Throwable e)
+		{
+			testRst = false;
+			e.printStackTrace();
+		}
+		finally
+		{
+			// package com.lombardrisk.testCase;
+			closeFormInstance();
+			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
+		}
+	}
+
+	@Test
+	public void test6743() throws Exception
+	{
+		String caseID = "6743";
+		logger.info("==== Verify form variable in sum rule of extend grid work well[case id=" + caseID + "]====");
+		boolean testRst = true;
+		EntityPage entityManagePage = null;
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			String entity = testdata.get(0);
+			String regulator = testdata.get(1);
+			String returnName = testdata.get(2).trim();
+			String ugs = testdata.get(3).trim();
+			String pgs = testdata.get(4).trim();
+			String value = testdata.get(5).trim();
+			String valueOfCB = testdata.get(6).trim();
+			String regulator1 = testdata.get(7).trim();
+			String regulator2 = testdata.get(8).trim();
+			String referenceDate = testdata.get(9).trim();
+			String page = testdata.get(10).trim();
+			String cellName1 = testdata.get(11).trim();
+			String cellName2 = testdata.get(12).trim();
+			String cellName3 = testdata.get(13).trim();
+			String value1 = testdata.get(14).trim();
+			String value2 = testdata.get(15).trim();
+			String value3 = testdata.get(16).trim();
+			String columnName = testdata.get(17).trim();
+			String expression = testdata.get(18).trim();
+			String itemName = testdata.get(19).trim();
+			String desc = testdata.get(20).trim();
+			String cellId = testdata.get(21).trim();
+
+			ListPage listPage = super.m.listPage;
+			entityManagePage = listPage.EnterEntityPage();
+
+			// Add entity and assign return
+			entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
+			entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
+
+			// Edit the form variable
+			entityManagePage.openFormVariablePage(entity);
+			entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
+			entityManagePage = entityManagePage.assignVariable(regulator);
+			listPage = entityManagePage.backToDashboard();
+
+			// Navigate to form variable page
+			FormVariablePage formVariablePage = listPage.openFormVariablePage();
+			formVariablePage = formVariablePage.filterByEntityColume(entity);
+			formVariablePage.editVariableValue(entity, returnName, desc, valueOfCB, "Input");
+			listPage = formVariablePage.backToDashboard();
+
+			// Create the new return CRIR
+			listPage.getProductListPage(regulator1, null, null, null);
+			listPage.getProductListPage(regulator2, entity, "All", "All");
+			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
+
+			// Edit the cell value
+			formInstancePage.selectPage(page);
+			formInstancePage.insertRow(cellId);
+			formInstancePage.editCellValue(cellName1, value1);
+			formInstancePage.editCellValue(cellName2, value2);
+
+			// Check the cell value
+			Assert.assertEquals(formInstancePage.getCellText(cellName3), value3);
+
+			// Double click the cell
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName3);
+			Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
+			Assert.assertEquals(allocationPage.getSumRule(), expression);
+			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfCB, "", desc, ""));
+		}
+		catch (Throwable e)
+		{
+			testRst = false;
+			e.printStackTrace();
+		}
+		finally
+		{
+			// package com.lombardrisk.testCase;
+			closeFormInstance();
+			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
+		}
+	}
+
+	@Test
+	public void test6756() throws Exception
+	{
+		String caseID = "6756";
+		logger.info("==== Verify entity variable in function sum rule of extend grid work well[case id=" + caseID + "]====");
+		boolean testRst = true;
+		EntityPage entityManagePage = null;
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			String entity = testdata.get(0);
+			String regulator = testdata.get(1);
+			String returnName = testdata.get(2).trim();
+			String ugs = testdata.get(3).trim();
+			String pgs = testdata.get(4).trim();
+			String value = testdata.get(5).trim();
+			String valueOfCB = testdata.get(6).trim();
+			String regulator1 = testdata.get(7).trim();
+			String regulator2 = testdata.get(8).trim();
+			String referenceDate = testdata.get(9).trim();
+			String page = testdata.get(10).trim();
+			String cellName1 = testdata.get(11).trim();
+			String cellName2 = testdata.get(12).trim();
+			String value1 = testdata.get(13).trim();
+			String value2 = testdata.get(14).trim();
+			String columnName = testdata.get(15).trim();
+			String expression = testdata.get(16).trim();
+			String itemName = testdata.get(17).trim();
+			String desc = testdata.get(18).trim();
+			String cellId = testdata.get(19).trim();
+			String valueOfAll = testdata.get(20).trim();
+
+			ListPage listPage = super.m.listPage;
+			entityManagePage = listPage.EnterEntityPage();
+
+			// Add entity and assign return
+			entityManagePage = entityManagePage.addRootEntityIfNotExist(entity, entity, entity, true);
+			entityManagePage.assignReturnToEntity(entity, regulator, returnName.split("#"), ugs.split("#"), pgs.split("#"));
+
+			// Edit the form variable
+			entityManagePage.openFormVariablePage(entity);
+			entityManagePage.inputRequiredFieldsOfVariable(regulator, value);
+			entityManagePage.updateColumnValueOfDate(regulator, desc, valueOfCB);
+			entityManagePage = entityManagePage.assignVariable(regulator);
+			listPage = entityManagePage.backToDashboard();
+
+			// Create the new return CRIR
+			listPage.getProductListPage(regulator1, null, null, null);
+			listPage.getProductListPage(regulator2, entity, "All", "All");
+			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
+
+			// Edit the cell value
+			formInstancePage.selectPage(page);
+			formInstancePage.insertRow(cellId);
+			formInstancePage.editCellValue(cellName1, value1);
+
+			// Check the cell value
+			Assert.assertEquals(formInstancePage.getCellText(cellName2), value2);
+
+			// Double click the cell
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(cellName2);
+			Assert.assertTrue(allocationPage.getSumTabHeader().contains(columnName));
+			Assert.assertEquals(allocationPage.getSumRule(), expression);
+			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
+		}
+		catch (Throwable e)
+		{
+			testRst = false;
+			e.printStackTrace();
+		}
+		finally
+		{
+			// package com.lombardrisk.testCase;
+			closeFormInstance();
+			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
+		}
+	}
+
+	@Test
+	public void test6757() throws Exception
+	{
 		String caseID = "6757";
 		logger.info("==== Verify form variable in function sum rule of extend grid work well[case id=" + caseID + "]====");
 		boolean testRst = true;
 		EntityPage entityManagePage = null;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2176,10 +2207,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, valueOfAll, "", desc, ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2187,12 +2221,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6673() throws Exception {
+	public void test6673() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6673";
 		logger.info("==== Verify entity variable in sum rule work well for all instance with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2200,7 +2236,7 @@ public class Admin_FormVariable extends TestTemplate
 			String returnName = testdata.get(2).trim();
 			String referenceDate = testdata.get(3).trim();
 			String instanceName1 = testdata.get(4).trim();
-//			String instanceName2 = testdata.get(5).trim();
+			// String instanceName2 = testdata.get(5).trim();
 			String cellName1 = testdata.get(6).trim();
 			String cellName2 = testdata.get(7).trim();
 			String cellName3 = testdata.get(8).trim();
@@ -2235,10 +2271,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2246,12 +2285,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6674() throws Exception {
+	public void test6674() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6674";
 		logger.info("==== Verify entity variable in sum rule work well for each instance with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2286,10 +2327,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2297,12 +2341,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6675() throws Exception {
+	public void test6675() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6675";
 		logger.info("==== Verify form variable in sum rule work well for all instance with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2310,7 +2356,7 @@ public class Admin_FormVariable extends TestTemplate
 			String returnName = testdata.get(2).trim();
 			String referenceDate = testdata.get(3).trim();
 			String instanceName1 = testdata.get(4).trim();
-//			String instanceName2 = testdata.get(5).trim();
+			// String instanceName2 = testdata.get(5).trim();
 			String cellName1 = testdata.get(6).trim();
 			String cellName2 = testdata.get(7).trim();
 			String cellName3 = testdata.get(8).trim();
@@ -2345,10 +2391,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2356,12 +2405,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6676() throws Exception {
+	public void test6676() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6676";
 		logger.info("==== Verify form variable in sum rule work well for each instance with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2396,10 +2447,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2407,12 +2461,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6748() throws Exception {
+	public void test6748() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6748";
 		logger.info("==== Verify entity variable in sum rule of extend grid work well with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2452,10 +2508,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2463,12 +2522,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6751() throws Exception {
+	public void test6751() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6751";
 		logger.info("==== Verify form variable in sum rule of extend grid work well with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2508,10 +2569,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2519,12 +2583,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6759() throws Exception {
+	public void test6759() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6759";
 		logger.info("====Verify entity variable in function sum rule of extend grid work well with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2561,10 +2627,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
@@ -2572,12 +2641,14 @@ public class Admin_FormVariable extends TestTemplate
 	}
 
 	@Test
-	public void test6760() throws Exception {
+	public void test6760() throws Exception
+	{
 		// Toolset environment
 		String caseID = "6760";
 		logger.info("====Verify form variable in function sum rule of extend grid work well with toolset DB[case id=" + caseID + "]====");
 		boolean testRst = true;
-		try {
+		try
+		{
 			String nodeName = "C" + caseID;
 			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
 			String entity = testdata.get(0);
@@ -2614,10 +2685,13 @@ public class Admin_FormVariable extends TestTemplate
 			Assert.assertEquals(allocationPage.getSumRule(), expression);
 			Assert.assertTrue(allocationPage.checkSumRowOfFormVariable(itemName, entityValue, "", "", ""));
 		}
-		catch (Throwable e) {
+		catch (Throwable e)
+		{
 			testRst = false;
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
 			// package com.lombardrisk.testCase;
 			closeFormInstance();
 			writeTestResultToFile(caseID, testRst, "Admin_FormVariable");
