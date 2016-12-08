@@ -349,7 +349,7 @@ public class EntityPage extends AbstractImportPage
 	 * @return all entities(List)
 	 * @throws Exception
 	 */
-	public List<String> getAllEntityName() throws Exception
+	public List<String> getAllEntityName()
 	{
 		logger.info("Get all entities");
 		try

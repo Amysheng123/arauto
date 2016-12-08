@@ -2,6 +2,7 @@ package com.lombardrisk.pages;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.yiwan.webcore.web.IWebDriverWrapper;
 
@@ -63,8 +64,8 @@ public class DWIntegrationPage extends AbstractPage
 	public void deleteContextual(String DW, String contextualName) throws Exception
 	{
 		SelectDW(DW);
-		int nums = (int) element("dwi.dataTable").getRowCount();
-		for (int i = 1; i <= nums; i++)
+		int num = (int) element("dwi.dataTable").getRowCount();
+		for (int i = 1; i <= num; i++)
 		{
 			if (element("dwi.dataTable.name", String.valueOf(i)).getInnerText().equalsIgnoreCase(contextualName))
 			{
@@ -88,7 +89,7 @@ public class DWIntegrationPage extends AbstractPage
 	public void deleteAllContextual(String DW) throws Exception
 	{
 		SelectDW(DW);
-		if (element("dwi.dataTable2").isDisplayed() && element("dwi.dataTable2").getInnerText().equals("No records found."))
+		if (element("dwi.dataTable2").isDisplayed() && "No records found.".equals(element("dwi.dataTable2").getInnerText()))
 		{
 
 		}
@@ -177,7 +178,8 @@ public class DWIntegrationPage extends AbstractPage
 			element("dwi.edit.desc").input(desc);
 		}
 
-		int x = (int) (Math.random() * 10);
+		Random random=new Random();
+		int x = random.nextInt(10);
 
 		element("dwi.edit.icon", String.valueOf(x)).click();
 		waitStatusDlg();

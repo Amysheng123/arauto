@@ -33,7 +33,7 @@ public class DeleteReturnLogPage extends AbstractPage
 		}
 
 		int amt, rowAmt_F;
-		if (element("drlp.firstRowTxt").getInnerText().equals("No records found."))
+		if ("No records found.".equals(element("drlp.firstRowTxt").getInnerText()))
 			amt = 0;
 		else
 		{

@@ -106,7 +106,7 @@ public class AdjustLogPage extends AbstractPage
 		int Nums = (int) element("alp.logTable").getRowCount();
 		if (Nums == 1)
 		{
-			if (element("alp.noRecords").getInnerText().equals("No records found."))
+			if ("No records found.".equals(element("alp.noRecords").getInnerText()))
 				Nums = 0;
 		}
 		return Nums;
@@ -201,6 +201,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 			return "";
 		}
 	}
@@ -223,6 +224,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 			return "";
 		}
 	}
@@ -242,6 +244,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 			return "";
 		}
 	}
@@ -261,6 +264,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 			return "";
 		}
 	}
@@ -280,6 +284,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 			return "";
 		}
 	}

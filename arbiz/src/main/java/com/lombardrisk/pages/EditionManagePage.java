@@ -55,7 +55,7 @@ public class EditionManagePage extends AbstractPage
 					try
 					{
 						String p_Index = element("edm.nextPage").getAttribute("tabindex");
-						if (!p_Index.equals("-1"))
+						if (!"-1".equals(p_Index))
 						{
 							element("edm.nextPage").click();
 							pageNO++;
@@ -69,9 +69,10 @@ public class EditionManagePage extends AbstractPage
 					}
 					catch (Exception e)
 					{
+						logger.warn(e.getMessage());
 						nextPageage = false;
 						findForm = true;
-						logger.warn(e.getMessage());
+
 					}
 				}
 
@@ -111,7 +112,7 @@ public class EditionManagePage extends AbstractPage
 		}
 
 		status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("ACTIVE"))
+		if ("ACTIVE".equalsIgnoreCase(status))
 		{
 			state = true;
 			logger.error("Activate edition successfully");
@@ -133,13 +134,13 @@ public class EditionManagePage extends AbstractPage
 	{
 		boolean state = false;
 		String formPosition = findForm(creationDate);
-		if (formPosition.equals("1_0"))
+		if ("1_0".equals(formPosition))
 		{
 			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
 		String rowNo = formPosition.split("_")[1];
 		String status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("DORMANT"))
+		if ("DORMANT".equalsIgnoreCase(status))
 		{
 			logger.error("This edition is dormant");
 		}
@@ -150,7 +151,7 @@ public class EditionManagePage extends AbstractPage
 		}
 
 		status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("DORMANT"))
+		if ("DORMANT".equalsIgnoreCase(status))
 		{
 			state = true;
 			logger.error("Deactivate edition successfully");
@@ -168,12 +169,12 @@ public class EditionManagePage extends AbstractPage
 	 */
 	public FormInstancePage openForm(String creationDate) throws Exception
 	{
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if ("1_0".equals(formPosition))
 		{
 			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 		int row = Integer.parseInt(rowNo) - 1;
 		element("edm.formLink", String.valueOf(row)).click();
 		waitStatusDlg();

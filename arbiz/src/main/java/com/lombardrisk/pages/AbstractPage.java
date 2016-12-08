@@ -82,7 +82,7 @@ public abstract class AbstractPage extends PageBase
 
 		List<File> list = getFiles(path, new ArrayList<File>());
 
-		if (list != null && list.size() > 0)
+		if (list != null && !list.isEmpty())
 		{
 
 			Collections.sort(list, new Comparator<File>() {
@@ -118,7 +118,7 @@ public abstract class AbstractPage extends PageBase
 	protected static String getLatestFile(String path)
 	{
 		List<File> files = sortFileByModifiedTime(path);
-		if (files.size() > 0)
+		if (!files.isEmpty())
 			return files.get(0).toString();
 		else
 			return "";
@@ -136,7 +136,7 @@ public abstract class AbstractPage extends PageBase
 		return test.getRandomString(length);
 	}
 
-	public void refreshPage() throws Exception
+	public void refreshPage()
 	{
 		getWebDriverWrapper().navigate().refresh();
 	}
@@ -158,15 +158,14 @@ public abstract class AbstractPage extends PageBase
 	 * 
 	 * @throws Exception
 	 */
-	protected void waitForPageLoaded() throws Exception
-	{
+	protected void waitForPageLoaded() throws InterruptedException {
 		String js = "return document.readyState";
-		boolean rst = executeScript(js).equals("complete");
+		boolean rst = "complete".equals(executeScript(js));
 		while (!rst)
 		{
 			logger.info("Current status is[" + executeScript(js) + "],loading...");
 			Thread.sleep(300);
-			rst = executeScript(js).equals("complete");
+            rst = "complete".equals(executeScript(js));
 		}
 		Thread.sleep(300);
 	}
@@ -185,7 +184,7 @@ public abstract class AbstractPage extends PageBase
 		{
 			try
 			{
-				if (element(locator).getAllOptions().size() > 0)
+				if (!element(locator).getAllOptions().isEmpty())
 					break;
 				long cur = System.currentTimeMillis();
 				if ((cur - init) / 1000 > 5)
@@ -193,8 +192,8 @@ public abstract class AbstractPage extends PageBase
 			}
 			catch (StaleElementReferenceException e)
 			{
-				i++;
-				logger.info("Try again");
+				logger.warn("Try again");
+                i++;
 			}
 		}
 
@@ -207,12 +206,10 @@ public abstract class AbstractPage extends PageBase
 	 * @return Return
 	 * @throws Exception
 	 */
-	protected List<String> splitReturn(String returnName) throws Exception
+	protected List<String> splitReturn(String returnName)
 	{
 		List<String> returnNV = new ArrayList<>();
-		String formCode;
-		String formVersion;
-		String Form;
+		String formCode,formVersion,Form;
 		if (returnName.contains("("))
 		{
 			returnName = returnName.replace("(", "#");
@@ -242,8 +239,7 @@ public abstract class AbstractPage extends PageBase
 	 * 
 	 * @throws Exception
 	 */
-	protected void clickEnterKey() throws Exception
-	{
+	protected void clickEnterKey() throws InterruptedException {
 		actions().sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 	}
@@ -257,23 +253,20 @@ public abstract class AbstractPage extends PageBase
 	protected void selectDate(String date) throws Exception
 	{
 		getFormatFromDB();
-		String year = null;
-		String month = null;
-		String day = null;
-
-		if (format.equalsIgnoreCase("en_GB"))
+		String year ,month,day;
+		if ("en_GB".equalsIgnoreCase(format))
 		{
 			month = date.substring(3, 5);
 			day = date.substring(0, 2);
 			year = date.substring(6, 10);
 		}
-		else if (format.equalsIgnoreCase("en_US"))
+		else if ("en_US".equalsIgnoreCase(format))
 		{
 			day = date.substring(3, 5);
 			month = date.substring(0, 2);
 			year = date.substring(6, 10);
 		}
-		else if (format.equalsIgnoreCase("zh_CN"))
+		else if ("zh_CN".equalsIgnoreCase(format))
 		{
 			month = date.substring(8, 10);
 			day = date.substring(5, 7);
