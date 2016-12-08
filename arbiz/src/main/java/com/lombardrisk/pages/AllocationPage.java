@@ -133,7 +133,7 @@ public class AllocationPage extends AbstractPage
 	{
 		Thread.sleep(3000);
 		waitStatusDlg();
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{

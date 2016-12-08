@@ -55,8 +55,8 @@ public abstract class AbstractPage extends PageBase
 		File realFile = new File(path);
 		if (realFile.isDirectory())
 		{
-			File[] subfiles = realFile.listFiles();
-			for (File file : subfiles)
+			File[] subFiles = realFile.listFiles();
+			for (File file : subFiles)
 			{
 				if (file.isDirectory())
 				{
@@ -118,14 +118,10 @@ public abstract class AbstractPage extends PageBase
 	protected static String getLatestFile(String path)
 	{
 		List<File> files = sortFileByModifiedTime(path);
-		try
-		{
+		if (files.size() > 0)
 			return files.get(0).toString();
-		}
-		catch (Exception e)
-		{
+		else
 			return "";
-		}
 	}
 
 	/**
@@ -189,10 +185,8 @@ public abstract class AbstractPage extends PageBase
 		{
 			try
 			{
-				if (element(locator).getAllOptions().size() == 0)
-				{
-
-				}
+				if (element(locator).getAllOptions().size() > 0)
+					break;
 				long cur = System.currentTimeMillis();
 				if ((cur - init) / 1000 > 5)
 					break;
@@ -267,14 +261,7 @@ public abstract class AbstractPage extends PageBase
 		String month = null;
 		String day = null;
 
-		if (format == null)
-		{
-			month = date.substring(3, 5);
-			day = date.substring(0, 2);
-			year = date.substring(6, 10);
-		}
-
-		else if (format.equalsIgnoreCase("en_GB"))
+		if (format.equalsIgnoreCase("en_GB"))
 		{
 			month = date.substring(3, 5);
 			day = date.substring(0, 2);
@@ -291,6 +278,12 @@ public abstract class AbstractPage extends PageBase
 			month = date.substring(8, 10);
 			day = date.substring(5, 7);
 			year = date.substring(0, 4);
+		}
+		else
+		{
+			month = date.substring(3, 5);
+			day = date.substring(0, 2);
+			year = date.substring(6, 10);
 		}
 		if (day.startsWith("0"))
 		{
@@ -467,10 +460,9 @@ public abstract class AbstractPage extends PageBase
 	{
 		if (exportType == null)
 			exportType = "";
-		String filePath = null;
+		String filePath, fileName = null;
 		if (dir == null)
-			dir = FileUtils.getUserDirectoryPath() + "\\downloads\\";
-		String fileName = null;
+			dir = FileUtils.getUserDirectoryPath() + "/downloads/";
 		boolean flag = true;
 		long statTime = System.currentTimeMillis();
 
@@ -480,7 +472,7 @@ public abstract class AbstractPage extends PageBase
 			long curTime = System.currentTimeMillis();
 			if (!fileName.equalsIgnoreCase(LatestFileName) && !fileName.endsWith(".tmp") && !fileName.endsWith(".crdownload"))
 				flag = false;
-			else if ((curTime - statTime) / 1000 > 300)
+			else if ((curTime - statTime) / 1000 > 600)
 			{
 				flag = false;
 				fileName = null;
@@ -495,7 +487,7 @@ public abstract class AbstractPage extends PageBase
 			filePath = fileName;
 		else
 		{
-			File exportedFile = new File("target\\result\\data\\download\\" + new File(fileName).getName());
+			File exportedFile = new File("target/result/data/download/" + new File(fileName).getName());
 			if (exportedFile.exists())
 				exportedFile.delete();
 			if (fileName != null)

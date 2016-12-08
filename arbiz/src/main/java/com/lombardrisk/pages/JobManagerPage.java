@@ -128,6 +128,7 @@ public class JobManagerPage extends AbstractPage
 	{
 		logger.info("Back to list page");
 		element("jmp.backToList2").click();
+		Thread.sleep(300);
 		waitStatusDlg();
 		return new ListPage(getWebDriverWrapper());
 	}

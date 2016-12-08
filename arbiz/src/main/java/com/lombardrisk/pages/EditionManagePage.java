@@ -28,7 +28,7 @@ public class EditionManagePage extends AbstractPage
 	 */
 	private String findForm(String creationDate) throws Exception
 	{
-		String page_index = "";
+		String page_index;
 		int pageNO = 1;
 		int rowNo = 0;
 		boolean findForm = false;
@@ -71,7 +71,7 @@ public class EditionManagePage extends AbstractPage
 					{
 						nextPageage = false;
 						findForm = true;
-						e.printStackTrace();
+						logger.warn(e.getMessage());
 					}
 				}
 
@@ -92,17 +92,17 @@ public class EditionManagePage extends AbstractPage
 	public boolean activateForm(String creationDate) throws Exception
 	{
 		boolean state = false;
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if (formPosition.equals("1_0"))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 
 		String status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
 		if (status.equalsIgnoreCase("ACTIVE"))
 		{
-			logger.error("This edition alread activated");
+			logger.error("This edition already activated");
 		}
 		else
 		{
@@ -132,12 +132,12 @@ public class EditionManagePage extends AbstractPage
 	public boolean deactivateForm(String creationDate) throws Exception
 	{
 		boolean state = false;
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if (formPosition.equals("1_0"))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 		String status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
 		if (status.equalsIgnoreCase("DORMANT"))
 		{
@@ -171,7 +171,7 @@ public class EditionManagePage extends AbstractPage
 		String formPosttion = findForm(creationDate);
 		if (formPosttion.equals("1_0"))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
 		String rowNo = formPosttion.split("_")[1];
 		int row = Integer.parseInt(rowNo) - 1;
@@ -192,7 +192,7 @@ public class EditionManagePage extends AbstractPage
 		String formPosttion = findForm(creationDate);
 		if (formPosttion.equals("1_0"))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
 		String rowNo = formPosttion.split("_")[1];
 		int row = Integer.parseInt(rowNo);
@@ -200,7 +200,7 @@ public class EditionManagePage extends AbstractPage
 		waitStatusDlg();
 		element("edm.delEditionConBtn").click();
 		waitStatusDlg();
-		element("edm.delEditionComment").type("Delete by autoamtion");
+		element("edm.delEditionComment").type("Delete by automation");
 		element("edm.deleteBtn").click();
 		waitStatusDlg();
 		waitThat("edm.message").toBeInvisible();

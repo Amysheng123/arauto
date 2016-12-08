@@ -24,7 +24,7 @@ import com.lombardrisk.utils.fileService.XMLUtil;
 
 public class TestTemplate extends TestBase
 {
-	protected static String targetLogFolder = System.getProperty("user.dir") + "\\target\\result\\logs\\";
+	protected static String targetLogFolder = System.getProperty("user.dir") + "/target/result/logs/";
 	protected static String testDataFolderName = PropHelper.getProperty("data.type").trim();
 	protected static boolean startService = Boolean.parseBoolean(PropHelper.getProperty("test.startService").trim());
 	protected static String envPath = PropHelper.getProperty("test.environment.path").trim();
@@ -118,31 +118,31 @@ public class TestTemplate extends TestBase
 			ConnectDBType = "toolSet";
 		}
 
-		testdata_admin = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Admin\\Admin.xml";
-		testdata_DeleteReturn = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\DeleteReturn\\DeleteReturn.xml";
-		testdata_edition = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Edition\\Edition.xml";
-		testdata_editForm = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\EditForm\\EditForm.xml";
+		testdata_admin = System.getProperty("user.dir") + "/" + testDataFolderName + "/Admin/Admin.xml";
+		testdata_DeleteReturn = System.getProperty("user.dir") + "/" + testDataFolderName + "/DeleteReturn/DeleteReturn.xml";
+		testdata_edition = System.getProperty("user.dir") + "/" + testDataFolderName + "/Edition/Edition.xml";
+		testdata_editForm = System.getProperty("user.dir") + "/" + testDataFolderName + "/EditForm/EditForm.xml";
 		editFormLogData = new File(testdata_editForm.replace("EditForm.xml", "EditForm_Data_Log.xlsx"));
-		testdata_highlight = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\HighLight\\HighLight.xml";
-		testdata_Utility = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Utility\\Utility.xml";
-		testdata_Workflow = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Workflow\\Workflow.xml";
-		testdata_General = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\GeneralFunction\\GeneralFunction.xml";
-		jobData = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Job\\Job.xml";
-		testdata_updateForm = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\UpdateForm\\UpdateForm.xml";
-		testdata_OtherModule = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\OtherModule\\OtherModule.xml";
-		testdata_FormVariable = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Admin\\FormVariable.xml";
-		testdata_RowLimit = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\RowLimit\\RowLimit.xml";
-		testdata_Threshold = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Threshold\\Threshold.xml";
-		testdata_DropDown = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\DropDown\\DropDown.xml";
-		testdata_GridWithinGrid = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\GridWithinGrid\\GridWithinGrid.xml";
-		testdata_Contextual = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Contextual\\Contextual.xml";
-		testdata_Calendar = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Admin\\Calendar.xml";
-		testdata_ReturnList = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ReturnList\\ReturnList.xml";
-		testdata_importExportFormat = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ImportExportFormat\\ImportExportFormat.xml";
-		testdata_Export_External = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ExportForm_External\\ExportForm_External.xml";
-		testdata_BatchRun = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\BatchRun\\BatchRun.xml";
+		testdata_highlight = System.getProperty("user.dir") + "/" + testDataFolderName + "/HighLight/HighLight.xml";
+		testdata_Utility = System.getProperty("user.dir") + "/" + testDataFolderName + "/Utility/Utility.xml";
+		testdata_Workflow = System.getProperty("user.dir") + "/" + testDataFolderName + "/Workflow/Workflow.xml";
+		testdata_General = System.getProperty("user.dir") + "/" + testDataFolderName + "/GeneralFunction/GeneralFunction.xml";
+		jobData = System.getProperty("user.dir") + "/" + testDataFolderName + "/Job/Job.xml";
+		testdata_updateForm = System.getProperty("user.dir") + "/" + testDataFolderName + "/UpdateForm/UpdateForm.xml";
+		testdata_OtherModule = System.getProperty("user.dir") + "/" + testDataFolderName + "/OtherModule/OtherModule.xml";
+		testdata_FormVariable = System.getProperty("user.dir") + "/" + testDataFolderName + "/Admin/FormVariable.xml";
+		testdata_RowLimit = System.getProperty("user.dir") + "/" + testDataFolderName + "/RowLimit/RowLimit.xml";
+		testdata_Threshold = System.getProperty("user.dir") + "/" + testDataFolderName + "/Threshold/Threshold.xml";
+		testdata_DropDown = System.getProperty("user.dir") + "/" + testDataFolderName + "/DropDown/DropDown.xml";
+		testdata_GridWithinGrid = System.getProperty("user.dir") + "/" + testDataFolderName + "/GridWithinGrid/GridWithinGrid.xml";
+		testdata_Contextual = System.getProperty("user.dir") + "/" + testDataFolderName + "/Contextual/Contextual.xml";
+		testdata_Calendar = System.getProperty("user.dir") + "/" + testDataFolderName + "/Admin/Calendar.xml";
+		testdata_ReturnList = System.getProperty("user.dir") + "/" + testDataFolderName + "/ReturnList/ReturnList.xml";
+		testdata_importExportFormat = System.getProperty("user.dir") + "/" + testDataFolderName + "/ImportExportFormat/ImportExportFormat.xml";
+		testdata_Export_External = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/ExportForm_External.xml";
+		testdata_BatchRun = System.getProperty("user.dir") + "/" + testDataFolderName + "/BatchRun/BatchRun.xml";
 
-		File testRstFolder = new File("target\\TestResult");
+		File testRstFolder = new File("target/TestResult");
 		if (!testRstFolder.exists())
 			testRstFolder.mkdir();
 
@@ -237,13 +237,13 @@ public class TestTemplate extends TestBase
 	@AfterSuite
 	public void SyncQC() throws Exception
 	{
-		File from = new File(System.getProperty("user.dir") + "\\" + "target\\TestResult");
-		File to = new File("C:\\ARAutoTestResult");
+		File from = new File(System.getProperty("user.dir") + "/" + "target/TestResult");
+		File to = new File("C:/ARAutoTestResult");
 		FileUtils.copyDirectory(from, to);
 
 		if (PropHelper.getProperty("qc.sync").trim().equalsIgnoreCase("y"))
 		{
-			String TestStatusFile = System.getProperty("user.dir") + "\\" + "target\\TestResult\\" + curDate + "\\TestStatus.xlsx";
+			String TestStatusFile = System.getProperty("user.dir") + "/" + "target/TestResult/" + curDate + "/TestStatus.xlsx";
 			logger.info("Reading data from " + TestStatusFile);
 			UpdateCaseInQC.setStatus(TestStatusFile);
 		}
@@ -273,41 +273,41 @@ public class TestTemplate extends TestBase
 
 		if (FuncList.contains(Function))
 		{
-			String testDataFolderString = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\" + Function + "\\";
+			String testDataFolderString = System.getProperty("user.dir") + "/" + testDataFolderName + "/" + Function + "/";
 			String testFile = null;
 			if (fileName != null)
 				testFile = testDataFolderString + fileName;
 			String testDataFolder;
 			if (Function.equals("CheckRule"))
-				testDataFolder = testDataFolderString + "TestData\\";
+				testDataFolder = testDataFolderString + "TestData/";
 			else
-				testDataFolder = testDataFolderString + "CheckCellValue\\";
+				testDataFolder = testDataFolderString + "CheckCellValue/";
 
 			// add test data folder
 			Files.add(testDataFolder);
 
-			String currentDayFolderString = System.getProperty("user.dir") + "\\" + "target\\TestResult\\" + curDate;
+			String currentDayFolderString = System.getProperty("user.dir") + "/" + "target/TestResult/" + curDate;
 			File currentDayFolder = new File(currentDayFolderString);
 			if (!currentDayFolder.exists())
 				currentDayFolder.mkdir();
 
-			String testResultFolderString = currentDayFolderString + "\\" + Function;
+			String testResultFolderString = currentDayFolderString + "/" + Function;
 			File testResultFolder = new File(testResultFolderString);
 			if (!testResultFolder.exists())
 				testResultFolder.mkdir();
 
 			File checkDataFolder;
 			if (Function.equals("CheckRule"))
-				checkDataFolder = new File(testResultFolder + "\\" + "TestData\\");
+				checkDataFolder = new File(testResultFolder + "/" + "TestData/");
 			else
-				checkDataFolder = new File(testResultFolder + "\\" + "CheckCellValue\\");
+				checkDataFolder = new File(testResultFolder + "/" + "CheckCellValue/");
 
 			if (!checkDataFolder.exists())
 				checkDataFolder.mkdir();
 			// add test result check data folder
-			Files.add(checkDataFolder.getAbsolutePath() + "\\");
+			Files.add(checkDataFolder.getAbsolutePath() + "/");
 
-			testRstFile = new File(testResultFolder + "\\" + fileName);
+			testRstFile = new File(testResultFolder + "/" + fileName);
 			if (!testRstFile.exists() && fileName != null)
 				FileUtils.copyFile(new File(testFile), testRstFile);
 
@@ -590,8 +590,8 @@ public class TestTemplate extends TestBase
 
 		if (caseID.length() > 3)
 		{
-			String source = testDataFolderName + "\\TestStatus.xlsx";
-			File TestStatusFile = new File("target\\TestResult\\" + curDate + "\\TestStatus.xlsx");
+			String source = testDataFolderName + "/TestStatus.xlsx";
+			File TestStatusFile = new File("target/TestResult/" + curDate + "/TestStatus.xlsx");
 			if (!TestStatusFile.exists())
 				FileUtils.copyFile(new File(source), TestStatusFile);
 
@@ -639,8 +639,8 @@ public class TestTemplate extends TestBase
 
 		if (caseID.length() > 3)
 		{
-			String source = testDataFolderName + "\\TestStatus.xlsx";
-			File TestStatusFile = new File("target\\TestResult\\" + curDate + "\\TestStatus.xlsx");
+			String source = testDataFolderName + "/TestStatus.xlsx";
+			File TestStatusFile = new File("target/TestResult/" + curDate + "/TestStatus.xlsx");
 			if (!TestStatusFile.exists())
 			{
 				FileUtils.copyFile(new File(source), TestStatusFile);
@@ -663,11 +663,11 @@ public class TestTemplate extends TestBase
 		logger.info("Copy exported file to TestResult folder");
 		File sourceFile = new File(copyFrom);
 		String fileName = sourceFile.getName();
-		File destFolder = new File("target\\TestResult\\" + curDate + "\\" + Module + "\\ExportedFile\\");
+		File destFolder = new File("target/TestResult/" + curDate + "/" + Module + "/ExportedFile/");
 		if (!destFolder.exists())
 			destFolder.mkdir();
 
-		File destFile = new File("target\\TestResult\\" + curDate + "\\" + Module + "\\ExportedFile\\" + fileName);
+		File destFile = new File("target/TestResult/" + curDate + "/" + Module + "/ExportedFile/" + fileName);
 		FileUtils.copyFile(sourceFile, destFile);
 	}
 
@@ -1064,14 +1064,14 @@ public class TestTemplate extends TestBase
 		String pathWithQuotes = "";
 		if (path.contains(" "))
 		{
-			path = path.replace("\\", "~");
+			path = path.replace("/", "~");
 			for (String part : path.split("~"))
 			{
 				if (part.contains(" "))
 				{
 					part = "\"" + part + "\"";
 				}
-				pathWithQuotes = pathWithQuotes + part + "\\";
+				pathWithQuotes = pathWithQuotes + part + "/";
 			}
 			pathWithQuotes = pathWithQuotes.substring(0, pathWithQuotes.length() - 1);
 		}

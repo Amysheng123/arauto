@@ -22,7 +22,7 @@ public class ExportToFilePage extends AbstractPage
 		{
 			logger.info("Set group: " + group);
 			String replace = "";
-			if (!type.equalsIgnoreCase("xbrl"))
+			if (!"xbrl".equalsIgnoreCase(type))
 				replace = "4Fed";
 			element("efp.groupSelector", replace).selectByVisibleText(group);
 			waitStatusDlg();
@@ -37,7 +37,7 @@ public class ExportToFilePage extends AbstractPage
 		{
 			logger.info("Set referenceDate: " + date);
 			String replace = "";
-			if (!type.equalsIgnoreCase("xbrl"))
+			if (!"xbrl".equalsIgnoreCase(type))
 				replace = "4Fed";
 			element("efp.referenceDate", replace).selectByVisibleText(date);
 			waitStatusDlg();
@@ -51,7 +51,7 @@ public class ExportToFilePage extends AbstractPage
 		{
 			logger.info("Set framework: " + framework);
 			String replace = "";
-			if (!type.equalsIgnoreCase("xbrl"))
+			if (!"xbrl".equalsIgnoreCase(type))
 				replace = "4Fed";
 			element("efp.frameworkSelector", replace).selectByVisibleText(framework);
 			waitStatusDlg();
@@ -75,7 +75,7 @@ public class ExportToFilePage extends AbstractPage
 		{
 			logger.info("Set taxonomy: " + taxonomy);
 			String replace = "";
-			if (!type.equalsIgnoreCase("xbrl"))
+			if (!"xbrl".equalsIgnoreCase(type))
 				replace = "4Fed";
 			element("efp.taxonomySelector", replace).selectByVisibleText(taxonomy);
 			waitStatusDlg();
@@ -90,7 +90,7 @@ public class ExportToFilePage extends AbstractPage
 		{
 			logger.info("Set module: " + module);
 			String replace = "";
-			if (!type.equalsIgnoreCase("xbrl"))
+			if (!"xbrl".equalsIgnoreCase(type))
 				replace = "4Fed";
 			element("efp.moduleSelector", replace).selectByVisibleText(module);
 			waitStatusDlg();
@@ -98,13 +98,13 @@ public class ExportToFilePage extends AbstractPage
 		}
 	}
 
-	public void setCompreeType(String compressType, String type) throws Exception
+	public void setCompressType(String compressType, String type) throws Exception
 	{
 		if (compressType != null)
 		{
 			logger.info("Set compressType: " + compressType);
 			String replace = "";
-			if (!type.equalsIgnoreCase("xbrl"))
+			if (!"xbrl".equalsIgnoreCase(type))
 				replace = "4Fed";
 			element("efp.compressType", replace).selectByVisibleText(compressType.toUpperCase());
 			waitStatusDlg();
@@ -130,7 +130,7 @@ public class ExportToFilePage extends AbstractPage
 	{
 		logger.info("Click export button");
 		String replace = "";
-		if (!type.equalsIgnoreCase("xbrl"))
+		if (!"xbrl".equalsIgnoreCase(type))
 			replace = "4Fed";
 		if (!type.toLowerCase().startsWith("ds"))
 		{
@@ -154,7 +154,7 @@ public class ExportToFilePage extends AbstractPage
 	public void closeExportPage(String type) throws Exception
 	{
 		String replace = "";
-		if (!type.equalsIgnoreCase("xbrl"))
+		if (!"xbrl".equalsIgnoreCase(type))
 			replace = "4Fed";
 		if (element("efp.cancel", replace).isDisplayed())
 		{

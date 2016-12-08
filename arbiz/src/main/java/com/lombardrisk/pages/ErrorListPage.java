@@ -91,10 +91,10 @@ public class ErrorListPage extends AbstractDrilldownPage
 				String ID = getRuleNo(i);
 				if (ID.equals(ruleID))
 				{
-					if (rowKey.equals(""))
+					if (rowKey.length() == 0)
 					{
 						String Msg = getMessageText(i);
-						if (!instance.equals(""))
+						if (instance.length() > 0)
 						{
 							String instanceName = Msg.substring(Msg.indexOf(":") + 1, Msg.indexOf(":") + 2);
 							if (instanceName.equals(instance))
@@ -155,16 +155,12 @@ public class ErrorListPage extends AbstractDrilldownPage
 							flag = false;
 							break;
 						}
-
 					}
-
 				}
-
 			}
 
 			if (count > 0)
 			{
-
 				for (int i = 1; i <= 3; i++)
 				{
 					if (element("elp.curPageNO", String.valueOf(i)).getAttribute("class").contains("ui-state-active"))
@@ -175,10 +171,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 
 				if (Integer.parseInt(curPage) - Integer.parseInt(startPage) >= 0)
-				{
-					flag = false;
 					break;
-				}
 			}
 
 			if (flag)
@@ -197,6 +190,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 				catch (Exception e)
 				{
+					logger.warn(e.getMessage());
 					flag = false;
 				}
 			}
@@ -228,7 +222,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 				catch (Exception e)
 				{
-
+					logger.warn(e.getMessage());
 				}
 			}
 

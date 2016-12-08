@@ -30,7 +30,7 @@ public class XMLUtil
 	public static String getcellValueFromVanilla(String xmlFile, String specElenentName, String specAttributeName) throws DocumentException
 	{
 		String value = null;
-		File txtFile = new File("c:\\tmp\\QueryFromXML.txt");
+		File txtFile = new File("c:/tmp/QueryFromXML.txt");
 		String rowKey = null;
 		try
 		{
@@ -72,13 +72,13 @@ public class XMLUtil
 	@SuppressWarnings("unchecked")
 	public static void getNodes(Element node, String elementName, String attributeName) throws IOException
 	{
-		File txtFileDir = new File("c:\\tmp");
+		File txtFileDir = new File("c:/tmp");
 		if (!txtFileDir.exists())
 			txtFileDir.mkdir();
-		File txtFile = new File("c:\\tmp\\QueryFromXML.txt");
+		File txtFile = new File("c:/tmp/QueryFromXML.txt");
 		if (txtFile.exists())
 			txtFile.delete();
-		FileWriter fileWriter = new FileWriter("c:\\tmp\\QueryFromXML.txt", true);
+		FileWriter fileWriter = new FileWriter("c:/tmp/QueryFromXML.txt", true);
 		String cellName = null;
 		String instance = null;
 		String rowKey = null;
@@ -403,7 +403,7 @@ public class XMLUtil
 	}
 
 	// public static void main(String args[]) throws Exception {
-	// String file = "E:\\ECR_2999_CAR_v6_20160102.xml";
+	// String file = "E:/ECR_2999_CAR_v6_20160102.xml";
 	// String node = "exportTime";
 	// String text = "xxxxx";
 	// updateXMLFile(file, node, text);

@@ -60,8 +60,7 @@ public class ExportXBRLPage extends AbstractPage
 	{
 		if (type != null)
 		{
-			type = type.toUpperCase();
-			element("exbrl.selectCompressType").selectByVisibleText(type);
+			element("exbrl.selectCompressType").selectByVisibleText(type.toUpperCase());
 			waitStatusDlg();
 		}
 	}

@@ -358,6 +358,7 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (Exception e)
 		{
+			logger.warn("No Entity");
 			return null;
 		}
 	}
@@ -526,6 +527,7 @@ public class EntityPage extends AbstractImportPage
 			}
 			catch (NoSuchElementException e)
 			{
+				logger.warn("Entity: " + Entity + " does not exist");
 			}
 			CurrentTime = System.currentTimeMillis();
 		}
@@ -558,6 +560,7 @@ public class EntityPage extends AbstractImportPage
 			}
 			catch (NoSuchElementException e)
 			{
+				logger.warn("Entity: " + Entity + " does not exist");
 			}
 
 			CurrentTime = System.currentTimeMillis();
@@ -603,6 +606,7 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 		}
 
 		return result;
@@ -647,11 +651,11 @@ public class EntityPage extends AbstractImportPage
 	 * 
 	 * @param returnName
 	 * @param userGPNames
-	 * @param addPersmission
+	 * @param addPermission
 	 * @param permissionNames
 	 * @throws Exception
 	 */
-	private void addUserGP(String returnName, String[] userGPNames, boolean addPersmission, String[] permissionNames) throws Exception
+	private void addUserGP(String returnName, String[] userGPNames, boolean addPermission, String[] permissionNames) throws Exception
 	{
 		logger.info("Click Open[" + returnName + "] link");
 		openAssignPrivPage(returnName);
@@ -672,7 +676,7 @@ public class EntityPage extends AbstractImportPage
 				waitStatusDlg();
 			}
 
-			if (addPersmission)
+			if (addPermission)
 				addPrivilegeGroup(UGP, permissionNames);
 
 		}
@@ -1097,6 +1101,7 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (Exception e)
 		{
+			logger.warn(e.getMessage());
 		}
 	}
 
@@ -1181,7 +1186,7 @@ public class EntityPage extends AbstractImportPage
 		String oldName = new File(exportedFile).getName();
 		String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
 		String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-		String file = null;
+		String file;
 		if (fileName == null || fileName.length() == 0)
 		{
 			file = exportedFile;
@@ -1218,7 +1223,7 @@ public class EntityPage extends AbstractImportPage
 		String oldName = new File(exportedFile).getName();
 		String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
 		String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
-		String file = null;
+		String file;
 		if (fileName == null || fileName.length() == 0)
 		{
 			file = exportedFile;
@@ -1309,7 +1314,7 @@ public class EntityPage extends AbstractImportPage
 	/**
 	 * open openFormVariablePage
 	 * 
-	 * @param ReturnName
+	 * @param Entity
 	 * @throws Exception
 	 */
 	public void openFormVariablePage(String Entity) throws Exception

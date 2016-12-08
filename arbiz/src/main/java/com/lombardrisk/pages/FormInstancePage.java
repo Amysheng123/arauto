@@ -1662,7 +1662,7 @@ public class FormInstancePage extends AbstractPage
 	{
 		logger.info("Begin exprot to " + fileType);
 		String filePath = null;
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		exportToFileClick(fileType, Form, Module, compressType, null);
 		boolean flag = true;
@@ -2016,7 +2016,7 @@ public class FormInstancePage extends AbstractPage
 			waitStatusDlg();
 			exportToFilePage = enterExportToFiLePage(fileType, Form);
 			exportToFilePage.setModuleSelector(module, fileType);
-			exportToFilePage.setCompreeType(compressType, fileType);
+			exportToFilePage.setCompressType(compressType, fileType);
 			exportToFilePage.exportBtnClick(fileType);
 
 			if (fileType.toLowerCase().startsWith("ds"))
@@ -2777,7 +2777,7 @@ public class FormInstancePage extends AbstractPage
 		String file = null;
 		logger.info("Begin export validation result to excel");
 		enterValidation(true);
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -2814,7 +2814,7 @@ public class FormInstancePage extends AbstractPage
 		waitStatusDlg();
 		waitThat("fp.problemExport").toBeClickable();
 		String file = null;
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -2870,7 +2870,7 @@ public class FormInstancePage extends AbstractPage
 		element("fp.showImportLog").click();
 		Thread.sleep(3000);
 		String file = null;
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{

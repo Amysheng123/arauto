@@ -294,7 +294,7 @@ public class AdjustLogPage extends AbstractPage
 	{
 		waitStatusDlg();
 		waitThat("alp.export").toBeClickable();
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{

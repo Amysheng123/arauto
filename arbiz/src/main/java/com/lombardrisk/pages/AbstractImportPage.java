@@ -40,17 +40,17 @@ public abstract class AbstractImportPage extends AbstractPage
 
 	public abstract By getImportBtn(String type);
 
-	private String getUploadId(String type) throws Exception
+	private String getUploadId(String type)
 	{
 		return type + ":importFileUpload";
 	}
 
-	private String getUploadInputId(String type) throws Exception
+	private String getUploadInputId(String type)
 	{
 		return type + ":importFileUpload_input";
 	}
 
-	private String getErrorTextarea(String type) throws Exception
+	private String getErrorTextarea(String type)
 	{
 		return type + ":errorTextarea";
 	}

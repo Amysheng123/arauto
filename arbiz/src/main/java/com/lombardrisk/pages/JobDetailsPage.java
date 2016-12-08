@@ -201,7 +201,7 @@ public class JobDetailsPage extends AbstractPage
 	{
 		element("dwp.list.Job", String.valueOf(rowIndex)).click();
 		waitStatusDlg();
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{

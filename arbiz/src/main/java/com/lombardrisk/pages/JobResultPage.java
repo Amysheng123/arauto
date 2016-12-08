@@ -45,7 +45,7 @@ public class JobResultPage extends AbstractPage
 
 	public String exportLog() throws Exception
 	{
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{

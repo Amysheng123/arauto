@@ -23,7 +23,7 @@ public class AboutPage extends AbstractPage
 			element("abp.sortColumn", ID).click();
 			waitStatusDlg();
 		}
-		if (type.equalsIgnoreCase("asc"))
+		if ("asc".equalsIgnoreCase(type))
 		{
 			if (!element("abp.sortColumn", ID).getAttribute("class").contains("ui-icon-triangle-1-n"))
 			{
@@ -44,8 +44,8 @@ public class AboutPage extends AbstractPage
 	public List<String> getConfigurationsColumns(int columnID) throws Exception
 	{
 		List<String> ConfigurationsColumns = new ArrayList<>();
-		int nums = element("abp.rows").getNumberOfMatches();
-		for (int i = 1; i <= nums; i++)
+		int num = element("abp.rows").getNumberOfMatches();
+		for (int i = 1; i <= num; i++)
 		{
 			String[] list =
 			{ String.valueOf(i), String.valueOf(columnID) };
@@ -57,8 +57,8 @@ public class AboutPage extends AbstractPage
 	public List<String> getConfigurationsRow(String prefix) throws Exception
 	{
 		List<String> ConfigurationsRow = new ArrayList<>();
-		int nums = element("abp.rows").getNumberOfMatches();
-		for (int i = 1; i <= nums; i++)
+		int num = element("abp.rows").getNumberOfMatches();
+		for (int i = 1; i <= num; i++)
 		{
 			String[] list =
 			{ String.valueOf(i), "1" };

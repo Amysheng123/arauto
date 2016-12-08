@@ -27,7 +27,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class XLSX2CSV extends DefaultHandler
 {
-	private final static String targetDataFolder = System.getProperty("user.dir") + "\\target\\result\\data\\";
+	private final static String targetDataFolder = System.getProperty("user.dir") + "/target/result/data/";
 	private final OPCPackage xlsxPackage;
 	/**
 	 * Number of columns to read starting with leftmost

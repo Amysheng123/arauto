@@ -41,7 +41,7 @@ public class Browser extends TestTemplate
 		m = new Module(this);
 		m.homePage.logon();
 
-		File testRstFolder = new File("target\\TestResult");
+		File testRstFolder = new File("target/TestResult");
 		if (!testRstFolder.exists())
 		{
 			testRstFolder.mkdir();
@@ -102,8 +102,8 @@ public class Browser extends TestTemplate
 
 		if (caseID.length() > 3)
 		{
-			String source = "data_toolset\\TestStatus.xlsx";
-			File TestStatusFile = new File("target\\TestResult\\" + curDate + "\\TestStatus.xlsx");
+			String source = "data_toolset/TestStatus.xlsx";
+			File TestStatusFile = new File("target/TestResult/" + curDate + "/TestStatus.xlsx");
 			if (!TestStatusFile.exists())
 			{
 				FileUtils.copyFile(new File(source), TestStatusFile);
@@ -140,24 +140,24 @@ public class Browser extends TestTemplate
 
 		if (FuncList.contains(Function))
 		{
-			String TD_TestFile = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\" + Function + "\\" + Function + ".xls";
-			String TD_checkDataFolder = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\" + Function + "\\" + "CheckCellValue\\";
+			String TD_TestFile = System.getProperty("user.dir") + "/" + testDataFolderName + "/" + Function + "/" + Function + ".xls";
+			String TD_checkDataFolder = System.getProperty("user.dir") + "/" + testDataFolderName + "/" + Function + "/" + "CheckCellValue/";
 
 			// add test data folder
 			Files.add(TD_checkDataFolder);
 
-			String TR_CurrenrDayFolder = System.getProperty("user.dir") + "\\" + "target\\TestResult\\" + curDate + "\\";
+			String TR_CurrenrDayFolder = System.getProperty("user.dir") + "/" + "target/TestResult/" + curDate + "/";
 			String TR_FunctionFolder = TR_CurrenrDayFolder + Function;
-			String TR_TestFile = TR_CurrenrDayFolder + Function + "\\" + Function + ".xls";
+			String TR_TestFile = TR_CurrenrDayFolder + Function + "/" + Function + ".xls";
 			String TR_checkDataFolder = null;
 
 			if (Function.equals("CheckRule"))
 			{
-				TR_checkDataFolder = TR_CurrenrDayFolder + Function + "\\" + "TestData\\";
+				TR_checkDataFolder = TR_CurrenrDayFolder + Function + "/" + "TestData/";
 			}
 			else
 			{
-				TR_checkDataFolder = TR_CurrenrDayFolder + Function + "\\" + "CheckCellValue\\";
+				TR_checkDataFolder = TR_CurrenrDayFolder + Function + "/" + "CheckCellValue/";
 			}
 
 			// add test result check data folder
@@ -206,13 +206,13 @@ public class Browser extends TestTemplate
 	@AfterSuite
 	public void SyncQC() throws Exception
 	{
-		File from = new File(System.getProperty("user.dir") + "\\" + "target\\TestResult");
-		File to = new File("C:\\ARAutoTestResult");
+		File from = new File(System.getProperty("user.dir") + "/" + "target/TestResult");
+		File to = new File("C:/ARAutoTestResult");
 		FileUtils.copyDirectory(from, to);
 
 		if (PropHelper.getProperty("qc.sync").trim().equalsIgnoreCase("y"))
 		{
-			String TestStatusFile = System.getProperty("user.dir") + "\\" + "target\\TestResult\\" + curDate + "\\TestStatus.xlsx";
+			String TestStatusFile = System.getProperty("user.dir") + "/" + "target/TestResult/" + curDate + "/TestStatus.xlsx";
 			logger.info("Reading data from " + TestStatusFile);
 			UpdateCaseInQC.setStatus(TestStatusFile);
 		}

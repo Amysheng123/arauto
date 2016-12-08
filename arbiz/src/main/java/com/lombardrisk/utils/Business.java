@@ -19,9 +19,9 @@ import com.lombardrisk.utils.fileService.*;
  */
 public class Business
 {
-	public final static String targetLogFolder = System.getProperty("user.dir") + "\\target\\result\\logs\\";
+	public final static String targetLogFolder = System.getProperty("user.dir") + "/target/result/logs/";
 	private final static Logger logger = LoggerFactory.getLogger(Business.class);
-	private final static String targetDataFolder = System.getProperty("user.dir") + "\\target\\result\\data\\";
+	private final static String targetDataFolder = System.getProperty("user.dir") + "/target/result/data/";
 	static String parentPath = new File(System.getProperty("user.dir")).getParent().toString();
 
 	@SuppressWarnings("static-access")
@@ -57,9 +57,9 @@ public class Business
 				if (!exportedFile.toLowerCase().endsWith(".csv"))
 				{
 					String saveFolder = new File(exportedFile).getParent().toString();
-					exportedFile = saveFolder + "\\" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
+					exportedFile = saveFolder + "/" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
 				}
-				String exeFilePath = parentPath + "\\public\\extension\\CompareExcel\\CompareExcel.exe";
+				String exeFilePath = parentPath + "/public/extension/CompareExcel/CompareExcel.exe";
 				logger.info("Exe file:" + exeFilePath);
 
 				String commons[] =
@@ -119,7 +119,7 @@ public class Business
 						if (!exportedFile.toLowerCase().endsWith(".xml"))
 						{
 							String saveFolder = new File(exportedFile).getParent().toString();
-							exportedFile = saveFolder + "\\" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
+							exportedFile = saveFolder + "/" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
 						}
 						if (instance.equals(""))
 							actualValue = XMLUtil.getcellValueFromVanilla(exportedFile, cellName, null);
@@ -148,7 +148,7 @@ public class Business
 				if (!exportedFile.toLowerCase().endsWith(".txt"))
 				{
 					String saveFolder = new File(exportedFile).getParent().toString();
-					exportedFile = saveFolder + "\\" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
+					exportedFile = saveFolder + "/" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
 				}
 				List<String> base = TxtUtil.getFileContent(new File(baselineFile));
 				List<String> exp = TxtUtil.getFileContent(new File(exportedFile));
@@ -179,7 +179,7 @@ public class Business
 					if (!exportedFile.toLowerCase().endsWith(".xbrl"))
 					{
 						String saveFolder = new File(exportedFile).getParent().toString();
-						exportedFile = saveFolder + "\\" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
+						exportedFile = saveFolder + "/" + FileUtil.unCompress(exportedFile, saveFolder).get(0);
 					}
 				}
 				compareRst = XBRLUtil.XBRLCompare(baselineFile, exportedFile);
@@ -189,7 +189,7 @@ public class Business
 			{
 				long startTime = System.currentTimeMillis();
 				String commons[] =
-				{ parentPath + "\\public\\extension\\GetCellValueFromExcel\\GetCellValueFromExcel.exe", "\"" + exportFile.getAbsolutePath() + "\"", "\"" + baselineFile + "\"", targetLogFolder };
+				{ parentPath + "/public/extension/GetCellValueFromExcel/GetCellValueFromExcel.exe", "\"" + exportFile.getAbsolutePath() + "\"", "\"" + baselineFile + "\"", targetLogFolder };
 				Date now = new Date();
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//
 				logger.info("Current time is:  " + dateFormat.format(now));
@@ -197,7 +197,7 @@ public class Business
 				process.waitFor();
 				long cur = System.currentTimeMillis();
 				logger.info("Take " + (cur - startTime) / 1000 + " seconds");
-				File compareRstFile = new File(targetLogFolder + "\\queryCellValueRst.txt");
+				File compareRstFile = new File(targetLogFolder + "/queryCellValueRst.txt");
 				String rst = TxtUtil.getAllContent(compareRstFile).trim();
 				if (rst.valueOf(0).equalsIgnoreCase("0"))
 					rst = rst.substring(1);
