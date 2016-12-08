@@ -536,4 +536,20 @@ public class JobDetailsPage extends AbstractPage
 		return new JobResultPage(getWebDriverWrapper());
 	}
 
+	public boolean isDeleteIconExits(int jobIndex) throws Exception
+	{
+		return element("dwp.deleteIcon", String.valueOf(jobIndex - 1)).isDisplayed();
+	}
+
+	public void deleteJob(int jobIndex) throws Exception
+	{
+		element("dwp.deleteIcon", String.valueOf(jobIndex - 1)).click();
+		waitStatusDlg();
+	}
+
+	public int getJobNums() throws Exception
+	{
+		return element("dwp.rowAmt").getNumberOfMatches();
+	}
+
 }

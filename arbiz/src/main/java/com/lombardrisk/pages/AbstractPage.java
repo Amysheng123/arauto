@@ -158,14 +158,15 @@ public abstract class AbstractPage extends PageBase
 	 * 
 	 * @throws Exception
 	 */
-	protected void waitForPageLoaded() throws InterruptedException {
+	protected void waitForPageLoaded() throws InterruptedException
+	{
 		String js = "return document.readyState";
 		boolean rst = "complete".equals(executeScript(js));
 		while (!rst)
 		{
 			logger.info("Current status is[" + executeScript(js) + "],loading...");
 			Thread.sleep(300);
-            rst = "complete".equals(executeScript(js));
+			rst = "complete".equals(executeScript(js));
 		}
 		Thread.sleep(300);
 	}
@@ -193,7 +194,7 @@ public abstract class AbstractPage extends PageBase
 			catch (StaleElementReferenceException e)
 			{
 				logger.warn("Try again");
-                i++;
+				i++;
 			}
 		}
 
@@ -209,7 +210,7 @@ public abstract class AbstractPage extends PageBase
 	protected List<String> splitReturn(String returnName)
 	{
 		List<String> returnNV = new ArrayList<>();
-		String formCode,formVersion,Form;
+		String formCode, formVersion, Form;
 		if (returnName.contains("("))
 		{
 			returnName = returnName.replace("(", "#");
@@ -239,7 +240,8 @@ public abstract class AbstractPage extends PageBase
 	 * 
 	 * @throws Exception
 	 */
-	protected void clickEnterKey() throws InterruptedException {
+	protected void clickEnterKey() throws InterruptedException
+	{
 		actions().sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
 	}
@@ -253,7 +255,7 @@ public abstract class AbstractPage extends PageBase
 	protected void selectDate(String date) throws Exception
 	{
 		getFormatFromDB();
-		String year ,month,day;
+		String year, month, day;
 		if ("en_GB".equalsIgnoreCase(format))
 		{
 			month = date.substring(3, 5);

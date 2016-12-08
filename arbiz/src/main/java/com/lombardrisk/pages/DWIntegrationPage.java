@@ -178,7 +178,7 @@ public class DWIntegrationPage extends AbstractPage
 			element("dwi.edit.desc").input(desc);
 		}
 
-		Random random=new Random();
+		Random random = new Random();
 		int x = random.nextInt(10);
 
 		element("dwi.edit.icon", String.valueOf(x)).click();
