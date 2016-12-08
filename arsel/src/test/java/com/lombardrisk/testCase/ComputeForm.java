@@ -43,7 +43,7 @@ public class ComputeForm extends TestTemplate
 
 		try
 		{
-			File testDataFile = new File(testDataFolderName + "\\ComputeForm\\" + fileName);
+			File testDataFile = new File(testDataFolderName + "/ComputeForm/" + fileName);
 			for (int index = 1; index <= ExcelUtil.getRowNums(testDataFile, null); index++)
 			{
 				ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, index);

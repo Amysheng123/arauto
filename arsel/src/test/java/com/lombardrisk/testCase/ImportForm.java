@@ -72,7 +72,7 @@ public class ImportForm extends TestTemplate
 			else if (!ErrorInfo.equals("") && ErrorInfo.endsWith(".txt"))
 			{
 				logger.info("Begin get import error info");
-				File txt = new File(testDataFolderName + "\\ImportForm\\CheckCellValue\\" + ErrorInfo);
+				File txt = new File(testDataFolderName + "/ImportForm/CheckCellValue/" + ErrorInfo);
 				String actualInfo = listPage.getimportAdjustmentErrorInfo(importFile, addToExistValue).replace("\r", "\n");
 				String expectInfo = TxtUtil.getAllContent(txt).replace("\r", "\n");
 				if (!expectInfo.equalsIgnoreCase(actualInfo))
@@ -183,7 +183,7 @@ public class ImportForm extends TestTemplate
 			}
 			else if (!ErrorInfo.equals("") && ErrorInfo.endsWith(".txt"))
 			{
-				File txt = new File(testDataFolderName + "\\ImportForm\\CheckCellValue\\" + ErrorInfo);
+				File txt = new File(testDataFolderName + "/ImportForm/CheckCellValue/" + ErrorInfo);
 				String actualInfo = formInstancePage.getImportAdjustmentErrorInfo(importFile).replaceAll("(\r\n|\r|\n|\n\r)", "<br>");
 
 				String expectInfo = TxtUtil.getAllContent(txt).replaceAll("(\r\n|\r|\n|\n\r)", "<br>");
@@ -307,7 +307,7 @@ public class ImportForm extends TestTemplate
 
 		if (!testRstFile.getName().equalsIgnoreCase(fileName))
 			testRstFile = new File(testRstFile.getParent() + fileName);
-		File testDataFile = new File(testDataFolderName + "\\ImportForm\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/ImportForm/" + fileName);
 		for (int index = 1; index <= ExcelUtil.getRowNums(testDataFile, null); index++)
 		{
 			ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, index);

@@ -40,13 +40,13 @@ public class Utility extends TestTemplate
 			List<String> cellNames = new ArrayList<>();
 			Collections.addAll(cellNames, Cells.split(","));
 
-			File importFile = new File(testdata_Utility.replace("Utility.xml", caseID + "\\" + FileName));
+			File importFile = new File(testdata_Utility.replace("Utility.xml", caseID + "/" + FileName));
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
 			FormInstancePage formInstancePage = listPage.createFormFromExcel(importFile, false, false, true);
 			String exportFilePath = formInstancePage.exportToFile(Group, Form, ProcessDate, "iFile", Module, null);
 			String saveFolderString = new File(exportFilePath).getParent();
-			exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+			exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			if (ExcelUtil.isDefinedCellNameExistInExcel(new File(exportFilePath), cellNames))
 				testRst = true;
 		}

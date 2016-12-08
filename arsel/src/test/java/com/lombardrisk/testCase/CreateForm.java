@@ -288,7 +288,7 @@ public class CreateForm extends TestTemplate
 
 		if (!testRstFile.getName().equalsIgnoreCase(fileName))
 			testRstFile = new File(testRstFile.getParent() + fileName);
-		File testDataFile = new File(testDataFolderName + "\\CreateForm\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/CreateForm/" + fileName);
 		int rouNums = ExcelUtil.getRowNums(testDataFile, null);
 		for (int index = 1; index <= rouNums; index++)
 		{

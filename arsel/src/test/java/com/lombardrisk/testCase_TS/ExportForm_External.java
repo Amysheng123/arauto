@@ -50,7 +50,7 @@ public class ExportForm_External extends TestTemplate
 			FormInstancePage formInstancePage = listPage.createNewForm(Entity, ReferenceDate, Form, null, false, false);
 			formInstancePage.closeFormInstance();
 			String exportFilePath = listPage.ExportToRegulatorFormat(Entity, Form, ReferenceDate, FileType, Framework, Taxonomy, Module, null);
-			String BaselineFile = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ExportForm_External\\CheckCellValue\\" + BaseLine;
+			String BaselineFile = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/CheckCellValue/" + BaseLine;
 			Boolean rst = Business.verifyExportedFile(BaselineFile, exportFilePath, FileType);
 			assertThat(rst).as("Exist difference between exported file and baseline").isEqualTo(true);
 			testRst = true;
@@ -96,7 +96,7 @@ public class ExportForm_External extends TestTemplate
 			DBQuery.update(DBIndex, SQL);
 			FormInstancePage formInstancePage = listPage.createNewForm(Entity, ReferenceDate, Form, null, false, false);
 			String exportFilePath = formInstancePage.exportToFile(Entity, Form, ReferenceDate, FileType, Module, null);
-			String BaselineFile = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ExportForm_External\\CheckCellValue\\" + BaseLine;
+			String BaselineFile = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/CheckCellValue/" + BaseLine;
 			Boolean rst = Business.verifyExportedFile(BaselineFile, exportFilePath, FileType);
 			assertThat(rst).as("Exist difference between exported file and baseline").isEqualTo(true);
 			testRst = true;
@@ -182,7 +182,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			File expectedValueFile = new File(checkRstFolder + CheckCellValueFile);
 			if (expectedValueFile.exists())
@@ -242,7 +242,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			File expectedValueFile = new File(checkRstFolder + CheckCellValueFile);
 			if (expectedValueFile.exists())
@@ -504,7 +504,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			String baseline = testDataFolder + BaselineName;
 			boolean rst = Business.verifyExportedFile(baseline, exportFilePath, ExportType);
@@ -514,7 +514,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			rst = Business.verifyExportedFile(baseline, exportFilePath, ExportType);
 			assertThat(rst).as("Exported value should same with expected value").isEqualTo(true);

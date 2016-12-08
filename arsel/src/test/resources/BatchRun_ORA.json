@@ -30,6 +30,20 @@
         "driver": "oracle",
         "host": "172.20.31.239@ora12c",
         "schema": "ARHKMA_52112_SYSTEM1"
+      },
+      {
+        "id": 3,
+        "name": "toolset_database",
+        "driver": "oracle",
+        "host": "172.20.31.239@ora12c",
+        "schema": "MAS_21103_ORLTTTN_DATA"
+      },
+      {
+        "id": 3,
+        "name": "toolset_database",
+        "driver": "oracle",
+        "host": "172.20.31.239@ora12c",
+        "schema": "MAS_21103_ORLTTTN_SYSTEM"
       }
     ]
   }

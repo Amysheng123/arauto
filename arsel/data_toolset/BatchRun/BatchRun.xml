@@ -78,4 +78,44 @@
 		<ReferenceDate>2015-12-02</ReferenceDate>
 	</C6549>
 
+	<C6551>
+		<JsonFile>MAS1105_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6551>
+
+	<C6601>
+		<JsonFile>MAS1105_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0015</Entity>
+		<Form>MAS1105 v1</Form>
+		<ReferenceDate2>31/12/2014</ReferenceDate2>
+		<ExpectedFile>MAS1105_v1_0015_20141231.xlsx</ExpectedFile>
+	</C6601>
+
+	<C6602>
+		<JsonFile>MAS649_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0013</Entity>
+		<Form>MAS649 v1</Form>
+		<ReferenceDate2>31/12/2014</ReferenceDate2>
+		<ExpectedFile>MAS649_v1_0013_20141231.xlsx</ExpectedFile>
+	</C6602>
+
+	<C6603>
+		<JsonFile>KM_ProductJob.json</JsonFile>
+		<ReferenceDate>2018-12-31</ReferenceDate>
+		<Regulator>Hong Kong Monetary Authority</Regulator>
+		<Entity>0015</Entity>
+		<Form>KM v0</Form>
+		<ReferenceDate2>31/12/2018</ReferenceDate2>
+		<ExpectedFile>KM_v0_0015_20181231.xlsx</ExpectedFile>
+	</C6603>
+
+	<C6608>
+		<JsonFile>KM_ComputeJob.json</JsonFile>
+		<ReferenceDate>2020-12-31</ReferenceDate>
+	</C6608>
+
 </BatchRun>

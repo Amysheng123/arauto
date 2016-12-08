@@ -37,7 +37,7 @@ public class LockUnlockForm extends TestTemplate
 			listPage.getProductListPage(Regulator, Group, Form, ProcessDate);
 			logger.info("Check form status");
 			String fileName = "FR2052B_v1_0004_20150930_Import.xlsx";
-			File importFile = new File(testDataFolderName + "\\CreateForm\\Import\\" + fileName);
+			File importFile = new File(testDataFolderName + "/CreateForm/Import/" + fileName);
 			if (listPage.isFormLockedInList(Form, ProcessDate))
 			{
 				logger.info("Form status is Invalid");

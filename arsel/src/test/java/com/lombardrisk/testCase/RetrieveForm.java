@@ -39,7 +39,7 @@ public class RetrieveForm extends TestTemplate
 
 		if (!testRstFile.getName().equalsIgnoreCase(fileName))
 			testRstFile = new File(testRstFile.getParent() + fileName);
-		File testDataFile = new File(testDataFolderName + "\\RetrieveForm\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/RetrieveForm/" + fileName);
 		if (testDataFile.exists())
 		{
 			for (int i = 1; i <= ExcelUtil.getRowNums(testDataFile, null); i++)

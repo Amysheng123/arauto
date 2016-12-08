@@ -91,7 +91,7 @@ public class CheckRule extends TestTemplate
 
 			long startTime = System.currentTimeMillis();
 			String commons[] =
-			{ parentPath + "\\public\\extension\\GetRuleProblem\\GetRuleProblem.exe", exportProblem.getAbsolutePath(), expectedRstFile.getAbsolutePath(), targetLogFolder };
+			{ parentPath + "/public/extension/GetRuleProblem/GetRuleProblem.exe", exportProblem.getAbsolutePath(), expectedRstFile.getAbsolutePath(), targetLogFolder };
 			logger.info("cmd args are:" + commons[1] + " " + commons[2]);
 			Process process = Runtime.getRuntime().exec(commons);
 			process.waitFor();
@@ -234,13 +234,13 @@ public class CheckRule extends TestTemplate
 			FormInstancePage formInstancePage = listPage.openFormInstance(formCode, version, ProcessDate);
 
 			logger.info("Begin get rule result");
-			File compareRstFile = new File(targetLogFolder + "\\rule_compareRst.txt");
+			File compareRstFile = new File(targetLogFolder + "/rule_compareRst.txt");
 			if (compareRstFile.exists())
 				compareRstFile.delete();
 			String exporteFile = formInstancePage.exportValidationResult();
 			long startTime = System.currentTimeMillis();
 			String commons[] =
-			{ parentPath + "\\public\\extension\\GetRuleResult\\GetRuleResult.exe", exporteFile, expectedRstFile.getAbsolutePath(), targetLogFolder, "Y" };
+			{ parentPath + "/public/extension/GetRuleResult/GetRuleResult.exe", exporteFile, expectedRstFile.getAbsolutePath(), targetLogFolder, "Y" };
 			logger.info("cmd args are:" + commons[0] + " " + commons[1] + " " + commons[2]);
 			Date now = new Date();
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -291,7 +291,7 @@ public class CheckRule extends TestTemplate
 
 		if (!testRstFile.getName().equalsIgnoreCase(fileName))
 			testRstFile = new File(testRstFile.getParent() + fileName);
-		File testDataFile = new File(testDataFolderName + "\\CheckRule\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/CheckRule/" + fileName);
 		for (int index = 1; index <= ExcelUtil.getRowNums(testDataFile, null); index++)
 		{
 			ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, index);

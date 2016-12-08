@@ -19,7 +19,7 @@ public class DropDown extends TestTemplate
 {
 
 	String parentPath = new File(System.getProperty("user.dir")).getParent().toString();
-	String importFolder = System.getProperty("user.dir") + "\\data_ar\\DropDown\\ImportFile\\";
+	String importFolder = System.getProperty("user.dir") + "/data_ar/DropDown/ImportFile/";
 
 	@Test
 	public void test6298() throws Exception

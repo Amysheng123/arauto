@@ -30,7 +30,7 @@ public class MultipleReporter extends Browser
 	@Test
 	public void testMultipleReporter() throws Exception
 	{
-		File testDataFile = new File(testDataFolderName + "\\MultipleReporter\\MultipleReporter.xls");
+		File testDataFile = new File(testDataFolderName + "/MultipleReporter/MultipleReporter.xls");
 		int rouNums = ExcelUtil.getRowNums(testDataFile, null);
 		for (int index = 1; index <= rouNums; index++)
 		{
@@ -282,7 +282,7 @@ public class MultipleReporter extends Browser
 	public boolean testRPConfigActivate(String installPath, String productPrefix, String productVersion) throws Exception
 	{
 		logger.info("Begin activate configuration[" + productPrefix + " v " + productVersion + "]");
-		String cmd = installPath + "\\bin\\config.bat  -t " + productPrefix + " -iv " + productVersion;
+		String cmd = installPath + "/bin/config.bat  -t " + productPrefix + " -iv " + productVersion;
 		logger.info("Activate config in cmd: " + cmd);
 		String line = getCMDRst(cmd);
 		logger.info(line);
@@ -343,11 +343,11 @@ public class MultipleReporter extends Browser
 	{
 		if (reStart)
 			stopService(installPath);
-		File File = new File(installPath + "\\bin\\run.lock");
+		File File = new File(installPath + "/bin/run.lock");
 		if (!File.exists())
 		{
 			logger.info("Start ar service");
-			String cmd = installPath + "\\bin\\start.bat ";
+			String cmd = installPath + "/bin/start.bat ";
 			Runtime.getRuntime().exec("cmd.exe /C start " + cmd);
 			Thread.sleep(1000 * 60);
 		}
@@ -355,11 +355,11 @@ public class MultipleReporter extends Browser
 
 	public void stopService(String installPath) throws Exception
 	{
-		File File = new File(installPath + "\\bin\\run.lock");
+		File File = new File(installPath + "/bin/run.lock");
 		if (File.exists())
 		{
 			logger.info("Stop ar service");
-			String cmd = installPath + "\\bin\\stop.bat ";
+			String cmd = installPath + "/bin/stop.bat ";
 			Runtime.getRuntime().exec(cmd);
 			Thread.sleep(1000 * 15);
 		}

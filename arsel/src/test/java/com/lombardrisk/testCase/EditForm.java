@@ -1980,7 +1980,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2112,7 +2112,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2243,7 +2243,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2374,7 +2374,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2505,7 +2505,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2636,7 +2636,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			splitReturn(Form).get(0);
 			splitReturn(Form).get(1);
@@ -2780,7 +2780,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2922,7 +2922,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3064,7 +3064,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3206,7 +3206,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3349,7 +3349,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3491,7 +3491,7 @@ public class EditForm extends TestTemplate
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
 			String ReferenceDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
@@ -3634,7 +3634,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3779,7 +3779,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3923,7 +3923,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -4068,7 +4068,7 @@ public class EditForm extends TestTemplate
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile\\") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
