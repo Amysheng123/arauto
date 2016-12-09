@@ -24,12 +24,12 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameA");
-			String UserNameB = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameB");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserNameA");
+			String UserNameB = getElementValueFromXML(testData_Workflow, nodeName, "UserNameB");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -98,11 +98,11 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserName");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserName");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -160,12 +160,12 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameA");
-			String UserNameB = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameB");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserNameA");
+			String UserNameB = getElementValueFromXML(testData_Workflow, nodeName, "UserNameB");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -233,12 +233,12 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameA");
-			String UserNameB = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameB");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserNameA");
+			String UserNameB = getElementValueFromXML(testData_Workflow, nodeName, "UserNameB");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -308,12 +308,12 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameA");
-			String UserNameB = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameB");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserNameA");
+			String UserNameB = getElementValueFromXML(testData_Workflow, nodeName, "UserNameB");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -419,11 +419,11 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserName = getElementValueFromXML(testdata_Workflow, nodeName, "UserName");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserName = getElementValueFromXML(testData_Workflow, nodeName, "UserName");
 
 			ListPage listPage = super.m.listPage;
 			HomePage homePage = listPage.logout();
@@ -462,12 +462,12 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameA");
-			String UserNameB = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameB");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserNameA");
+			String UserNameB = getElementValueFromXML(testData_Workflow, nodeName, "UserNameB");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -515,11 +515,11 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserName = getElementValueFromXML(testdata_Workflow, nodeName, "UserName");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserName = getElementValueFromXML(testData_Workflow, nodeName, "UserName");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -571,11 +571,11 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Workflow, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Workflow, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Workflow, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Workflow, nodeName, "ProcessDate");
-			String UserNameA = getElementValueFromXML(testdata_Workflow, nodeName, "UserNameA");
+			String Regulator = getElementValueFromXML(testData_Workflow, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Workflow, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Workflow, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Workflow, nodeName, "ProcessDate");
+			String UserNameA = getElementValueFromXML(testData_Workflow, nodeName, "UserNameA");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);

@@ -32,7 +32,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -142,7 +142,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -254,7 +254,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -394,7 +394,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -450,7 +450,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -524,7 +524,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -637,7 +637,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -686,7 +686,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -743,7 +743,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -818,7 +818,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -932,7 +932,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1045,7 +1045,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);

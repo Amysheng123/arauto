@@ -24,10 +24,10 @@ public class Admin_User extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Email = getElementValueFromXML(testdata_admin, nodeName, "Email");
-			String Password = getElementValueFromXML(testdata_admin, nodeName, "Password");
-			String ConfimPassword = getElementValueFromXML(testdata_admin, nodeName, "ConfimPassword");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Email = getElementValueFromXML(testData_admin, nodeName, "Email");
+			String Password = getElementValueFromXML(testData_admin, nodeName, "Password");
+			String ConfimPassword = getElementValueFromXML(testData_admin, nodeName, "ConfimPassword");
 
 			ListPage listPage = super.m.listPage;
 			UsersPage usersPage = listPage.EnterUserPage();
@@ -59,18 +59,18 @@ public class Admin_User extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Password1 = getElementValueFromXML(testdata_admin, nodeName, "Password1");
-			String ConfimPassword1 = getElementValueFromXML(testdata_admin, nodeName, "ConfimPassword1");
-			String Message1 = getElementValueFromXML(testdata_admin, nodeName, "Message1");
-			String Password2 = getElementValueFromXML(testdata_admin, nodeName, "Password2");
-			String ConfimPassword2 = getElementValueFromXML(testdata_admin, nodeName, "ConfimPassword2");
-			String Message2 = getElementValueFromXML(testdata_admin, nodeName, "Message2");
-			String Password3 = getElementValueFromXML(testdata_admin, nodeName, "Password3");
-			String ConfimPassword3 = getElementValueFromXML(testdata_admin, nodeName, "ConfimPassword3");
-			String Message3 = getElementValueFromXML(testdata_admin, nodeName, "Message3");
-			String Password4 = getElementValueFromXML(testdata_admin, nodeName, "Password4");
-			String ConfimPassword4 = getElementValueFromXML(testdata_admin, nodeName, "ConfimPassword4");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Password1 = getElementValueFromXML(testData_admin, nodeName, "Password1");
+			String ConfimPassword1 = getElementValueFromXML(testData_admin, nodeName, "ConfimPassword1");
+			String Message1 = getElementValueFromXML(testData_admin, nodeName, "Message1");
+			String Password2 = getElementValueFromXML(testData_admin, nodeName, "Password2");
+			String ConfimPassword2 = getElementValueFromXML(testData_admin, nodeName, "ConfimPassword2");
+			String Message2 = getElementValueFromXML(testData_admin, nodeName, "Message2");
+			String Password3 = getElementValueFromXML(testData_admin, nodeName, "Password3");
+			String ConfimPassword3 = getElementValueFromXML(testData_admin, nodeName, "ConfimPassword3");
+			String Message3 = getElementValueFromXML(testData_admin, nodeName, "Message3");
+			String Password4 = getElementValueFromXML(testData_admin, nodeName, "Password4");
+			String ConfimPassword4 = getElementValueFromXML(testData_admin, nodeName, "ConfimPassword4");
 
 			ListPage listPage = super.m.listPage;
 			UsersPage usersPage = listPage.EnterUserPage();

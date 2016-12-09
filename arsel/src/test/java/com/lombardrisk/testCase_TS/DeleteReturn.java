@@ -22,10 +22,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 			String random = getRandomString(5);
 			// String sql =
 			// "SELECT COUNT(*) FROM \"FIN_FORM_INSTANCE_DEL_LOG\" WHERE
@@ -63,10 +63,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 
@@ -107,10 +107,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, null);

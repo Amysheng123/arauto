@@ -28,7 +28,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String Entity = testdata.get(0);
 			String Regulator = testdata.get(1);
 			String prefix = testdata.get(2);
@@ -88,7 +88,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entityId = testdata.get(2).trim();
@@ -151,7 +151,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String accountingStandard = testdata.get(2).trim();
@@ -215,7 +215,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entityId = testdata.get(2).trim();
@@ -271,7 +271,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entityId = testdata.get(2).trim();
@@ -326,7 +326,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String regulatorNew = testdata.get(2);
@@ -385,7 +385,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entityId = testdata.get(2).trim();
@@ -448,7 +448,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 
 			ListPage listPage = super.m.listPage;
@@ -490,7 +490,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String configName = testdata.get(1).trim();
 			String formName = testdata.get(2).trim();
@@ -564,7 +564,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String configName = testdata.get(1).trim();
 			String formName = testdata.get(2).trim();
@@ -630,7 +630,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String configName = testdata.get(1).trim();
 			String formName = testdata.get(2).trim();
@@ -679,7 +679,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String configName = testdata.get(1).trim();
 			String formName = testdata.get(2).trim();
@@ -747,7 +747,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String configName = testdata.get(1).trim();
 			String formName = testdata.get(2).trim();
@@ -796,7 +796,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -855,7 +855,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -906,7 +906,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -961,7 +961,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -1041,7 +1041,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -1110,7 +1110,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String pgName = testdata.get(0).trim();
 			String type = testdata.get(1).trim();
 			String privilege = testdata.get(2).trim();
@@ -1202,7 +1202,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -1277,7 +1277,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String username = testdata.get(0).trim();
 			String email = testdata.get(1).trim();
 			String password = testdata.get(2).trim();
@@ -1369,7 +1369,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entityName = testdata.get(0);
 			String productPrefix = testdata.get(1).trim();
 			String returnName = testdata.get(2).trim();
@@ -1436,7 +1436,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String username1 = testdata.get(0).trim();
 			String email1 = testdata.get(1).trim();
 			String password = testdata.get(2).trim();
@@ -1560,7 +1560,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -1639,7 +1639,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -1723,7 +1723,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -1809,7 +1809,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -1900,7 +1900,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -1981,7 +1981,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2067,7 +2067,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2146,7 +2146,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2230,7 +2230,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2294,7 +2294,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2350,7 +2350,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2414,7 +2414,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2470,7 +2470,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2531,7 +2531,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2592,7 +2592,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();
@@ -2650,7 +2650,7 @@ public class Admin_FormVariable extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_FormVariable, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_FormVariable, nodeName);
 			String entity = testdata.get(0);
 			String regulator = testdata.get(1);
 			String returnName = testdata.get(2).trim();

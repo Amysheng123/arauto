@@ -28,17 +28,17 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Cell = testdata.get(5);
-			String Step6 = testdata.get(6);
-			String Step9 = testdata.get(7);
-			String Step9_2 = testdata.get(8).replace("~", "&");
-			String Step10 = testdata.get(9);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Cell = testData.get(5);
+			String Step6 = testData.get(6);
+			String Step9 = testData.get(7);
+			String Step9_2 = testData.get(8).replace("~", "&");
+			String Step10 = testData.get(9);
 
 			ListPage listPage = super.m.listPage;
 
@@ -111,17 +111,17 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Insert = testdata.get(5);
-			String Cell = testdata.get(6);
-			String Step6 = testdata.get(7);
-			String Step9 = testdata.get(8);
-			String Step10 = testdata.get(9);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Insert = testData.get(5);
+			String Cell = testData.get(6);
+			String Step6 = testData.get(7);
+			String Step9 = testData.get(8);
+			String Step10 = testData.get(9);
 
 			ListPage listPage = super.m.listPage;
 
@@ -184,19 +184,19 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Edit1 = testdata.get(5);
-			String Cell = testdata.get(6);
-			String Step7_1 = testdata.get(7);
-			String Step7_2 = testdata.get(8);
-			String Edit2 = testdata.get(9);
-			String Step9_1 = testdata.get(10);
-			String Step9_2 = testdata.get(11);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Edit1 = testData.get(5);
+			String Cell = testData.get(6);
+			String Step7_1 = testData.get(7);
+			String Step7_2 = testData.get(8);
+			String Edit2 = testData.get(9);
+			String Step9_1 = testData.get(10);
+			String Step9_2 = testData.get(11);
 
 			ListPage listPage = super.m.listPage;
 
@@ -268,20 +268,20 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Insert = testdata.get(5);
-			String Edit1 = testdata.get(6);
-			String Cell = testdata.get(7);
-			String Step7_1 = testdata.get(8);
-			String Step7_2 = testdata.get(9);
-			String Edit2 = testdata.get(10);
-			String Step9_1 = testdata.get(11);
-			String Step9_2 = testdata.get(12);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Insert = testData.get(5);
+			String Edit1 = testData.get(6);
+			String Cell = testData.get(7);
+			String Step7_1 = testData.get(8);
+			String Step7_2 = testData.get(9);
+			String Edit2 = testData.get(10);
+			String Step9_1 = testData.get(11);
+			String Step9_2 = testData.get(12);
 
 			ListPage listPage = super.m.listPage;
 
@@ -353,17 +353,17 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Insert = testdata.get(5);
-			String Edit = testdata.get(6);
-			String FileName = testdata.get(7);
-			String ExpectedCell_Value = testdata.get(8);
-			String CheckCellValueFile = testdata.get(9);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Insert = testData.get(5);
+			String Edit = testData.get(6);
+			String FileName = testData.get(7);
+			String ExpectedCell_Value = testData.get(8);
+			String CheckCellValueFile = testData.get(9);
 
 			ListPage listPage = super.m.listPage;
 
@@ -439,15 +439,15 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Insert = testdata.get(5);
-			String Cell = testdata.get(6);
-			String EditValue = testdata.get(7);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Insert = testData.get(5);
+			String Cell = testData.get(6);
+			String EditValue = testData.get(7);
 
 			ListPage listPage = super.m.listPage;
 
@@ -490,16 +490,16 @@ public class DropDown extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DropDown, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
-			String Page = testdata.get(4);
-			String Insert = testdata.get(5);
-			String Cell = testdata.get(6);
-			String EditValue = testdata.get(7);
-			String ExpectedValue = testdata.get(8);
+			List<String> testData = getElementValueFromXML(testData_DropDown, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
+			String Page = testData.get(4);
+			String Insert = testData.get(5);
+			String Cell = testData.get(6);
+			String EditValue = testData.get(7);
+			String ExpectedValue = testData.get(8);
 
 			ListPage listPage = super.m.listPage;
 

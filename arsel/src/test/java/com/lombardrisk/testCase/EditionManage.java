@@ -26,10 +26,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -68,11 +68,11 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
-			String fileName = getElementValueFromXML(testdata_edition, nodeName, "ImportFile");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
+			String fileName = getElementValueFromXML(testData_edition, nodeName, "ImportFile");
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
 
@@ -81,7 +81,7 @@ public class EditionManage extends TestTemplate
 			int rowIndex = listPage.getFormInstanceRowPos(formCode, version, ReferenceDate);
 			EditionManagePage editionPage = listPage.openEditionManage(rowIndex);
 			int initAmt = editionPage.getEditionAmt();
-			File importFile = new File(testdata_edition.replace("Edition.xml", fileName));
+			File importFile = new File(testData_edition.replace("Edition.xml", fileName));
 			listPage.createFormFromExcel(importFile, false, false, false);
 			rowIndex = listPage.getFormInstanceRowPos(formCode, version, ReferenceDate);
 			editionPage = listPage.openEditionManage(rowIndex);
@@ -110,10 +110,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -148,10 +148,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -191,10 +191,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -233,10 +233,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -279,10 +279,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -321,10 +321,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -367,10 +367,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -412,11 +412,11 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
-			String CellName = getElementValueFromXML(testdata_edition, nodeName, "CellName");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
+			String CellName = getElementValueFromXML(testData_edition, nodeName, "CellName");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -466,11 +466,11 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
-			String CellName = getElementValueFromXML(testdata_edition, nodeName, "CellName");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
+			String CellName = getElementValueFromXML(testData_edition, nodeName, "CellName");
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
 
@@ -520,10 +520,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -564,10 +564,10 @@ public class EditionManage extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_edition, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_edition, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_edition, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_edition, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_edition, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_edition, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_edition, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_edition, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);

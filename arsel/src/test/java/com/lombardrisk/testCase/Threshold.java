@@ -32,7 +32,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -105,7 +105,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -177,7 +177,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -250,7 +250,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -327,7 +327,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -404,7 +404,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -481,7 +481,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -557,7 +557,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -660,7 +660,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -736,7 +736,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -856,7 +856,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -929,7 +929,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -972,7 +972,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -1059,7 +1059,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -1108,7 +1108,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1199,7 +1199,7 @@ public class Threshold extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Threshold, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Threshold, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);

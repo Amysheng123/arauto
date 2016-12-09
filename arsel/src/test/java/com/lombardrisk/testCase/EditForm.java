@@ -29,7 +29,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -48,12 +48,12 @@ public class EditForm extends TestTemplate
 				if (editValue.equals(""))
 					editValue = null;
 				String comment = rowValueList.get(6).trim();
-				String dispalyed = rowValueList.get(7).trim();
+				String displayed = rowValueList.get(7).trim();
 				String log_cell = rowValueList.get(8).trim();
 				String log_value = rowValueList.get(9).trim();
-				String log_valueto = rowValueList.get(10).trim();
-				if (log_valueto.length() == 0)
-					log_valueto = "NULL";
+				String log_valueTo = rowValueList.get(10).trim();
+				if (log_valueTo.length() == 0)
+					log_valueTo = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
 				int logid = 0;
@@ -70,15 +70,15 @@ public class EditForm extends TestTemplate
 				if (!editCell.equals(""))
 				{
 					formInstancePage.editCellValue(null, cell1, cell2, editValue, comment);
-					if (dispalyed.length() > 0)
+					if (displayed.length() > 0)
 					{
 						String actualValue = formInstancePage.getCellText(editCell).trim();
-						assertThat(actualValue).isEqualTo(dispalyed);
+						assertThat(actualValue).isEqualTo(displayed);
 					}
 				}
 				if (log_cell.length() > 1)
 				{
-					String expectedLog = log_cell + "#" + log_value + "#" + log_valueto + "#" + log_comment;
+					String expectedLog = log_cell + "#" + log_value + "#" + log_valueTo + "#" + log_comment;
 					logger.info("Expected log is:" + expectedLog);
 
 					AdjustLogPage adjustLogPage = formInstancePage.getDrillDown();
@@ -117,7 +117,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -233,7 +233,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -349,7 +349,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -465,7 +465,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -581,7 +581,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -697,7 +697,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -813,7 +813,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -929,7 +929,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1045,7 +1045,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1161,7 +1161,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1277,7 +1277,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1393,7 +1393,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1510,7 +1510,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1625,7 +1625,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1742,7 +1742,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1859,7 +1859,7 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1975,12 +1975,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2107,12 +2107,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2238,12 +2238,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2369,12 +2369,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2500,12 +2500,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2631,12 +2631,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			splitReturn(Form).get(0);
 			splitReturn(Form).get(1);
@@ -2775,12 +2775,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -2917,12 +2917,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3059,12 +3059,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3201,12 +3201,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3344,12 +3344,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3486,12 +3486,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
 			String ReferenceDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
@@ -3629,12 +3629,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3774,12 +3774,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -3918,12 +3918,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -4063,12 +4063,12 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_editForm, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
 			String ProcessDate = testdata.get(3);
-			File ImportFile = new File(testdata_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testdata_editForm, nodeName, "ImportFile").trim());
+			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);

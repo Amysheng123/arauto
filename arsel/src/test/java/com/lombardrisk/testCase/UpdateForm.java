@@ -35,7 +35,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -101,7 +101,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -147,7 +147,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -252,7 +252,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -356,7 +356,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -463,7 +463,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -546,7 +546,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -626,7 +626,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -730,7 +730,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -834,7 +834,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -935,7 +935,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1036,7 +1036,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1138,7 +1138,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1241,7 +1241,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1350,7 +1350,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1463,7 +1463,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1573,7 +1573,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1681,7 +1681,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1788,7 +1788,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1897,7 +1897,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -1989,7 +1989,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -2083,7 +2083,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();
@@ -2175,7 +2175,7 @@ public class UpdateForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_updateForm, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_updateForm, nodeName);
 			String regulator = elementValues.get(0).trim();
 			String entity = elementValues.get(1).trim();
 			String form = elementValues.get(2).trim();

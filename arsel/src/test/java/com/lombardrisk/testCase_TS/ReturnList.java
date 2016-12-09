@@ -26,7 +26,7 @@ public class ReturnList extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_ReturnList, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_ReturnList, nodeName);
 			String Regulator = elementValues.get(0);
 			String Entity = elementValues.get(1);
 			String ReferenceDate = elementValues.get(2);
@@ -99,7 +99,7 @@ public class ReturnList extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_ReturnList, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_ReturnList, nodeName);
 			String Regulator = elementValues.get(0);
 			String Entity = elementValues.get(1);
 			String ReferenceDate = elementValues.get(2);
@@ -150,7 +150,7 @@ public class ReturnList extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_ReturnList, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_ReturnList, nodeName);
 			String Regulator = elementValues.get(0);
 			String Entity = elementValues.get(1);
 			String ReferenceDate = elementValues.get(2);
@@ -200,7 +200,7 @@ public class ReturnList extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_ReturnList, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_ReturnList, nodeName);
 			String Regulator = elementValues.get(0);
 			String Entity = elementValues.get(1);
 			String ReferenceDate = elementValues.get(2);
@@ -266,7 +266,7 @@ public class ReturnList extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_ReturnList, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_ReturnList, nodeName);
 			String Regulator = elementValues.get(0);
 			String Entity = elementValues.get(1);
 			String ReferenceDate = elementValues.get(2);
@@ -317,7 +317,7 @@ public class ReturnList extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_ReturnList, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_ReturnList, nodeName);
 			String Regulator = elementValues.get(0);
 			String Entity = elementValues.get(1);
 			String ReferenceDate = elementValues.get(2);

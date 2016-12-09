@@ -25,29 +25,30 @@ public class BatchRun extends TestTemplate
 {
 	private String executeBatchRun(String jsonFile, String date) throws Exception
 	{
-		String status = null;
-		List<String> testData = getElementValueFromXML(testdata_BatchRun, "executeBatchRun");
+		return executeBatchRun(jsonFile, "admin", date);
+	}
+
+	private String executeBatchRun(String jsonFile, String userName, String date) throws Exception
+	{
+		List<String> testData = getElementValueFromXML(testData_BatchRun, "executeBatchRun");
 		String path = testData.get(0) + "/tools/etl-cmd/";
 		String fullPath = path + "startBatchRun.bat";
 		String jsonPath = System.getProperty("user.dir") + "/" + testDataFolderName + "/BatchRun/JsonFile/" + jsonFile;
 		FileUtils.copyFile(new File(jsonPath), new File(path + jsonFile));
 		logger.info("Json file is:" + jsonFile);
-		Process process = Runtime.getRuntime().exec("cmd.exe /c start /b " + fullPath + " " + "admin" + " " + "5dfc52b51bd35553df8592078de921bc" + " " + jsonFile + " " + date, null, new File(path));
+		Process process = Runtime.getRuntime().exec("cmd.exe /c start /b " + fullPath + " " + userName + " " + "5dfc52b51bd35553df8592078de921bc" + " " + jsonFile + " " + date, null, new File(path));
 		process.waitFor();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-		String line = "";
+		String line, status = null;
 		while ((line = reader.readLine()) != null)
 		{
-			if (line.contains("is already in progress"))
-			{
-				status = "running";
-				break;
-			}
-			if (line.contains("The Etl job starts successfully"))
+			if (line.startsWith("The Etl job starts successfully"))
 			{
 				status = "success";
 				break;
 			}
+			else
+				status = "";
 		}
 		reader.close();
 		return status;
@@ -55,8 +56,8 @@ public class BatchRun extends TestTemplate
 
 	public void waitJob(JobManagerPage jobManagerPage) throws Exception
 	{
-		List<String> jobInfo = jobManagerPage.getLatestJobInfo();
-		DateFormat df = null;
+		List<String> jobInfo;
+		DateFormat df;
 		if (format.equalsIgnoreCase("en_GB"))
 			df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		else if (format.equalsIgnoreCase("en_US"))
@@ -67,7 +68,7 @@ public class BatchRun extends TestTemplate
 		while (true)
 		{
 			refreshPage();
-			Thread.sleep(1000 * 10);
+			Thread.sleep(1000 * 50);
 			jobInfo = jobManagerPage.getLatestJobInfo();
 			String Status = jobInfo.get(8);
 			Date startTime = df.parse(jobInfo.get(6));
@@ -91,7 +92,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String Type = testData.get(0);
 			String Alias = testData.get(1);
 			String Path = testData.get(2);
@@ -139,7 +140,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 			String T_Table = testData.get(2);
@@ -194,7 +195,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 			String T_Table = testData.get(2);
@@ -235,7 +236,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String Type = testData.get(0);
 			String Alias = testData.get(1);
 			String Path = testData.get(2);
@@ -268,7 +269,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFiles = testData.get(0);
 			String ReferenceDates = testData.get(1);
 
@@ -320,7 +321,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFiles = testData.get(0);
 			String ReferenceDates = testData.get(1);
 
@@ -417,7 +418,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -477,7 +478,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -522,7 +523,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -590,7 +591,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -637,7 +638,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -684,7 +685,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -728,7 +729,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -765,7 +766,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 
@@ -820,7 +821,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 			String Regulator = testData.get(2);
@@ -861,7 +862,7 @@ public class BatchRun extends TestTemplate
 		}
 		finally
 		{
-			writeTestResultToFile(caseID, testRst, "BatchRun");
+			writeTestResultToFile(caseID + ",6746", testRst, "BatchRun");
 		}
 	}
 
@@ -877,7 +878,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 			String Regulator = testData.get(2);
@@ -934,7 +935,7 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 			String Regulator = testData.get(2);
@@ -988,12 +989,11 @@ public class BatchRun extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_BatchRun, nodeName);
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
 			String JsonFile = testData.get(0);
 			String ReferenceDate = testData.get(1);
 			String status = testData.get(2);
-			String StatausMessage = testData.get(3);
-			String jobMessage = testData.get(4);
+			String StatusMessage = testData.get(3);
 
 			executeBatchRun(JsonFile, ReferenceDate);
 
@@ -1002,7 +1002,197 @@ public class BatchRun extends TestTemplate
 			waitJob(jobManagerPage);
 			List<String> jobInfo = jobManagerPage.getLatestJobInfo();
 			assertThat(jobInfo.get(8).equalsIgnoreCase(status));
-			assertThat(jobInfo.get(10).equalsIgnoreCase(StatausMessage));
+			assertThat(jobInfo.get(10).equalsIgnoreCase(StatusMessage));
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			e.printStackTrace();
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6610() throws Exception
+	{
+		String caseID = "6610";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+
+			executeBatchRun(JsonFile, ReferenceDate);
+
+			ListPage listPage = m.listPage;
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			List<String> jobInfo = jobManagerPage.getLatestJobInfo();
+			JobDetailsPage jobDetailsPage = jobManagerPage.enterJobDetailsPage(1);
+			if ("IN PROGRESS".equalsIgnoreCase(jobInfo.get(8)))
+			{
+				assertThat(jobDetailsPage.isDeleteIconExits(1)).isEqualTo(false);
+				jobManagerPage = jobDetailsPage.backToJobManager();
+				waitJob(jobManagerPage);
+				jobDetailsPage = jobManagerPage.enterJobDetailsPage(1);
+				assertThat(jobDetailsPage.isDeleteIconExits(1)).isEqualTo(true);
+			}
+			else
+				assertThat(jobDetailsPage.isDeleteIconExits(1)).isEqualTo(true);
+
+			int init = jobDetailsPage.getJobNums();
+			jobDetailsPage.deleteJob(1);
+			int after = jobDetailsPage.getJobNums();
+			assertThat(after - init).isEqualTo(1);
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			e.printStackTrace();
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6618() throws Exception
+	{
+		String caseID = "6618";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+			String Items = testData.get(2);
+			String Job1 = testData.get(3);
+			String Job2 = testData.get(4);
+
+			ListPage listPage = m.listPage;
+			for (String item : Items.split("#"))
+			{
+				String[] i = item.split("_");
+				String Regulator = i[0];
+				String Entity = i[1];
+				String Form = i[2];
+				String Date = i[2];
+				listPage.setRegulatorByValue(Regulator);
+				listPage.setGroup(Entity);
+				listPage.setForm(Form);
+				listPage.setProcessDate(Date);
+				listPage.deleteFormInstance(Form, Date);
+			}
+			executeBatchRun(JsonFile, ReferenceDate);
+
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			JobDetailsPage jobDetailsPage = jobManagerPage.enterJobDetailsPage(1);
+			List<String> subJobNames = jobDetailsPage.getSubJobName(1);
+			assertThat(Job1).isIn(subJobNames);
+			assertThat(Job2).isIn(subJobNames);
+			jobDetailsPage.backToDashboard();
+			waitJob(jobManagerPage);
+
+			listPage = jobManagerPage.backToDashboard();
+			for (String item : Items.split("#"))
+			{
+				String[] i = item.split("_");
+				String Regulator = i[0];
+				String Entity = i[1];
+				String Form = i[2];
+				String Date = i[2];
+				listPage.setRegulatorByValue(Regulator);
+				listPage.setGroup(Entity);
+				listPage.setForm(Form);
+				listPage.setProcessDate(Date);
+				assertThat(listPage.isFormExist(Form, Date)).isEqualTo(true);
+			}
+
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			e.printStackTrace();
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6740() throws Exception
+	{
+		String caseID = "6740";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String ExecuteJob = testData.get(0);
+			String Items = testData.get(1);
+			String Job1 = testData.get(2);
+			String Job2 = testData.get(3);
+
+			ListPage listPage = m.listPage;
+			for (String item : Items.split("#"))
+			{
+				String[] i = item.split("_");
+				String Regulator = i[0];
+				String Entity = i[1];
+				String Form = i[2];
+				String Date = i[2];
+				listPage.setRegulatorByValue(Regulator);
+				listPage.setGroup(Entity);
+				listPage.setForm(Form);
+				listPage.setProcessDate(Date);
+				listPage.deleteFormInstance(Form, Date);
+			}
+
+			for (String jobDetail : ExecuteJob.split("#"))
+			{
+				String JsonFile = jobDetail.split("_")[0];
+				String ReferenceDate = jobDetail.split("_")[1];
+				executeBatchRun(JsonFile, ReferenceDate);
+			}
+
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			while (!"IN PROGRESS".equalsIgnoreCase(jobManagerPage.getJobInfo(1).get(8)) && !"IN PROGRESS".equalsIgnoreCase(jobManagerPage.getJobInfo(2).get(8)))
+			{
+				Thread.sleep(1000 * 30);
+				refreshPage();
+			}
+
+			listPage = jobManagerPage.backToDashboard();
+			for (String item : Items.split("#"))
+			{
+				String[] i = item.split("_");
+				String Regulator = i[0];
+				String Entity = i[1];
+				String Form = i[2];
+				String Date = i[2];
+				listPage.setRegulatorByValue(Regulator);
+				listPage.setGroup(Entity);
+				listPage.setForm(Form);
+				listPage.setProcessDate(Date);
+				assertThat(listPage.isFormExist(Form, Date)).isEqualTo(true);
+			}
+
 			testRst = true;
 		}
 		catch (Exception e)

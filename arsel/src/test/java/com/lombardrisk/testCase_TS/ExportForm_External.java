@@ -28,7 +28,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -76,7 +76,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -122,7 +122,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -162,7 +162,7 @@ public class ExportForm_External extends TestTemplate
 			String importFolder = Files.get(3);
 
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -222,7 +222,7 @@ public class ExportForm_External extends TestTemplate
 			String importFolder = Files.get(3);
 
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -274,7 +274,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -318,7 +318,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -376,7 +376,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -434,7 +434,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -486,7 +486,7 @@ public class ExportForm_External extends TestTemplate
 			String importFolder = Files.get(3);
 
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);

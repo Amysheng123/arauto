@@ -33,7 +33,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -88,7 +88,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -143,7 +143,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -198,7 +198,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -240,7 +240,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -282,7 +282,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -324,7 +324,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -366,7 +366,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -406,7 +406,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -452,7 +452,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -492,7 +492,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -532,7 +532,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String regulator = testdata.get(0);
 			String entity = testdata.get(1);
 			String referenceDate = testdata.get(2);
@@ -571,7 +571,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String regulator = testdata.get(0);
 			String entity = testdata.get(1);
 			String referenceDate = testdata.get(2);
@@ -608,7 +608,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String regulator = testdata.get(0);
 			String entity = testdata.get(1);
 			String referenceDate = testdata.get(2);

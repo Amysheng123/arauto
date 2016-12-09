@@ -730,7 +730,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 		ListPage listPage = super.m.listPage;
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String NewEntityName = elementValues.get(2);
@@ -771,7 +771,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -828,7 +828,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -872,7 +872,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -914,7 +914,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		// String Form = elementValues.get(2);
@@ -1018,7 +1018,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -1054,7 +1054,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);

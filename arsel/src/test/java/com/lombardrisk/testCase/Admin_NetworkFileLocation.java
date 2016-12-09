@@ -38,7 +38,7 @@ public class Admin_NetworkFileLocation extends TestTemplate
 		{
 			ListPage listPage = super.m.listPage;
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_admin, nodeName);
 			String networkLocation = elementValues.get(0);
 			String userPath = elementValues.get(1);
 			String entityName = elementValues.get(2);
@@ -107,7 +107,7 @@ public class Admin_NetworkFileLocation extends TestTemplate
 			physicalLocationPage = listPage.enterPhysicalLoaction();
 
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_admin, nodeName);
 			String networkLocation = elementValues.get(0);
 			String userPath = elementValues.get(1);
 			String entityName = elementValues.get(2);
@@ -166,7 +166,7 @@ public class Admin_NetworkFileLocation extends TestTemplate
 			physicalLocationPage = listPage.enterPhysicalLoaction();
 
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_admin, nodeName);
 			String initNetworkLocation = elementValues.get(0);
 			String initUserPath = elementValues.get(1);
 			String initEntityName = elementValues.get(2);
@@ -239,7 +239,7 @@ public class Admin_NetworkFileLocation extends TestTemplate
 			physicalLocationPage = listPage.enterPhysicalLoaction();
 
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_admin, nodeName);
 			String initNetworkLocation = elementValues.get(0);
 			String initUserPath = elementValues.get(1);
 			String initEntityName = elementValues.get(2);
@@ -298,7 +298,7 @@ public class Admin_NetworkFileLocation extends TestTemplate
 			physicalLocationPage = listPage.enterPhysicalLoaction();
 
 			String nodeName = "C" + caseID;
-			List<String> elementValues = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> elementValues = getElementValueFromXML(testData_admin, nodeName);
 			String initNetworkLocation = elementValues.get(0);
 			String initUserPath = elementValues.get(1);
 			String initEntityName = elementValues.get(2);

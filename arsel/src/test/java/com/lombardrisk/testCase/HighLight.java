@@ -24,7 +24,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -81,7 +81,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -155,7 +155,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -212,7 +212,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -290,7 +290,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -370,7 +370,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -439,7 +439,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);

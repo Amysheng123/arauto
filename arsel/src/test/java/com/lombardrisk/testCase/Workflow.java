@@ -26,7 +26,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -105,7 +105,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -173,7 +173,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -236,7 +236,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -300,7 +300,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -364,7 +364,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -426,7 +426,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -486,7 +486,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -553,7 +553,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -608,7 +608,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -646,7 +646,7 @@ public class Workflow extends TestTemplate
 			}
 			formInstancePage.closeFormInstance();
 			testRst = false;
-			File importFile = new File(testdata_Workflow.replace("Workflow.xml", ImportFile));
+			File importFile = new File(testData_Workflow.replace("Workflow.xml", ImportFile));
 			formInstancePage = listPage.createFormFromExcel(importFile, false, false, true);
 			logNums = formInstancePage.getApproveLogAmt();
 			if (logNums == 0)
@@ -680,7 +680,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -744,7 +744,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -802,7 +802,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -883,7 +883,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -925,7 +925,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -984,7 +984,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1030,7 +1030,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1077,7 +1077,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1129,7 +1129,7 @@ public class Workflow extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Workflow, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Workflow, nodeName);
 			String Regulator = testdata.get(0);
 			String Group = testdata.get(1);
 			String Form = testdata.get(2);
