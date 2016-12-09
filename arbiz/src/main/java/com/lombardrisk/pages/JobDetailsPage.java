@@ -209,7 +209,7 @@ public class JobDetailsPage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("dwp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			return getOriginalFile(exportedFile, latestFile);
 		}
 		else
@@ -536,20 +536,66 @@ public class JobDetailsPage extends AbstractPage
 		return new JobResultPage(getWebDriverWrapper());
 	}
 
+	/**
+	 * verify delete job icon exist
+	 * 
+	 * @param jobIndex
+	 * @return boolean
+	 * @throws Exception
+	 */
 	public boolean isDeleteIconExits(int jobIndex) throws Exception
 	{
 		return element("dwp.deleteIcon", String.valueOf(jobIndex - 1)).isDisplayed();
 	}
 
+	/**
+	 * delete job
+	 * 
+	 * @param jobIndex
+	 * @throws Exception
+	 */
 	public void deleteJob(int jobIndex) throws Exception
 	{
+		logger.info("Delete job");
 		element("dwp.deleteIcon", String.valueOf(jobIndex - 1)).click();
 		waitStatusDlg();
 	}
 
+	/**
+	 * get job amount
+	 * 
+	 * @return int
+	 * @throws Exception
+	 */
 	public int getJobNums() throws Exception
 	{
 		return element("dwp.rowAmt").getNumberOfMatches();
+	}
+
+	/**
+	 * get sub job name
+	 * 
+	 * @param parentJobIndex
+	 * @return List
+	 * @throws Exception
+	 */
+	public List<String> getSubJobName(int parentJobIndex) throws Exception
+	{
+		List<String> names = new ArrayList<>();
+		int subJobIndex = 0;
+		String[] list =
+		{ String.valueOf(parentJobIndex - 1), String.valueOf(subJobIndex) };
+		boolean flag = true;
+		while (flag)
+		{
+			if (element("dwp.batchRunName2_1", list).isDisplayed())
+				names.add(element("dwp.batchRunName2_1", list).getInnerText());
+			if (element("dwp.batchRunName2_2", list).isDisplayed())
+				names.add(element("dwp.batchRunName2_2", list).getInnerText());
+			subJobIndex++;
+			list[1] = String.valueOf(subJobIndex);
+		}
+		return names;
 	}
 
 }

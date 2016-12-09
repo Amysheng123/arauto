@@ -223,22 +223,22 @@ public class ExcelUtil
 	}
 
 	@SuppressWarnings("finally")
-	public static ArrayList<String> getSpecficColRowValueFromExcel(File file, String sheetName, int colStart, int rowIndex) throws Exception
+	public static ArrayList<String> getSpecificColRowValueFromExcel(File file, String sheetName, int colStart, int rowIndex) throws Exception
 	{
 		// logger.info("File is:"+file+", sheet is:"+sheetName+" , column
 		// start:"+colStart+" , row start:"+rowIndex);
-		ArrayList<String> rowVal = new ArrayList<String>();
+		ArrayList<String> rowVal = new ArrayList<>();
 		InputStream inp = new FileInputStream(file);
 		try
 		{
 			Workbook workbook = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			Sheet sheet;
 			if (sheetName == null)
 				sheet = workbook.getSheetAt(0);
 			else
 				sheet = workbook.getSheet(sheetName);
 			Row row = sheet.getRow(rowIndex);
-			Cell cell = null;
+			Cell cell;
 			int colAmt = sheet.getRow(0).getPhysicalNumberOfCells();
 			String cellValue = null;
 			for (int i = colStart - 1; i < colAmt; i++)
@@ -288,16 +288,16 @@ public class ExcelUtil
 		try
 		{
 			Workbook xwb = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			Sheet sheet;
 			if (sheetName == null)
 				sheet = xwb.getSheetAt(0);
 			else
 				sheet = xwb.getSheet(sheetName);
 			Row row = sheet.getRow(rowIndex);
-			Cell cell = null;
+			Cell cell;
 
 			int colAmt = sheet.getRow(0).getPhysicalNumberOfCells();
-			String cellValue = null;
+			String cellValue;
 			for (int i = 0; i < colAmt; i++)
 			{
 				cell = row.getCell(i);
@@ -339,7 +339,7 @@ public class ExcelUtil
 		int amt = getRowAmts(file, sheetName);
 		for (int i = startRow; i <= amt; i++)
 		{
-			ArrayList<String> rowContent = ExcelUtil.getSpecficColRowValueFromExcel(file, sheetName, startColumn, i);
+			ArrayList<String> rowContent = ExcelUtil.getSpecificColRowValueFromExcel(file, sheetName, startColumn, i);
 			content.add(rowContent);
 		}
 		return content;
@@ -391,8 +391,8 @@ public class ExcelUtil
 					Sheet sheet = workBook.getSheet(sheetName);
 					int rowID = Integer.parseInt(cellName.substring(numericPos(cellName))) - 1;
 					int colID = convertColumnID(cellName.substring(0, numericPos(cellName)));
-					Row row = null;
-					Cell cell = null;
+					Row row;
+					Cell cell;
 					row = sheet.getRow(rowID);
 					cell = row.getCell(colID);
 					if (cell != null)
@@ -526,7 +526,7 @@ public class ExcelUtil
 					rowID = rowID + rowNo - 1;
 				}
 			}
-			Row row = null;
+			Row row;
 			Cell cell = null;
 			try
 			{
@@ -535,7 +535,7 @@ public class ExcelUtil
 			}
 			catch (Exception e)
 			{
-
+				logger.warn(e.getMessage());
 			}
 
 			if (cell != null)
@@ -550,6 +550,7 @@ public class ExcelUtil
 		catch (Exception e)
 		{
 			e.printStackTrace();
+			logger.warn(e.getMessage());
 		}
 		finally
 		{
@@ -563,6 +564,7 @@ public class ExcelUtil
 			catch (Exception e)
 			{
 				e.printStackTrace();
+				logger.warn(e.getMessage());
 			}
 		}
 
@@ -609,6 +611,7 @@ public class ExcelUtil
 			catch (Exception e)
 			{
 				e.printStackTrace();
+				logger.warn(e.getMessage());
 			}
 		}
 
@@ -637,8 +640,8 @@ public class ExcelUtil
 			int rowID = Integer.parseInt(nameDetail.split("#")[1]);
 			int colID = Integer.parseInt(nameDetail.split("#")[2]);
 			Sheet sheet = workBook.getSheet(sheetName);
-			Row row = null;
-			Cell cell = null;
+			Row row;
+			Cell cell;
 			try
 			{
 				row = sheet.getRow(rowID);
@@ -676,6 +679,7 @@ public class ExcelUtil
 			catch (Exception e)
 			{
 				e.printStackTrace();
+				logger.warn(e.getMessage());
 			}
 		}
 
@@ -714,6 +718,7 @@ public class ExcelUtil
 			catch (Exception e)
 			{
 				e.printStackTrace();
+				logger.warn(e.getMessage());
 			}
 		}
 

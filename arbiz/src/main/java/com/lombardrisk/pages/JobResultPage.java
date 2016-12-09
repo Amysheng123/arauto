@@ -54,7 +54,7 @@ public class JobResultPage extends AbstractPage
 			element("jrp.exportLog").click();
 			waitStatusDlg();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			return getOriginalFile(exportedFile, latestFile);
 		}
 		else

@@ -1688,7 +1688,7 @@ public class FormInstancePage extends AbstractPage
 		{
 			if (httpDownload)
 			{
-				String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+				String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 				filePath = getOriginalFile(exportedFile, latestFile);
 			}
 			else
@@ -2785,7 +2785,7 @@ public class FormInstancePage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("fp.validationExport").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			file = getOriginalFile(exportedFile, latestFile);
 		}
 		else
@@ -2822,7 +2822,7 @@ public class FormInstancePage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("fp.problemExport").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			file = getOriginalFile(exportedFile, latestFile);
 		}
 		else
@@ -2878,7 +2878,7 @@ public class FormInstancePage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("fp.firstExportBrn").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			file = getOriginalFile(exportedFile, latestFile);
 		}
 		else

@@ -307,7 +307,7 @@ public class AdjustLogPage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("alp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			return getOriginalFile(exportedFile, latestFile);
 		}
 		else

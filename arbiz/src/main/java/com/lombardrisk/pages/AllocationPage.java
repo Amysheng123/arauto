@@ -143,7 +143,7 @@ public class AllocationPage extends AbstractPage
 			TestCaseManager.getTestCase().stopTransaction();
 			element("fp.hidDrillDownTable").click();
 			waitStatusDlg();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 			return getOriginalFile(exportedFile, latestFile);
 		}
 		else

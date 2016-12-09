@@ -1182,7 +1182,7 @@ public class EntityPage extends AbstractImportPage
 		TestCaseManager.getTestCase().setPrepareToDownload(true);
 		element("emp.export").click();
 		TestCaseManager.getTestCase().stopTransaction();
-		String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+		String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 		String oldName = new File(exportedFile).getName();
 		String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
 		String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
@@ -1219,7 +1219,7 @@ public class EntityPage extends AbstractImportPage
 		waitThat().timeout(10000);
 		element("emp.importBtn").click();
 		TestCaseManager.getTestCase().stopTransaction();
-		String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+		String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 		String oldName = new File(exportedFile).getName();
 		String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
 		String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();

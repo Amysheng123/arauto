@@ -41,6 +41,7 @@ public class JobManagerPage extends AbstractPage
 	 */
 	public List<String> getJobInfo(int rowIndex) throws Exception
 	{
+		logger.info("Get job info");
 		List<String> jobInfo = new ArrayList<String>();
 		String specical = String.valueOf(rowIndex - 1);
 		String normal = String.valueOf(rowIndex);
@@ -85,6 +86,7 @@ public class JobManagerPage extends AbstractPage
 	 */
 	public JobDetailsPage enterJobDetailsPage(String formCode, String formVersion, String referenceDate) throws Exception
 	{
+		logger.info("Enter job details page");
 		element("jmp.filter").input(formCode);
 		Thread.sleep(1000);
 		int nums = (int) element("jmp.table").getRowCount();
@@ -113,6 +115,7 @@ public class JobManagerPage extends AbstractPage
 	 */
 	public JobDetailsPage enterJobDetailsPage(int rowIndex) throws Exception
 	{
+		logger.info("Enter job details page");
 		element("jmp.list.Name", String.valueOf(rowIndex - 1)).click();
 		waitStatusDlg();
 		return new JobDetailsPage(getWebDriverWrapper());
@@ -205,6 +208,12 @@ public class JobManagerPage extends AbstractPage
 		return rst;
 	}
 
+	/**
+	 * verify if filter exist
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
 	public boolean isFilterExist() throws Exception
 	{
 		if (element("jmp.filter").isDisplayed())

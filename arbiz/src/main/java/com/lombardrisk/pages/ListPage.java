@@ -438,7 +438,7 @@ public class ListPage extends AbstractPage
 		TestCaseManager.getTestCase().setPrepareToDownload(true);
 		element("lp.exportFormList").click();
 		TestCaseManager.getTestCase().stopTransaction();
-		String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+		String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 		String oldName = new File(exportedFile).getName();
 		String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
 		String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
@@ -1542,7 +1542,7 @@ public class ListPage extends AbstractPage
 		if (filePath == null)
 			if (httpDownload)
 			{
-				String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+				String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 				filePath = getOriginalFile(exportedFile, latestFile);
 			}
 			else
