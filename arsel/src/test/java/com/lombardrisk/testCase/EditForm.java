@@ -29,17 +29,18 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(Group, ProcessDate, Form, null, true, true);
 			int rowAmt = ExcelUtil.getRowAmts(editFormLogData, caseID);
 			File exportFile = null;
+
 			for (int i = 1; i <= rowAmt; i++)
 			{
 				ArrayList<String> rowValueList = ExcelUtil.getRowValueFromExcel(editFormLogData, caseID, i);
@@ -56,9 +57,9 @@ public class EditForm extends TestTemplate
 					log_valueTo = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				String cell1 = editCell;
 				String cell2 = null;
@@ -88,7 +89,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -117,11 +118,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -148,9 +149,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -205,7 +206,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -233,11 +234,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -264,9 +265,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -321,7 +322,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -349,11 +350,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -380,9 +381,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -437,7 +438,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -465,11 +466,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -496,9 +497,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -553,7 +554,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -581,11 +582,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -612,9 +613,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -669,7 +670,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -697,11 +698,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -728,9 +729,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -785,7 +786,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -813,11 +814,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -844,9 +845,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -901,7 +902,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -929,11 +930,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -960,9 +961,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1017,7 +1018,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1045,11 +1046,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1076,9 +1077,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1133,7 +1134,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1161,11 +1162,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1192,9 +1193,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1249,7 +1250,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1277,11 +1278,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1308,9 +1309,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1365,7 +1366,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1393,11 +1394,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1424,9 +1425,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1481,7 +1482,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1510,11 +1511,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1539,9 +1540,9 @@ public class EditForm extends TestTemplate
 				String log_valueto = rowValueList.get(10).trim();
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1596,7 +1597,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1625,11 +1626,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1656,9 +1657,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1713,7 +1714,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1742,11 +1743,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1773,9 +1774,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1830,7 +1831,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1859,11 +1860,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
@@ -1890,9 +1891,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(11).trim();
 				String id = rowValueList.get(12).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (insertRow.length() > 3)
 				{
@@ -1947,7 +1948,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -1975,11 +1976,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2010,9 +2011,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2077,7 +2078,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2107,11 +2108,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2142,9 +2143,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2209,7 +2210,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2238,11 +2239,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2273,9 +2274,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2340,7 +2341,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2369,11 +2370,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2404,9 +2405,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2471,7 +2472,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2500,11 +2501,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2535,9 +2536,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2602,7 +2603,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2631,11 +2632,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			splitReturn(Form).get(0);
@@ -2669,9 +2670,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2736,7 +2737,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2775,11 +2776,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2810,9 +2811,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -2877,7 +2878,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -2917,11 +2918,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -2952,9 +2953,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3019,7 +3020,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -3059,11 +3060,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3094,9 +3095,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3161,7 +3162,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -3201,11 +3202,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3236,9 +3237,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3303,7 +3304,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 
 					logger.error("Actual log is[" + actualLog + "]");
@@ -3344,11 +3345,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3379,9 +3380,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3446,7 +3447,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -3486,11 +3487,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Entity = testdata.get(1);
-			String Form = testdata.get(2);
-			String ReferenceDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ReferenceDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3521,9 +3522,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3588,7 +3589,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 
 					logger.error("Actual log is[" + actualLog + "]");
@@ -3629,11 +3630,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3664,9 +3665,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3733,7 +3734,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 
 					logger.error("Actual log is[" + actualLog + "]");
@@ -3774,11 +3775,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3809,9 +3810,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -3878,7 +3879,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -3918,11 +3919,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -3953,9 +3954,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -4023,7 +4024,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
@@ -4063,11 +4064,11 @@ public class EditForm extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_editForm, nodeName);
-			String Regulator = testdata.get(0);
-			String Group = testdata.get(1);
-			String Form = testdata.get(2);
-			String ProcessDate = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_editForm, nodeName);
+			String Regulator = testData.get(0);
+			String Group = testData.get(1);
+			String Form = testData.get(2);
+			String ProcessDate = testData.get(3);
 			File ImportFile = new File(testData_editForm.replace("EditForm.xml", "ImportFile/") + getElementValueFromXML(testData_editForm, nodeName, "ImportFile").trim());
 
 			ListPage listPage = super.m.listPage;
@@ -4098,9 +4099,9 @@ public class EditForm extends TestTemplate
 					log_valueto = "NULL";
 				String log_comment = rowValueList.get(13).trim();
 				String id = rowValueList.get(14).trim();
-				int logid = 0;
+				int logId = 0;
 				if (!id.equals(""))
-					logid = Integer.parseInt(id);
+					logId = Integer.parseInt(id);
 
 				if (addInstance.length() > 0)
 					formInstancePage.addInstance(addInstance);
@@ -4168,7 +4169,7 @@ public class EditForm extends TestTemplate
 						adjustLogPage.inputCellText(log_cell);
 						exportFile = new File(adjustLogPage.exportAdjustment());
 					}
-					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logid);
+					List<String> actualLogs = ExcelUtil.getRowValueFromExcel(exportFile, null, logId);
 					String actualLog = actualLogs.get(0) + "#" + actualLogs.get(1) + "#" + actualLogs.get(3) + "#" + actualLogs.get(4) + "#" + actualLogs.get(7);
 					logger.error("Actual log is[" + actualLog + "]");
 					assertThat(actualLog).isEqualTo(expectedLog);
