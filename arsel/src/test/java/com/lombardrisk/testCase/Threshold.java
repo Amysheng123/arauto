@@ -21,8 +21,6 @@ import com.lombardrisk.utils.fileService.TxtUtil;
 
 public class Threshold extends TestTemplate
 {
-
-	String parentPath = new File(System.getProperty("user.dir")).getParent().toString();
 	String importFolder = System.getProperty("user.dir") + "/data_ar/Threshold/ImportFile/";
 
 	@Test

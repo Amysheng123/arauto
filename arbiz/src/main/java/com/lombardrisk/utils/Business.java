@@ -22,7 +22,7 @@ public class Business
 	public final static String targetLogFolder = System.getProperty("user.dir") + "/target/result/logs/";
 	private final static Logger logger = LoggerFactory.getLogger(Business.class);
 	private final static String targetDataFolder = System.getProperty("user.dir") + "/target/result/data/";
-	static String parentPath = new File(System.getProperty("user.dir")).getParent().toString();
+	static String parentPath = new File(new File(System.getProperty("user.dir")).getParent()).getParent().toString();
 
 	@SuppressWarnings("static-access")
 	public static boolean verifyExportedFile(String baselineFile, String exportedFile, String fileType) throws Exception

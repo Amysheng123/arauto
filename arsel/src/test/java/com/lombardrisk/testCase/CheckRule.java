@@ -27,7 +27,6 @@ public class CheckRule extends TestTemplate
 	static String testDataFolder = null;
 	static String checkRuleFileFolder = null;
 	static File testRstFile = null;
-	static String parentPath = new File(System.getProperty("user.dir")).getParent().toString();
 
 	protected void verifySumRule(int ID, String Regulator, String Group, String Form, String formCode, String version, String ProcessDate, String EditCell, String CheckRules) throws Exception
 	{

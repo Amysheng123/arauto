@@ -24,7 +24,7 @@ public class MultipleReporter extends Browser
 	private final static Logger logger = LoggerFactory.getLogger(MultipleReporter.class);
 	List<String> Files = createFolderAndCopyFile("MultipleReporter");
 	String testDataFolder = Files.get(0);
-	String checkCellFileFolder = Files.get(1);
+	// String checkCellFileFolder = Files.get(1);
 	File testRstFile = new File(Files.get(2));
 
 	@Test

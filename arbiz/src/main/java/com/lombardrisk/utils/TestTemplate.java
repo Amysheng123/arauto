@@ -53,6 +53,7 @@ public class TestTemplate extends TestBase
 	protected static String testdata_importExportFormat = null;
 	protected static String testdata_Export_External = null;
 	protected static String testdata_BatchRun = null;
+	protected static String parentPath = null;
 
 	protected static String format = "";
 	protected static String userName = "";
@@ -141,6 +142,8 @@ public class TestTemplate extends TestBase
 		testdata_importExportFormat = System.getProperty("user.dir") + "/" + testDataFolderName + "/ImportExportFormat/ImportExportFormat.xml";
 		testdata_Export_External = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/ExportForm_External.xml";
 		testdata_BatchRun = System.getProperty("user.dir") + "/" + testDataFolderName + "/BatchRun/BatchRun.xml";
+
+		parentPath = new File(new File(System.getProperty("user.dir")).getParent()).getParent().toString();
 
 		File testRstFolder = new File("target/TestResult");
 		if (!testRstFolder.exists())
