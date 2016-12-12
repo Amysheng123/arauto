@@ -222,4 +222,25 @@ public class JobManagerPage extends AbstractPage
 			return false;
 	}
 
+	public int getJobNum() throws Exception
+	{
+		int firstPage = element("dwp.rowAmt").getNumberOfMatches();
+		if ("0".equalsIgnoreCase(element("dwp.lastPageStatus").getAttribute("tabindex")))
+		{
+			element("dwp.lastPageStatus").click();
+			waitStatusDlg();
+			int lastPageNo;
+			if (element("dwp.lastPageNo1").isDisplayed())
+				lastPageNo = Integer.parseInt(element("dwp.lastPageNo1").getInnerText());
+			else
+				lastPageNo = Integer.parseInt(element("dwp.lastPageNo2").getInnerText());
+
+			int lastPage = element("dwp.rowAmt").getNumberOfMatches();
+			int maxRow = Integer.parseInt(element("dwp.displayedRow").getSelectedText());
+			return (lastPageNo - 1) * maxRow + lastPage;
+		}
+		else
+			return firstPage;
+	}
+
 }

@@ -583,10 +583,10 @@ public class JobDetailsPage extends AbstractPage
 	{
 		List<String> names = new ArrayList<>();
 		int subJobIndex = 0;
+		showBatchRun(parentJobIndex);
 		String[] list =
 		{ String.valueOf(parentJobIndex - 1), String.valueOf(subJobIndex) };
-		boolean flag = true;
-		while (flag)
+		while (element("dwp.batchRunName2_1", list).isDisplayed() || element("dwp.batchRunName2_2", list).isDisplayed())
 		{
 			if (element("dwp.batchRunName2_1", list).isDisplayed())
 				names.add(element("dwp.batchRunName2_1", list).getInnerText());

@@ -775,10 +775,14 @@
         <locator id="dwp.cellText5" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[?]" name="cell text" description="cell text" />
         <locator id="dwp.cellRow" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_data']/tr[?]" name="cell row" description="cell row" />
         <locator id="dwp.batchRunName" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable:?_?:jobExecutionName']" name="batchRunName" description="batchRunName" />
-        <locator id="dwp.batchRunName2_1" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[1]/a']" name="batchRunName" description="batchRunName" />
-        <locator id="dwp.batchRunName2_2" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[1]/input']" name="batchRunName" description="batchRunName" />
+        <locator id="dwp.batchRunName2_1" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[1]/a" name="batchRunName" description="batchRunName" />
+        <locator id="dwp.batchRunName2_2" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_node_?_?']/td[1]/input" name="batchRunName" description="batchRunName" />
         <locator id="dwp.deleteIcon" type="WebElement" by="id" expression="formJobManagerListForm:formJobManagerListTable:?:deleteBtn" name="delete Icon" description="delete icon" />
         <locator id="dwp.rowAmt" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_data']/tr" name="row amt" description="row amt" />
+        <locator id="dwp.lastPageStatus" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_paginator_bottom']/span[5]" name="lastPageStatus" description="lastPageStatus" />
+        <locator id="dwp.lastPageNo1" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_paginator_bottom']/span[3]/span[3]" name="lastPageNo" description="lastPageNo" />
+        <locator id="dwp.lastPageNo2" type="WebElement" by="xpath" expression=".//*[@id='formJobManagerListForm:formJobManagerListTable_paginator_bottom']/span[3]/span[2]" name="lastPageNo" description="lastPageNo" />
+        <locator id="dwp.displayedRow" type="WebElement" by="id" expression="formJobManagerListForm:formJobManagerListTable_rppDD" name="displayedRow" description="displayedRow" />
     </page>
     <page id="rrp" name="RetrieveResultPage" description="ListImportFile Page">
         <locator id="rrp.showLogBtn" type="WebButton" by="id" expression="retriveResConfirmForm:showLog" name="showLogBtn" description="show log button" />
