@@ -129,15 +129,28 @@
 		<JsonFile>MultipleReturn_ProductJob.json</JsonFile>
 		<ReferenceDate>2018-12-31</ReferenceDate>
 		<Items>HKMA_0015_KM v0_31/12/2018#HKMA_0001_AA v0_31/12/2018</Items>
-		<JobName1>HKMA/0015/KM/0</JobName1>
-		<JobName2>HKMA/0001/AA/0</JobName2>
+		<JobName1>HKMA|0015|KM|0</JobName1>
+		<JobName2>HKMA|0001|AA|0</JobName2>
 	</C6618>
 
 	<C6740>
-		<ExecuteJob>Integration_KM_ProductJob.json_2016-02-25#Integration_CVA_ProductJob.json_2016-02-25</ExecuteJob>
-		<Items>HKMA_0015_KM v0_25/02/2016#ECR_0001_CVA v4_25/02/2016</Items>
+		<ExecuteJob>Integration_KM_ProductJob.json@2016-02-25#MAS1105_ProductJob.json@2014-12-31</ExecuteJob>
+		<Items>HKMA_0015_KM v0_25/02/2016#MAS_0001_MAS1105 v1_31/12/2014</Items>
 		<JobName1>INTEGRATION_KM</JobName1>
 		<JobName2>INTEGRATION_CVS</JobName2>
 	</C6740>
+
+	<C6776>
+		<JsonFile>MAS1105_ComDifEntity.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+		<Items>MAS_0015_MAS1105 v1_31/12/2014#MAS_0001_MAS1105 v1_31/12/2014</Items>
+		<JobName1>MAS|0015|MAS1105|1</JobName1>
+		<JobName2>MAS|0001|MAS1105|1</JobName2>
+	</C6776>
+
+	<C6526>
+		<JsonFile>MAS1105_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6526>
 
 </BatchRun>

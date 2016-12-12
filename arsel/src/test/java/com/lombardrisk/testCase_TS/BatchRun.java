@@ -25,10 +25,10 @@ public class BatchRun extends TestTemplate
 {
 	private String executeBatchRun(String jsonFile, String date) throws Exception
 	{
-		return executeBatchRun(jsonFile, "admin", date);
+		return executeBatchRun(jsonFile, "admin", "5dfc52b51bd35553df8592078de921bc", date);
 	}
 
-	private String executeBatchRun(String jsonFile, String userName, String date) throws Exception
+	private String executeBatchRun(String jsonFile, String userName, String password, String date) throws Exception
 	{
 		List<String> testData = getElementValueFromXML(testData_BatchRun, "executeBatchRun");
 		String path = testData.get(0) + "/tools/etl-cmd/";
@@ -36,7 +36,7 @@ public class BatchRun extends TestTemplate
 		String jsonPath = System.getProperty("user.dir") + "/" + testDataFolderName + "/BatchRun/JsonFile/" + jsonFile;
 		FileUtils.copyFile(new File(jsonPath), new File(path + jsonFile));
 		logger.info("Json file is:" + jsonFile);
-		Process process = Runtime.getRuntime().exec("cmd.exe /c start /b " + fullPath + " " + userName + " " + "5dfc52b51bd35553df8592078de921bc" + " " + jsonFile + " " + date, null, new File(path));
+		Process process = Runtime.getRuntime().exec("cmd.exe /c start /b " + fullPath + " " + userName + " " + password + " " + jsonFile + " " + date, null, new File(path));
 		process.waitFor();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 		String line, status = null;
@@ -47,6 +47,12 @@ public class BatchRun extends TestTemplate
 				status = "success";
 				break;
 			}
+			else if (line.startsWith("The username or password does not match."))
+			{
+				status = "fail_userIssue";
+				break;
+			}
+
 			else
 				status = "";
 		}
@@ -1088,7 +1094,7 @@ public class BatchRun extends TestTemplate
 				String Regulator = i[0];
 				String Entity = i[1];
 				String Form = i[2];
-				String Date = i[2];
+				String Date = i[3];
 				listPage.setRegulatorByValue(Regulator);
 				listPage.setGroup(Entity);
 				listPage.setForm(Form);
@@ -1156,18 +1162,18 @@ public class BatchRun extends TestTemplate
 				String Regulator = i[0];
 				String Entity = i[1];
 				String Form = i[2];
-				String Date = i[2];
+				String Date = i[3];
 				listPage.setRegulatorByValue(Regulator);
 				listPage.setGroup(Entity);
 				listPage.setForm(Form);
-				listPage.setProcessDate(Date);
+				// listPage.setProcessDate(Date);
 				listPage.deleteFormInstance(Form, Date);
 			}
 
 			for (String jobDetail : ExecuteJob.split("#"))
 			{
-				String JsonFile = jobDetail.split("_")[0];
-				String ReferenceDate = jobDetail.split("_")[1];
+				String JsonFile = jobDetail.split("@")[0];
+				String ReferenceDate = jobDetail.split("@")[1];
 				executeBatchRun(JsonFile, ReferenceDate);
 			}
 
@@ -1204,6 +1210,116 @@ public class BatchRun extends TestTemplate
 		finally
 		{
 			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6776() throws Exception
+	{
+		String caseID = "6776";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+			String Items = testData.get(2);
+			String Job1 = testData.get(3);
+			String Job2 = testData.get(4);
+
+			ListPage listPage = m.listPage;
+			for (String item : Items.split("#"))
+			{
+				String[] i = item.split("_");
+				String Regulator = i[0];
+				String Entity = i[1];
+				String Form = i[2];
+				String Date = i[3];
+				listPage.setRegulatorByValue(Regulator);
+				listPage.setGroup(Entity);
+				listPage.setForm(Form);
+				listPage.setProcessDate(Date);
+				listPage.deleteFormInstance(Form, Date);
+			}
+			executeBatchRun(JsonFile, ReferenceDate);
+
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			JobDetailsPage jobDetailsPage = jobManagerPage.enterJobDetailsPage(1);
+			List<String> subJobNames = jobDetailsPage.getSubJobName(1);
+			assertThat(Job1).isIn(subJobNames);
+			assertThat(Job2).isIn(subJobNames);
+			jobDetailsPage.backToDashboard();
+			waitJob(jobManagerPage);
+
+			listPage = jobManagerPage.backToDashboard();
+			for (String item : Items.split("#"))
+			{
+				String[] i = item.split("_");
+				String Regulator = i[0];
+				String Entity = i[1];
+				String Form = i[2];
+				String Date = i[2];
+				listPage.setRegulatorByValue(Regulator);
+				listPage.setGroup(Entity);
+				listPage.setForm(Form);
+				listPage.setProcessDate(Date);
+				assertThat(listPage.isFormExist(Form, Date)).isEqualTo(true);
+			}
+
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			e.printStackTrace();
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6526() throws Exception
+	{
+		String caseID = "6526";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+
+			ListPage listPage = m.listPage;
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			int init = jobManagerPage.getJobNum();
+			executeBatchRun(JsonFile, "admin", "password", ReferenceDate);
+			Thread.sleep(1000 * 10);
+			refreshPage();
+			int after = jobManagerPage.getJobNum();
+			assertThat(after).isEqualTo(init);
+
+			executeBatchRun(JsonFile, "adminadmin", "5dfc52b51bd35553df8592078de921bc", ReferenceDate);
+			Thread.sleep(1000 * 10);
+			refreshPage();
+			after = jobManagerPage.getJobNum();
+			assertThat(after).isEqualTo(init);
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			e.printStackTrace();
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID + ",6528", testRst, "BatchRun");
 		}
 	}
 }
