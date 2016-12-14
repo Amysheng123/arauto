@@ -394,7 +394,7 @@ public class Admin_ImportExport extends TestTemplate
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
-			String logPath = entityManagePage.importAcessSettings(importFilePath);
+			String logPath = entityManagePage.importAccessSettings(importFilePath);
 			if (logPath != null)
 			{
 				File importFile = new File(importFilePath);

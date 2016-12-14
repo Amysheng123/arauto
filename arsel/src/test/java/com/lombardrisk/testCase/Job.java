@@ -573,7 +573,7 @@ public class Job extends TestTemplate
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
 
 			formInstancePage = listPage.openFormInstance(formCode, version, ReferenceDate);
-			String errorMsg = formInstancePage.getExportDataSchduleMessage(ExportType, Module, null, false);
+			String errorMsg = formInstancePage.getExportDataScheduleMessage(ExportType, Module, null, false);
 			formInstancePage.closeFormInstance();
 			if (ErrorMessage.equals(errorMsg))
 				testRst = false;
@@ -833,7 +833,7 @@ public class Job extends TestTemplate
 
 			// export ds return
 			formInstancePage = listPage.openFormInstance(formCode, version, ReferenceDate);
-			String errorMsg = formInstancePage.getExportDataSchduleMessage(ExportType, Module, null, false);
+			String errorMsg = formInstancePage.getExportDataScheduleMessage(ExportType, Module, null, false);
 			formInstancePage.closeFormInstance();
 			if (ErrorMessage.equals(errorMsg))
 				testRst = false;

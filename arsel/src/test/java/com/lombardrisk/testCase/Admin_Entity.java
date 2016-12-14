@@ -25,10 +25,10 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String EntityNames = testdata.get(0);
-			String EntityCodes = testdata.get(1);
-			String EntityDescs = testdata.get(2);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String EntityNames = testData.get(0);
+			String EntityCodes = testData.get(1);
+			String EntityDescs = testData.get(2);
 
 			String Names[];
 			String Codes[];
@@ -81,11 +81,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Parent = testdata.get(0);
-			String EntityNames = testdata.get(1);
-			String EntityCodes = testdata.get(2);
-			String EntityDescs = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Parent = testData.get(0);
+			String EntityNames = testData.get(1);
+			String EntityCodes = testData.get(2);
+			String EntityDescs = testData.get(3);
 			String Names[];
 			String Codes[];
 			String Descs[];
@@ -141,11 +141,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Child = testdata.get(0);
-			String EntityNames = testdata.get(1);
-			String EntityCodes = testdata.get(2);
-			String EntityDescs = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Child = testData.get(0);
+			String EntityNames = testData.get(1);
+			String EntityCodes = testData.get(2);
+			String EntityDescs = testData.get(3);
 			String Names[] = null;
 			String Codes[] = null;
 			String Descs[] = null;
@@ -200,11 +200,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String newName = testdata.get(1);
-			String newCode = testdata.get(2);
-			String newDesc = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String newName = testData.get(1);
+			String newCode = testData.get(2);
+			String newDesc = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -261,14 +261,13 @@ public class Admin_Entity extends TestTemplate
 		String caseID = "4786";
 		logger.info("====Test delete entity with child (no form instance)[case id=" + caseID + "]====");
 		boolean testRst = false;
-		EntityPage entityManagePage = null;
 		try
 		{
 			String nodeName = "C" + caseID;
 			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
 
 			ListPage listPage = super.m.listPage;
-			entityManagePage = listPage.EnterEntityPage();
+			EntityPage entityManagePage = listPage.EnterEntityPage();
 			assertThat(entityManagePage.isDeleteEntityWithInstanceFailed(Entity)).isEqualTo(true);
 			assertThat(entityManagePage.getAllEntityName()).contains(Entity);
 			testRst = true;
@@ -295,12 +294,12 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String ProductPrefxi = testdata.get(1);
-			String returnName = testdata.get(2);
-			String UG = testdata.get(3);
-			String PG = testdata.get(4);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String ProductPrefxi = testData.get(1);
+			String returnName = testData.get(2);
+			String UG = testData.get(3);
+			String PG = testData.get(4);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -340,11 +339,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Child = testdata.get(0);
-			String EntityNames = testdata.get(1);
-			String EntityCodes = testdata.get(2);
-			String EntityDescs = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Child = testData.get(0);
+			String EntityNames = testData.get(1);
+			String EntityCodes = testData.get(2);
+			String EntityDescs = testData.get(3);
 			String Names[] = null;
 			String Codes[] = null;
 			String Descs[] = null;
@@ -409,11 +408,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Child = testdata.get(0);
-			String EntityNames = testdata.get(1);
-			String EntityCodes = testdata.get(2);
-			String EntityDescs = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Child = testData.get(0);
+			String EntityNames = testData.get(1);
+			String EntityCodes = testData.get(2);
+			String EntityDescs = testData.get(3);
 			String Names[] = null;
 			String Codes[] = null;
 			String Descs[] = null;
@@ -478,11 +477,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Child = testdata.get(0);
-			String EntityName = testdata.get(1);
-			String EntityCode = testdata.get(2);
-			String EntityDesc = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Child = testData.get(0);
+			String EntityName = testData.get(1);
+			String EntityCode = testData.get(2);
+			String EntityDesc = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -517,11 +516,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Child = testdata.get(0);
-			String EntityName = testdata.get(1);
-			String EntityCode = testdata.get(2);
-			String EntityDesc = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Child = testData.get(0);
+			String EntityName = testData.get(1);
+			String EntityCode = testData.get(2);
+			String EntityDesc = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -556,12 +555,12 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Product = testdata.get(1);
-			String Return = testdata.get(2);
-			String Privilege = testdata.get(3);
-			String UserGroup = testdata.get(4);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Product = testData.get(1);
+			String Return = testData.get(2);
+			String Privilege = testData.get(3);
+			String UserGroup = testData.get(4);
 			String[] Returns = null;
 			if (Return.contains("#"))
 				Returns = Return.split("#");
@@ -627,13 +626,13 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Parent = testdata.get(0);
-			String Child = testdata.get(1);
-			String Product = testdata.get(2);
-			String Return = testdata.get(3);
-			String Privilege = testdata.get(4);
-			String UserGroup = testdata.get(5);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Parent = testData.get(0);
+			String Child = testData.get(1);
+			String Product = testData.get(2);
+			String Return = testData.get(3);
+			String Privilege = testData.get(4);
+			String UserGroup = testData.get(5);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -688,8 +687,8 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -757,9 +756,9 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String ECR = testdata.get(1);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String ECR = testData.get(1);
 			// TESTPRODUCT
 			String group = "rpadmin_grp";
 			String privilege = "Return Maker";
@@ -846,12 +845,12 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Regulator = testdata.get(1);
-			String Return = testdata.get(2);
-			String Privilege = testdata.get(3);
-			String UserGroup = testdata.get(4);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Regulator = testData.get(1);
+			String Return = testData.get(2);
+			String Privilege = testData.get(3);
+			String UserGroup = testData.get(4);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -1046,12 +1045,12 @@ public class Admin_Entity extends TestTemplate
 
 			List<String> forms = listPage.getFormOptions_Create(EntityName, null);
 
-			if (forms.equals(Return1))
+			if (forms.contains(Return1))
 			{
 				testRst = false;
 				logger.error("Form[" + Return1 + "] not in create form list");
 			}
-			if (!forms.equals(Return2))
+			if (!forms.contains(Return2))
 			{
 				testRst = false;
 				logger.error("Form[" + Return2 + "] should in create form list");
@@ -1279,7 +1278,7 @@ public class Admin_Entity extends TestTemplate
 	{
 		String caseID = "5589";
 		logger.info("====Verify special characters in entity code can be added[case id=" + caseID + "]====");
-		boolean testRst = true;
+		boolean testRst = false;
 		EntityPage entityManagePage = null;
 		try
 		{
@@ -1292,11 +1291,9 @@ public class Admin_Entity extends TestTemplate
 			entityManagePage = listPage.EnterEntityPage();
 
 			entityManagePage.addRootEntity(EntityName, Code, Desc, true);
-			if (!entityManagePage.getAllEntityName().contains(Code))
-			{
-				testRst = false;
-				logger.error("Add entity[name=" + EntityName + ",code=" + Code + ",desc=" + Desc + "] failed");
-			}
+			List<String> entities = entityManagePage.getAllEntityName();
+			assertThat(entities).contains(EntityName);
+			testRst = true;
 
 		}
 		catch (RuntimeException e)
@@ -1318,7 +1315,6 @@ public class Admin_Entity extends TestTemplate
 		String caseID = "5590";
 		logger.info("====Verify restricting characters in entity code can not be added[case id=" + caseID + "]====");
 		boolean testRst = true;
-		EntityPage entityManagePage = null;
 		try
 		{
 			String nodeName = "C" + caseID;
@@ -1327,7 +1323,7 @@ public class Admin_Entity extends TestTemplate
 			String Desc = getElementValueFromXML(testData_admin, nodeName, "Desc");
 
 			ListPage listPage = super.m.listPage;
-			entityManagePage = listPage.EnterEntityPage();
+			EntityPage entityManagePage = listPage.EnterEntityPage();
 
 			entityManagePage.addRootEntity(EntityName, Code, Desc, true);
 
@@ -1356,25 +1352,22 @@ public class Admin_Entity extends TestTemplate
 	{
 		String caseID = "5609";
 		logger.info("====Verify restricting characters in entity code can not be added[case id=" + caseID + "]====");
-		boolean testRst = true;
-		EntityPage entityManagePage = null;
+		boolean testRst = false;
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
-			String EntityName = getElementValueFromXML(testData_admin, nodeName, "NewName");
-			String Code = getElementValueFromXML(testData_admin, nodeName, "NewCode");
-			String Desc = getElementValueFromXML(testData_admin, nodeName, "NewDesc");
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String EntityName = testData.get(1);
+			String Code = testData.get(2);
+			String Desc = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
-			entityManagePage = listPage.EnterEntityPage();
+			EntityPage entityManagePage = listPage.EnterEntityPage();
 
-			entityManagePage.editEntity(Entity, EntityName, Code, Desc);
-			if (entityManagePage.getAllEntityName().contains(Code))
-			{
-				testRst = false;
-				logger.error("Add entity[name=" + EntityName + ",code=" + Code + ",desc=" + Desc + "] failed");
-			}
+			String msg = entityManagePage.editEntity(Entity, EntityName, Code, Desc);
+			assertThat(msg).isEqualTo("character \"|\" is not allowed in entity Code");
+			testRst = true;
 
 		}
 		catch (RuntimeException e)
@@ -1400,11 +1393,11 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Code = testdata.get(1);
-			String Desc = testdata.get(2);
-			String Regulator = testdata.get(3);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Code = testData.get(1);
+			String Desc = testData.get(2);
+			String Regulator = testData.get(3);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -1437,12 +1430,12 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Regulators = testdata.get(1);
-			String Returns = testdata.get(2);
-			String ug = testdata.get(3);
-			String Privileges = testdata.get(4);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Regulators = testData.get(1);
+			String Returns = testData.get(2);
+			String ug = testData.get(3);
+			String Privileges = testData.get(4);
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
@@ -1457,28 +1450,23 @@ public class Admin_Entity extends TestTemplate
 			{ ug }, new String[]
 			{ Privileges.split("#")[1] });
 
-			boolean s1 = false;
-			boolean s2 = false;
-			boolean s3 = false;
-
 			listPage = entityManagePage.backToDashboard();
 			listPage.setRegulatorByValue(Regulators.split("#")[0]);
 			listPage.setGroup(Entity);
 
-			if (listPage.getFormOptions().size() == 1 && listPage.getFormOptions().get(0).equals(Returns.split("#")[0]))
-				s1 = true;
+			assertThat(listPage.getFormOptions().size()).isEqualTo(1);
+			assertThat(listPage.getFormOptions().get(0)).isEqualTo(Returns.split("#")[0]);
 
 			listPage.setRegulatorByValue(Regulators.split("#")[1]);
 			listPage.setGroup(Entity);
-			if (listPage.getFormOptions().size() == 1 && listPage.getFormOptions().get(0).equals(Returns.split("#")[1]))
-				s2 = true;
+
+			assertThat(listPage.getFormOptions().size()).isEqualTo(1);
+			assertThat(listPage.getFormOptions().get(0)).isEqualTo(Returns.split("#")[1]);
 
 			List<String> optionsList = listPage.getFormOptions_Create(Entity, null);
-			if (optionsList.size() == 1 && optionsList.get(0).equals(Returns.split("#")[1]))
-				s3 = true;
-
-			if (s1 && s2 && s3)
-				testRst = true;
+			assertThat(optionsList.size()).isEqualTo(1);
+			assertThat(optionsList.get(0)).isEqualTo(Returns.split("#")[1]);
+			testRst = true;
 		}
 		catch (RuntimeException e)
 		{
@@ -1502,14 +1490,14 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Regulator = testdata.get(1);
-			String RegulatorPrefix = testdata.get(2);
-			String Return = testdata.get(3);
-			String ug = testdata.get(4);
-			String Privileges = testdata.get(5);
-			String user = testdata.get(6);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Regulator = testData.get(1);
+			String RegulatorPrefix = testData.get(2);
+			String Return = testData.get(3);
+			String ug = testData.get(4);
+			String Privileges = testData.get(5);
+			String user = testData.get(6);
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
@@ -1558,7 +1546,7 @@ public class Admin_Entity extends TestTemplate
 		}
 		finally
 		{
-			writeTestResultToFile(caseID + ",4755", testRst, "Admin_Entity");
+			writeTestResultToFile(caseID, testRst, "Admin_Entity");
 		}
 	}
 
@@ -1572,13 +1560,13 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Code = testdata.get(1);
-			String Regulator = testdata.get(2);
-			String Return = testdata.get(3);
-			String ug = testdata.get(4);
-			String Privileges = testdata.get(5);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Code = testData.get(1);
+			String Regulator = testData.get(2);
+			String Return = testData.get(3);
+			String ug = testData.get(4);
+			String Privileges = testData.get(5);
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
@@ -1606,7 +1594,7 @@ public class Admin_Entity extends TestTemplate
 		}
 		finally
 		{
-			writeTestResultToFile(caseID + ",4755", testRst, "Admin_Entity");
+			writeTestResultToFile(caseID, testRst, "Admin_Entity");
 		}
 	}
 
@@ -1620,9 +1608,9 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Code = testdata.get(1);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Code = testData.get(1);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -1640,7 +1628,7 @@ public class Admin_Entity extends TestTemplate
 		}
 		finally
 		{
-			writeTestResultToFile(caseID + ",4755", testRst, "Admin_Entity");
+			writeTestResultToFile(caseID, testRst, "Admin_Entity");
 		}
 	}
 
@@ -1654,12 +1642,12 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Regulator = testdata.get(1);
-			String Return = testdata.get(2);
-			String active = testdata.get(3);
-			String deactive = testdata.get(4);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Regulator = testData.get(1);
+			String Return = testData.get(2);
+			String active = testData.get(3);
+			String deactive = testData.get(4);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -1678,7 +1666,7 @@ public class Admin_Entity extends TestTemplate
 		}
 		finally
 		{
-			writeTestResultToFile(caseID + ",4755", testRst, "Admin_Entity");
+			writeTestResultToFile(caseID, testRst, "Admin_Entity");
 		}
 	}
 
@@ -1692,12 +1680,12 @@ public class Admin_Entity extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
-			String Entity = testdata.get(0);
-			String Regulator = testdata.get(1);
-			String Return = testdata.get(2);
-			String ActiveDates = testdata.get(3);
-			String LanguageRegions = testdata.get(4);
+			List<String> testData = getElementValueFromXML(testData_admin, nodeName);
+			String Entity = testData.get(0);
+			String Regulator = testData.get(1);
+			String Return = testData.get(2);
+			String ActiveDates = testData.get(3);
+			String LanguageRegions = testData.get(4);
 
 			ListPage listPage = super.m.listPage;
 			entityManagePage = listPage.EnterEntityPage();
@@ -1720,7 +1708,7 @@ public class Admin_Entity extends TestTemplate
 		}
 		finally
 		{
-			writeTestResultToFile(caseID + ",4755", testRst, "Admin_Entity");
+			writeTestResultToFile(caseID, testRst, "Admin_Entity");
 		}
 	}
 }

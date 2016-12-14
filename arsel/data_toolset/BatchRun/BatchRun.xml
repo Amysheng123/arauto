@@ -135,9 +135,9 @@
 
 	<C6740>
 		<ExecuteJob>Integration_KM_ProductJob.json@2016-02-25#MAS1105_ProductJob.json@2014-12-31</ExecuteJob>
-		<Items>HKMA_0015_KM v0_25/02/2016#MAS_0001_MAS1105 v1_31/12/2014</Items>
+		<Items>HKMA_0015_KM v0_25/02/2016#MAS_0015_MAS1105 v1_31/12/2014</Items>
 		<JobName1>INTEGRATION_KM</JobName1>
-		<JobName2>INTEGRATION_CVS</JobName2>
+		<JobName2>MAS1105_Product</JobName2>
 	</C6740>
 
 	<C6776>
@@ -152,5 +152,53 @@
 		<JsonFile>MAS1105_ProductJob.json</JsonFile>
 		<ReferenceDate>2014-12-31</ReferenceDate>
 	</C6526>
+
+	<C6495>
+		<JsonFile>ProductJob1.json@2014-12-31#ProductJob2.json@2014-12-31</JsonFile>
+	</C6495>
+
+	<C6496>
+		<JsonFile>BatchRunJob1.json@2014-12-31#BatchRunJob2.json@2014-12-31</JsonFile>
+	</C6496>
+
+	<C6497>
+		<JsonFile>CONF_INPUTCUST.json@2019-12-31#SpecificDate_BatchRunJob.json@2020-12-31</JsonFile>
+	</C6497>
+
+	<C6498>
+		<JsonFile>CREATESTBFORM_BatchRunJob.json@2005-01-01#MAS1105_ProductJob.json@2014-12-31</JsonFile>
+	</C6498>
+
+	<C6616>
+		<JsonFile>BatchRunJob1.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6616>
+
+	<C6617>
+		<JsonFile>BatchRunJob1.json</JsonFile>
+	</C6617>
+
+	<C6619>
+		<JsonFile>CONF_INPUTCUST.json@2019-12-31#ErrorLookup_BatchRunJob.json@2019-12-31</JsonFile>
+	</C6619>
+
+	<C6620>
+		<JsonFile>CONF_INPUTCUST.json@2013-12-31#ErrorLookup_BatchRunJob.json@2019-12-31</JsonFile>
+	</C6620>
+
+	<C6621>
+		<JsonFile>CONF_INPUTCUST.json@2018-12-31#ErrorLookup_BatchRunJob.json@2019-12-31</JsonFile>
+	</C6621>
+
+	<C6782>
+		<JsonFile>BatchRunJob1.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6782>
+
+	<C6783>
+		<JsonFile>MAS1105_ProductJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6783>
+
 
 </BatchRun>

@@ -494,7 +494,7 @@ public class DataSchedule extends TestTemplate
 						boolean lock = false;
 						if (caseId.equalsIgnoreCase("6122"))
 							lock = true;
-						String actualMessage = formInstancePage.getExportDataSchduleMessage(fileType, module, compressType, lock);
+						String actualMessage = formInstancePage.getExportDataScheduleMessage(fileType, module, compressType, lock);
 						if (!actualMessage.equalsIgnoreCase(message))
 						{
 							testRst = false;
@@ -512,12 +512,12 @@ public class DataSchedule extends TestTemplate
 						{
 							logger.info("File location is:" + location);
 							location = location + "ValidationErrors/";
-							testRst = formInstancePage.isExportDataSchduleSucessed(fileType, module, compressType, "test export", location);
+							testRst = formInstancePage.isExportDataSchduleSucceed(fileType, module, compressType, "test export", location);
 						}
 						else
 						{
 							logger.info("File location is:" + location);
-							boolean exportRst = formInstancePage.isExportDataSchduleSucessed(fileType, module, compressType, "test export", location);
+							boolean exportRst = formInstancePage.isExportDataSchduleSucceed(fileType, module, compressType, "test export", location);
 							if (!exportRst)
 								testRst = false;
 							if (baseline.length() > 1 && testRst)
@@ -545,7 +545,7 @@ public class DataSchedule extends TestTemplate
 						dateString = dateString.substring(4, 8) + dateString.substring(0, 5);
 						location = location + "/Submission/" + regulatorPrefix + "/" + Group + "/" + dateString + "/";
 						logger.info("File location is:" + location);
-						boolean exportRst = formInstancePage.isExportDataSchduleSucessed(fileType, module, compressType, "test export", location);
+						boolean exportRst = formInstancePage.isExportDataSchduleSucceed(fileType, module, compressType, "test export", location);
 						if (exportRst)
 						{
 							testRst = false;

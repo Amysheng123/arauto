@@ -190,7 +190,7 @@ public class MultipleReporter extends Browser
 					logger.error("Copy data from still exist!");
 				}
 
-				if (!listPage.isExistImportAdjsutment())
+				if (!listPage.isExistImportAdjustment())
 				{
 					testRst = false;
 					logger.error("Import adjustment does not exist in dashboard!");
