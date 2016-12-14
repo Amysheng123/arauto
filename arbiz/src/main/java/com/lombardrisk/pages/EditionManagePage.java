@@ -94,14 +94,14 @@ public class EditionManagePage extends AbstractPage
 	{
 		boolean state = false;
 		String formPosition = findForm(creationDate);
-		if (formPosition.equals("1_0"))
+		if ("1_0".equals(formPosition))
 		{
 			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
 		String rowNo = formPosition.split("_")[1];
 
 		String status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("ACTIVE"))
+		if ("ACTIVE".equalsIgnoreCase(status))
 		{
 			logger.error("This edition already activated");
 		}
@@ -190,12 +190,12 @@ public class EditionManagePage extends AbstractPage
 	 */
 	public void deleteEdition(String creationDate) throws Exception
 	{
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if ("1_0".equals(formPosition))
 		{
 			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 		int row = Integer.parseInt(rowNo);
 		element("edm.delEdition", String.valueOf(row)).click();
 		waitStatusDlg();
@@ -323,8 +323,9 @@ public class EditionManagePage extends AbstractPage
 			}
 			catch (Exception e)
 			{
-				rst = false;
+				logger.warn(e.getMessage());
 				e.printStackTrace();
+				rst = false;
 			}
 		}
 		return rst;
@@ -342,7 +343,7 @@ public class EditionManagePage extends AbstractPage
 		int amt = (int) element("edm.editionMagForm").getRowCount();
 		for (int i = 1; i <= amt; i++)
 		{
-			if (element("edm.formState", String.valueOf(i)).getInnerText().equalsIgnoreCase("DORMANT"))
+			if ("DORMANT".equalsIgnoreCase(element("edm.formState", String.valueOf(i)).getInnerText()))
 			{
 				String editionNo = element("edm.formLink", String.valueOf(i - 1)).getInnerText();
 				String creationDt = element("edm.createDt", String.valueOf(i)).getInnerText();
@@ -367,7 +368,7 @@ public class EditionManagePage extends AbstractPage
 		int amt = (int) element("edm.editionMagForm").getRowCount();
 		for (int i = 1; i <= amt; i++)
 		{
-			if (element("edm.formState", String.valueOf(i)).getInnerText().equalsIgnoreCase("ACTIVE"))
+			if ("ACTIVE".equalsIgnoreCase(element("edm.formState", String.valueOf(i)).getInnerText()))
 			{
 				String editionNo = element("edm.formLink", String.valueOf(i - 1)).getInnerText();
 				String creationDt = element("edm.createDt", String.valueOf(i)).getInnerText();

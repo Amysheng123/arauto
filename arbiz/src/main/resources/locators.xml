@@ -226,6 +226,7 @@
         <locator id="emp.getPriv" type="WebElement" by="xpath" expression="//div[@id='?']/table/tbody/tr[?]/td[?]/div/span" name="getPriv" description="get privilege " />
         <locator id="emp.returnTable" type="WebTable" by="id" expression="?" name="returnTable" description="returnTable " />
         <locator id="emp.messageTitle" type="WebElement" by="xpath" expression="//*[@id='growl_container']/div/div/div[2]/span" name="messageTitle" description="messageTitle" />
+        <locator id="emp.message" type="WebElement" by="xpath" expression="//*[@id='growl_container']/div/div/div[2]/p" name="message" description="message" />
         <locator id="emp.cancelRestore" type="WebElement" by="id" expression="restoredecline" name="cancelRestore" description="cancelRestore" />
         <locator id="emp.cancelAssignReturn" type="WebElement" by="xpath" expression="//button[span='Cancel'][contains(@id,'cancelGroupAssign')]" name="cancelAssignReturn" description="cancel assign return" />
         <locator id="emp.regulator.table" type="WebElement" by="xpath" expression="//div/div[span='?']/parent::*" name="regulator.table" description="regulator.table" />

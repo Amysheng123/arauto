@@ -107,16 +107,16 @@ public class EntityPage extends AbstractImportPage
 	/**
 	 * edit entity
 	 * 
-	 * @param originalEntiry
+	 * @param originalEntity
 	 * @param newName
 	 * @param newCode
 	 * @param newDescription
 	 * @throws Exception
 	 */
-	public void editEntity(String originalEntiry, String newName, String newCode, String newDescription) throws Exception
+	public String editEntity(String originalEntity, String newName, String newCode, String newDescription) throws Exception
 	{
 		logger.info("Begin update entity");
-		element("emp.entityImg", originalEntiry).click();
+		element("emp.entityImg", originalEntity).click();
 		waitStatusDlg();
 		if (newName != null)
 			element("emp.edit.name").input(newName);
@@ -126,8 +126,10 @@ public class EntityPage extends AbstractImportPage
 			element("emp.edit.desc").input(newDescription);
 		element("emp.edit.save").click();
 		waitThat("emp.messageTitle").toBeVisible();
+		String msg = element("emp.message").getInnerText();
 		waitThat("emp.messageTitle").toBeInvisible();
 		closeEntityEditPage();
+		return msg;
 	}
 
 	/**
@@ -519,7 +521,7 @@ public class EntityPage extends AbstractImportPage
 		{
 			try
 			{
-				if (element("emp.promptMsg").getInnerText().equals("Entity cannot be removed as it has Assigned Entities"))
+				if ("Entity cannot be removed as it has Assigned Entities".equals(element("emp.promptMsg").getInnerText()))
 				{
 					result = true;
 					break;
@@ -585,7 +587,7 @@ public class EntityPage extends AbstractImportPage
 		boolean result = true;
 		String message = addEntity(parent, name, code, desc, true);
 
-		if (type.equalsIgnoreCase("name"))
+		if ("name".equalsIgnoreCase(type))
 		{
 			if (message.equals("Entity name " + name + " is already in use"))
 			{
@@ -1021,7 +1023,7 @@ public class EntityPage extends AbstractImportPage
 	 */
 	public boolean isEditEntity(String Entity) throws Exception
 	{
-		boolean rst = true;
+		boolean rst;
 		try
 		{
 			openEntityEditPage(Entity);
@@ -1030,11 +1032,10 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (NoSuchElementException e)
 		{
+			logger.warn(e.getMessage());
 			rst = false;
 		}
-
 		closeEntityEditPage();
-
 		return rst;
 	}
 
@@ -1127,7 +1128,7 @@ public class EntityPage extends AbstractImportPage
 			entityInfo.add(parent);
 		try
 		{
-			if (!element("emp.edit.slide").getAttribute("checked").equals("checked"))
+			if (!"checked".equals(element("emp.edit.slide").getAttribute("checked")))
 			{
 				entityInfo.add("Y");
 			}
@@ -1150,7 +1151,7 @@ public class EntityPage extends AbstractImportPage
 	 */
 	public boolean isImportEnabled() throws Exception
 	{
-		if (element("emp.import").getAttribute("aria-disabled").equalsIgnoreCase("false"))
+		if ("false".equalsIgnoreCase(element("emp.import").getAttribute("aria-disabled")))
 			return true;
 		else
 			return false;
@@ -1164,7 +1165,7 @@ public class EntityPage extends AbstractImportPage
 	 */
 	public boolean isExportEnabled() throws Exception
 	{
-		if (element("emp.export").getAttribute("aria-disabled").equalsIgnoreCase("false"))
+		if ("false".equalsIgnoreCase(element("emp.export").getAttribute("aria-disabled")))
 			return true;
 		else
 			return false;
@@ -1206,7 +1207,7 @@ public class EntityPage extends AbstractImportPage
 	 * @return exported log file
 	 * @throws Exception
 	 */
-	public String importAcessSettings(String importFile) throws Exception
+	public String importAccessSettings(String importFile) throws Exception
 	{
 		logger.info("Begin import adjustment");
 		logger.info("Import file is :" + importFile);

@@ -1543,7 +1543,7 @@ public class ListPage extends AbstractPage
 			if (httpDownload)
 			{
 				String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
-				filePath = getOriginalFile(exportedFile, latestFile);
+				filePath = getOriginalFile(exportedFile, latestFile, true);
 			}
 			else
 				filePath = downloadFile(FileType, latestFile, null);
@@ -1792,7 +1792,8 @@ public class ListPage extends AbstractPage
 		}
 		finally
 		{
-			formInstanceCreatePage.createCloseClick();
+			if (formInstanceCreatePage != null)
+				formInstanceCreatePage.createCloseClick();
 		}
 
 		return isExistForm;
@@ -1917,7 +1918,7 @@ public class ListPage extends AbstractPage
 	 * @return true or false
 	 * @throws Exception
 	 */
-	public boolean isExistImportAdjsutment() throws Exception
+	public boolean isExistImportAdjustment() throws Exception
 	{
 		return element("lp.import").isDisplayed();
 	}
@@ -1967,6 +1968,7 @@ public class ListPage extends AbstractPage
 	 */
 	public JobManagerPage enterJobManagerPage() throws Exception
 	{
+		logger.info("Enter job manager page");
 		element("lp.JobManger").click();
 		waitStatusDlg();
 		Thread.sleep(1500);

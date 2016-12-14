@@ -27,6 +27,7 @@ public class TestTemplate extends TestBase
 	protected static String targetLogFolder = System.getProperty("user.dir") + "/target/result/logs/";
 	protected static String testDataFolderName = PropHelper.getProperty("data.type").trim();
 	protected static boolean startService = Boolean.parseBoolean(PropHelper.getProperty("test.startService").trim());
+	protected static boolean setOriginalName = Boolean.parseBoolean(PropHelper.getProperty("getOriginalName").trim());
 	protected static String envPath = PropHelper.getProperty("test.environment.path").trim();
 	protected static boolean httpDownload = Boolean.parseBoolean(PropHelper.getProperty("download.enable").trim());
 	protected static String testData_admin = null;
@@ -372,7 +373,7 @@ public class TestTemplate extends TestBase
 	 * @param extendCell
 	 * @return Cell type
 	 */
-	public String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell)
+	public String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell) throws Exception
 	{
 
 		if (ConnectDBType.equalsIgnoreCase("ar"))
@@ -427,7 +428,7 @@ public class TestTemplate extends TestBase
 	 * @param Regulator
 	 * @return IDRangeStart
 	 */
-	public String getRegulatorIDRangeStart(String Regulator)
+	public String getRegulatorIDRangeStart(String Regulator) throws Exception
 	{
 		String SQL = "SELECT \"ID_RANGE_START\" FROM \"CFG_INSTALLED_CONFIGURATIONS\" WHERE \"DESCRIPTION\"='" + Regulator + "'  AND \"STATUS\"='A' ";
 		return DBQuery.queryRecord(SQL);
@@ -440,7 +441,7 @@ public class TestTemplate extends TestBase
 	 * @param Regulator
 	 * @return IDRangeEnd
 	 */
-	public String getRegulatorIDRangEnd(String Regulator)
+	public String getRegulatorIDRangEnd(String Regulator) throws Exception
 	{
 		String SQL = "SELECT \"ID_RANGE_END\" FROM \"CFG_INSTALLED_CONFIGURATIONS\" WHERE \"DESCRIPTION\"='" + Regulator + "' AND \"STATUS\"='A'  ";
 		return DBQuery.queryRecord(SQL);
@@ -455,7 +456,7 @@ public class TestTemplate extends TestBase
 	 * @param cellName
 	 * @return GridName
 	 */
-	public String getExtendCellName(String Regulator, String formCode, String version, String cellName)
+	public String getExtendCellName(String Regulator, String formCode, String version, String cellName) throws Exception
 	{
 		if (ConnectDBType.equalsIgnoreCase("ar"))
 		{
@@ -490,7 +491,7 @@ public class TestTemplate extends TestBase
 	 * @param ruleID
 	 * @return DestFld
 	 */
-	public String getDestFldFromSumRule(String Regulator, String formCode, String version, int ruleID)
+	public String getDestFldFromSumRule(String Regulator, String formCode, String version, int ruleID) throws Exception
 	{
 		if (ConnectDBType.equalsIgnoreCase("ar"))
 		{
@@ -521,7 +522,7 @@ public class TestTemplate extends TestBase
 	 * @param ruleID
 	 * @return validation rule
 	 */
-	public String getValidationExpression(String Regulator, String formCode, String version, String ruleType, int ruleID)
+	public String getValidationExpression(String Regulator, String formCode, String version, String ruleType, int ruleID) throws Exception
 	{
 		String SQL = null;
 		if (ConnectDBType.equalsIgnoreCase("ar"))
@@ -789,6 +790,11 @@ public class TestTemplate extends TestBase
 		return format;
 	}
 
+	public boolean isSetOriginalName()
+	{
+		return setOriginalName;
+	}
+
 	/**
 	 * get page name
 	 *
@@ -799,7 +805,7 @@ public class TestTemplate extends TestBase
 	 * @param extendCell
 	 * @return page name
 	 */
-	public String getPageName(String Regulator, String form, String version, String cellName, String extendCell)
+	public String getPageName(String Regulator, String form, String version, String cellName, String extendCell) throws Exception
 	{
 		String SQL;
 		String refTable = "";
@@ -1058,6 +1064,7 @@ public class TestTemplate extends TestBase
 	 */
 	public void refreshPage() throws Exception
 	{
+		logger.info("Refresh page");
 		getWebDriverWrapper().navigate().refresh();
 		Thread.sleep(3000);
 	}

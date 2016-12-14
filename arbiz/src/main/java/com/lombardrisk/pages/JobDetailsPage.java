@@ -133,14 +133,14 @@ public class JobDetailsPage extends AbstractPage
 					if (element("dwp.message", String.valueOf(i)).getInnerText().equals(message))
 					{
 						String levelIcon = element("dwp.level", String.valueOf(i)).getAttribute("src");
-						String acctualLevel = null;
+						String actualLevel = "";
 						if (levelIcon.contains("FailIcon"))
-							acctualLevel = "ERROR";
+							actualLevel = "ERROR";
 						else if (levelIcon.contains("WarningIcon"))
-							acctualLevel = "WARN";
+							actualLevel = "WARN";
 						else if (levelIcon.contains("SuccessIcon"))
-							acctualLevel = "INFO";
-						if (acctualLevel.equalsIgnoreCase(level))
+							actualLevel = "INFO";
+						if (actualLevel.equalsIgnoreCase(level))
 						{
 							findMsg = true;
 							flag = false;
@@ -210,7 +210,7 @@ public class JobDetailsPage extends AbstractPage
 			element("dwp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
-			return getOriginalFile(exportedFile, latestFile);
+			return getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{

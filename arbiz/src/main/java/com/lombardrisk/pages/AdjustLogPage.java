@@ -202,6 +202,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
+			e.printStackTrace();
 			return "";
 		}
 	}
@@ -225,6 +226,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
+			e.printStackTrace();
 			return "";
 		}
 	}
@@ -245,6 +247,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
+			e.printStackTrace();
 			return "";
 		}
 	}
@@ -265,6 +268,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
+			e.printStackTrace();
 			return "";
 		}
 	}
@@ -285,6 +289,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
+			e.printStackTrace();
 			return "";
 		}
 	}
@@ -308,7 +313,7 @@ public class AdjustLogPage extends AbstractPage
 			element("alp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
 			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
-			return getOriginalFile(exportedFile, latestFile);
+			return getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{

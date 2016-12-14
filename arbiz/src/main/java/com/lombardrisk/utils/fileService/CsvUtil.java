@@ -35,11 +35,10 @@ public class CsvUtil
 		}
 	}
 
-	public static String getCellValueFromCSV(File csvFile, String cellId, String instance, String rowKey)
+	public static String getCellValueFromCSV(File csvFile, String cellId, String instance, String rowKey) throws IOException
 	{
 
-		String inString = null;
-		String cellValue = null;
+		String inString, cellValue = null;
 
 		BufferedReader reader = null;
 		try
@@ -88,28 +87,21 @@ public class CsvUtil
 		}
 		finally
 		{
-			try
-			{
+			if (reader != null)
 				reader.close();
-			}
-			catch (IOException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 
 		return cellValue;
 	}
 
-	public static List<String> readFile(File file)
+	public static List<String> readFile(File file) throws IOException
 	{
 		BufferedReader br = null;
 		List<String> list = new ArrayList<String>();
 		try
 		{
 			br = new BufferedReader(new FileReader(file));
-			String str = "";
+			String str;
 			while ((str = br.readLine()) != null)
 			{
 				/*
@@ -134,10 +126,15 @@ public class CsvUtil
 		{
 			e.printStackTrace();
 		}
+		finally
+		{
+			if (br != null)
+				br.close();
+		}
 		return list;
 	}
 
-	public static boolean compareCSV(File file1, File file2)
+	public static boolean compareCSV(File file1, File file2) throws IOException
 	{
 		boolean rst = true;
 		List<String> fileCon1 = readFile(file1);
@@ -161,7 +158,7 @@ public class CsvUtil
 		return rst;
 	}
 
-	public static void writeFile(File file, List<String> list)
+	public static void writeFile(File file, List<String> list) throws IOException
 	{
 		BufferedWriter bw = null;
 		try
@@ -178,6 +175,11 @@ public class CsvUtil
 		catch (IOException e)
 		{
 			e.printStackTrace();
+		}
+		finally
+		{
+			if (bw != null)
+				bw.close();
 		}
 	}
 
@@ -200,7 +202,7 @@ public class CsvUtil
 		}
 	}
 
-	public static void sortCsv(String sourceFile, String destFile, int colID)
+	public static void sortCsv(String sourceFile, String destFile, int colID) throws IOException
 	{
 		logger.info("Begin sort csv file[" + sourceFile + "] by column " + colID);
 		File file1 = new File(sourceFile);

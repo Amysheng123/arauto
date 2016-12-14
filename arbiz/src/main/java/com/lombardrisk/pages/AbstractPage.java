@@ -22,10 +22,8 @@ import com.lombardrisk.utils.TestTemplate;
  */
 public abstract class AbstractPage extends PageBase
 {
-	public static String userName = "";
-	public static String password = "";
-	public static String connectedDB = "";
-	public static String format = "";
+	public static String userName, password, connectedDB, format;
+	public static boolean setOriginalName;
 
 	protected static boolean httpDownload = Boolean.parseBoolean(PropHelper.getProperty("download.enable").trim());
 
@@ -41,6 +39,7 @@ public abstract class AbstractPage extends PageBase
 		password = test.getPassword();
 		connectedDB = test.connetcedDB();
 		format = test.getFormat();
+		setOriginalName = test.isSetOriginalName();
 	}
 
 	/**
@@ -194,6 +193,7 @@ public abstract class AbstractPage extends PageBase
 			catch (StaleElementReferenceException e)
 			{
 				logger.warn("Try again");
+				e.printStackTrace();
 				i++;
 			}
 		}
@@ -365,7 +365,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param Regulator
 	 * @return IDRangeStart
 	 */
-	protected String getRegulatorIDRangeStart(String Regulator)
+	protected String getRegulatorIDRangeStart(String Regulator) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getRegulatorIDRangeStart(Regulator);
@@ -377,7 +377,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param Regulator
 	 * @return IDRangEnd
 	 */
-	protected String getRegulatorIDRangEnd(String Regulator)
+	protected String getRegulatorIDRangEnd(String Regulator) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getRegulatorIDRangEnd(Regulator);
@@ -389,7 +389,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param Regulator
 	 * @return prefix
 	 */
-	protected String getToolsetRegPrefix(String Regulator)
+	protected String getToolsetRegPrefix(String Regulator) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getToolsetRegPrefix(Regulator);
@@ -404,7 +404,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param cellName
 	 * @return grid name
 	 */
-	protected String getExtendCellName(String Regulator, String formCode, String version, String cellName)
+	protected String getExtendCellName(String Regulator, String formCode, String version, String cellName) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getExtendCellName(Regulator, formCode, version, cellName);
@@ -436,7 +436,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param extendCell
 	 * @return cell Type
 	 */
-	protected String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell)
+	protected String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getCellType(Regulator, formCode, version, cellName, extendCell);
@@ -512,9 +512,9 @@ public abstract class AbstractPage extends PageBase
 	 * @return true or false
 	 * @throws Exception
 	 */
-	protected boolean isJobSuccessed() throws Exception
+	protected boolean isJobSucceed() throws Exception
 	{
-		boolean isSucess = false;
+		boolean isSuccess = false;
 		boolean flag = true;
 		while (flag)
 		{
@@ -522,7 +522,7 @@ public abstract class AbstractPage extends PageBase
 			if (status != null)
 			{
 				if (!status.equalsIgnoreCase("FAILED"))
-					isSucess = true;
+					isSuccess = true;
 				flag = false;
 			}
 			else
@@ -531,7 +531,7 @@ public abstract class AbstractPage extends PageBase
 			}
 		}
 		Thread.sleep(10000);
-		return isSucess;
+		return isSuccess;
 	}
 
 	/**
@@ -592,10 +592,10 @@ public abstract class AbstractPage extends PageBase
 		return DBQuery.queryRecordSpecDB("ar", null, SQL);
 	}
 
-	public String getOriginalFile(String exportedFile, String latestFile) throws Exception
+	public String getOriginalFile(String exportedFile, String latestFile, boolean getOriginalName) throws Exception
 	{
 		String file;
-		if (PropHelper.getProperty("getOriginalName").trim().equalsIgnoreCase("true"))
+		if (getOriginalName)
 		{
 			String oldName = new File(exportedFile).getName();
 			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");

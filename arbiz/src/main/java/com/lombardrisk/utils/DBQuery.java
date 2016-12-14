@@ -80,7 +80,7 @@ public class DBQuery extends TestTemplate
 		return rst;
 	}
 
-	public static String queryRecord(String sql)
+	public static String queryRecord(String sql) throws Exception
 	{
 		DBHelper dh = getDBHelpInstance(null, null);
 		dh.connect();
@@ -89,7 +89,7 @@ public class DBQuery extends TestTemplate
 		return rst;
 	}
 
-	public static String queryRecordSpecDB(String type, String dbName, String sql)
+	public static String queryRecordSpecDB(String type, String dbName, String sql) throws Exception
 	{
 		DBHelper dh = getDBHelpInstance(type, dbName);
 		dh.connect();
@@ -98,7 +98,7 @@ public class DBQuery extends TestTemplate
 		return rst;
 	}
 
-	public static List<String> queryRecords(String sql)
+	public static List<String> queryRecords(String sql) throws Exception
 	{
 		DBHelper dh = getDBHelpInstance(null, null);
 		dh.connect();
@@ -145,8 +145,9 @@ public class DBQuery extends TestTemplate
 	}
 
 	public static String getCellValeFromDB(String Regulator, String formCode, String version, String processDate, String Entity, String instance, String cellId, boolean isExtendCell, int rowKey)
+			throws Exception
 	{
-		String value = null;
+		String value;
 
 		String REFERENCE_DATE = getFormatDate(processDate);
 		if (AR_DBType.equalsIgnoreCase("oracle"))
@@ -235,7 +236,7 @@ public class DBQuery extends TestTemplate
 
 	}
 
-	public static int getInstanceNum(String Regulator, String formCode, String version, String processDate, String Entity)
+	public static int getInstanceNum(String Regulator, String formCode, String version, String processDate, String Entity) throws Exception
 	{
 		List<String> instances = new ArrayList<String>();
 		if (AR_DBType.equalsIgnoreCase("ar"))
