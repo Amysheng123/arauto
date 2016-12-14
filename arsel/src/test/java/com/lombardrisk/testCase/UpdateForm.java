@@ -77,7 +77,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -124,7 +124,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -225,7 +225,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -328,7 +328,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -435,7 +435,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -522,7 +522,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -602,7 +602,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -706,7 +706,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -810,7 +810,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -911,7 +911,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1012,7 +1012,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1114,7 +1114,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1218,7 +1218,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1326,7 +1326,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1439,7 +1439,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1549,7 +1549,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1657,7 +1657,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1764,7 +1764,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1873,7 +1873,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1965,7 +1965,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -2059,7 +2059,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -2152,7 +2152,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -2228,7 +2228,7 @@ public class UpdateForm extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally

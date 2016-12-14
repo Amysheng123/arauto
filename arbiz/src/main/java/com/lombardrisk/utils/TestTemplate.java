@@ -691,7 +691,7 @@ public class TestTemplate extends TestBase
 		}
 		catch (DocumentException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			return "";
 		}
 
@@ -708,7 +708,7 @@ public class TestTemplate extends TestBase
 	public List<String> getElementValueFromXML(String xmlFile, String node) throws Exception
 	{
 		List<String> elementValue = new ArrayList<String>();
-		for (String element : XMLUtil.getelements(xmlFile, node))
+		for (String element : XMLUtil.getElements(xmlFile, node))
 		{
 			elementValue.add(getElementValueFromXML(xmlFile, node, element));
 		}

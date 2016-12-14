@@ -31,7 +31,7 @@ public class DateTime
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 
 		return between;
@@ -60,7 +60,7 @@ public class DateTime
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 
 		return between;

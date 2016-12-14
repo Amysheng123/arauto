@@ -101,7 +101,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -217,7 +217,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -333,7 +333,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -449,7 +449,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -565,7 +565,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -681,7 +681,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -797,7 +797,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -913,7 +913,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1029,7 +1029,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1145,7 +1145,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1261,7 +1261,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1377,7 +1377,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1493,7 +1493,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1608,7 +1608,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1725,7 +1725,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1842,7 +1842,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -1959,7 +1959,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2089,7 +2089,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2221,7 +2221,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2352,7 +2352,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2483,7 +2483,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2614,7 +2614,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2759,7 +2759,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -2900,7 +2900,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3042,7 +3042,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3184,7 +3184,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3327,7 +3327,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3469,7 +3469,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3612,7 +3612,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3757,7 +3757,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -3901,7 +3901,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -4046,7 +4046,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -4191,7 +4191,7 @@ public class EditForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{

@@ -785,7 +785,7 @@ public class FormInstancePage extends AbstractPage
 		catch (NoSuchElementException e)
 		{
 			logger.warn(e.getMessage());
-			e.printStackTrace();
+			//e.printStackTrace();
 			return false;
 		}
 	}
@@ -840,7 +840,7 @@ public class FormInstancePage extends AbstractPage
 		catch (NoSuchElementException e)
 		{
 			logger.warn(e.getMessage());
-			e.printStackTrace();
+			//e.printStackTrace();
 			return false;
 		}
 	}
@@ -876,7 +876,7 @@ public class FormInstancePage extends AbstractPage
 		catch (NoSuchElementException e)
 		{
 			logger.warn(e.getMessage());
-			e.printStackTrace();
+			//e.printStackTrace();
 			visible = false;
 		}
 		return visible;
@@ -1450,7 +1450,7 @@ public class FormInstancePage extends AbstractPage
 		{
 			importRst = false;
 			importFileInReturnPage.closeImportFileDlg(type);
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return importRst;
 	}
@@ -1481,7 +1481,7 @@ public class FormInstancePage extends AbstractPage
 		catch (Exception e)
 		{
 			importFileInReturnPage.closeImportFileDlg(type);
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return error;
 	}
@@ -1505,7 +1505,7 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{

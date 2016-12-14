@@ -84,7 +84,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -152,7 +152,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -215,7 +215,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -279,7 +279,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -343,7 +343,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -406,7 +406,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -466,7 +466,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -532,7 +532,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -588,7 +588,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -659,7 +659,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -725,7 +725,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -781,7 +781,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -862,7 +862,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -904,7 +904,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -963,7 +963,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -1009,7 +1009,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -1057,7 +1057,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -1108,7 +1108,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}
@@ -1160,7 +1160,7 @@ public class Workflow extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 			testRst = false;
 		}

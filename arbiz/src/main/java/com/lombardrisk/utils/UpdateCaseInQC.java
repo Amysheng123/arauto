@@ -33,7 +33,7 @@ public class UpdateCaseInQC
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 

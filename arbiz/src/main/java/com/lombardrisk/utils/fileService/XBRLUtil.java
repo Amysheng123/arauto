@@ -85,14 +85,15 @@ public class XBRLUtil
 
 	}
 
-	public static boolean XBRLCompare(String file1, String file2)
+	public static boolean XBRLCompare(String file1, String file2) throws IOException
 	{
 		logger.info("Begin compare two xbrl(xml) files");
 		boolean Identical = false;
+		Reader r1 = null, r2 = null;
 		try
 		{
-			Reader r1 = new FileReader(file1);
-			Reader r2 = new FileReader(file2);
+			r1 = new FileReader(file1);
+			r2 = new FileReader(file2);
 
 			Diff diff = new Diff(r1, r2);
 			Identical = diff.identical();
@@ -116,19 +117,26 @@ public class XBRLUtil
 		}
 		catch (FileNotFoundException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		catch (SAXException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
+		}
+		finally
+		{
+			if (r1 != null)
+				r1.close();
+			if (r2 != null)
+				r2.close();
 		}
 		return Identical;
 

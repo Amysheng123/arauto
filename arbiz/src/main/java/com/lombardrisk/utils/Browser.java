@@ -189,7 +189,7 @@ public class Browser extends TestTemplate
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					//e.printStackTrace();
 				}
 
 			// add test result file

@@ -82,7 +82,7 @@ public class ReturnList extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -133,7 +133,7 @@ public class ReturnList extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -183,7 +183,7 @@ public class ReturnList extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -249,7 +249,7 @@ public class ReturnList extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -300,7 +300,7 @@ public class ReturnList extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -350,7 +350,7 @@ public class ReturnList extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally

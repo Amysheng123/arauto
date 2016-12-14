@@ -202,7 +202,7 @@ public class CheckRule extends TestTemplate
 		catch (Exception e)
 		{
 			testResult = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -258,12 +258,12 @@ public class CheckRule extends TestTemplate
 		}
 		catch (NumberFormatException e)
 		{
-			// e.printStackTrace();logger.error(e.getMessage());
+			// //e.printStackTrace();logger.error(e.getMessage());
 		}
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally

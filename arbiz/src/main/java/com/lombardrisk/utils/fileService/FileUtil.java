@@ -32,7 +32,8 @@ public class FileUtil extends FileUtils
 		byte[] buf = new byte[1024];
 		try
 		{
-			ZipOutputStream out = new ZipOutputStream(new FileOutputStream(zipfile));
+			FileOutputStream fos = new FileOutputStream(zipfile);
+			ZipOutputStream out = new ZipOutputStream(fos);
 			for (String fileNAME : fileNames)
 			{
 				FileInputStream in = new FileInputStream(new File(fileNAME));
@@ -46,10 +47,11 @@ public class FileUtil extends FileUtils
 				in.close();
 			}
 			out.close();
+			fos.close();
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 
@@ -91,7 +93,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			throw e;
 		}
 		finally
@@ -267,7 +269,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 			throw e;
 		}
 		finally
@@ -306,7 +308,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 
 		return fileNames;

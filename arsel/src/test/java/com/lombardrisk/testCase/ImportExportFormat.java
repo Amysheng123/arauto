@@ -70,7 +70,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -125,7 +125,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -180,7 +180,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -222,7 +222,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -264,7 +264,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -306,7 +306,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -348,7 +348,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -388,7 +388,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -434,7 +434,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -474,7 +474,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -514,7 +514,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -553,7 +553,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -590,7 +590,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
@@ -624,7 +624,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{

@@ -324,7 +324,7 @@ public class EditionManagePage extends AbstractPage
 			catch (Exception e)
 			{
 				logger.warn(e.getMessage());
-				e.printStackTrace();
+				//e.printStackTrace();
 				rst = false;
 			}
 		}

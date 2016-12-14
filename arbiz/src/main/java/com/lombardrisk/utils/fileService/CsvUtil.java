@@ -41,9 +41,12 @@ public class CsvUtil
 		String inString, cellValue = null;
 
 		BufferedReader reader = null;
+		FileReader fReader = null;
+
 		try
 		{
-			reader = new BufferedReader(new FileReader(csvFile));
+			fReader = new FileReader(csvFile);
+			reader = new BufferedReader(fReader);
 
 			while ((inString = reader.readLine()) != null)
 			{
@@ -75,20 +78,21 @@ public class CsvUtil
 					}
 				}
 			}
-			reader.close();
 		}
 		catch (FileNotFoundException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
 			if (reader != null)
 				reader.close();
+			if (fReader != null)
+				fReader.close();
 		}
 
 		return cellValue;
@@ -97,10 +101,12 @@ public class CsvUtil
 	public static List<String> readFile(File file) throws IOException
 	{
 		BufferedReader br = null;
+		FileReader fReader = null;
 		List<String> list = new ArrayList<String>();
 		try
 		{
-			br = new BufferedReader(new FileReader(file));
+			fReader = new FileReader(file);
+			br = new BufferedReader(fReader);
 			String str;
 			while ((str = br.readLine()) != null)
 			{
@@ -124,12 +130,14 @@ public class CsvUtil
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
 			if (br != null)
 				br.close();
+			if (fReader != null)
+				fReader.close();
 		}
 		return list;
 	}
@@ -161,10 +169,13 @@ public class CsvUtil
 	public static void writeFile(File file, List<String> list) throws IOException
 	{
 		BufferedWriter bw = null;
+		FileWriter fwr = null;
 		try
 		{
+
 			String line = System.getProperty("line.separator");
-			bw = new BufferedWriter(new FileWriter(file));
+			fwr = new FileWriter(file);
+			bw = new BufferedWriter(fwr);
 			for (String str : list)
 			{
 				bw.write(str);
@@ -174,12 +185,14 @@ public class CsvUtil
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
 			if (bw != null)
 				bw.close();
+			if (fwr != null)
+				fwr.close();
 		}
 	}
 
@@ -284,10 +297,11 @@ public class CsvUtil
 		HSSFSheet sheet = wb.createSheet("Sheet1");
 
 		BufferedReader r = null;
-
+		FileReader fReader = null;
 		try
 		{
-			r = new BufferedReader(new FileReader(csv));
+			fReader = new FileReader(csv);
+			r = new BufferedReader(fReader);
 			int i = 0;
 			while (true)
 			{
@@ -307,12 +321,16 @@ public class CsvUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
 			if (r != null)
 				r.close();
+			if (wb != null)
+				wb.close();
+			if (fReader != null)
+				fReader.close();
 		}
 
 		FileOutputStream fileOut = null;
@@ -324,7 +342,7 @@ public class CsvUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		finally
 		{
