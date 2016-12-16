@@ -691,7 +691,8 @@ public class TestTemplate extends TestBase
 		}
 		catch (DocumentException e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
+            logger.warn(e.getMessage());
 			return "";
 		}
 

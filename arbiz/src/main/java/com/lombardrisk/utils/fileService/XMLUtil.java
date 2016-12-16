@@ -60,7 +60,7 @@ public class XMLUtil
 		catch (Exception e)
 		{
 			logger.info(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -100,7 +100,7 @@ public class XMLUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.info(e.getMessage());
 		}
 
@@ -193,7 +193,7 @@ public class XMLUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return nodeValue;
 	}
@@ -396,7 +396,7 @@ public class XMLUtil
 		catch (Exception e)
 		{
 
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return doc;
 	}

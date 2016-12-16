@@ -62,7 +62,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -134,9 +134,9 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -228,7 +228,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -285,7 +285,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -363,7 +363,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -443,7 +443,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -512,7 +512,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -574,7 +574,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -651,7 +651,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -712,7 +712,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -761,7 +761,7 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally

@@ -193,7 +193,7 @@ public abstract class AbstractPage extends PageBase
 			catch (StaleElementReferenceException e)
 			{
 				logger.warn("Try again");
-				//e.printStackTrace();
+				// e.printStackTrace();
 				i++;
 			}
 		}

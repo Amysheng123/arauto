@@ -44,7 +44,7 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 
 		}
@@ -88,7 +88,7 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 
 		}
@@ -132,7 +132,7 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally

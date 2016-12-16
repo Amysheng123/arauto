@@ -51,7 +51,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (IOException e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 	}
 
@@ -93,7 +93,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			throw e;
 		}
 		finally
@@ -269,7 +269,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			throw e;
 		}
 		finally
@@ -308,7 +308,7 @@ public class FileUtil extends FileUtils
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 
 		return fileNames;

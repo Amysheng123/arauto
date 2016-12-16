@@ -82,7 +82,11 @@
         <locator id="ac.cellLink" type="WebElement" by="linkText" expression="?" name="cellLink" description="cell link" />
         <locator id="ac.sumHeader" type="WebElement" by="xpath" expression="//th[contains(@id, 'formInstDetailFooterTabView:drilldownForm:summingTable')]/span[last()]" name="sumHeader" description="sum header" />
         <locator id="ac.sumRowOfVar" type="WebElement" by="xpath" expression="//tr[contains(@id, 'formInstDetailFooterTabView:drilldownForm:summingTable') and td/span/text()='?']/td[?]/span[last()]" name="sumRowOfVar" description="sum row of variable" />
+        <locator id="ac.columnField" type="WebElement" by="xpath" expression=".//*[@id='formInstDetailFooterTabView:drilldownForm:transactionTable_scrollableThead']/tr/th[?]/span[2]" name="columnField" description="columnField" />
     </page>
+    <page id="rj" name="RejectionPage" description="Rejection Page">
+        <locator id="rj.columnField" type="WebElement" by="xpath" expression=".//*[@id='formInstDetailFooterTabView:rejectionsReportForm:rejectionsTable_scrollableThead']/tr/th[?]/span[2]" name="columnField" description="columnField" />
+    </page>>
     <page id="cal" name="CalendarPage" description="Calendar Page">
         <locator id="cal.calendarAdd" type="WebButton" by="id" expression="calendarMainForm:calendarAdd" name="calendarAddButton" description="calendar Add Button" />
         <locator id="cal.CalendarName" type="WebEdit" by="id" expression="editCalendarForm:calendarName" name="txCalendarName" description="Input CalendarName" />
@@ -303,6 +307,7 @@
     <page id="fp" name="FormInstancePage" description="FormInstance Page">
         <locator id="fp.ajaxstatusDlg" type="WebElement" by="id" expression="ajaxstatusDlg_modal" name="ajaxstatusDlg" description="ajax status Dlg" />
         <locator id="fp.allocation" type="WebElement" by="linkText" expression="ALLOCATIONS" name="allocationsTab" description="ALLOCATIONS TAB" />
+        <locator id="fp.rejection" type="WebElement" by="linkText" expression="REJECTIONS" name="REJECTIONS" description="REJECTIONS TAB" />
         <locator id="fp.close" type="WebElement" by="id" expression="formHeader:closeFormInstanceBtn" name="closeFormInstanceButton" description="close FormInstance Button" />
         <locator id="fp.inputCell" type="WebElement" by="xpath" expression="//input[@id='?']" name="inputCell" description="cell id" />
         <locator id="fp.selectCell" type="WebElement" by="xpath" expression="//select[@id='?']" name="selectCell" description="cell id" />

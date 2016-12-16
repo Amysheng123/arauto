@@ -200,5 +200,25 @@
 		<ReferenceDate>2014-12-31</ReferenceDate>
 	</C6783>
 
+	<C6882>
+		<JsonFile>MAPPING_SIZE.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+		<Table>T_QA_RT_311214_QHKMA_QHCH#T_QAHKRTNS_311214_QHKMA_QHCH</Table>
+		<DBIndex>1</DBIndex>
+	</C6882>
+
+	<C6827>
+		<JsonFile>TB_TranslateCompute.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+	</C6827>
+
+	<C6719>
+		<Regulator>Hong Kong Monetary Authorit</Regulator>
+		<Entity>0015</Entity>
+		<Form>S v0</Form>
+		<ReferenceDate>31/12/2018</ReferenceDate>
+		<Cell>SP2C11H</Cell>
+		<Field>STBBRANCH,STBDrillAlias,STBDrillRef,STBDrillTable,STBFIELD,STBFORM,STBGROUP,STBITEM,STBPAGE,S_Amount</Field>
+	</C6719>
 
 </BatchRun>

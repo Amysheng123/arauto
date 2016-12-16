@@ -170,7 +170,7 @@ public class XLSX2CSV extends DefaultHandler
 			catch (Exception e)
 			{
 				// TODO Auto-generated catch block
-				//e.printStackTrace();
+				// e.printStackTrace();
 			}
 			sbr = new StringBuilder("");
 		}

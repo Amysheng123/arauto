@@ -1,0 +1,15 @@
+{
+    "configPrefix": "HKMA",
+    "name": "TB_RETURN",
+    "batchRunJobs": [
+    {
+     "name": "TB_DAINPUT",
+    "abortOnFailure" : "true"
+        },
+  {
+     "name": "TB",
+    "abortOnFailure" : "true"
+        }
+    ]
+
+}

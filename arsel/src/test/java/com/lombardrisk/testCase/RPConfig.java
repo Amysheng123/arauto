@@ -161,7 +161,7 @@ public class RPConfig extends TestTemplate
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -175,7 +175,7 @@ public class RPConfig extends TestTemplate
 				}
 				catch (Exception e)
 				{
-					//e.printStackTrace();
+					// e.printStackTrace();
 					logger.error(e.getMessage());
 				}
 			}

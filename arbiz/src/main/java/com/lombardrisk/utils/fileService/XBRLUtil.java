@@ -117,19 +117,19 @@ public class XBRLUtil
 		}
 		catch (FileNotFoundException e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		catch (SAXException e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		catch (IOException e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{

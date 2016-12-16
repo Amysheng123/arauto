@@ -1,0 +1,8 @@
+{
+  "configPrefix":"HKMA",
+  "name":"MAPPING_SIZE",
+  "batchRunJobs" : [ {
+    "name" : "MAPPING_SIZE",
+    "abortOnFailure" : "false"   
+  } ]
+}

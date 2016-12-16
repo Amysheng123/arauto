@@ -302,6 +302,33 @@ public class FormInstancePage extends AbstractPage
 	}
 
 	/**
+	 * enter rejection page
+	 * 
+	 * @param Regulator
+	 * @param formCode
+	 * @param version
+	 * @param instance
+	 * @param cellId
+	 * @param extendCell
+	 * @return RejectionPage
+	 * @throws Exception
+	 */
+	public RejectionPage enterRejectionPage(String Regulator, String formCode, String version, String instance, String cellId, String extendCell) throws Exception
+	{
+		getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
+		selectInstance(instance);
+		if (extendCell != null)
+			element("fp.inputCell", extendCell).doubleClick();
+		else
+			element("fp.inputCell", cellId).doubleClick();
+		waitStatusDlg();
+		Thread.sleep(1000);
+		element("fp.rejection").click();
+		waitStatusDlg();
+		return new RejectionPage(getWebDriverWrapper());
+	}
+
+	/**
 	 * edit cell that is checkbox
 	 *
 	 * @param Regulator
@@ -785,7 +812,7 @@ public class FormInstancePage extends AbstractPage
 		catch (NoSuchElementException e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -840,7 +867,7 @@ public class FormInstancePage extends AbstractPage
 		catch (NoSuchElementException e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -876,7 +903,7 @@ public class FormInstancePage extends AbstractPage
 		catch (NoSuchElementException e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			visible = false;
 		}
 		return visible;
@@ -1450,7 +1477,7 @@ public class FormInstancePage extends AbstractPage
 		{
 			importRst = false;
 			importFileInReturnPage.closeImportFileDlg(type);
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return importRst;
 	}
@@ -1481,7 +1508,7 @@ public class FormInstancePage extends AbstractPage
 		catch (Exception e)
 		{
 			importFileInReturnPage.closeImportFileDlg(type);
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return error;
 	}
@@ -1505,7 +1532,7 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{

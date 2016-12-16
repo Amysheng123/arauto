@@ -202,7 +202,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -226,7 +226,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -247,7 +247,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -268,7 +268,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -289,7 +289,7 @@ public class AdjustLogPage extends AbstractPage
 		catch (Exception e)
 		{
 			logger.warn(e.getMessage());
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 	}

@@ -1,5 +1,6 @@
 package com.lombardrisk.pages;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -192,5 +193,23 @@ public class AllocationPage extends AbstractPage
 		boolean isDescEquals = element("ac.sumRowOfVar", itemName, "4").getInnerText().equals(description);
 		boolean isExpEquals = element("ac.sumRowOfVar", itemName, "5").getInnerText().equals(expression);
 		return isIta && isValueEquals && isInstanceEquals && isDescEquals && isExpEquals;
+	}
+
+	/**
+	 * get all column name
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<String> getAllFields() throws Exception
+	{
+		List<String> fields = new ArrayList<>();
+		int i = 1;
+		while (element("ac.columnField", String.valueOf(i)).isDisplayed())
+		{
+			fields.add(element("ac.columnField", String.valueOf(i)).getInnerText());
+			i++;
+		}
+		return fields;
 	}
 }

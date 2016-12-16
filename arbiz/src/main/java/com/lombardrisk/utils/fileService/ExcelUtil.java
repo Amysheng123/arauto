@@ -36,7 +36,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -72,7 +72,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -134,7 +134,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -195,7 +195,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -250,7 +250,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -272,7 +272,7 @@ public class ExcelUtil
 		// is:"+rowIndex);
 		ArrayList<String> rowVal = new ArrayList<>();
 		InputStream inp = new FileInputStream(file);
-		Workbook xwb =null;
+		Workbook xwb = null;
 		try
 		{
 			xwb = WorkbookFactory.create(inp);
@@ -329,13 +329,13 @@ public class ExcelUtil
 	public static boolean getCellValueForArbitrary(File expectedValueFile, File exportedFile, String targetDataFolder) throws Exception
 	{
 		boolean compareRst = true;
-        Workbook workBook = null;
+		Workbook workBook = null;
 		try
 		{
 			File txtFile_iFile = new File(targetDataFolder + "worksheet.txt");
 			String lastSheet = "";
 			List<String> content = null;
-            int amt = ExcelUtil.getRowAmts(expectedValueFile, null);
+			int amt = ExcelUtil.getRowAmts(expectedValueFile, null);
 			for (int index = 1; index <= amt; index++)
 			{
 				ArrayList<String> expectedValueValueList = ExcelUtil.getRowValueFromExcel(expectedValueFile.getAbsoluteFile(), null, index);
@@ -369,7 +369,7 @@ public class ExcelUtil
 				else
 				{
 					InputStream inp = new FileInputStream(exportedFile);
-                    workBook = WorkbookFactory.create(inp);
+					workBook = WorkbookFactory.create(inp);
 					Sheet sheet = workBook.getSheet(sheetName);
 					int rowID = Integer.parseInt(cellName.substring(numericPos(cellName))) - 1;
 					int colID = convertColumnID(cellName.substring(0, numericPos(cellName)));
@@ -416,11 +416,12 @@ public class ExcelUtil
 			logger.info(e.getMessage());
 			compareRst = false;
 		}
-		finally {
-		    if(workBook!=null)
-                workBook.close();
-        }
-        return compareRst;
+		finally
+		{
+			if (workBook != null)
+				workBook.close();
+		}
+		return compareRst;
 	}
 
 	public static int getColumnIndex(String rowStr)
@@ -538,7 +539,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.warn(e.getMessage());
 		}
 		finally
@@ -581,7 +582,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-            logger.warn(e.getMessage());
+			logger.warn(e.getMessage());
 		}
 		finally
 		{
@@ -644,7 +645,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-            logger.warn(e.getMessage());
+			logger.warn(e.getMessage());
 		}
 		finally
 		{
@@ -676,7 +677,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -718,9 +719,10 @@ public class ExcelUtil
 				}
 			}
 		}
-		catch (Exception e) {
-            logger.warn(e.getMessage());
-        }
+		catch (Exception e)
+		{
+			logger.warn(e.getMessage());
+		}
 		finally
 		{
 			if (inp != null)
@@ -762,7 +764,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-            logger.warn(e.getMessage());
+			logger.warn(e.getMessage());
 		}
 		finally
 		{

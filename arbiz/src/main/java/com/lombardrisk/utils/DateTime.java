@@ -30,8 +30,8 @@ public class DateTime
 			between = (Math.abs(end.getTime() - begin.getTime())) / 1000;
 		}
 		catch (Exception e)
-		{
-			//e.printStackTrace();
+        {
+            e.printStackTrace();
 		}
 
 		return between;
@@ -60,7 +60,7 @@ public class DateTime
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+		    e.printStackTrace();
 		}
 
 		return between;

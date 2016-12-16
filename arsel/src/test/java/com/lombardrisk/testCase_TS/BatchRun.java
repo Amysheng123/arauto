@@ -151,7 +151,7 @@ public class BatchRun extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -206,7 +206,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -247,7 +247,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -280,7 +280,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -332,7 +332,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -392,7 +392,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -429,7 +429,7 @@ public class BatchRun extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -489,7 +489,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -534,7 +534,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -602,7 +602,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -649,7 +649,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -696,7 +696,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -740,7 +740,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -777,7 +777,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -829,7 +829,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -886,7 +886,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -943,7 +943,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1000,7 +1000,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1037,7 +1037,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1085,7 +1085,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1154,7 +1154,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1229,7 +1229,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1305,7 +1305,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1346,7 +1346,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1396,7 +1396,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1446,7 +1446,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1496,7 +1496,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1550,7 +1550,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1584,7 +1584,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1612,7 +1612,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1666,7 +1666,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1720,7 +1720,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1774,7 +1774,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1803,7 +1803,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -1832,7 +1832,130 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6882() throws Exception
+	{
+		String caseID = "6882";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+			String Tables = testData.get(2);
+			int DBIndex = Integer.parseInt(testData.get(3));
+
+			for (String Table : Tables.split("#"))
+			{
+				String SQL = "TRUNCATE TABLE \"" + Table + "\"";
+				DBQuery.update(DBIndex, SQL);
+			}
+
+			ListPage listPage = m.listPage;
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+
+			executeBatchRun(JsonFile, ReferenceDate);
+			waitJob(jobManagerPage);
+
+			for (String Table : Tables.split("#"))
+			{
+				String SQL = "SELECT COUNT(*) FROM \"" + Table + "\"";
+				int num = Integer.parseInt(DBQuery.queryRecord(DBIndex, SQL));
+				assertThat(num).isPositive();
+			}
+
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6827() throws Exception
+	{
+		String caseID = "6827";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+
+			ListPage listPage = m.listPage;
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+
+			executeBatchRun(JsonFile, ReferenceDate);
+			waitJob(jobManagerPage);
+			String status = jobManagerPage.getLatestJobInfo().get(8);
+			assertThat(status).isEqualTo("SUCCESS");
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			logger.error(e.getMessage());
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6719() throws Exception
+	{
+		String caseID = "6719";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ReferenceDate = testData.get(3);
+			String Cell = testData.get(4);
+			String Fields = testData.get(5);
+
+			String formCode = splitReturn(Form).get(0);
+			String formVersion = splitReturn(Form).get(1);
+			ListPage listPage = m.listPage;
+			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
+			FormInstancePage formInstancePage = listPage.openFirstFormInstance();
+			AllocationPage allocationPage = formInstancePage.cellDoubleClick(Regulator, formCode, formVersion, null, Cell, null);
+			List<String> fields = allocationPage.getAllFields();
+
+			assertThat(fields.size()).isEqualTo(Fields.split(",").length);
+			for (String column : Fields.split(","))
+			{
+				assertThat(fields).contains(column);
+			}
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
 			logger.error(e.getMessage());
 		}
 		finally

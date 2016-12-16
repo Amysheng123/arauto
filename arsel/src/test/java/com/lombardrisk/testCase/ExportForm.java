@@ -120,7 +120,7 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -188,7 +188,7 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 			ExportToFilePage exportToFilePage = new ExportToFilePage(getWebDriverWrapper());
 			exportToFilePage.closeExportPage(FileType);
@@ -304,7 +304,7 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -407,7 +407,7 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 			ExportToFilePage exportToFilePage = new ExportToFilePage(getWebDriverWrapper());
 			exportToFilePage.closeExportPage(FileType);
@@ -483,7 +483,7 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally

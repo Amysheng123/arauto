@@ -49,7 +49,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -175,7 +175,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -205,7 +205,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -275,7 +275,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -329,7 +329,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -413,7 +413,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -469,7 +469,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -562,7 +562,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{

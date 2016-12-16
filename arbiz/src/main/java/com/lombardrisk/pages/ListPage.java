@@ -1097,7 +1097,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			formInstanceCreatePage.createCloseClick();
 			return null;
 		}
@@ -1142,7 +1142,7 @@ public class ListPage extends AbstractPage
 			{
 				logger.error("Create form form excel failed");
 				listImportFilePage.closeImportFileDlg(type);
-				//e.printStackTrace();
+				// e.printStackTrace();
 			}
 			if (element("lp.warnConfirmBtn").isDisplayed())
 			{
@@ -1190,13 +1190,13 @@ public class ListPage extends AbstractPage
 			catch (Exception e)
 			{
 				logger.error("Import adjustment failed");
-				//e.printStackTrace();
+				// e.printStackTrace();
 			}
 			Thread.sleep(500);
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			listImportFilePage.closeImportFileDlg(type);
 		}
 		return new FormInstancePage(getWebDriverWrapper());
@@ -1232,7 +1232,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -1262,7 +1262,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -1306,7 +1306,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 		finally
@@ -1399,7 +1399,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 		finally
@@ -1458,7 +1458,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			//e.printStackTrace();
+			// e.printStackTrace();
 		}
 
 		if (openForm)

@@ -202,7 +202,7 @@ public class CheckRule extends TestTemplate
 		catch (Exception e)
 		{
 			testResult = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
@@ -263,7 +263,7 @@ public class CheckRule extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			//e.printStackTrace();
+			// e.printStackTrace();
 			logger.error(e.getMessage());
 		}
 		finally
