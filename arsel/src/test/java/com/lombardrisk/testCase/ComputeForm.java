@@ -71,7 +71,7 @@ public class ComputeForm extends TestTemplate
 		catch (Exception e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 	}
 
@@ -207,7 +207,7 @@ public class ComputeForm extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{

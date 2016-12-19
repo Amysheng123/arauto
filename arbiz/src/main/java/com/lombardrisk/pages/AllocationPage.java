@@ -205,7 +205,7 @@ public class AllocationPage extends AbstractPage
 	{
 		List<String> fields = new ArrayList<>();
 		int i = 1;
-		while (element("ac.columnField", String.valueOf(i)).isDisplayed())
+		while (element("ac.columnField", String.valueOf(i)).isPresent())
 		{
 			fields.add(element("ac.columnField", String.valueOf(i)).getInnerText());
 			i++;

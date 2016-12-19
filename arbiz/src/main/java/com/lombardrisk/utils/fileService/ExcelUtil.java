@@ -302,7 +302,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.info(e.getMessage());
+			logger.info("error", e);
 		}
 		finally
 		{
@@ -413,7 +413,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.info(e.getMessage());
+			logger.info("error", e);
 			compareRst = false;
 		}
 		finally
@@ -454,7 +454,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 
 		return cellNames;
@@ -525,7 +525,7 @@ public class ExcelUtil
 			}
 			catch (Exception e)
 			{
-				logger.warn(e.getMessage());
+				logger.warn("warn", e);
 			}
 
 			if (cell != null)
@@ -540,7 +540,7 @@ public class ExcelUtil
 		catch (Exception e)
 		{
 			// e.printStackTrace();
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 		finally
 		{
@@ -582,7 +582,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 		finally
 		{
@@ -645,7 +645,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 		finally
 		{
@@ -721,7 +721,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 		finally
 		{
@@ -764,7 +764,7 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 		finally
 		{

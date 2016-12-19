@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExportForm>
+    <C6682>
+        <Regulator>US1 FED Reserve</Regulator>
+        <Entity>0001</Entity>
+        <Form>FRYPC v2</Form>
+        <ImportFile>FED_0001_FRY9C_v2_20160930.xlsx</ImportFile>
+    </C6682>
+</ExportForm>

@@ -80,7 +80,7 @@ public class XLSX2CSV extends DefaultHandler
 		}
 		catch (ParserConfigurationException e)
 		{
-			throw new RuntimeException("SAX parser appears to be broken - " + e.getMessage());
+			throw new RuntimeException("SAX parser appears to be broken - " + e);
 		}
 	}
 

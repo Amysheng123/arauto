@@ -108,7 +108,7 @@ public class DBHelper
 		catch (SQLException e)
 		{
 			logger.error("Database connection failed!");
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 	}
 
@@ -122,7 +122,7 @@ public class DBHelper
 		catch (SQLException e)
 		{
 			logger.error("Database close failed!");
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 	}
 
@@ -155,7 +155,7 @@ public class DBHelper
 			catch (SQLException e)
 			{
 				logger.info("SQLException in [" + sql + "]");
-				logger.error(e.getMessage());
+				logger.error("error", e);
 			}
 			finally
 			{
@@ -205,7 +205,7 @@ public class DBHelper
 			catch (SQLException e)
 			{
 				logger.info("SQLException in [" + sql + "]");
-				logger.error(e.getMessage());
+				logger.error("error", e);
 			}
 			finally
 			{
@@ -246,7 +246,7 @@ public class DBHelper
 			catch (SQLException e)
 			{
 				logger.info("SQLException in [" + sql + "]");
-				logger.error(e.getMessage());
+				logger.error("error", e);
 			}
 			finally
 			{
@@ -275,7 +275,7 @@ public class DBHelper
 			catch (SQLException e)
 			{
 				logger.info("SQLException in [" + sql + "]");
-				logger.error(e.getMessage());
+				logger.error("error", e);
 			}
 			return result;
 		}

@@ -86,7 +86,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -158,7 +158,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -231,7 +231,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -308,7 +308,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -385,7 +385,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -462,7 +462,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -538,7 +538,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -641,7 +641,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -717,7 +717,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -837,7 +837,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -910,7 +910,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -952,7 +952,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -1040,7 +1040,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -1089,7 +1089,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -1180,7 +1180,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -1229,7 +1229,7 @@ public class Threshold extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally

@@ -34,7 +34,7 @@ public class UpdateCaseInQC
 		catch (Exception e)
 		{
 			// e.printStackTrace();
-            logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 	}
 

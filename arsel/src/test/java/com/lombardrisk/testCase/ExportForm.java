@@ -121,7 +121,7 @@ public class ExportForm extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -189,7 +189,7 @@ public class ExportForm extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			ExportToFilePage exportToFilePage = new ExportToFilePage(getWebDriverWrapper());
 			exportToFilePage.closeExportPage(FileType);
 		}
@@ -305,7 +305,7 @@ public class ExportForm extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -408,7 +408,7 @@ public class ExportForm extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			ExportToFilePage exportToFilePage = new ExportToFilePage(getWebDriverWrapper());
 			exportToFilePage.closeExportPage(FileType);
 		}
@@ -484,7 +484,7 @@ public class ExportForm extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{

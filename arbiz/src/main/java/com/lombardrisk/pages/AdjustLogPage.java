@@ -201,7 +201,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return "";
 		}
@@ -225,7 +225,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return "";
 		}
@@ -246,7 +246,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return "";
 		}
@@ -267,7 +267,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return "";
 		}
@@ -288,7 +288,7 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return "";
 		}

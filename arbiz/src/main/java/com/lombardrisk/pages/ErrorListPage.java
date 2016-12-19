@@ -190,7 +190,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 				catch (Exception e)
 				{
-					logger.warn(e.getMessage());
+					logger.warn("warn", e);
 					flag = false;
 				}
 			}
@@ -221,7 +221,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 				catch (Exception e)
 				{
-					logger.warn(e.getMessage());
+					logger.warn("warn", e);
 				}
 			}
 

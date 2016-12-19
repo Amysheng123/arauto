@@ -92,7 +92,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -165,7 +165,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -249,7 +249,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -335,7 +335,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -421,7 +421,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -472,7 +472,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -524,7 +524,7 @@ public class DropDown extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally

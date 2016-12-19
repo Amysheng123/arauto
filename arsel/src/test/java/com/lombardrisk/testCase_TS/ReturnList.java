@@ -82,7 +82,7 @@ public class ReturnList extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -133,7 +133,7 @@ public class ReturnList extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -183,7 +183,7 @@ public class ReturnList extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -249,7 +249,7 @@ public class ReturnList extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -300,7 +300,7 @@ public class ReturnList extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -350,7 +350,7 @@ public class ReturnList extends TestTemplate
 		catch (RuntimeException e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{

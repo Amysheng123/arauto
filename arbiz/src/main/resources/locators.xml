@@ -86,6 +86,7 @@
     </page>
     <page id="rj" name="RejectionPage" description="Rejection Page">
         <locator id="rj.columnField" type="WebElement" by="xpath" expression=".//*[@id='formInstDetailFooterTabView:rejectionsReportForm:rejectionsTable_scrollableThead']/tr/th[?]/span[2]" name="columnField" description="columnField" />
+        <locator id="rj.export" type="WebElement" by="xpath" expression=".//*[@id='formInstDetailFooterTabView:rejectionsReportForm:rejectionsExport']/img" name="export" description="export" />
     </page>>
     <page id="cal" name="CalendarPage" description="Calendar Page">
         <locator id="cal.calendarAdd" type="WebButton" by="id" expression="calendarMainForm:calendarAdd" name="calendarAddButton" description="calendar Add Button" />

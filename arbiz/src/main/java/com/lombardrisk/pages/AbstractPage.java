@@ -147,9 +147,22 @@ public abstract class AbstractPage extends PageBase
 	 */
 	protected void waitStatusDlg() throws Exception
 	{
-		waitThat("ap.ajaxstatusDlg").toBeInvisible();
-		waitThat("ap.ajaxstatusDlg2").toBeInvisible();
-		Thread.sleep(500);
+		while (element("ap.ajaxstatusDlg").isDisplayed())
+		{
+			Thread.sleep(500);
+		}
+		while (element("ap.ajaxstatusDlg2").isDisplayed())
+		{
+			Thread.sleep(500);
+		}
+		/*
+		 * if(element("ap.ajaxstatusDlg").isDisplayed())
+		 * waitThat("ap.ajaxstatusDlg").toBeInvisible();
+		 * if(element("ap.ajaxstatusDlg2").isDisplayed())
+		 * waitThat("ap.ajaxstatusDlg2").toBeInvisible();
+		 * 
+		 * Thread.sleep(500);
+		 */
 	}
 
 	/**

@@ -63,7 +63,7 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -135,9 +135,9 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -194,7 +194,7 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -272,7 +272,7 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -352,7 +352,7 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -421,7 +421,7 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -483,7 +483,7 @@ public class HighLight extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{

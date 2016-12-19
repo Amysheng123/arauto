@@ -55,6 +55,7 @@ public class TestTemplate extends TestBase
 	protected static String testData_Export_External = null;
 	protected static String testData_BatchRun = null;
 	protected static String parentPath = null;
+	protected static String testData_ExportForm2 = null;
 
 	protected static String format = "";
 	protected static String userName = "";
@@ -97,6 +98,7 @@ public class TestTemplate extends TestBase
 				Thread.sleep(1000 * 90);
 			}
 		}
+
 		nameFile = new File("target/result/Names.txt");
 		if (nameFile.exists())
 		{
@@ -143,6 +145,7 @@ public class TestTemplate extends TestBase
 		testData_importExportFormat = System.getProperty("user.dir") + "/" + testDataFolderName + "/ImportExportFormat/ImportExportFormat.xml";
 		testData_Export_External = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/ExportForm_External.xml";
 		testData_BatchRun = System.getProperty("user.dir") + "/" + testDataFolderName + "/BatchRun/BatchRun.xml";
+		testData_ExportForm2 = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm2/ExportForm2.xml";
 
 		parentPath = new File(new File(System.getProperty("user.dir")).getParent()).getParent().toString();
 
@@ -223,7 +226,7 @@ public class TestTemplate extends TestBase
 		}
 		catch (Exception e)
 		{
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 
 	}
@@ -566,7 +569,7 @@ public class TestTemplate extends TestBase
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 	}
 
@@ -692,7 +695,7 @@ public class TestTemplate extends TestBase
 		catch (DocumentException e)
 		{
 			// e.printStackTrace();
-            logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			return "";
 		}
 
@@ -879,12 +882,18 @@ public class TestTemplate extends TestBase
 			String DB;
 			if (dbInfo.get(1).equalsIgnoreCase("oracle"))
 			{
-				server = dbInfo.get(2) + "@" + dbInfo.get(4);
+				if (dbInfo.get(3) == null)
+					server = dbInfo.get(2) + "@" + dbInfo.get(4);
+				else
+					server = dbInfo.get(2) + "@" + dbInfo.get(3);
 				DB = dbInfo.get(0);
 			}
 			else
 			{
-				server = dbInfo.get(2) + "@" + dbInfo.get(3);
+				if (dbInfo.get(3) == null)
+					server = dbInfo.get(2) + "//" + dbInfo.get(4);
+				else
+					server = dbInfo.get(2) + "//" + dbInfo.get(3);
 				DB = dbInfo.get(4);
 			}
 			List<List<String>> rsts = DBAction.queryRecord(dbInfo.get(1), server, DB, SQL);

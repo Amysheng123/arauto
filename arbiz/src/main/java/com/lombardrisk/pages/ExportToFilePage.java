@@ -65,7 +65,7 @@ public class ExportToFilePage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 		}
 	}

@@ -268,7 +268,7 @@ public class MultipleReporter extends Browser
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally
@@ -317,7 +317,7 @@ public class MultipleReporter extends Browser
 		catch (Exception e)
 		{
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -331,7 +331,7 @@ public class MultipleReporter extends Browser
 				catch (Exception e)
 				{
 					// e.printStackTrace();
-					logger.error(e.getMessage());
+					logger.error("error", e);
 				}
 			}
 		}

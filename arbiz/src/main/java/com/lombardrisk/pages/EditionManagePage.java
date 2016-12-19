@@ -69,7 +69,7 @@ public class EditionManagePage extends AbstractPage
 					}
 					catch (Exception e)
 					{
-						logger.warn(e.getMessage());
+						logger.warn("warn", e);
 						nextPageage = false;
 						findForm = true;
 
@@ -323,7 +323,7 @@ public class EditionManagePage extends AbstractPage
 			}
 			catch (Exception e)
 			{
-				logger.warn(e.getMessage());
+				logger.warn("warn", e);
 				// e.printStackTrace();
 				rst = false;
 			}

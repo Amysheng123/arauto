@@ -811,7 +811,7 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (NoSuchElementException e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return false;
 		}
@@ -866,7 +866,7 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (NoSuchElementException e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			return false;
 		}
@@ -894,7 +894,7 @@ public class FormInstancePage extends AbstractPage
 			}
 			catch (NoSuchElementException e)
 			{
-				logger.warn(e.getMessage());
+				logger.warn("warn", e);
 			}
 
 			if (element("fp.approve").isDisplayed() && element("fp.reject").isDisplayed())
@@ -902,7 +902,7 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (NoSuchElementException e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			// e.printStackTrace();
 			visible = false;
 		}
@@ -1993,7 +1993,7 @@ public class FormInstancePage extends AbstractPage
 	 */
 	private void exportToFileClick(String fileType, String Form, String module, String compressType, String comment) throws Exception
 	{
-		ExportToFilePage exportToFilePage = null;
+		ExportToFilePage exportToFilePage;
 		getFormatFromDB();
 		if (fileType.equalsIgnoreCase("csv"))
 		{

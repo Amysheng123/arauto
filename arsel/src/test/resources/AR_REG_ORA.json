@@ -4,7 +4,7 @@
       {
         "id": 0,
         "name": "default",
-        "url": "http://172.20.31.33:8082/",
+        "url": "http://172.20.30.246:8082/",
         "username": "rpadmin",
         "password": "password"
       }
@@ -15,7 +15,7 @@
         "name": "ar_database",
         "driver": "oracle",
         "host": "172.20.31.239@ora12c",
-        "schema": "AR_AUTO_OWNER_1150"
+        "schema": "AR_AUTO_OWNER"
       }
     ]
   },
@@ -24,7 +24,7 @@
       {
         "id": 0,
         "name": "default",
-        "url": "http://172.20.31.33:8082/",
+        "url": "http://172.20.30.246:8082/",
         "username": "rpadmin",
         "password": "password"
       }
@@ -35,7 +35,7 @@
         "name": "ar_database",
         "driver": "oracle",
         "host": "172.20.31.239@ora12c",
-        "schema": "AR_AUTO_OWNER_1150"
+        "schema": "AR_AUTO_OWNER"
       }
     ]
   },
@@ -44,7 +44,7 @@
       {
         "id": 0,
         "name": "default",
-        "url": "http://172.20.31.33:8082/",
+        "url": "http://172.20.30.246:8082/",
         "username": "rpadmin",
         "password": "password"
       }
@@ -55,7 +55,7 @@
         "name": "ar_database",
         "driver": "oracle",
         "host": "172.20.31.239@ora12c",
-        "schema": "AR_AUTO_OWNER_1150"
+        "schema": "AR_AUTO_OWNER"
       }
     ]
   },
@@ -64,7 +64,7 @@
       {
         "id": 0,
         "name": "default",
-        "url": "http://172.20.31.33:8082/",
+        "url": "http://172.20.30.246:8082/",
         "username": "rpadmin",
         "password": "password"
       }
@@ -75,7 +75,7 @@
         "name": "ar_database",
         "driver": "oracle",
         "host": "172.20.31.239@ora12c",
-        "schema": "AR_AUTO_OWNER_1150"
+        "schema": "AR_AUTO_OWNER"
       }
     ]
   },
@@ -84,7 +84,7 @@
       {
         "id": 0,
         "name": "default",
-        "url": "http://172.20.31.33:8082/",
+        "url": "http://172.20.30.246:8082/",
         "username": "rpadmin",
         "password": "password"
       }
@@ -95,7 +95,7 @@
         "name": "ar_database",
         "driver": "oracle",
         "host": "172.20.31.239@ora12c",
-        "schema": "AR_AUTO_OWNER_1150"
+        "schema": "AR_AUTO_OWNER"
       }
     ]
   }

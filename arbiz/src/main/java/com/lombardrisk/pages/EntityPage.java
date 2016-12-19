@@ -608,7 +608,7 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 
 		return result;
@@ -1032,7 +1032,7 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (NoSuchElementException e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 			rst = false;
 		}
 		closeEntityEditPage();
@@ -1102,7 +1102,7 @@ public class EntityPage extends AbstractImportPage
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 	}
 

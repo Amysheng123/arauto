@@ -325,11 +325,10 @@ public class Admin_NetworkFileLocation extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
-			physicalLocationPage.backToDashboard();
 			writeTestResultToFile(caseID, testRst, "NetworkFileLocation");
 		}
 	}

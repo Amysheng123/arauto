@@ -52,7 +52,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -97,7 +97,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -129,7 +129,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally
@@ -168,7 +168,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally
@@ -205,7 +205,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -253,7 +253,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -287,7 +287,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally
@@ -333,7 +333,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally
@@ -382,7 +382,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally
@@ -480,7 +480,7 @@ public class DeleteReturn extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 
 		}
 		finally

@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import com.lombardrisk.pages.*;
 import com.lombardrisk.utils.DBQuery;
 import com.lombardrisk.utils.TestTemplate;
+import com.lombardrisk.utils.fileService.CsvUtil;
 
 /**
  * Created by Leo Tu on 11/29/2016. Below test cases must be executed in machine
@@ -152,7 +153,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -207,7 +208,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -248,7 +249,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -281,7 +282,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -333,7 +334,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -393,7 +394,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -430,7 +431,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -490,7 +491,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -535,7 +536,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -603,7 +604,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -650,7 +651,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -697,7 +698,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -741,7 +742,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -778,7 +779,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -830,7 +831,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -887,7 +888,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -944,7 +945,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1001,7 +1002,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1038,7 +1039,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1086,7 +1087,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1155,7 +1156,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1230,7 +1231,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1306,7 +1307,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1347,7 +1348,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1397,7 +1398,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1447,7 +1448,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1497,7 +1498,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1551,7 +1552,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1585,7 +1586,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1613,7 +1614,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1667,7 +1668,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1721,7 +1722,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1775,7 +1776,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1804,7 +1805,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1833,7 +1834,7 @@ public class BatchRun extends TestTemplate
 		{
 			testRst = false;
 			// e.printStackTrace();
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1880,7 +1881,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1913,7 +1914,7 @@ public class BatchRun extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1944,19 +1945,204 @@ public class BatchRun extends TestTemplate
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
 			FormInstancePage formInstancePage = listPage.openFirstFormInstance();
 			AllocationPage allocationPage = formInstancePage.cellDoubleClick(Regulator, formCode, formVersion, null, Cell, null);
-			List<String> fields = allocationPage.getAllFields();
+			String exportFile = allocationPage.exportAllocation();
+			String rowText = CsvUtil.readFile(new File(exportFile)).get(1).replace("\"", "");
 
-			assertThat(fields.size()).isEqualTo(Fields.split(",").length);
+			assertThat(rowText.split(",").length).isEqualTo(Fields.split(",").length);
 			for (String column : Fields.split(","))
 			{
-				assertThat(fields).contains(column);
+				assertThat(rowText.split(",")).contains(column);
 			}
 			testRst = true;
 		}
 		catch (Exception e)
 		{
 			testRst = false;
-			logger.error(e.getMessage());
+			logger.error("error", e);
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6721() throws Exception
+	{
+		String caseID = "6721";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ReferenceDate = testData.get(3);
+			String Cell = testData.get(4);
+			String Fields = testData.get(5);
+
+			String formCode = splitReturn(Form).get(0);
+			String formVersion = splitReturn(Form).get(1);
+			ListPage listPage = m.listPage;
+			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
+			FormInstancePage formInstancePage = listPage.openFirstFormInstance();
+			RejectionPage rejectionPage = formInstancePage.enterRejectionPage(Regulator, formCode, formVersion, null, Cell, null);
+			String exportFile = rejectionPage.exportRejection();
+			String rowText = CsvUtil.readFile(new File(exportFile)).get(1).replace("\"", "");
+
+			assertThat(rowText.split(",").length).isEqualTo(Fields.split(",").length);
+			for (String column : Fields.split(","))
+			{
+				assertThat(rowText.split(",")).contains(column);
+			}
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			logger.error("error", e);
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6777() throws Exception
+	{
+		String caseID = "6777";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		List<String> Files = createFolderAndCopyFile("BatchRun", null);
+		String testDataFolder = Files.get(0);
+		String checkCellFileFolder = Files.get(1);
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFile = testData.get(0);
+			String ReferenceDate = testData.get(1);
+			String Regulator = testData.get(2);
+			String Entity = testData.get(3);
+			String Form = testData.get(4);
+			String ReferenceDate2 = testData.get(5);
+			String CheckCellValue = testData.get(6);
+
+			executeBatchRun(JsonFile, ReferenceDate);
+
+			ListPage listPage = m.listPage;
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			waitJob(jobManagerPage);
+			jobManagerPage.backToDashboard();
+			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate2);
+			FormInstancePage formInstancePage = listPage.openFirstFormInstance();
+			String source = testDataFolder + CheckCellValue;
+			String dest = checkCellFileFolder + CheckCellValue;
+
+			File expectedValueFile = new File(dest);
+			if (!expectedValueFile.isDirectory())
+			{
+				if (expectedValueFile.exists())
+					expectedValueFile.delete();
+				FileUtils.copyFile(new File(source), expectedValueFile);
+			}
+			String formCode = splitReturn(Form).get(0);
+			String version = splitReturn(Form).get(1);
+			boolean rst = getCellValueInForm(formInstancePage, Regulator, formCode, version, expectedValueFile);
+			assertThat(rst).isEqualTo(true);
+			testRst = true;
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			logger.error("error", e);
+		}
+		finally
+		{
+			writeTestResultToFile(caseID + ",6746", testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6778() throws Exception
+	{
+		String caseID = "6778";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String JsonFiles = testData.get(0);
+
+			ListPage listPage = m.listPage;
+
+			for (String item : JsonFiles.split("#"))
+			{
+				String JsonFile = item.split("@")[0];
+				String ReferenceDate = item.split("@")[1];
+				executeBatchRun(JsonFile, ReferenceDate);
+			}
+
+			JobManagerPage jobManagerPage = listPage.enterJobManagerPage();
+			List<String> jobInfo1 = jobManagerPage.getLatestJobInfo();
+			List<String> jobInfo2 = jobManagerPage.getJobInfo(2);
+			assertThat(jobInfo1.get(0)).isEqualTo("MAS1105_Product");
+			assertThat(jobInfo2.get(0)).isEqualTo("MAS1105_Product");
+			assertThat(jobInfo1.get(4)).isEqualTo("30/12/2016");
+			assertThat(jobInfo2.get(4)).isEqualTo("30/09/2016");
+			testRst = true;
+			waitJob(jobManagerPage);
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			// e.printStackTrace();
+			logger.error("error", e);
+		}
+		finally
+		{
+			writeTestResultToFile(caseID, testRst, "BatchRun");
+		}
+	}
+
+	@Test
+	public void test6914() throws Exception
+	{
+		String caseID = "6914";
+		boolean testRst = false;
+		logger.info("====Test...[case id=" + caseID + "]====");
+		try
+		{
+			String nodeName = "C" + caseID;
+			List<String> testData = getElementValueFromXML(testData_BatchRun, nodeName);
+			String Regulator = testData.get(0);
+			String Entity = testData.get(1);
+			String Form = testData.get(2);
+			String ReferenceDate = testData.get(3);
+			String CellName = testData.get(4);
+			String ExpectedValue = testData.get(5);
+
+			String formCode = splitReturn(Form).get(0);
+			String formVersion = splitReturn(Form).get(1);
+
+			ListPage listPage = m.listPage;
+			listPage.setRegulator(Regulator);
+			ComputePage computePage = listPage.enterComputePage();
+			FormInstancePage formInstancePage = computePage.computeReturn(Entity, ReferenceDate, Form, false);
+			String text = formInstancePage.getCellText(Regulator, formCode, formVersion, null, CellName, null);
+			assertThat(text).isEqualTo(ExpectedValue);
+			testRst = true;
+
+		}
+		catch (Exception e)
+		{
+			testRst = false;
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

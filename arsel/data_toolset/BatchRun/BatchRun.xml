@@ -213,12 +213,45 @@
 	</C6827>
 
 	<C6719>
-		<Regulator>Hong Kong Monetary Authorit</Regulator>
+		<Regulator>Hong Kong Monetary Authority</Regulator>
 		<Entity>0015</Entity>
 		<Form>S v0</Form>
 		<ReferenceDate>31/12/2018</ReferenceDate>
 		<Cell>SP2C11H</Cell>
 		<Field>STBBRANCH,STBDrillAlias,STBDrillRef,STBDrillTable,STBFIELD,STBFORM,STBGROUP,STBITEM,STBPAGE,S_Amount</Field>
 	</C6719>
+
+	<C6721>
+		<Regulator>Hong Kong Monetary Authority</Regulator>
+		<Entity>0015</Entity>
+		<Form>S v0</Form>
+		<ReferenceDate>31/12/2018</ReferenceDate>
+		<Cell>SP2C11H</Cell>
+		<Field>HKRTN,STBBRANCH,STBDrillAlias,STBDrillRef,STBDrillTable,STBFIELD,STBFORM,STBGROUP,STBIMPDATE,STBIMPINDEX,STBITEM,STBMAPID,STBPAGE,STBSTATUS,S_Amount,S_TAVA_Ref</Field>
+	</C6721>
+
+
+	<C6777>
+		<JsonFile>MAS649_ComputeJob.json</JsonFile>
+		<ReferenceDate>2014-12-31</ReferenceDate>
+		<Regulator>Monetary Authority of Singapore</Regulator>
+		<Entity>0013</Entity>
+		<Form>MAS649 v1</Form>
+		<ReferenceDate2>31/12/2014</ReferenceDate2>
+		<ExpectedFile>MAS649_v1_0013_20141231-2.xlsx</ExpectedFile>
+	</C6777>
+
+	<C6778>
+		<JsonFile>MAS1105_Translate.json@MAS-Q -1#MAS1105_Translate.json@MAS-Y 1</JsonFile>
+	</C6778>
+
+	<C6914>
+		<Regulator>Hong Kong Monetary Authority</Regulator>
+		<Entity>0001</Entity>
+		<Form>P v0</Form>
+		<ReferenceDate2>31/12/2018</ReferenceDate2>
+		<CellName>PP2C1</CellName>
+		<ExpectedValue>1,657</ExpectedValue>
+	</C6914>
 
 </BatchRun>

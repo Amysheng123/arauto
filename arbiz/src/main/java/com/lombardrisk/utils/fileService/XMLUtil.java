@@ -59,7 +59,7 @@ public class XMLUtil
 		}
 		catch (Exception e)
 		{
-			logger.info(e.getMessage());
+			logger.info("error", e);
 			// e.printStackTrace();
 		}
 		finally
@@ -101,7 +101,7 @@ public class XMLUtil
 		catch (Exception e)
 		{
 			// e.printStackTrace();
-			logger.info(e.getMessage());
+			logger.info("error", e);
 		}
 
 		if (attributeName != null)
