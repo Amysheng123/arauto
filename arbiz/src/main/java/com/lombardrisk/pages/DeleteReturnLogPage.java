@@ -32,9 +32,8 @@ public class DeleteReturnLogPage extends AbstractPage
 			waitStatusDlg();
 		}
 
-		int amt = 0;
-		int rowAmt_F = 0;
-		if (element("drlp.firstRowTxt").getInnerText().equals("No records found."))
+		int amt, rowAmt_F;
+		if ("No records found.".equals(element("drlp.firstRowTxt").getInnerText()))
 			amt = 0;
 		else
 		{

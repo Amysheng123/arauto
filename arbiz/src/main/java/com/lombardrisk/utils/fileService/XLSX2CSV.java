@@ -27,7 +27,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class XLSX2CSV extends DefaultHandler
 {
-	private final static String targetDataFolder = System.getProperty("user.dir") + "\\target\\result\\data\\";
+	private final static String targetDataFolder = System.getProperty("user.dir") + "/target/result/data/";
 	private final OPCPackage xlsxPackage;
 	/**
 	 * Number of columns to read starting with leftmost
@@ -80,7 +80,7 @@ public class XLSX2CSV extends DefaultHandler
 		}
 		catch (ParserConfigurationException e)
 		{
-			throw new RuntimeException("SAX parser appears to be broken - " + e.getMessage());
+			throw new RuntimeException("SAX parser appears to be broken - " + e);
 		}
 	}
 
@@ -170,7 +170,7 @@ public class XLSX2CSV extends DefaultHandler
 			catch (Exception e)
 			{
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 			sbr = new StringBuilder("");
 		}

@@ -39,8 +39,8 @@ public class General extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -77,8 +77,8 @@ public class General extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

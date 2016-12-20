@@ -27,10 +27,10 @@ public class XMLUtil
 {
 	private final static Logger logger = LoggerFactory.getLogger(XMLUtil.class);
 
-	public static String getcellValueFromVanilla(String xmlFile, String specElenentName, String specAttributeName) throws DocumentException
+	public static String getcellValueFromVanilla(String xmlFile, String specElementName, String specAttributeName) throws DocumentException
 	{
 		String value = null;
-		File txtFile = new File("c:\\tmp\\QueryFromXML.txt");
+		File txtFile = new File("c:/tmp/QueryFromXML.txt");
 		String rowKey = null;
 		try
 		{
@@ -47,7 +47,7 @@ public class XMLUtil
 			SAXReader reader = new SAXReader();
 			Document document = reader.read(xmlFile);
 			Element root = document.getRootElement();
-			getNodes(root, specElenentName, specAttributeName);
+			getNodes(root, specElementName, specAttributeName);
 			if (rowKey == null)
 			{
 				value = FileUtils.readLines(txtFile).get(0);
@@ -59,7 +59,8 @@ public class XMLUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.info("error", e);
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -72,37 +73,35 @@ public class XMLUtil
 	@SuppressWarnings("unchecked")
 	public static void getNodes(Element node, String elementName, String attributeName) throws IOException
 	{
-		File txtFileDir = new File("c:\\tmp");
+		File txtFileDir = new File("c:/tmp");
 		if (!txtFileDir.exists())
 			txtFileDir.mkdir();
-		File txtFile = new File("c:\\tmp\\QueryFromXML.txt");
+		File txtFile = new File("c:/tmp/QueryFromXML.txt");
 		if (txtFile.exists())
 			txtFile.delete();
-		FileWriter fileWriter = new FileWriter("c:\\tmp\\QueryFromXML.txt", true);
-		String cellName = null;
-		String instance = null;
-		String rowKey = null;
-		String result = null;
+		FileWriter fileWriter = new FileWriter("c:/tmp/QueryFromXML.txt", true);
+		String cellName = null, rowKey = null, instance = null, result;
 		try
 		{
 			if (attributeName != null)
 			{
 				cellName = attributeName.split(",")[0];
-			}
+				if (attributeName.split(",").length == 2)
+				{
+					instance = attributeName.split(",")[1];
+				}
 
-			if (attributeName.split(",").length == 2)
-			{
-				instance = attributeName.split(",")[1];
-			}
-
-			if (attributeName.split(",").length == 3)
-			{
-				instance = attributeName.split(",")[1];
-				rowKey = attributeName.split(",")[2];
+				if (attributeName.split(",").length == 3)
+				{
+					instance = attributeName.split(",")[1];
+					rowKey = attributeName.split(",")[2];
+				}
 			}
 		}
 		catch (Exception e)
 		{
+			// e.printStackTrace();
+			logger.info("error", e);
 		}
 
 		if (attributeName != null)
@@ -194,12 +193,12 @@ public class XMLUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return nodeValue;
 	}
 
-	public static List<String> getelements(String xmlFile, String node) throws Exception
+	public static List<String> getElements(String xmlFile, String node) throws Exception
 	{
 		List<String> elements = new ArrayList<String>();
 		SAXReader reader = new SAXReader();
@@ -397,15 +396,8 @@ public class XMLUtil
 		catch (Exception e)
 		{
 
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return doc;
 	}
-
-	// public static void main(String args[]) throws Exception {
-	// String file = "E:\\ECR_2999_CAR_v6_20160102.xml";
-	// String node = "exportTime";
-	// String text = "xxxxx";
-	// updateXMLFile(file, node, text);
-	// }
 }

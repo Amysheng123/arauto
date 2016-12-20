@@ -25,7 +25,7 @@ public class Contextual extends TestTemplate
 		logger.info("====Verify can add contextual buttons at Data Warehouse Integration page[case id=" + caseID + "]====");
 		boolean testRst = false;
 		String nodeName = "C" + caseID;
-		List<String> testdata = getElementValueFromXML(testdata_Contextual, nodeName);
+		List<String> testdata = getElementValueFromXML(testData_Contextual, nodeName);
 		String DW = testdata.get(0);
 		String Name = testdata.get(1);
 		String URL = testdata.get(2);
@@ -45,8 +45,8 @@ public class Contextual extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -61,7 +61,7 @@ public class Contextual extends TestTemplate
 		logger.info("====Verify can edit contextual buttons at Data Warehouse Integration page[case id=" + caseID + "]====");
 		boolean testRst = false;
 		String nodeName = "C" + caseID;
-		List<String> testdata = getElementValueFromXML(testdata_Contextual, nodeName);
+		List<String> testdata = getElementValueFromXML(testData_Contextual, nodeName);
 		String DW = testdata.get(0);
 		String Name = testdata.get(1);
 		String NewName = testdata.get(2);
@@ -80,8 +80,8 @@ public class Contextual extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -96,7 +96,7 @@ public class Contextual extends TestTemplate
 		logger.info("====Verify can cancel to add contextual buttons at Data Warehouse Integration page[case id=" + caseID + "]====");
 		boolean testRst = false;
 		String nodeName = "C" + caseID;
-		List<String> testdata = getElementValueFromXML(testdata_Contextual, nodeName);
+		List<String> testdata = getElementValueFromXML(testData_Contextual, nodeName);
 		String DW = testdata.get(0);
 		String Name = testdata.get(1);
 		String URL = testdata.get(2);
@@ -114,8 +114,8 @@ public class Contextual extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -130,7 +130,7 @@ public class Contextual extends TestTemplate
 		logger.info("====Verify can delete contextual buttons at Data Warehouse Integration page[case id=" + caseID + "]====");
 		boolean testRst = false;
 		String nodeName = "C" + caseID;
-		List<String> testdata = getElementValueFromXML(testdata_Contextual, nodeName);
+		List<String> testdata = getElementValueFromXML(testData_Contextual, nodeName);
 		String DW = testdata.get(0);
 		String Name = testdata.get(1);
 		String URL = testdata.get(2);
@@ -149,8 +149,8 @@ public class Contextual extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -165,7 +165,7 @@ public class Contextual extends TestTemplate
 		logger.info("====Verify can open a new page with the appropriate URL when click icon[case id=" + caseID + "]====");
 		boolean testRst = false;
 		String nodeName = "C" + caseID;
-		List<String> testdata = getElementValueFromXML(testdata_Contextual, nodeName);
+		List<String> testdata = getElementValueFromXML(testData_Contextual, nodeName);
 		String Regulator = testdata.get(0);
 		String Entity = testdata.get(1);
 		String Form = testdata.get(2);
@@ -193,8 +193,8 @@ public class Contextual extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

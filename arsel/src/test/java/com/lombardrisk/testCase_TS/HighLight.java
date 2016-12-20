@@ -24,7 +24,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -62,8 +62,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -81,7 +81,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -134,10 +134,10 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -155,7 +155,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -228,8 +228,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -247,7 +247,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -285,8 +285,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -304,7 +304,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -363,8 +363,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -382,7 +382,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -443,8 +443,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -462,7 +462,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -512,8 +512,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -531,7 +531,7 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_highlight, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_highlight, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -574,8 +574,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -593,14 +593,14 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_highlight, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_highlight, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_highlight, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_highlight, nodeName, "ReferenceDate");
-			String Rule = getElementValueFromXML(testdata_highlight, nodeName, "Rule");
-			String EditCell = getElementValueFromXML(testdata_highlight, nodeName, "EditCell");
-			String HighLightCell = getElementValueFromXML(testdata_highlight, nodeName, "HighLightCell");
-			String HighLightPage = getElementValueFromXML(testdata_highlight, nodeName, "HighLightPage");
+			String Regulator = getElementValueFromXML(testData_highlight, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_highlight, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_highlight, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_highlight, nodeName, "ReferenceDate");
+			String Rule = getElementValueFromXML(testData_highlight, nodeName, "Rule");
+			String EditCell = getElementValueFromXML(testData_highlight, nodeName, "EditCell");
+			String HighLightCell = getElementValueFromXML(testData_highlight, nodeName, "HighLightCell");
+			String HighLightPage = getElementValueFromXML(testData_highlight, nodeName, "HighLightPage");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -651,8 +651,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -670,13 +670,13 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_highlight, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_highlight, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_highlight, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_highlight, nodeName, "ReferenceDate");
-			String Rule = getElementValueFromXML(testdata_highlight, nodeName, "Rule");
-			String EditCell = getElementValueFromXML(testdata_highlight, nodeName, "EditCell");
-			String ClickCell = getElementValueFromXML(testdata_highlight, nodeName, "ClickCell");
+			String Regulator = getElementValueFromXML(testData_highlight, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_highlight, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_highlight, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_highlight, nodeName, "ReferenceDate");
+			String Rule = getElementValueFromXML(testData_highlight, nodeName, "Rule");
+			String EditCell = getElementValueFromXML(testData_highlight, nodeName, "EditCell");
+			String ClickCell = getElementValueFromXML(testData_highlight, nodeName, "ClickCell");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -712,8 +712,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -731,12 +731,12 @@ public class HighLight extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_highlight, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_highlight, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_highlight, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_highlight, nodeName, "ReferenceDate");
-			String Pages = getElementValueFromXML(testdata_highlight, nodeName, "Pages");
-			String Counts = getElementValueFromXML(testdata_highlight, nodeName, "Counts");
+			String Regulator = getElementValueFromXML(testData_highlight, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_highlight, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_highlight, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_highlight, nodeName, "ReferenceDate");
+			String Pages = getElementValueFromXML(testData_highlight, nodeName, "Pages");
+			String Counts = getElementValueFromXML(testData_highlight, nodeName, "Counts");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -761,8 +761,8 @@ public class HighLight extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

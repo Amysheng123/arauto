@@ -24,8 +24,8 @@ public class Admin_UserGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String groupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String description = getElementValueFromXML(testdata_admin, nodeName, "Desc");
+			String groupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String description = getElementValueFromXML(testData_admin, nodeName, "Desc");
 			ListPage listPage = super.m.listPage;
 
 			UserGroupPage userGroupManagePage = listPage.EnterUserGroupPage();
@@ -36,8 +36,8 @@ public class Admin_UserGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -55,9 +55,9 @@ public class Admin_UserGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String groupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String newName = getElementValueFromXML(testdata_admin, nodeName, "NewName");
-			String newDesc = getElementValueFromXML(testdata_admin, nodeName, "NewDesc");
+			String groupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String newName = getElementValueFromXML(testData_admin, nodeName, "NewName");
+			String newDesc = getElementValueFromXML(testData_admin, nodeName, "NewDesc");
 
 			ListPage listPage = super.m.listPage;
 
@@ -72,8 +72,8 @@ public class Admin_UserGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -91,8 +91,8 @@ public class Admin_UserGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String groupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String userName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
+			String groupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String userName = getElementValueFromXML(testData_admin, nodeName, "UserName");
 
 			ListPage listPage = super.m.listPage;
 
@@ -105,8 +105,8 @@ public class Admin_UserGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -123,8 +123,8 @@ public class Admin_UserGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String groupNames = getElementValueFromXML(testdata_admin, nodeName, "GroupNames");
-			String userName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
+			String groupNames = getElementValueFromXML(testData_admin, nodeName, "GroupNames");
+			String userName = getElementValueFromXML(testData_admin, nodeName, "UserName");
 
 			ListPage listPage = super.m.listPage;
 
@@ -140,8 +140,8 @@ public class Admin_UserGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -159,8 +159,8 @@ public class Admin_UserGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String groupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String userName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
+			String groupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String userName = getElementValueFromXML(testData_admin, nodeName, "UserName");
 
 			ListPage listPage = super.m.listPage;
 
@@ -175,8 +175,8 @@ public class Admin_UserGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

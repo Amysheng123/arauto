@@ -22,7 +22,7 @@ import com.lombardrisk.utils.fileService.XMLUtil;
  */
 public class ImportExportFormat extends TestTemplate
 {
-	String importFolder = System.getProperty("user.dir") + "\\data_ar\\ImportExportFormat\\";
+	String importFolder = System.getProperty("user.dir") + "/data_ar/ImportExportFormat/";
 
 	@Test
 	public void test6504() throws Exception
@@ -33,7 +33,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -61,7 +61,7 @@ public class ImportExportFormat extends TestTemplate
 				{
 					String str = list.get(i).split(",")[2];
 					String actualDate = str.substring(1, str.length() - 1);
-					Pattern pattern = Pattern.compile("^\\d{4}-[0-1][0-9]-[0-3][0-9]$");
+					Pattern pattern = Pattern.compile("^/d{4}-[0-1][0-9]-[0-3][0-9]$");
 					Assert.assertTrue(pattern.matcher(actualDate).matches());
 					break;
 				}
@@ -70,7 +70,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -88,7 +88,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -116,7 +116,7 @@ public class ImportExportFormat extends TestTemplate
 				{
 					String str = list.get(i).split(",")[2];
 					String actualDate = str.substring(1, str.length() - 1);
-					Pattern pattern = Pattern.compile("^[0-3][0-9]/[0-1][0-9]/\\d{4}$");
+					Pattern pattern = Pattern.compile("^[0-3][0-9]/[0-1][0-9]//d{4}$");
 					Assert.assertTrue(pattern.matcher(actualDate).matches());
 					break;
 				}
@@ -125,7 +125,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -143,7 +143,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -171,7 +171,7 @@ public class ImportExportFormat extends TestTemplate
 				{
 					String str = list.get(i).split(",")[2];
 					String actualDate = str.substring(1, str.length() - 1);
-					Pattern pattern = Pattern.compile("^[0-1][0-9]/[0-3][0-9]/\\d{4}$");
+					Pattern pattern = Pattern.compile("^[0-1][0-9]/[0-3][0-9]//d{4}$");
 					Assert.assertTrue(pattern.matcher(actualDate).matches());
 					break;
 				}
@@ -180,7 +180,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -198,7 +198,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -214,7 +214,7 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			formInstancePage.importAdjustment(importFile, false, false);
 			String cellValue = formInstancePage.getCellText(cellID);
 			Assert.assertEquals(cellValue, value);
@@ -222,7 +222,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -240,7 +240,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -256,7 +256,7 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			formInstancePage.importAdjustment(importFile, false, false);
 			String cellValue = formInstancePage.getCellText(cellID);
 			Assert.assertEquals(cellValue, value);
@@ -264,7 +264,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -282,7 +282,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -298,7 +298,7 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			formInstancePage.importAdjustment(importFile, false, false);
 			String cellValue = formInstancePage.getCellText(cellID);
 			Assert.assertEquals(cellValue, value);
@@ -306,7 +306,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -324,7 +324,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -340,7 +340,7 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			formInstancePage.importAdjustment(importFile, false, false);
 			String cellValue = formInstancePage.getCellText(cellID);
 			Assert.assertEquals(cellValue, value);
@@ -348,7 +348,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -366,7 +366,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -381,14 +381,14 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			String errorMsg = formInstancePage.getImportAdjustmentErrorInfo(importFile);
 			Assert.assertEquals(errorMsg, value);
 		}
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -406,7 +406,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -423,18 +423,18 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			String errorMsg = formInstancePage.getImportAdjustmentErrorInfo(importFile);
 			Assert.assertEquals(errorMsg, value);
 
-			File importFile2 = new File(importFolder + "\\" + fileName2);
+			File importFile2 = new File(importFolder + "/" + fileName2);
 			String errorMsg2 = formInstancePage.getImportAdjustmentErrorInfo(importFile2);
 			Assert.assertEquals(errorMsg2, value2);
 		}
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -452,7 +452,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -467,14 +467,14 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			String errorMsg = formInstancePage.getImportAdjustmentErrorInfo(importFile);
 			Assert.assertEquals(errorMsg, value);
 		}
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -492,7 +492,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String language = testdata.get(0);
 			String regulator = testdata.get(1);
 			String entity = testdata.get(2);
@@ -507,14 +507,14 @@ public class ImportExportFormat extends TestTemplate
 			listPage.getProductListPage(regulator, entity, null, null);
 			FormInstancePage formInstancePage = listPage.createNewForm(entity, referenceDate, returnName, null, false, false);
 
-			File importFile = new File(importFolder + "\\" + fileName);
+			File importFile = new File(importFolder + "/" + fileName);
 			String errorMsg = formInstancePage.getImportAdjustmentErrorInfo(importFile).replaceAll("\n|\r", "");
 			Assert.assertEquals(errorMsg, value);
 		}
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -532,7 +532,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String regulator = testdata.get(0);
 			String entity = testdata.get(1);
 			String referenceDate = testdata.get(2);
@@ -553,7 +553,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -571,7 +571,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String regulator = testdata.get(0);
 			String entity = testdata.get(1);
 			String referenceDate = testdata.get(2);
@@ -590,7 +590,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -608,7 +608,7 @@ public class ImportExportFormat extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_importExportFormat, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_importExportFormat, nodeName);
 			String regulator = testdata.get(0);
 			String entity = testdata.get(1);
 			String referenceDate = testdata.get(2);
@@ -624,7 +624,7 @@ public class ImportExportFormat extends TestTemplate
 		catch (Throwable e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{

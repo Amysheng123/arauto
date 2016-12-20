@@ -29,7 +29,7 @@ public class GridWithinGrid extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_GridWithinGrid, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_GridWithinGrid, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -55,8 +55,8 @@ public class GridWithinGrid extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -74,7 +74,7 @@ public class GridWithinGrid extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_GridWithinGrid, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_GridWithinGrid, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -128,8 +128,8 @@ public class GridWithinGrid extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -147,7 +147,7 @@ public class GridWithinGrid extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_GridWithinGrid, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_GridWithinGrid, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -227,8 +227,8 @@ public class GridWithinGrid extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -246,7 +246,7 @@ public class GridWithinGrid extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_GridWithinGrid, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_GridWithinGrid, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -267,8 +267,8 @@ public class GridWithinGrid extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -286,7 +286,7 @@ public class GridWithinGrid extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_GridWithinGrid, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_GridWithinGrid, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -307,8 +307,8 @@ public class GridWithinGrid extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally

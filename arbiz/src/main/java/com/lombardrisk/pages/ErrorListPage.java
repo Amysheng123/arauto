@@ -91,10 +91,10 @@ public class ErrorListPage extends AbstractDrilldownPage
 				String ID = getRuleNo(i);
 				if (ID.equals(ruleID))
 				{
-					if (rowKey.equals(""))
+					if (rowKey.length() == 0)
 					{
 						String Msg = getMessageText(i);
-						if (!instance.equals(""))
+						if (instance.length() > 0)
 						{
 							String instanceName = Msg.substring(Msg.indexOf(":") + 1, Msg.indexOf(":") + 2);
 							if (instanceName.equals(instance))
@@ -124,7 +124,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 							String Msg_temp = Msg.replace("[PageInstance:" + instanceName + "]", "");
 							String rowID = Msg_temp.substring(Msg_temp.indexOf(":") + 1, Msg_temp.indexOf(":") + 2);
 
-							if (!instance.equals(""))
+							if (!"".equals(instance))
 							{
 								if (rowID.equals(rowKey) && instanceName.equals(instance))
 								{
@@ -155,16 +155,12 @@ public class ErrorListPage extends AbstractDrilldownPage
 							flag = false;
 							break;
 						}
-
 					}
-
 				}
-
 			}
 
 			if (count > 0)
 			{
-
 				for (int i = 1; i <= 3; i++)
 				{
 					if (element("elp.curPageNO", String.valueOf(i)).getAttribute("class").contains("ui-state-active"))
@@ -175,17 +171,14 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 
 				if (Integer.parseInt(curPage) - Integer.parseInt(startPage) >= 0)
-				{
-					flag = false;
 					break;
-				}
 			}
 
 			if (flag)
 			{
 				try
 				{
-					if (element("elp.nextPage").getAttribute("tabindex").equals("0"))
+					if ("0".equals(element("elp.nextPage").getAttribute("tabindex")))
 					{
 						element("elp.nextPage").click();
 						waitStatusDlg();
@@ -197,6 +190,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 				catch (Exception e)
 				{
+					logger.warn("warn", e);
 					flag = false;
 				}
 			}
@@ -205,7 +199,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 			{
 				try
 				{
-					if (element("elp.firtPage").getAttribute("tabindex").equals("0"))
+					if ("0".equals(element("elp.firtPage").getAttribute("tabindex")))
 					{
 						element("elp.firtPage").click();
 						count++;
@@ -220,7 +214,6 @@ public class ErrorListPage extends AbstractDrilldownPage
 						}
 						if (Integer.parseInt(curPage) - Integer.parseInt(startPage) >= 0)
 						{
-							flag = false;
 							break;
 						}
 
@@ -228,7 +221,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 				}
 				catch (Exception e)
 				{
-
+					logger.warn("warn", e);
 				}
 			}
 
@@ -292,7 +285,7 @@ public class ErrorListPage extends AbstractDrilldownPage
 	 */
 	public String getRuleBackgroudColor(String ruleNo) throws Exception
 	{
-		String color = null;
+		String color = "";
 		if (element("elp.firtPage").getAttribute("class").contains("ui-state-disabled"))
 		{
 			element("elp.firtPage").click();
@@ -320,13 +313,13 @@ public class ErrorListPage extends AbstractDrilldownPage
 		{
 			color = element("elp.ruleBackgroud", ruleNo).getCssValue("background-color");
 		}
-		if (color.equalsIgnoreCase("rgba(204, 153, 204, 1)"))
+		if ("rgba(204, 153, 204, 1)".equalsIgnoreCase(color))
 			return "Purple";
-		else if (color.equalsIgnoreCase("rgba(236, 184, 188, 1)"))
+		else if ("rgba(236, 184, 188, 1)".equalsIgnoreCase(color))
 			return "Red";
-		else if (color.equalsIgnoreCase("rgba(255, 255, 204, 1)"))
+		else if ("rgba(255, 255, 204, 1)".equalsIgnoreCase(color))
 			return "Yellow";
-		else if (color.equalsIgnoreCase("rgba(181, 217, 245, 1)"))
+		else if ("rgba(181, 217, 245, 1)".equalsIgnoreCase(color))
 			return "Blue";
 		else
 			return "";

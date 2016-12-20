@@ -24,6 +24,7 @@ public class UserGroupPage extends AbstractPage
 		element("ugp.GPName").type(groupName);
 		element("ugp.GPDesc").type(description);
 		element("ugp.save").click();
+		waitThat("ugp.msg").toBeVisible();
 		waitThat("ugp.msg").toBeInvisible();
 		return this;
 	}
@@ -48,6 +49,7 @@ public class UserGroupPage extends AbstractPage
 		if (save)
 		{
 			element("ugp.save").click();
+			waitThat("ugp.msg").toBeVisible();
 			waitThat("ugp.msg").toBeInvisible();
 		}
 		else
@@ -71,7 +73,7 @@ public class UserGroupPage extends AbstractPage
 		element("ugp.delUser", list).click();
 		waitStatusDlg();
 		element("ugp.delConf").click();
-		waitStatusDlg();
+		waitThat("ugp.msg").toBeVisible();
 		waitThat("ugp.msg").toBeInvisible();
 		return this;
 	}
@@ -80,7 +82,7 @@ public class UserGroupPage extends AbstractPage
 	{
 		element("ugp.userCheckBox", userName).check(true);
 		element("ugp.AUTGS").click();
-		waitStatusDlg();
+		waitThat("ugp.msg").toBeVisible();
 		waitThat("ugp.msg").toBeInvisible();
 	}
 
@@ -91,8 +93,7 @@ public class UserGroupPage extends AbstractPage
 
 	public List<String> getUsersByUG(String groupName) throws Exception
 	{
-		List<String> names = new ArrayList<String>();
-		names = element("ugp.allUser", groupName).getAllInnerTexts();
+		List<String> names = element("ugp.allUser", groupName).getAllInnerTexts();
 		names.remove(names.size() - 1);
 		return names;
 	}

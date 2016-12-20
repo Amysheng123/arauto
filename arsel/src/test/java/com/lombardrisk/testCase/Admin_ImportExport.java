@@ -28,8 +28,8 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String userName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String password = getElementValueFromXML(testdata_admin, nodeName, "Password");
+			String userName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String password = getElementValueFromXML(testData_admin, nodeName, "Password");
 
 			ListPage listPage = super.m.listPage;
 			HomePage homePage = listPage.logout();
@@ -45,8 +45,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -64,7 +64,7 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
@@ -101,8 +101,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -121,7 +121,7 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			UsersPage usersPage = listPage.EnterUserPage();
@@ -157,8 +157,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -177,7 +177,7 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			UserGroupPage userGroupPage = listPage.EnterUserGroupPage();
@@ -213,8 +213,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -233,7 +233,7 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			UserGroupPage userGroupPage = listPage.EnterUserGroupPage();
@@ -266,8 +266,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -286,7 +286,7 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			PrivilegeGroupPage privilegeGroupPage = listPage.EnterPrivilegeGroupsPage();
@@ -318,8 +318,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -338,7 +338,7 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			UsersPage usersPage = listPage.EnterUserPage();
@@ -369,8 +369,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -388,13 +388,13 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String importFilePath = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
-			String baseFile = getElementValueFromXML(testdata_admin, nodeName, "BaseLineFile");
+			String importFilePath = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
+			String baseFile = getElementValueFromXML(testData_admin, nodeName, "BaseLineFile");
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
-			String logPath = entityManagePage.importAcessSettings(importFilePath);
+			String logPath = entityManagePage.importAccessSettings(importFilePath);
 			if (logPath != null)
 			{
 				File importFile = new File(importFilePath);
@@ -449,8 +449,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -469,9 +469,9 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String importFilePath = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
-			String baseFile = getElementValueFromXML(testdata_admin, nodeName, "BaseLineFile");
+			String importFilePath = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
+			String baseFile = getElementValueFromXML(testData_admin, nodeName, "BaseLineFile");
 
 			ListPage listPage = super.m.listPage;
 			UserGroupPage userGroupPage = listPage.EnterUserGroupPage();
@@ -526,8 +526,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -546,8 +546,8 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String importFilePath = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String importFilePath = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			UserGroupPage userGroupPage = listPage.EnterUserGroupPage();
@@ -583,8 +583,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -602,9 +602,9 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String importFilePath = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
-			String baseFile = getElementValueFromXML(testdata_admin, nodeName, "BaseLineFile");
+			String importFilePath = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
+			String baseFile = getElementValueFromXML(testData_admin, nodeName, "BaseLineFile");
 
 			ListPage listPage = super.m.listPage;
 			PrivilegeGroupPage privilegeGroupPage = listPage.EnterPrivilegeGroupsPage();
@@ -655,8 +655,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -675,8 +675,8 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String importFilePath = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
+			String importFilePath = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
 
 			ListPage listPage = super.m.listPage;
 			PrivilegeGroupPage privilegeGroupPage = listPage.EnterPrivilegeGroupsPage();
@@ -709,8 +709,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -728,9 +728,9 @@ public class Admin_ImportExport extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String importFilePath = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String sheetName = getElementValueFromXML(testdata_admin, nodeName, "SheetName");
-			String baseFile = getElementValueFromXML(testdata_admin, nodeName, "BaseLineFile");
+			String importFilePath = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String sheetName = getElementValueFromXML(testData_admin, nodeName, "SheetName");
+			String baseFile = getElementValueFromXML(testData_admin, nodeName, "BaseLineFile");
 
 			ListPage listPage = super.m.listPage;
 			PrivilegeGroupPage privilegeGroupPage = listPage.EnterPrivilegeGroupsPage();
@@ -781,8 +781,8 @@ public class Admin_ImportExport extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

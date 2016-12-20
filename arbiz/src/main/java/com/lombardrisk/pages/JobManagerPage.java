@@ -41,6 +41,7 @@ public class JobManagerPage extends AbstractPage
 	 */
 	public List<String> getJobInfo(int rowIndex) throws Exception
 	{
+		logger.info("Get job info");
 		List<String> jobInfo = new ArrayList<String>();
 		String specical = String.valueOf(rowIndex - 1);
 		String normal = String.valueOf(rowIndex);
@@ -85,6 +86,7 @@ public class JobManagerPage extends AbstractPage
 	 */
 	public JobDetailsPage enterJobDetailsPage(String formCode, String formVersion, String referenceDate) throws Exception
 	{
+		logger.info("Enter job details page");
 		element("jmp.filter").input(formCode);
 		Thread.sleep(1000);
 		int nums = (int) element("jmp.table").getRowCount();
@@ -113,6 +115,7 @@ public class JobManagerPage extends AbstractPage
 	 */
 	public JobDetailsPage enterJobDetailsPage(int rowIndex) throws Exception
 	{
+		logger.info("Enter job details page");
 		element("jmp.list.Name", String.valueOf(rowIndex - 1)).click();
 		waitStatusDlg();
 		return new JobDetailsPage(getWebDriverWrapper());
@@ -128,6 +131,7 @@ public class JobManagerPage extends AbstractPage
 	{
 		logger.info("Back to list page");
 		element("jmp.backToList2").click();
+		Thread.sleep(300);
 		waitStatusDlg();
 		return new ListPage(getWebDriverWrapper());
 	}
@@ -204,12 +208,39 @@ public class JobManagerPage extends AbstractPage
 		return rst;
 	}
 
+	/**
+	 * verify if filter exist
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
 	public boolean isFilterExist() throws Exception
 	{
 		if (element("jmp.filter").isDisplayed())
 			return true;
 		else
 			return false;
+	}
+
+	public int getJobNum() throws Exception
+	{
+		int firstPage = element("dwp.rowAmt").getNumberOfMatches();
+		if ("0".equalsIgnoreCase(element("dwp.lastPageStatus").getAttribute("tabindex")))
+		{
+			element("dwp.lastPageStatus").click();
+			waitStatusDlg();
+			int lastPageNo;
+			if (element("dwp.lastPageNo1").isDisplayed())
+				lastPageNo = Integer.parseInt(element("dwp.lastPageNo1").getInnerText());
+			else
+				lastPageNo = Integer.parseInt(element("dwp.lastPageNo2").getInnerText());
+
+			int lastPage = element("dwp.rowAmt").getNumberOfMatches();
+			int maxRow = Integer.parseInt(element("dwp.displayedRow").getSelectedText());
+			return (lastPageNo - 1) * maxRow + lastPage;
+		}
+		else
+			return firstPage;
 	}
 
 }

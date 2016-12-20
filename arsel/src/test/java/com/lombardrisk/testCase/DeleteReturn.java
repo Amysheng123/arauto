@@ -25,11 +25,11 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
-			int EditionAmt = Integer.parseInt(getElementValueFromXML(testdata_DeleteReturn, nodeName, "EditionAmt"));
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
+			int EditionAmt = Integer.parseInt(getElementValueFromXML(testData_DeleteReturn, nodeName, "EditionAmt"));
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
 			String edition = "1";
@@ -51,8 +51,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -69,11 +69,11 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
-			int EditionAmt = Integer.parseInt(getElementValueFromXML(testdata_DeleteReturn, nodeName, "EditionAmt"));
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
+			int EditionAmt = Integer.parseInt(getElementValueFromXML(testData_DeleteReturn, nodeName, "EditionAmt"));
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
 
@@ -96,8 +96,8 @@ public class DeleteReturn extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -114,10 +114,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
@@ -128,8 +128,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -147,11 +147,11 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String UserName = getElementValueFromXML(testdata_DeleteReturn, nodeName, "UserName");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String UserName = getElementValueFromXML(testData_DeleteReturn, nodeName, "UserName");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 
@@ -167,8 +167,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -186,10 +186,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, "All");
@@ -204,8 +204,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -222,10 +222,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -252,8 +252,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -270,10 +270,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
@@ -286,8 +286,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -305,10 +305,10 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
 
 			String formCode = splitReturn(Form).get(0);
 			String version = splitReturn(Form).get(1);
@@ -332,8 +332,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -351,11 +351,11 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Regulator");
-			String Entity = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Entity");
-			String Form = getElementValueFromXML(testdata_DeleteReturn, nodeName, "Form");
-			String ReferenceDate = getElementValueFromXML(testdata_DeleteReturn, nodeName, "ReferenceDate");
-			String EditionNo = getElementValueFromXML(testdata_DeleteReturn, nodeName, "EditionNo");
+			String Regulator = getElementValueFromXML(testData_DeleteReturn, nodeName, "Regulator");
+			String Entity = getElementValueFromXML(testData_DeleteReturn, nodeName, "Entity");
+			String Form = getElementValueFromXML(testData_DeleteReturn, nodeName, "Form");
+			String ReferenceDate = getElementValueFromXML(testData_DeleteReturn, nodeName, "ReferenceDate");
+			String EditionNo = getElementValueFromXML(testData_DeleteReturn, nodeName, "EditionNo");
 
 			int topNums = 1;
 			String editionNo = EditionNo.split(",")[0];
@@ -381,8 +381,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -400,7 +400,7 @@ public class DeleteReturn extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_DeleteReturn, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_DeleteReturn, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -479,8 +479,8 @@ public class DeleteReturn extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally

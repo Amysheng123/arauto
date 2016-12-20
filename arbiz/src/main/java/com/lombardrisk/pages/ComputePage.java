@@ -122,6 +122,14 @@ public class ComputePage extends AbstractPage
 		}
 		element("cp.computeBtn").click();
 		waitStatusDlg();
+		if (element("cp.confirmMsg").isDisplayed())
+		{
+			String msg = element("cp.confirmMsg").getInnerText();
+			if (!msg.equalsIgnoreCase("Overwriting existing forms:" + form.split(" ")[0]))
+				logger.error("The prompt message should be:" + "Overwriting existing forms:" + form.split(" ")[0] + ", but actual message is:" + msg);
+			element("cp.computeConfirmBtn").click();
+			waitStatusDlg();
+		}
 		return new FormInstancePage(getWebDriverWrapper());
 	}
 

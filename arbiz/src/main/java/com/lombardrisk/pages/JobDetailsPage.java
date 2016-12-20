@@ -133,14 +133,14 @@ public class JobDetailsPage extends AbstractPage
 					if (element("dwp.message", String.valueOf(i)).getInnerText().equals(message))
 					{
 						String levelIcon = element("dwp.level", String.valueOf(i)).getAttribute("src");
-						String acctualLevel = null;
+						String actualLevel = "";
 						if (levelIcon.contains("FailIcon"))
-							acctualLevel = "ERROR";
+							actualLevel = "ERROR";
 						else if (levelIcon.contains("WarningIcon"))
-							acctualLevel = "WARN";
+							actualLevel = "WARN";
 						else if (levelIcon.contains("SuccessIcon"))
-							acctualLevel = "INFO";
-						if (acctualLevel.equalsIgnoreCase(level))
+							actualLevel = "INFO";
+						if (actualLevel.equalsIgnoreCase(level))
 						{
 							findMsg = true;
 							flag = false;
@@ -201,7 +201,7 @@ public class JobDetailsPage extends AbstractPage
 	{
 		element("dwp.list.Job", String.valueOf(rowIndex)).click();
 		waitStatusDlg();
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -209,8 +209,8 @@ public class JobDetailsPage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("dwp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			return getOriginalFile(exportedFile, latestFile);
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+			return getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{
@@ -438,7 +438,7 @@ public class JobDetailsPage extends AbstractPage
 	 * get all map status under specific job and batch run
 	 * 
 	 * @param JobIndex
-	 * @param BatchRunIndex
+	 * @param
 	 * @return List
 	 * @throws Exception
 	 */
@@ -479,6 +479,29 @@ public class JobDetailsPage extends AbstractPage
 	}
 
 	/**
+	 * get batchRun progress
+	 * 
+	 * @param JobIndex
+	 * @return
+	 * @throws Exception
+	 */
+	public List<String> getBatchRunProgress(int JobIndex) throws Exception
+	{
+		List<String> BatchRunProgress = new ArrayList<>();
+		showBatchRun(JobIndex);
+		int BatchRunIndex = 1;
+		String[] list =
+		{ String.valueOf(JobIndex - 1), String.valueOf(BatchRunIndex - 1), "11" };
+		while (element("dwp.cellText5", list).isDisplayed())
+		{
+			BatchRunProgress.add(element("dwp.cellText5", list).getInnerText());
+			BatchRunIndex++;
+			list[1] = String.valueOf(BatchRunIndex - 1);
+		}
+		return BatchRunProgress;
+	}
+
+	/**
 	 * if batchRub link exist
 	 * 
 	 * @param jobIndex
@@ -511,6 +534,68 @@ public class JobDetailsPage extends AbstractPage
 		element("dwp.batchRunName", list).click();
 		waitStatusDlg();
 		return new JobResultPage(getWebDriverWrapper());
+	}
+
+	/**
+	 * verify delete job icon exist
+	 * 
+	 * @param jobIndex
+	 * @return boolean
+	 * @throws Exception
+	 */
+	public boolean isDeleteIconExits(int jobIndex) throws Exception
+	{
+		return element("dwp.deleteIcon", String.valueOf(jobIndex - 1)).isDisplayed();
+	}
+
+	/**
+	 * delete job
+	 * 
+	 * @param jobIndex
+	 * @throws Exception
+	 */
+	public void deleteJob(int jobIndex) throws Exception
+	{
+		logger.info("Delete job");
+		element("dwp.deleteIcon", String.valueOf(jobIndex - 1)).click();
+		waitStatusDlg();
+	}
+
+	/**
+	 * get job amount
+	 * 
+	 * @return int
+	 * @throws Exception
+	 */
+	public int getJobNums() throws Exception
+	{
+		return element("dwp.rowAmt").getNumberOfMatches();
+	}
+
+	/**
+	 * get sub job name
+	 * 
+	 * @param parentJobIndex
+	 * @return List
+	 * @throws Exception
+	 */
+	public List<String> getSubJobName(int parentJobIndex) throws Exception
+	{
+		List<String> names = new ArrayList<>();
+		int subJobIndex = 0;
+		showBatchRun(parentJobIndex);
+		String[] list =
+		{ String.valueOf(parentJobIndex - 1), String.valueOf(subJobIndex) };
+		while (element("dwp.batchRunName2_1", list).isDisplayed() || element("dwp.batchRunName2_2", list).isDisplayed())
+		{
+			if (element("dwp.batchRunName2_1", list).isDisplayed())
+				names.add(element("dwp.batchRunName2_1", list).getInnerText());
+			if (element("dwp.batchRunName2_2", list).isDisplayed())
+				names.add(element("dwp.batchRunName2_2", list).getInnerText());
+			subJobIndex++;
+			list[1] = String.valueOf(subJobIndex);
+		}
+		return names;
 	}
 
 }

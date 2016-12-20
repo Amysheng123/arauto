@@ -43,7 +43,7 @@ public class ComputeForm extends TestTemplate
 
 		try
 		{
-			File testDataFile = new File(testDataFolderName + "\\ComputeForm\\" + fileName);
+			File testDataFile = new File(testDataFolderName + "/ComputeForm/" + fileName);
 			for (int index = 1; index <= ExcelUtil.getRowNums(testDataFile, null); index++)
 			{
 				ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, index);
@@ -70,8 +70,8 @@ public class ComputeForm extends TestTemplate
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 	}
 
@@ -206,8 +206,8 @@ public class ComputeForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

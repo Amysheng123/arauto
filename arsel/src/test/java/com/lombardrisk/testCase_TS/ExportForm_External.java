@@ -28,7 +28,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -50,7 +50,7 @@ public class ExportForm_External extends TestTemplate
 			FormInstancePage formInstancePage = listPage.createNewForm(Entity, ReferenceDate, Form, null, false, false);
 			formInstancePage.closeFormInstance();
 			String exportFilePath = listPage.ExportToRegulatorFormat(Entity, Form, ReferenceDate, FileType, Framework, Taxonomy, Module, null);
-			String BaselineFile = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ExportForm_External\\CheckCellValue\\" + BaseLine;
+			String BaselineFile = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/CheckCellValue/" + BaseLine;
 			Boolean rst = Business.verifyExportedFile(BaselineFile, exportFilePath, FileType);
 			assertThat(rst).as("Exist difference between exported file and baseline").isEqualTo(true);
 			testRst = true;
@@ -58,8 +58,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -76,7 +76,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -96,7 +96,7 @@ public class ExportForm_External extends TestTemplate
 			DBQuery.update(DBIndex, SQL);
 			FormInstancePage formInstancePage = listPage.createNewForm(Entity, ReferenceDate, Form, null, false, false);
 			String exportFilePath = formInstancePage.exportToFile(Entity, Form, ReferenceDate, FileType, Module, null);
-			String BaselineFile = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ExportForm_External\\CheckCellValue\\" + BaseLine;
+			String BaselineFile = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/CheckCellValue/" + BaseLine;
 			Boolean rst = Business.verifyExportedFile(BaselineFile, exportFilePath, FileType);
 			assertThat(rst).as("Exist difference between exported file and baseline").isEqualTo(true);
 			testRst = true;
@@ -104,8 +104,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -122,7 +122,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -139,8 +139,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -162,7 +162,7 @@ public class ExportForm_External extends TestTemplate
 			String importFolder = Files.get(3);
 
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -182,7 +182,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			File expectedValueFile = new File(checkRstFolder + CheckCellValueFile);
 			if (expectedValueFile.exists())
@@ -199,8 +199,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -222,7 +222,7 @@ public class ExportForm_External extends TestTemplate
 			String importFolder = Files.get(3);
 
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -242,7 +242,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			File expectedValueFile = new File(checkRstFolder + CheckCellValueFile);
 			if (expectedValueFile.exists())
@@ -256,8 +256,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -274,7 +274,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -296,8 +296,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -318,7 +318,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -354,8 +354,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -376,7 +376,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -415,8 +415,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -434,7 +434,7 @@ public class ExportForm_External extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -461,8 +461,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -486,7 +486,7 @@ public class ExportForm_External extends TestTemplate
 			String importFolder = Files.get(3);
 
 			String nodeName = "C" + caseID;
-			List<String> testData = getElementValueFromXML(testdata_Export_External, nodeName);
+			List<String> testData = getElementValueFromXML(testData_Export_External, nodeName);
 			String Regulator = testData.get(0);
 			String Entity = testData.get(1);
 			String Form = testData.get(2);
@@ -504,7 +504,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			String baseline = testDataFolder + BaselineName;
 			boolean rst = Business.verifyExportedFile(baseline, exportFilePath, ExportType);
@@ -514,7 +514,7 @@ public class ExportForm_External extends TestTemplate
 			if (exportFilePath.endsWith(".zip"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			rst = Business.verifyExportedFile(baseline, exportFilePath, ExportType);
 			assertThat(rst).as("Exported value should same with expected value").isEqualTo(true);
@@ -523,8 +523,8 @@ public class ExportForm_External extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

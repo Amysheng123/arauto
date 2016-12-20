@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.lombardrisk.pages.*;
+import com.lombardrisk.utils.DBQuery;
 import com.lombardrisk.utils.TestTemplate;
 import com.lombardrisk.utils.fileService.CsvUtil;
 import com.lombardrisk.utils.fileService.ExcelUtil;
@@ -39,7 +40,7 @@ public class RetrieveForm extends TestTemplate
 
 		if (!testRstFile.getName().equalsIgnoreCase(fileName))
 			testRstFile = new File(testRstFile.getParent() + fileName);
-		File testDataFile = new File(testDataFolderName + "\\RetrieveForm\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/RetrieveForm/" + fileName);
 		if (testDataFile.exists())
 		{
 			for (int i = 1; i <= ExcelUtil.getRowNums(testDataFile, null); i++)
@@ -86,6 +87,14 @@ public class RetrieveForm extends TestTemplate
 				listPage.deleteFormInstance(Form, ProcessDate);
 
 			}
+			String SQL = "SELECT \"PHYSICAL_VIEW_NAME\" FROM \"CFG_DW_VIEW_BINDING\" WHERE \"VIEW_CODE\" IN" + "(SELECT  \"SOURCE_VIEW_CODE\" FROM \"CFG_DT_FORM_IMPORT\" WHERE \"FORM_CODE\"='"
+					+ formCode + "' AND \"FORM_VERSION\"=" + version + ")";
+			List<String> physicalName = DBQuery.queryRecords(SQL);
+			for (String tableName : physicalName)
+			{
+				String updateSQL = "UPDATE  \"" + tableName + "\"   SET \"N_RUN_SKEY\"=100";
+				DBQuery.updateSourceVew(updateSQL);
+			}
 			logger.info("Begin set retrieve properties");
 			int init = listPage.getNotificationNums();
 			logger.info("There are " + init + " notifcation(s)");
@@ -101,7 +110,7 @@ public class RetrieveForm extends TestTemplate
 			if (isJobSuccessed())
 			{
 				openForm = true;
-				logger.info("Retrieve form sucessed");
+				logger.info("Retrieve form succeeded");
 			}
 			else
 				logger.error("Retrieve form failed");
@@ -155,7 +164,7 @@ public class RetrieveForm extends TestTemplate
 						String cellId = allRowValue.get(0).trim();
 						String rowKey = allRowValue.get(1).trim();
 						String instance = allRowValue.get(2).trim();
-						String linkcell = allRowValue.get(3).trim();
+						String linkCell = allRowValue.get(3).trim();
 						File expAllocFile = new File(testDataFolder + allRowValue.get(4).trim());
 
 						String extCellName = null;
@@ -167,33 +176,32 @@ public class RetrieveForm extends TestTemplate
 							extCellName = gridName + rowKey + cellId;
 						}
 						AllocationPage allocationPage = formInstancePage.cellDoubleClick(Regulator, formCode, version, instance, cellId, extCellName);
-						if (linkcell.contains("->"))
+						if (linkCell.contains("->"))
 						{
-							linkcell = linkcell.replace("->", "#");
-							for (String name : linkcell.split("#"))
+							linkCell = linkCell.replace("->", "#");
+							for (String name : linkCell.split("#"))
 							{
 								allocationPage.clickCellLink(name);
 							}
 
 						}
 						File exportedFile = new File(allocationPage.exportAllocation());
-						if (linkcell.contains("->"))
+						if (linkCell.contains("->"))
 						{
 							allocationPage.clickCellLink(cellId);
 						}
 						if (exportedFile.getName().endsWith(".csv"))
 						{
 							String caseStatus = "Pass";
-							List<String> exportcsv = CsvUtil.readFile(exportedFile);
-							List<String> expectcsv = CsvUtil.readFile(expAllocFile);
-							int rowAmt = exportcsv.size() - 1;
-							for (int id = 1; id <= rowAmt; id++)
+							List<String> export_csv = CsvUtil.readFile(exportedFile);
+							List<String> expect_csv = CsvUtil.readFile(expAllocFile);
+							int rowAmt = export_csv.size() - 1;
+							for (int id = 2; id <= rowAmt; id++)
 							{
-								String exported = exportcsv.get(id).replace("\"", "");
-								String expectedTxt = expectcsv.get(id).replace("\"", "");
-								if (!exported.equals(expectedTxt))
+								String exported = export_csv.get(id);
+								if (!expect_csv.contains(exported))
 								{
-									logger.error("Expected is[" + expectedTxt + "], but acctual is[" + exported + "]");
+									logger.error("Exported record[" + exported + "] not in expected records");
 									step2 = false;
 									caseStatus = "Fail";
 									break;
@@ -281,8 +289,8 @@ public class RetrieveForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

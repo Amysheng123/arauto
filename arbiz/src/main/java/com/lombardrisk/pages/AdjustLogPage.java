@@ -106,7 +106,7 @@ public class AdjustLogPage extends AbstractPage
 		int Nums = (int) element("alp.logTable").getRowCount();
 		if (Nums == 1)
 		{
-			if (element("alp.noRecords").getInnerText().equals("No records found."))
+			if ("No records found.".equals(element("alp.noRecords").getInnerText()))
 				Nums = 0;
 		}
 		return Nums;
@@ -201,6 +201,8 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -223,6 +225,8 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -242,6 +246,8 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -261,6 +267,8 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -280,6 +288,8 @@ public class AdjustLogPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return "";
 		}
 	}
@@ -294,7 +304,7 @@ public class AdjustLogPage extends AbstractPage
 	{
 		waitStatusDlg();
 		waitThat("alp.export").toBeClickable();
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -302,8 +312,8 @@ public class AdjustLogPage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("alp.export").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			return getOriginalFile(exportedFile, latestFile);
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+			return getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{

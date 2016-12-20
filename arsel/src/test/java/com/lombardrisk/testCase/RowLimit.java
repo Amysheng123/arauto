@@ -21,9 +21,7 @@ import com.lombardrisk.utils.fileService.TxtUtil;
 
 public class RowLimit extends TestTemplate
 {
-
-	String parentPath = new File(System.getProperty("user.dir")).getParent().toString();
-	String importFolder = System.getProperty("user.dir") + "\\data_ar\\RowLimit\\ImportFile\\";
+	String importFolder = System.getProperty("user.dir") + "/data_ar/RowLimit/ImportFile/";
 
 	@Test
 	public void test6304() throws Exception
@@ -34,7 +32,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -44,7 +42,7 @@ public class RowLimit extends TestTemplate
 			String Step6_1 = testdata.get(6);
 			String Step6_2 = testdata.get(7);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 
 			ListPage listPage = super.m.listPage;
 
@@ -123,8 +121,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -144,7 +142,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -156,7 +154,7 @@ public class RowLimit extends TestTemplate
 			String Step6_1 = testdata.get(8);
 			String Step6_2 = testdata.get(9);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Entity, Form, ReferenceDate);
@@ -235,8 +233,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -256,7 +254,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -376,8 +374,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -396,7 +394,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -408,7 +406,7 @@ public class RowLimit extends TestTemplate
 			List<String> Files = createFolderAndCopyFile("RowLimit", null);
 			String testDataFolder = Files.get(0);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -432,8 +430,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -452,7 +450,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -460,7 +458,7 @@ public class RowLimit extends TestTemplate
 			String Step6_1 = testdata.get(4);
 			String Step6_2 = testdata.get(5);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -506,8 +504,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -526,7 +524,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -538,7 +536,7 @@ public class RowLimit extends TestTemplate
 			String Step7_1 = testdata.get(8);
 			String Step7_2 = testdata.get(9);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -619,8 +617,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -639,13 +637,13 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
 			String Step6 = testdata.get(3);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -668,8 +666,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -688,13 +686,13 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
 			String Step6 = testdata.get(3);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -724,8 +722,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -745,7 +743,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String FileName = testdata.get(2);
@@ -755,7 +753,7 @@ public class RowLimit extends TestTemplate
 			String testDataFolder = Files.get(0);
 			String checkCellFileFolder = Files.get(1);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -773,13 +771,13 @@ public class RowLimit extends TestTemplate
 			}
 
 			logger.info("Begin get rule result");
-			File compareRstFile = new File(targetLogFolder + "\\rule_compareRst.txt");
+			File compareRstFile = new File(targetLogFolder + "/rule_compareRst.txt");
 			if (compareRstFile.exists())
 				compareRstFile.delete();
 			String exporteFile = formInstancePage.exportValidationResult();
 			long startTime = System.currentTimeMillis();
 			String commons[] =
-			{ parentPath + "\\public\\extension\\GetRuleResult\\GetRuleResult.exe", exporteFile, expectedValueFile.getAbsolutePath(), targetLogFolder, "Y" };
+			{ parentPath + "/public/extension/GetRuleResult/GetRuleResult.exe", exporteFile, expectedValueFile.getAbsolutePath(), targetLogFolder, "Y" };
 			logger.info("cmd args are:" + commons[0] + " " + commons[1] + " " + commons[2]);
 			Date now = new Date();
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -800,8 +798,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -820,7 +818,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -841,7 +839,7 @@ public class RowLimit extends TestTemplate
 			String testDataFolder = Files.get(0);
 			String checkCellFileFolder = Files.get(1);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -895,7 +893,7 @@ public class RowLimit extends TestTemplate
 
 			boolean s2 = getCellValueInForm(formInstancePage, Regulator, formCode, version, expectedValueFile);
 
-			importFile = new File(importFolder + "\\" + FileName2);
+			importFile = new File(importFolder + "/" + FileName2);
 			formInstancePage.importAdjustment(importFile, true, false);
 			source = testDataFolder + data3;
 			dest = checkCellFileFolder + data3;
@@ -914,8 +912,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -934,7 +932,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -955,7 +953,7 @@ public class RowLimit extends TestTemplate
 			String testDataFolder = Files.get(0);
 			String checkCellFileFolder = Files.get(1);
 
-			File importFile = new File(importFolder + "\\" + FileName);
+			File importFile = new File(importFolder + "/" + FileName);
 			ListPage listPage = super.m.listPage;
 
 			listPage.getProductListPage(Regulator, Entity, null, null);
@@ -1008,7 +1006,7 @@ public class RowLimit extends TestTemplate
 			}
 
 			boolean s2 = getCellValueInForm(formInstancePage, Regulator, formCode, version, expectedValueFile);
-			importFile = new File(importFolder + "\\" + FileName2);
+			importFile = new File(importFolder + "/" + FileName2);
 			formInstancePage.importAdjustment(importFile, true, false);
 			source = testDataFolder + data3;
 			dest = checkCellFileFolder + data3;
@@ -1027,8 +1025,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally
@@ -1047,7 +1045,7 @@ public class RowLimit extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_RowLimit, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_RowLimit, nodeName);
 			String Regulator = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Form = testdata.get(2);
@@ -1112,8 +1110,8 @@ public class RowLimit extends TestTemplate
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			testRst = false;
 		}
 		finally

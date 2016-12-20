@@ -22,10 +22,8 @@ import com.lombardrisk.utils.TestTemplate;
  */
 public abstract class AbstractPage extends PageBase
 {
-	public static String userName = "";
-	public static String password = "";
-	public static String connectedDB = "";
-	public static String format = "";
+	public static String userName, password, connectedDB, format;
+	public static boolean setOriginalName;
 
 	protected static boolean httpDownload = Boolean.parseBoolean(PropHelper.getProperty("download.enable").trim());
 
@@ -41,6 +39,7 @@ public abstract class AbstractPage extends PageBase
 		password = test.getPassword();
 		connectedDB = test.connetcedDB();
 		format = test.getFormat();
+		setOriginalName = test.isSetOriginalName();
 	}
 
 	/**
@@ -55,8 +54,8 @@ public abstract class AbstractPage extends PageBase
 		File realFile = new File(path);
 		if (realFile.isDirectory())
 		{
-			File[] subfiles = realFile.listFiles();
-			for (File file : subfiles)
+			File[] subFiles = realFile.listFiles();
+			for (File file : subFiles)
 			{
 				if (file.isDirectory())
 				{
@@ -82,7 +81,7 @@ public abstract class AbstractPage extends PageBase
 
 		List<File> list = getFiles(path, new ArrayList<File>());
 
-		if (list != null && list.size() > 0)
+		if (list != null && !list.isEmpty())
 		{
 
 			Collections.sort(list, new Comparator<File>() {
@@ -118,14 +117,10 @@ public abstract class AbstractPage extends PageBase
 	protected static String getLatestFile(String path)
 	{
 		List<File> files = sortFileByModifiedTime(path);
-		try
-		{
+		if (!files.isEmpty())
 			return files.get(0).toString();
-		}
-		catch (Exception e)
-		{
+		else
 			return "";
-		}
 	}
 
 	/**
@@ -140,7 +135,7 @@ public abstract class AbstractPage extends PageBase
 		return test.getRandomString(length);
 	}
 
-	public void refreshPage() throws Exception
+	public void refreshPage()
 	{
 		getWebDriverWrapper().navigate().refresh();
 	}
@@ -152,9 +147,22 @@ public abstract class AbstractPage extends PageBase
 	 */
 	protected void waitStatusDlg() throws Exception
 	{
-		waitThat("ap.ajaxstatusDlg").toBeInvisible();
-		waitThat("ap.ajaxstatusDlg2").toBeInvisible();
-		Thread.sleep(500);
+		while (element("ap.ajaxstatusDlg").isDisplayed())
+		{
+			Thread.sleep(500);
+		}
+		while (element("ap.ajaxstatusDlg2").isDisplayed())
+		{
+			Thread.sleep(500);
+		}
+		/*
+		 * if(element("ap.ajaxstatusDlg").isDisplayed())
+		 * waitThat("ap.ajaxstatusDlg").toBeInvisible();
+		 * if(element("ap.ajaxstatusDlg2").isDisplayed())
+		 * waitThat("ap.ajaxstatusDlg2").toBeInvisible();
+		 * 
+		 * Thread.sleep(500);
+		 */
 	}
 
 	/**
@@ -162,15 +170,15 @@ public abstract class AbstractPage extends PageBase
 	 * 
 	 * @throws Exception
 	 */
-	protected void waitForPageLoaded() throws Exception
+	protected void waitForPageLoaded() throws InterruptedException
 	{
 		String js = "return document.readyState";
-		boolean rst = executeScript(js).equals("complete");
+		boolean rst = "complete".equals(executeScript(js));
 		while (!rst)
 		{
 			logger.info("Current status is[" + executeScript(js) + "],loading...");
 			Thread.sleep(300);
-			rst = executeScript(js).equals("complete");
+			rst = "complete".equals(executeScript(js));
 		}
 		Thread.sleep(300);
 	}
@@ -189,18 +197,17 @@ public abstract class AbstractPage extends PageBase
 		{
 			try
 			{
-				if (element(locator).getAllOptions().size() == 0)
-				{
-
-				}
+				if (!element(locator).getAllOptions().isEmpty())
+					break;
 				long cur = System.currentTimeMillis();
 				if ((cur - init) / 1000 > 5)
 					break;
 			}
 			catch (StaleElementReferenceException e)
 			{
+				logger.warn("Try again");
+				// e.printStackTrace();
 				i++;
-				logger.info("Try again");
 			}
 		}
 
@@ -213,12 +220,10 @@ public abstract class AbstractPage extends PageBase
 	 * @return Return
 	 * @throws Exception
 	 */
-	protected List<String> splitReturn(String returnName) throws Exception
+	protected List<String> splitReturn(String returnName)
 	{
 		List<String> returnNV = new ArrayList<>();
-		String formCode;
-		String formVersion;
-		String Form;
+		String formCode, formVersion, Form;
 		if (returnName.contains("("))
 		{
 			returnName = returnName.replace("(", "#");
@@ -248,7 +253,7 @@ public abstract class AbstractPage extends PageBase
 	 * 
 	 * @throws Exception
 	 */
-	protected void clickEnterKey() throws Exception
+	protected void clickEnterKey() throws InterruptedException
 	{
 		actions().sendKeys(Keys.ENTER).perform();
 		Thread.sleep(1000);
@@ -263,34 +268,30 @@ public abstract class AbstractPage extends PageBase
 	protected void selectDate(String date) throws Exception
 	{
 		getFormatFromDB();
-		String year = null;
-		String month = null;
-		String day = null;
-
-		if (format == null)
+		String year, month, day;
+		if ("en_GB".equalsIgnoreCase(format))
 		{
 			month = date.substring(3, 5);
 			day = date.substring(0, 2);
 			year = date.substring(6, 10);
 		}
-
-		else if (format.equalsIgnoreCase("en_GB"))
-		{
-			month = date.substring(3, 5);
-			day = date.substring(0, 2);
-			year = date.substring(6, 10);
-		}
-		else if (format.equalsIgnoreCase("en_US"))
+		else if ("en_US".equalsIgnoreCase(format))
 		{
 			day = date.substring(3, 5);
 			month = date.substring(0, 2);
 			year = date.substring(6, 10);
 		}
-		else if (format.equalsIgnoreCase("zh_CN"))
+		else if ("zh_CN".equalsIgnoreCase(format))
 		{
 			month = date.substring(8, 10);
 			day = date.substring(5, 7);
 			year = date.substring(0, 4);
+		}
+		else
+		{
+			month = date.substring(3, 5);
+			day = date.substring(0, 2);
+			year = date.substring(6, 10);
 		}
 		if (day.startsWith("0"))
 		{
@@ -377,7 +378,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param Regulator
 	 * @return IDRangeStart
 	 */
-	protected String getRegulatorIDRangeStart(String Regulator)
+	protected String getRegulatorIDRangeStart(String Regulator) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getRegulatorIDRangeStart(Regulator);
@@ -389,7 +390,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param Regulator
 	 * @return IDRangEnd
 	 */
-	protected String getRegulatorIDRangEnd(String Regulator)
+	protected String getRegulatorIDRangEnd(String Regulator) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getRegulatorIDRangEnd(Regulator);
@@ -401,7 +402,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param Regulator
 	 * @return prefix
 	 */
-	protected String getToolsetRegPrefix(String Regulator)
+	protected String getToolsetRegPrefix(String Regulator) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getToolsetRegPrefix(Regulator);
@@ -416,7 +417,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param cellName
 	 * @return grid name
 	 */
-	protected String getExtendCellName(String Regulator, String formCode, String version, String cellName)
+	protected String getExtendCellName(String Regulator, String formCode, String version, String cellName) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getExtendCellName(Regulator, formCode, version, cellName);
@@ -432,7 +433,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param extendCell
 	 * @return page name(List)
 	 */
-	protected List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell)
+	protected List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getPageNames(Regulator, form, version, cellName, extendCell);
@@ -448,7 +449,7 @@ public abstract class AbstractPage extends PageBase
 	 * @param extendCell
 	 * @return cell Type
 	 */
-	protected String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell)
+	protected String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell) throws Exception
 	{
 		TestTemplate test = new TestTemplate();
 		return test.getCellType(Regulator, formCode, version, cellName, extendCell);
@@ -467,10 +468,9 @@ public abstract class AbstractPage extends PageBase
 	{
 		if (exportType == null)
 			exportType = "";
-		String filePath = null;
+		String filePath, fileName = null;
 		if (dir == null)
-			dir = FileUtils.getUserDirectoryPath() + "\\downloads\\";
-		String fileName = null;
+			dir = FileUtils.getUserDirectoryPath() + "/downloads/";
 		boolean flag = true;
 		long statTime = System.currentTimeMillis();
 
@@ -480,7 +480,7 @@ public abstract class AbstractPage extends PageBase
 			long curTime = System.currentTimeMillis();
 			if (!fileName.equalsIgnoreCase(LatestFileName) && !fileName.endsWith(".tmp") && !fileName.endsWith(".crdownload"))
 				flag = false;
-			else if ((curTime - statTime) / 1000 > 300)
+			else if ((curTime - statTime) / 1000 > 600)
 			{
 				flag = false;
 				fileName = null;
@@ -495,7 +495,7 @@ public abstract class AbstractPage extends PageBase
 			filePath = fileName;
 		else
 		{
-			File exportedFile = new File("target\\result\\data\\download\\" + new File(fileName).getName());
+			File exportedFile = new File("target/result/data/download/" + new File(fileName).getName());
 			if (exportedFile.exists())
 				exportedFile.delete();
 			if (fileName != null)
@@ -525,9 +525,9 @@ public abstract class AbstractPage extends PageBase
 	 * @return true or false
 	 * @throws Exception
 	 */
-	protected boolean isJobSuccessed() throws Exception
+	protected boolean isJobSucceed() throws Exception
 	{
-		boolean isSucess = false;
+		boolean isSuccess = false;
 		boolean flag = true;
 		while (flag)
 		{
@@ -535,7 +535,7 @@ public abstract class AbstractPage extends PageBase
 			if (status != null)
 			{
 				if (!status.equalsIgnoreCase("FAILED"))
-					isSucess = true;
+					isSuccess = true;
 				flag = false;
 			}
 			else
@@ -544,7 +544,7 @@ public abstract class AbstractPage extends PageBase
 			}
 		}
 		Thread.sleep(10000);
-		return isSucess;
+		return isSuccess;
 	}
 
 	/**
@@ -605,10 +605,10 @@ public abstract class AbstractPage extends PageBase
 		return DBQuery.queryRecordSpecDB("ar", null, SQL);
 	}
 
-	public String getOriginalFile(String exportedFile, String latestFile) throws Exception
+	public String getOriginalFile(String exportedFile, String latestFile, boolean getOriginalName) throws Exception
 	{
 		String file;
-		if (PropHelper.getProperty("getOriginalName").trim().equalsIgnoreCase("true"))
+		if (getOriginalName)
 		{
 			String oldName = new File(exportedFile).getName();
 			String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");

@@ -45,7 +45,7 @@ public class JobResultPage extends AbstractPage
 
 	public String exportLog() throws Exception
 	{
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -54,8 +54,8 @@ public class JobResultPage extends AbstractPage
 			element("jrp.exportLog").click();
 			waitStatusDlg();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			return getOriginalFile(exportedFile, latestFile);
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+			return getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{

@@ -438,7 +438,7 @@ public class ListPage extends AbstractPage
 		TestCaseManager.getTestCase().setPrepareToDownload(true);
 		element("lp.exportFormList").click();
 		TestCaseManager.getTestCase().stopTransaction();
-		String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
+		String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
 		String oldName = new File(exportedFile).getName();
 		String path = new File(exportedFile).getAbsolutePath().replace(oldName, "");
 		String fileName = TestCaseManager.getTestCase().getDefaultDownloadFileName();
@@ -1097,7 +1097,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 			formInstanceCreatePage.createCloseClick();
 			return null;
 		}
@@ -1142,7 +1142,7 @@ public class ListPage extends AbstractPage
 			{
 				logger.error("Create form form excel failed");
 				listImportFilePage.closeImportFileDlg(type);
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 			if (element("lp.warnConfirmBtn").isDisplayed())
 			{
@@ -1190,13 +1190,13 @@ public class ListPage extends AbstractPage
 			catch (Exception e)
 			{
 				logger.error("Import adjustment failed");
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 			Thread.sleep(500);
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 			listImportFilePage.closeImportFileDlg(type);
 		}
 		return new FormInstancePage(getWebDriverWrapper());
@@ -1232,7 +1232,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -1262,7 +1262,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -1306,7 +1306,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 		finally
@@ -1399,7 +1399,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 			return "";
 		}
 		finally
@@ -1458,7 +1458,7 @@ public class ListPage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 
 		if (openForm)
@@ -1512,7 +1512,7 @@ public class ListPage extends AbstractPage
 			}
 			exportXBRLPage.selectCompressType(compressType);
 		}
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		exportToFilePage.exportBtnClick(FileType);
 
@@ -1542,8 +1542,8 @@ public class ListPage extends AbstractPage
 		if (filePath == null)
 			if (httpDownload)
 			{
-				String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-				filePath = getOriginalFile(exportedFile, latestFile);
+				String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+				filePath = getOriginalFile(exportedFile, latestFile, true);
 			}
 			else
 				filePath = downloadFile(FileType, latestFile, null);
@@ -1792,7 +1792,8 @@ public class ListPage extends AbstractPage
 		}
 		finally
 		{
-			formInstanceCreatePage.createCloseClick();
+			if (formInstanceCreatePage != null)
+				formInstanceCreatePage.createCloseClick();
 		}
 
 		return isExistForm;
@@ -1917,7 +1918,7 @@ public class ListPage extends AbstractPage
 	 * @return true or false
 	 * @throws Exception
 	 */
-	public boolean isExistImportAdjsutment() throws Exception
+	public boolean isExistImportAdjustment() throws Exception
 	{
 		return element("lp.import").isDisplayed();
 	}
@@ -1967,6 +1968,7 @@ public class ListPage extends AbstractPage
 	 */
 	public JobManagerPage enterJobManagerPage() throws Exception
 	{
+		logger.info("Enter job manager page");
 		element("lp.JobManger").click();
 		waitStatusDlg();
 		Thread.sleep(1500);

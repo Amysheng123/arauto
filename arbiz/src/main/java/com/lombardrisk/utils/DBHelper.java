@@ -108,7 +108,7 @@ public class DBHelper
 		catch (SQLException e)
 		{
 			logger.error("Database connection failed!");
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 	}
 
@@ -122,91 +122,163 @@ public class DBHelper
 		catch (SQLException e)
 		{
 			logger.error("Database close failed!");
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 	}
 
-	protected String query(String sql)
+	protected String query(String sql) throws SQLException
 	{
 		if (conn == null)
 			return null;
-		ResultSet rs = null;
-		String value = null;
-		try
+		else
 		{
-			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			rs = stmt.executeQuery(sql);
-			ResultSetMetaData rsmd = rs.getMetaData();
-			while (rs.next())
+			String value = null;
+			Statement stmt = null;
+			ResultSet rs = null;
+			try
 			{
-				String type = rsmd.getColumnClassName(1).toString();
-				if (type.equals("oracle.jdbc.OracleClob"))
-					value = rs.getClob(1).getSubString((long) 1, (int) rs.getClob(1).length());
-				else if (type.equals("java.math.BigDecimal"))
-					value = String.valueOf(rs.getBigDecimal(1));
-				else
-					value = rs.getString(1);
-			}
+				stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				rs = stmt.executeQuery(sql);
+				ResultSetMetaData rsmd = rs.getMetaData();
+				while (rs.next())
+				{
+					String type = rsmd.getColumnClassName(1).toString();
+					if (type.equals("oracle.jdbc.OracleClob"))
+						value = rs.getClob(1).getSubString((long) 1, (int) rs.getClob(1).length());
+					else if (type.equals("java.math.BigDecimal"))
+						value = String.valueOf(rs.getBigDecimal(1));
+					else
+						value = rs.getString(1);
+				}
 
+			}
+			catch (SQLException e)
+			{
+				logger.info("SQLException in [" + sql + "]");
+				logger.error("error", e);
+			}
+			finally
+			{
+				if (stmt != null)
+					stmt.close();
+				if (rs != null)
+					rs.close();
+			}
+			return value;
 		}
-		catch (SQLException e)
-		{
-			logger.info("SQLException in [" + sql + "]");
-			logger.error(e.getMessage());
-		}
-		return value;
 	}
 
-	protected List<String> queryRecords(String sql)
+	protected List<List<String>> queryRecord(String sql) throws SQLException
 	{
 		if (conn == null)
 			return null;
-		ArrayList<String> rst = new ArrayList<String>();
-		ResultSet rs = null;
-		try
+		else
 		{
-			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			rs = stmt.executeQuery(sql);
-			ResultSetMetaData rsmd = rs.getMetaData();
-			while (rs.next())
+			ResultSet rs = null;
+			Statement stmt = null;
+			List<List<String>> value = new ArrayList<>();
+			try
 			{
-				String type = rsmd.getColumnClassName(1).toString();
-				if (type.equals("oracle.jdbc.OracleClob"))
-					rst.add(rs.getClob(1).getSubString((long) 1, (int) rs.getClob(1).length()));
-				else if (type.equals("java.math.BigDecimal"))
-					rst.add(String.valueOf(rs.getBigDecimal(1)));
-				else
-					rst.add(rs.getString(1));
-			}
-		}
-		catch (SQLException e)
-		{
-			logger.info("SQLException in [" + sql + "]");
-			logger.error(e.getMessage());
-		}
+				stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				rs = stmt.executeQuery(sql);
+				ResultSetMetaData rsmd = rs.getMetaData();
+				int columnNum = rsmd.getColumnCount();
+				while (rs.next())
+				{
+					List<String> rowData = new ArrayList<>();
+					for (int columnIndex = 1; columnIndex <= columnNum; columnIndex++)
+					{
+						String cellValue = "";
+						String type = rsmd.getColumnClassName(columnIndex).toString();
+						if (type.equals("oracle.jdbc.OracleClob"))
+							cellValue = rs.getClob(columnIndex).getSubString((long) 1, (int) rs.getClob(columnIndex).length());
+						else if (type.equals("java.math.BigDecimal"))
+							cellValue = String.valueOf(rs.getBigDecimal(columnIndex));
+						else
+							cellValue = rs.getString(columnIndex);
+						rowData.add(cellValue);
+					}
+					value.add(rowData);
+				}
 
-		return rst;
+			}
+			catch (SQLException e)
+			{
+				logger.info("SQLException in [" + sql + "]");
+				logger.error("error", e);
+			}
+			finally
+			{
+				if (stmt != null)
+					stmt.close();
+				if (rs != null)
+					rs.close();
+			}
+			return value;
+		}
+	}
+
+	protected List<String> queryRecords(String sql) throws SQLException
+	{
+		if (conn == null)
+			return null;
+		else
+		{
+			ArrayList<String> rst = new ArrayList<>();
+			ResultSet rs = null;
+			Statement stmt = null;
+			try
+			{
+				stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				rs = stmt.executeQuery(sql);
+				ResultSetMetaData rsmd = rs.getMetaData();
+				while (rs.next())
+				{
+					String type = rsmd.getColumnClassName(1).toString();
+					if (type.equals("oracle.jdbc.OracleClob"))
+						rst.add(rs.getClob(1).getSubString((long) 1, (int) rs.getClob(1).length()));
+					else if (type.equals("java.math.BigDecimal"))
+						rst.add(String.valueOf(rs.getBigDecimal(1)));
+					else
+						rst.add(rs.getString(1));
+				}
+			}
+			catch (SQLException e)
+			{
+				logger.info("SQLException in [" + sql + "]");
+				logger.error("error", e);
+			}
+			finally
+			{
+				if (stmt != null)
+					stmt.close();
+				if (rs != null)
+					rs.close();
+			}
+			return rst;
+		}
 	}
 
 	protected int update(String sql)
 	{
 		if (conn == null)
 			return 0;
-
-		QueryRunner run = new QueryRunner();
-		int result = 0;
-
-		try
+		else
 		{
-			result = run.update(conn, sql);
-		}
-		catch (SQLException e)
-		{
-			logger.info("SQLException in [" + sql + "]");
-			logger.error(e.getMessage());
-		}
+			QueryRunner run = new QueryRunner();
+			int result = 0;
 
-		return result;
+			try
+			{
+				result = run.update(conn, sql);
+			}
+			catch (SQLException e)
+			{
+				logger.info("SQLException in [" + sql + "]");
+				logger.error("error", e);
+			}
+			return result;
+		}
 	}
 
 	protected void setConn(Connection conn)

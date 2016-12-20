@@ -40,7 +40,7 @@ public class DataSchedule extends TestTemplate
 		logger.info("============testDSRetrieve=============");
 		ListPage listPage = super.m.listPage;
 		boolean testRst = true;
-		File testDataFile = new File(testDataFolderName + "\\DataSchedule\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/DataSchedule/" + fileName);
 		int rouNums = ExcelUtil.getRowNums(testDataFile, null);
 		for (int index = 1; index <= rouNums; index++)
 		{
@@ -392,8 +392,8 @@ public class DataSchedule extends TestTemplate
 				catch (RuntimeException e)
 				{
 					testRst = false;
-					e.printStackTrace();
-					logger.error(e.getMessage());
+					// e.printStackTrace();
+					logger.error("error", e);
 				}
 				finally
 				{
@@ -421,7 +421,7 @@ public class DataSchedule extends TestTemplate
 			testRstFile = new File(testRstFile.getParent() + fileName);
 
 		ListPage listPage = super.m.listPage;
-		File testDataFile = new File(testDataFolderName + "\\DataSchedule\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/DataSchedule/" + fileName);
 		for (int i = 1; i <= ExcelUtil.getRowNums(testDataFile, null); i++)
 		{
 			ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, i);
@@ -494,7 +494,7 @@ public class DataSchedule extends TestTemplate
 						boolean lock = false;
 						if (caseId.equalsIgnoreCase("6122"))
 							lock = true;
-						String actualMessage = formInstancePage.getExportDataSchduleMessage(fileType, module, compressType, lock);
+						String actualMessage = formInstancePage.getExportDataScheduleMessage(fileType, module, compressType, lock);
 						if (!actualMessage.equalsIgnoreCase(message))
 						{
 							testRst = false;
@@ -505,19 +505,19 @@ public class DataSchedule extends TestTemplate
 					{
 						String dateString = referenceDate.replace("/", "");
 						dateString = dateString.substring(4, 8) + dateString.substring(2, 4) + dateString.substring(0, 2);
-						location = location + "Submission\\" + regulatorPrefix + "\\" + Group + "\\" + dateString + "\\";
+						location = location + "Submission/" + regulatorPrefix + "/" + Group + "/" + dateString + "/";
 						File folderFile = new File(location);
 						FileUtils.cleanDirectory(folderFile);
 						if (errorLog.length() > 0)
 						{
 							logger.info("File location is:" + location);
-							location = location + "ValidationErrors\\";
-							testRst = formInstancePage.isExportDataSchduleSucessed(fileType, module, compressType, "test export", location);
+							location = location + "ValidationErrors/";
+							testRst = formInstancePage.isExportDataSchduleSucceed(fileType, module, compressType, "test export", location);
 						}
 						else
 						{
 							logger.info("File location is:" + location);
-							boolean exportRst = formInstancePage.isExportDataSchduleSucessed(fileType, module, compressType, "test export", location);
+							boolean exportRst = formInstancePage.isExportDataSchduleSucceed(fileType, module, compressType, "test export", location);
 							if (!exportRst)
 								testRst = false;
 							if (baseline.length() > 1 && testRst)
@@ -541,11 +541,11 @@ public class DataSchedule extends TestTemplate
 					}
 					else
 					{
-						String dateString = referenceDate.replace("\\", "");
+						String dateString = referenceDate.replace("/", "");
 						dateString = dateString.substring(4, 8) + dateString.substring(0, 5);
-						location = location + "\\Submission\\" + regulatorPrefix + "\\" + Group + "\\" + dateString + "\\";
+						location = location + "/Submission/" + regulatorPrefix + "/" + Group + "/" + dateString + "/";
 						logger.info("File location is:" + location);
-						boolean exportRst = formInstancePage.isExportDataSchduleSucessed(fileType, module, compressType, "test export", location);
+						boolean exportRst = formInstancePage.isExportDataSchduleSucceed(fileType, module, compressType, "test export", location);
 						if (exportRst)
 						{
 							testRst = false;
@@ -589,8 +589,8 @@ public class DataSchedule extends TestTemplate
 				catch (RuntimeException e)
 				{
 					testRst = false;
-					e.printStackTrace();
-					logger.error(e.getMessage());
+					// e.printStackTrace();
+					logger.error("error", e);
 				}
 				finally
 				{

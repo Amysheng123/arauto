@@ -109,16 +109,16 @@ public class FormInstancePage extends AbstractPage
 		{
 			if (element("fp.inputCell", cellId).isDisplayed())
 			{
-				if (element("fp.inputCell", cellId).getAttribute("type").equals("checkbox"))
+				if ("checkbox".equals(element("fp.inputCell", cellId).getAttribute("type")))
 				{
 					String part1 = element("fp.inputCell", cellId).getAttribute("onfocus").replace("onCellFocus", "");
 					String part2 = part1.substring(1, part1.length() - 2).replace(" ", "").replace("\'", "").replace(",", "~");
 					String[] rsts = part2.split("~");
-					if (rsts[2].equals("checked"))
+					if ("checked".equals(rsts[2]))
 					{
 						cellValue = "1";
 					}
-					else if (rsts[2].equals("unchecked"))
+					else if ("unchecked".equals(rsts[2]))
 					{
 						cellValue = "0";
 					}
@@ -127,7 +127,7 @@ public class FormInstancePage extends AbstractPage
 				{
 					cellValue = element("fp.inputCell", cellId).getAttribute("value");
 					String attr = element("fp.inputCell", cellId).getAttribute("onfocus").replace("hideScale();onCellFocus(", "").replace(");", "").replace("'", "");
-					if (!attr.split(",")[3].equalsIgnoreCase("C"))
+					if (!"C".equalsIgnoreCase(attr.split(",")[3]))
 						cellValue = trimRight(cellValue);
 				}
 
@@ -135,7 +135,7 @@ public class FormInstancePage extends AbstractPage
 			}
 			else
 			{
-				if (element("fp.nextPageSta").isDisplayed() && !element("fp.nextPageSta").getAttribute("tabindex").equals("-1"))
+				if (element("fp.nextPageSta").isDisplayed() && !"-1".equals(element("fp.nextPageSta").getAttribute("tabindex")))
 				{
 					element("fp.nextPage").click();
 					waitStatusDlg();
@@ -182,16 +182,16 @@ public class FormInstancePage extends AbstractPage
 		{
 			if (element("fp.inputCell", cellId).isDisplayed())
 			{
-				if (element("fp.inputCell", cellId).getAttribute("type").equals("checkbox"))
+				if ("checkbox".equals(element("fp.inputCell", cellId).getAttribute("type")))
 				{
 					String part1 = element("fp.inputCell", cellId).getAttribute("onfocus").replace("onCellFocus", "");
 					String part2 = part1.substring(1, part1.length() - 2).replace(" ", "").replace("\'", "").replace(",", "~");
 					String[] rsts = part2.split("~");
-					if (rsts[2].equals("checked"))
+					if ("checked".equals(rsts[2]))
 					{
 						cellValue = "1";
 					}
-					else if (rsts[2].equals("unchecked"))
+					else if ("unchecked".equals(rsts[2]))
 					{
 						cellValue = "0";
 					}
@@ -200,7 +200,7 @@ public class FormInstancePage extends AbstractPage
 				{
 					cellValue = element("fp.inputCell", cellId).getAttribute("value");
 					String attr = element("fp.inputCell", cellId).getAttribute("onfocus").replace("hideScale();onCellFocus(", "").replace(");", "").replace("'", "");
-					if (!attr.split(",")[3].equalsIgnoreCase("C"))
+					if (!"C".equalsIgnoreCase(attr.split(",")[3]))
 						cellValue = cellValue.trim();
 				}
 
@@ -208,7 +208,7 @@ public class FormInstancePage extends AbstractPage
 			}
 			else
 			{
-				if (element("fp.nextPageSta2", startCell).isDisplayed() && !element("fp.nextPageSta2", startCell).getAttribute("tabindex").equals("-1"))
+				if (element("fp.nextPageSta2", startCell).isDisplayed() && !"-1".equals(element("fp.nextPageSta2", startCell).getAttribute("tabindex")))
 				{
 					element("fp.nextPage2", startCell).click();
 					waitStatusDlg();
@@ -235,15 +235,19 @@ public class FormInstancePage extends AbstractPage
 	 */
 	public String getCellText(String Regulator, String formCode, String version, String instance, String cellId, String extendCell) throws Exception
 	{
-		String cellPage = getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
-		logger.info("Cell[" + cellId + "] in page[" + cellPage + "]");
+		String cellName;
+		if (!element("fp.inputCell", cellId).isDisplayed() && !element("fp.inputCell", extendCell).isDisplayed())
+		{
+			String cellPage = getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
+			logger.info("Cell[" + cellId + "] in page[" + cellPage + "]");
+		}
+		else
+			selectInstance(instance);
 
-		String cellName = null;
 		if (extendCell != null)
 			cellName = extendCell;
 		else
 			cellName = cellId;
-
 		return getCellText(cellName);
 	}
 
@@ -301,6 +305,33 @@ public class FormInstancePage extends AbstractPage
 	}
 
 	/**
+	 * enter rejection page
+	 * 
+	 * @param Regulator
+	 * @param formCode
+	 * @param version
+	 * @param instance
+	 * @param cellId
+	 * @param extendCell
+	 * @return RejectionPage
+	 * @throws Exception
+	 */
+	public RejectionPage enterRejectionPage(String Regulator, String formCode, String version, String instance, String cellId, String extendCell) throws Exception
+	{
+		getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
+		selectInstance(instance);
+		if (extendCell != null)
+			element("fp.inputCell", extendCell).doubleClick();
+		else
+			element("fp.inputCell", cellId).doubleClick();
+		waitStatusDlg();
+		Thread.sleep(1000);
+		element("fp.rejection").click();
+		waitStatusDlg();
+		return new RejectionPage(getWebDriverWrapper());
+	}
+
+	/**
 	 * edit cell that is checkbox
 	 *
 	 * @param Regulator
@@ -316,7 +347,7 @@ public class FormInstancePage extends AbstractPage
 	{
 		if (tick)
 		{
-			if (!getCellText(Regulator, formCode, version, instance, cellId, extendCell).equals("1"))
+			if (!"1".equals(getCellText(Regulator, formCode, version, instance, cellId, extendCell)))
 				element("fp.inputCell", cellId).click();
 		}
 		waitStatusDlg();
@@ -358,9 +389,9 @@ public class FormInstancePage extends AbstractPage
 		if (id != null)
 		{
 			logger.info("id of input is:" + id);
-			if (!id.equalsIgnoreCase("selectCellEditor"))
+			if (!"selectCellEditor".equalsIgnoreCase(id))
 			{
-				if (id.equalsIgnoreCase("dateCellEditor_input"))
+				if ("dateCellEditor_input".equalsIgnoreCase(id))
 				{
 					element("fp.cellID", id).click();
 					waitThat().timeout(300);
@@ -370,7 +401,7 @@ public class FormInstancePage extends AbstractPage
 				else
 				{
 					element("fp.cellID", id).input(text);
-					if (id.equalsIgnoreCase("dateCellEditor_input"))
+					if ("dateCellEditor_input".equalsIgnoreCase(id))
 						element("fp.currentDay").click();
 				}
 			}
@@ -419,7 +450,7 @@ public class FormInstancePage extends AbstractPage
 	private void editCellValue(String cellId, String text, String comment) throws Exception
 	{
 		editCell(cellId, text);
-		if (comment != null && !comment.equals(""))
+		if (comment != null && !"".equals(comment))
 			element("fp.comment").input(comment);
 		cellEditOkBtnClick();
 	}
@@ -664,7 +695,7 @@ public class FormInstancePage extends AbstractPage
 		int amt = (int) element("fp.pageTab").getRowCount();
 		for (int i = 1; i <= amt; i++)
 		{
-			if (element("fp.pageState", String.valueOf(i)).getAttribute("aria-selected").equals("true"))
+			if ("true".equals(element("fp.pageState", String.valueOf(i)).getAttribute("aria-selected")))
 			{
 				pageName = element("fp.pageName", String.valueOf(i)).getInnerText();
 				break;
@@ -702,7 +733,7 @@ public class FormInstancePage extends AbstractPage
 	{
 		if (element("fp.valNowBtn").isDisplayed())
 		{
-			if (element("fp.valNowBtn").getAttribute("aria-disabled").equals("true"))
+			if ("true".equals(element("fp.valNowBtn").getAttribute("aria-disabled")))
 				return false;
 			else
 				return true;
@@ -715,7 +746,7 @@ public class FormInstancePage extends AbstractPage
 	{
 		if (element("fp.liveVal").isDisplayed())
 		{
-			if (element("fp.liveVal").getAttribute("aria-disabled").equals("true"))
+			if ("true".equals(element("fp.liveVal").getAttribute("aria-disabled")))
 				return false;
 			else
 				return true;
@@ -783,6 +814,8 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (NoSuchElementException e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -836,6 +869,8 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (NoSuchElementException e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -862,7 +897,7 @@ public class FormInstancePage extends AbstractPage
 			}
 			catch (NoSuchElementException e)
 			{
-				logger.warn(e.getMessage());
+				logger.warn("warn", e);
 			}
 
 			if (element("fp.approve").isDisplayed() && element("fp.reject").isDisplayed())
@@ -870,6 +905,8 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (NoSuchElementException e)
 		{
+			logger.warn("warn", e);
+			// e.printStackTrace();
 			visible = false;
 		}
 		return visible;
@@ -911,6 +948,7 @@ public class FormInstancePage extends AbstractPage
 			}
 			catch (Exception e1)
 			{
+				logger.warn(e1.getMessage());
 				e1.printStackTrace();
 			}
 		}
@@ -962,7 +1000,7 @@ public class FormInstancePage extends AbstractPage
 	 * @param instanceName
 	 * @throws Exception
 	 */
-	private void inputInstanName(String instanceName) throws Exception
+	private void inputInstanceName(String instanceName) throws Exception
 	{
 		if (!element("fp.select.addInstance").isDisplayed())
 		{
@@ -1375,7 +1413,7 @@ public class FormInstancePage extends AbstractPage
 	{
 		boolean rst = false;
 		addPageInstanceClick();
-		inputInstanName(instanceName);
+		inputInstanceName(instanceName);
 
 		if (getCurrentPageInstance().equals(instanceName))
 			rst = true;
@@ -1442,7 +1480,7 @@ public class FormInstancePage extends AbstractPage
 		{
 			importRst = false;
 			importFileInReturnPage.closeImportFileDlg(type);
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return importRst;
 	}
@@ -1473,7 +1511,7 @@ public class FormInstancePage extends AbstractPage
 		catch (Exception e)
 		{
 			importFileInReturnPage.closeImportFileDlg(type);
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		return error;
 	}
@@ -1497,7 +1535,7 @@ public class FormInstancePage extends AbstractPage
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -1661,7 +1699,7 @@ public class FormInstancePage extends AbstractPage
 	{
 		logger.info("Begin exprot to " + fileType);
 		String filePath = null;
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		exportToFileClick(fileType, Form, Module, compressType, null);
 		boolean flag = true;
@@ -1687,8 +1725,8 @@ public class FormInstancePage extends AbstractPage
 		{
 			if (httpDownload)
 			{
-				String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-				filePath = getOriginalFile(exportedFile, latestFile);
+				String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+				filePath = getOriginalFile(exportedFile, latestFile, true);
 			}
 			else
 				filePath = downloadFile(fileType, latestFile, null);
@@ -1710,12 +1748,12 @@ public class FormInstancePage extends AbstractPage
 		logger.info("Begin exprot to " + fileType);
 		fileType = fileType.toLowerCase();
 		exportToFileClick(fileType, null, Module, compressType, null);
-		if (isJobSuccessed())
+		if (isJobSucceed())
 		{
-			logger.info("Export to dataSchdule successed");
+			logger.info("Export to dataSchedule succeed");
 		}
 		else
-			logger.error("Export to dataSchdule failed");
+			logger.error("Export to dataSchedule failed");
 
 	}
 
@@ -1730,29 +1768,29 @@ public class FormInstancePage extends AbstractPage
 	 * @return
 	 * @throws Exception
 	 */
-	public boolean isExportDataSchduleSucessed(String fileType, String Module, String compressType, String comment, String location) throws Exception
+	public boolean isExportDataSchduleSucceed(String fileType, String Module, String compressType, String comment, String location) throws Exception
 	{
 		logger.info("Begin exprot to " + fileType);
 		boolean exportRst = false;
 		fileType = fileType.toLowerCase();
 		String latest = getLatestFile(location);
 		exportToFileClick(fileType, null, Module, compressType, comment);
-		if (isJobSuccessed())
+		if (isJobSucceed())
 		{
 			String downloadedFile = downloadFile(fileType, latest, location).toLowerCase();
-			if (compressType.equals("NONE"))
+			if ("NONE".equals(compressType))
 			{
-				if (fileType.equals("ds"))
+				if ("ds".equals(fileType))
 				{
 					if (downloadedFile.endsWith(".xml"))
 						exportRst = true;
 				}
-				else if (fileType.equals("ds(csv)"))
+				else if ("ds(csv)".equals(fileType))
 				{
 					if (downloadedFile.endsWith(".csv"))
 						exportRst = true;
 				}
-				else if (fileType.equals("ds(txt)"))
+				else if ("ds(txt)".equals(fileType))
 				{
 					if (downloadedFile.endsWith(".txt"))
 						exportRst = true;
@@ -1766,9 +1804,9 @@ public class FormInstancePage extends AbstractPage
 			}
 		}
 		if (exportRst)
-			logger.info("Export to dataSchdule successed");
+			logger.info("Export to dataSchedule succeed");
 		else
-			logger.error("Export to dataSchdule failed");
+			logger.error("Export to dataSchedule failed");
 		return exportRst;
 	}
 
@@ -1789,21 +1827,21 @@ public class FormInstancePage extends AbstractPage
 		fileType = fileType.toLowerCase();
 		String latest = getLatestFile(location);
 		exportToFileClick(fileType, null, Module, compressType, comment);
-		isJobSuccessed();
+		isJobSucceed();
 		String downloadedFile = downloadFile(fileType, latest, location).toLowerCase();
-		if (compressType.equals("NONE"))
+		if ("NONE".equals(compressType))
 		{
-			if (fileType.equals("ds"))
+			if ("ds".equals(fileType))
 			{
 				if (downloadedFile.endsWith(".xml"))
 					exportRst = true;
 			}
-			else if (fileType.equals("ds(csv)"))
+			else if ("ds(csv)".equals(fileType))
 			{
 				if (downloadedFile.endsWith(".csv"))
 					exportRst = true;
 			}
-			else if (fileType.equals("ds(txt)"))
+			else if ("ds(txt)".equals(fileType))
 			{
 				if (downloadedFile.endsWith(".txt"))
 					exportRst = true;
@@ -1816,9 +1854,9 @@ public class FormInstancePage extends AbstractPage
 				exportRst = true;
 		}
 		if (exportRst)
-			logger.info("Export to dataSchdule successed");
+			logger.info("Export to dataSchedule succeed");
 		else
-			logger.error("Export to dataSchdule failed");
+			logger.error("Export to dataSchedule failed");
 		return exportRst;
 	}
 
@@ -1827,9 +1865,9 @@ public class FormInstancePage extends AbstractPage
 		return getLatestFile(location);
 	}
 
-	public String getExportDataSchduleMessage(String fileType, String Module, String compressType, boolean lock) throws Exception
+	public String getExportDataScheduleMessage(String fileType, String Module, String compressType, boolean lock) throws Exception
 	{
-		logger.info("Begin exprot to " + fileType);
+		logger.info("Begin export to " + fileType);
 		String message = null;
 		exportToFileClick(fileType, null, Module, compressType, null);
 		if (lock)
@@ -1958,7 +1996,7 @@ public class FormInstancePage extends AbstractPage
 	 */
 	private void exportToFileClick(String fileType, String Form, String module, String compressType, String comment) throws Exception
 	{
-		ExportToFilePage exportToFilePage = null;
+		ExportToFilePage exportToFilePage;
 		getFormatFromDB();
 		if (fileType.equalsIgnoreCase("csv"))
 		{
@@ -2015,7 +2053,7 @@ public class FormInstancePage extends AbstractPage
 			waitStatusDlg();
 			exportToFilePage = enterExportToFiLePage(fileType, Form);
 			exportToFilePage.setModuleSelector(module, fileType);
-			exportToFilePage.setCompreeType(compressType, fileType);
+			exportToFilePage.setCompressType(compressType, fileType);
 			exportToFilePage.exportBtnClick(fileType);
 
 			if (fileType.toLowerCase().startsWith("ds"))
@@ -2776,7 +2814,7 @@ public class FormInstancePage extends AbstractPage
 		String file = null;
 		logger.info("Begin export validation result to excel");
 		enterValidation(true);
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -2784,8 +2822,8 @@ public class FormInstancePage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("fp.validationExport").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			file = getOriginalFile(exportedFile, latestFile);
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+			file = getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{
@@ -2813,7 +2851,7 @@ public class FormInstancePage extends AbstractPage
 		waitStatusDlg();
 		waitThat("fp.problemExport").toBeClickable();
 		String file = null;
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -2821,8 +2859,8 @@ public class FormInstancePage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("fp.problemExport").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			file = getOriginalFile(exportedFile, latestFile);
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+			file = getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{
@@ -2869,7 +2907,7 @@ public class FormInstancePage extends AbstractPage
 		element("fp.showImportLog").click();
 		Thread.sleep(3000);
 		String file = null;
-		String dir = FileUtils.getUserDirectoryPath() + "\\downloads";
+		String dir = FileUtils.getUserDirectoryPath() + "/downloads";
 		String latestFile = getLatestFile(dir);
 		if (httpDownload)
 		{
@@ -2877,8 +2915,8 @@ public class FormInstancePage extends AbstractPage
 			TestCaseManager.getTestCase().setPrepareToDownload(true);
 			element("fp.firstExportBrn").click();
 			TestCaseManager.getTestCase().stopTransaction();
-			String exportedFile = TestCaseManager.getTestCase().getDownloadFile();
-			file = getOriginalFile(exportedFile, latestFile);
+			String exportedFile = System.getProperty("user.dir") + "/" + TestCaseManager.getTestCase().getDownloadFile();
+			file = getOriginalFile(exportedFile, latestFile, setOriginalName);
 		}
 		else
 		{

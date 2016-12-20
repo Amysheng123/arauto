@@ -54,9 +54,9 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String GroupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String Description = getElementValueFromXML(testdata_admin, nodeName, "Description");
-			String Type = getElementValueFromXML(testdata_admin, nodeName, "Type");
+			String GroupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String Description = getElementValueFromXML(testData_admin, nodeName, "Description");
+			String Type = getElementValueFromXML(testData_admin, nodeName, "Type");
 
 			ListPage listPage = super.m.listPage;
 			PrivilegeGroupPage privilegeGroupPage = listPage.EnterPrivilegeGroupsPage();
@@ -71,8 +71,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -90,11 +90,11 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String GroupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String NewGroupName = getElementValueFromXML(testdata_admin, nodeName, "NewGroupName");
-			String NewDescription = getElementValueFromXML(testdata_admin, nodeName, "NewDescription");
-			String AddPrivileges = getElementValueFromXML(testdata_admin, nodeName, "AddPrivilege").trim();
-			String DelPrivileges = getElementValueFromXML(testdata_admin, nodeName, "DeletePrivilege").trim();
+			String GroupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String NewGroupName = getElementValueFromXML(testData_admin, nodeName, "NewGroupName");
+			String NewDescription = getElementValueFromXML(testData_admin, nodeName, "NewDescription");
+			String AddPrivileges = getElementValueFromXML(testData_admin, nodeName, "AddPrivilege").trim();
+			String DelPrivileges = getElementValueFromXML(testData_admin, nodeName, "DeletePrivilege").trim();
 
 			if (NewGroupName.length() == 0)
 			{
@@ -141,8 +141,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -160,7 +160,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String GroupWithReturn = testdata.get(0);
 			String Entity = testdata.get(1);
 			String Product = testdata.get(2);
@@ -198,8 +198,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -217,7 +217,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String GroupName = testdata.get(0);
 			String Description = testdata.get(1);
 			String Type = testdata.get(2);
@@ -242,8 +242,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -262,7 +262,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String GroupName = testdata.get(0);
 			String UserName = testdata.get(1);
 			String Password = testdata.get(2);
@@ -383,8 +383,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -403,7 +403,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String GroupName = testdata.get(0);
 			String UserName = testdata.get(1);
 			String Password = testdata.get(2);
@@ -447,8 +447,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -467,12 +467,12 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Password = getElementValueFromXML(testdata_admin, nodeName, "Password");
-			String GroupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String Entity = getElementValueFromXML(testdata_admin, nodeName, "Entity");
-			String ImportFileName = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
-			String DeletePrivilege = getElementValueFromXML(testdata_admin, nodeName, "DeletePrivilege");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Password = getElementValueFromXML(testData_admin, nodeName, "Password");
+			String GroupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
+			String ImportFileName = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
+			String DeletePrivilege = getElementValueFromXML(testData_admin, nodeName, "DeletePrivilege");
 
 			ListPage listPage = super.m.listPage;
 
@@ -484,7 +484,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 			listPage = homePage.loginAs(UserName, Password);
 
 			listPage.setGroup(Entity);
-			File importFile = new File(testdata_admin.replace("Admin.xml", ImportFileName));
+			File importFile = new File(testData_admin.replace("Admin.xml", ImportFileName));
 			String msg = listPage.getImportAdjustmentErrorMsg(importFile, false);
 			if (!msg.equalsIgnoreCase("You do not have right to write this return."))
 			{
@@ -497,8 +497,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -517,14 +517,14 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Password = getElementValueFromXML(testdata_admin, nodeName, "Password");
-			String GroupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String Entity = getElementValueFromXML(testdata_admin, nodeName, "Entity");
-			String Return = getElementValueFromXML(testdata_admin, nodeName, "Return");
-			String ProcessDate = getElementValueFromXML(testdata_admin, nodeName, "ProcessDate");
-			String DeletePrivilege = getElementValueFromXML(testdata_admin, nodeName, "DeletePrivilege");
-			String CellName = getElementValueFromXML(testdata_admin, nodeName, "CellName");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Password = getElementValueFromXML(testData_admin, nodeName, "Password");
+			String GroupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
+			String Return = getElementValueFromXML(testData_admin, nodeName, "Return");
+			String ProcessDate = getElementValueFromXML(testData_admin, nodeName, "ProcessDate");
+			String DeletePrivilege = getElementValueFromXML(testData_admin, nodeName, "DeletePrivilege");
+			String CellName = getElementValueFromXML(testData_admin, nodeName, "CellName");
 
 			String formCode = splitReturn(Return).get(0);
 			String version = splitReturn(Return).get(1);
@@ -563,8 +563,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -582,7 +582,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String GroupName = testdata.get(0);
 			String UserName = testdata.get(1);
 			String Password = testdata.get(2);
@@ -624,8 +624,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -644,13 +644,13 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Password = getElementValueFromXML(testdata_admin, nodeName, "Password");
-			String GroupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String Entity = getElementValueFromXML(testdata_admin, nodeName, "Entity");
-			String Return = getElementValueFromXML(testdata_admin, nodeName, "Return");
-			String ProcessDate = getElementValueFromXML(testdata_admin, nodeName, "ProcessDate");
-			String DeletePrivilege = getElementValueFromXML(testdata_admin, nodeName, "DeletePrivilege");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Password = getElementValueFromXML(testData_admin, nodeName, "Password");
+			String GroupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
+			String Return = getElementValueFromXML(testData_admin, nodeName, "Return");
+			String ProcessDate = getElementValueFromXML(testData_admin, nodeName, "ProcessDate");
+			String DeletePrivilege = getElementValueFromXML(testData_admin, nodeName, "DeletePrivilege");
 			String formCode = splitReturn(Return).get(0);
 			String version = splitReturn(Return).get(1);
 
@@ -706,8 +706,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 
 		}
 		finally
@@ -726,13 +726,13 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Password = getElementValueFromXML(testdata_admin, nodeName, "Password");
-			String GroupName = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String Entity = getElementValueFromXML(testdata_admin, nodeName, "Entity");
-			String Return = getElementValueFromXML(testdata_admin, nodeName, "Return");
-			String ProcessDate = getElementValueFromXML(testdata_admin, nodeName, "ProcessDate");
-			String DeletePrivilege = getElementValueFromXML(testdata_admin, nodeName, "DeletePrivilege");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Password = getElementValueFromXML(testData_admin, nodeName, "Password");
+			String GroupName = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
+			String Return = getElementValueFromXML(testData_admin, nodeName, "Return");
+			String ProcessDate = getElementValueFromXML(testData_admin, nodeName, "ProcessDate");
+			String DeletePrivilege = getElementValueFromXML(testData_admin, nodeName, "DeletePrivilege");
 			String formCode = splitReturn(Return).get(0);
 			String version = splitReturn(Return).get(1);
 
@@ -773,8 +773,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -792,13 +792,13 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String UserName = getElementValueFromXML(testdata_admin, nodeName, "UserName");
-			String Password = getElementValueFromXML(testdata_admin, nodeName, "Password");
-			String Entity = getElementValueFromXML(testdata_admin, nodeName, "Entity");
-			String Return = getElementValueFromXML(testdata_admin, nodeName, "Return");
-			String ImportFileName = getElementValueFromXML(testdata_admin, nodeName, "ImportFile");
+			String UserName = getElementValueFromXML(testData_admin, nodeName, "UserName");
+			String Password = getElementValueFromXML(testData_admin, nodeName, "Password");
+			String Entity = getElementValueFromXML(testData_admin, nodeName, "Entity");
+			String Return = getElementValueFromXML(testData_admin, nodeName, "Return");
+			String ImportFileName = getElementValueFromXML(testData_admin, nodeName, "ImportFile");
 
-			File importFile = new File(testdata_admin.replace("Admin.xml", ImportFileName));
+			File importFile = new File(testData_admin.replace("Admin.xml", ImportFileName));
 			ListPage listPage = super.m.listPage;
 			HomePage homePage = listPage.logout();
 			listPage = homePage.loginAs(UserName, Password);
@@ -834,8 +834,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -853,10 +853,10 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Entity = getElementValueFromXML(testdata_admin, nodeName, "GroupName");
-			String Product = getElementValueFromXML(testdata_admin, nodeName, "Product");
-			String NewName = getElementValueFromXML(testdata_admin, nodeName, "NewName");
-			String Return = getElementValueFromXML(testdata_admin, nodeName, "Return");
+			String Entity = getElementValueFromXML(testData_admin, nodeName, "GroupName");
+			String Product = getElementValueFromXML(testData_admin, nodeName, "Product");
+			String NewName = getElementValueFromXML(testData_admin, nodeName, "NewName");
+			String Return = getElementValueFromXML(testData_admin, nodeName, "Return");
 
 			ListPage listPage = super.m.listPage;
 			EntityPage entityManagePage = listPage.EnterEntityPage();
@@ -873,8 +873,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -892,10 +892,10 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String PG_User = getElementValueFromXML(testdata_admin, nodeName, "PG_User");
-			String PG_Entity = getElementValueFromXML(testdata_admin, nodeName, "PG_Entity");
-			String File = getElementValueFromXML(testdata_admin, nodeName, "File");
-			File privilgeFile = new File(testdata_admin.replace("Admin.xml", File));
+			String PG_User = getElementValueFromXML(testData_admin, nodeName, "PG_User");
+			String PG_Entity = getElementValueFromXML(testData_admin, nodeName, "PG_Entity");
+			String File = getElementValueFromXML(testData_admin, nodeName, "File");
+			File privilgeFile = new File(testData_admin.replace("Admin.xml", File));
 
 			ListPage listPage = super.m.listPage;
 			PrivilegeGroupPage privilegeGroupPage = listPage.EnterPrivilegeGroupsPage();
@@ -942,8 +942,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -961,7 +961,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String privilegeGroup = testdata.get(0);
 
 			ListPage listPage = super.m.listPage;
@@ -972,8 +972,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -991,7 +991,7 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_admin, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_admin, nodeName);
 			String GroupName = testdata.get(0);
 			String GroupDesc = testdata.get(1);
 			String GroupType = testdata.get(2);
@@ -1034,8 +1034,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1066,8 +1066,8 @@ public class Admin_PrivilegeGroup extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

@@ -24,7 +24,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String calendarName = testdata.get(0).trim();
 			String labelName = testdata.get(1).trim();
 			String labelWeekends = testdata.get(2).trim();
@@ -49,7 +49,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -68,7 +68,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String scheduleName = testdata.get(0).trim();
 			String recPatternType = testdata.get(1).trim();
 			String labelName = testdata.get(2).trim();
@@ -175,7 +175,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -205,7 +205,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -223,7 +223,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String name1 = testdata.get(0).trim();
 			String description1 = testdata.get(1).trim();
 			String dailyAddButton1 = testdata.get(2).trim();
@@ -275,7 +275,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -294,7 +294,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String calendarName = testdata.get(0).trim();
 			String saturday = testdata.get(1).trim();
 			String sunday = testdata.get(2).trim();
@@ -329,7 +329,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -348,7 +348,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String calendarName1 = testdata.get(0).trim();
 			String saturday = testdata.get(1).trim();
 			String sunday = testdata.get(2).trim();
@@ -413,7 +413,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -432,7 +432,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String entityName = testdata.get(0).trim();
 			String prefix = testdata.get(1).trim();
 			String[] returns = testdata.get(2).trim().split("#");
@@ -469,7 +469,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
@@ -488,7 +488,7 @@ public class Admin_Calendar extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			List<String> testdata = getElementValueFromXML(testdata_Calendar, nodeName);
+			List<String> testdata = getElementValueFromXML(testData_Calendar, nodeName);
 			String schName1 = testdata.get(0).trim();
 			String desc1 = testdata.get(1).trim();
 			String dailyAddBtn1 = testdata.get(2).trim();
@@ -562,7 +562,7 @@ public class Admin_Calendar extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{

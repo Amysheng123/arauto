@@ -32,13 +32,13 @@ public class ExportForm extends TestTemplate
 
 	public static void main(String args[]) throws Exception
 	{
-		String pathString = "C:\\Documents\\download\\";
+		String pathString = "C:/Documents/download/";
 		String fileName = "RBIForAutomation_0001_RBIndia-FORMX_20250520.xlsx";
 		String fileType = "iFile";
 		String date = "20161116";
 
-		testDataFolder = "D:\\Develop\\workspace\\rpsel\\data_ar\\ExportForm\\CheckCellValue\\";
-		checkRstFolder = "D:\\Develop\\workspace\\rpsel\\target\\TestResult\\" + date + "\\ExportForm\\CheckCellValue\\";
+		testDataFolder = "D:/Develop/workspace/rpsel/data_ar/ExportForm/CheckCellValue/";
+		checkRstFolder = "D:/Develop/workspace/rpsel/target/TestResult/" + date + "/ExportForm/CheckCellValue/";
 		String baseLineFileName = "FormXv1_20250520_Arbitrary.xlsx";
 
 		File expectedValueFile = new File(checkRstFolder + baseLineFileName);
@@ -120,8 +120,8 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -137,7 +137,7 @@ public class ExportForm extends TestTemplate
 		String formCode = splitReturn(Form).get(0);
 		String version = splitReturn(Form).get(1);
 		Form = splitReturn(Form).get(2);
-		BaselineFile = testDataFolder + "\\" + BaselineFile;
+		BaselineFile = testDataFolder + "/" + BaselineFile;
 		boolean testRst = false;
 		try
 		{
@@ -188,8 +188,8 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			ExportToFilePage exportToFilePage = new ExportToFilePage(getWebDriverWrapper());
 			exportToFilePage.closeExportPage(FileType);
 		}
@@ -221,7 +221,7 @@ public class ExportForm extends TestTemplate
 			if (exportFilePath.endsWith(".zip") && !FileType.equalsIgnoreCase("Vanilla"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			boolean s1 = true;
 			if (exportFilePath.equalsIgnoreCase("Error"))
@@ -238,7 +238,7 @@ public class ExportForm extends TestTemplate
 				// {
 				// String saveFolderString = new
 				// File(exportFilePath).getParent();
-				// exportFilePath = saveFolderString + "\\" +
+				// exportFilePath = saveFolderString + "/" +
 				// FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 				// }
 
@@ -304,8 +304,8 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -331,7 +331,7 @@ public class ExportForm extends TestTemplate
 			if (exportFilePath.endsWith(".zip") && !FileType.equalsIgnoreCase("Vanilla"))
 			{
 				String saveFolderString = new File(exportFilePath).getParent();
-				exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+				exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			}
 			boolean s1 = true;
 			if (!exportFilePath.equalsIgnoreCase("Error"))
@@ -341,7 +341,7 @@ public class ExportForm extends TestTemplate
 				// {
 				// String saveFolderString = new
 				// File(exportFilePath).getParent();
-				// exportFilePath = saveFolderString + "\\" +
+				// exportFilePath = saveFolderString + "/" +
 				// FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 				// }
 				if (CheckCellValueFile.endsWith(".xlsx"))
@@ -407,8 +407,8 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 			ExportToFilePage exportToFilePage = new ExportToFilePage(getWebDriverWrapper());
 			exportToFilePage.closeExportPage(FileType);
 		}
@@ -437,7 +437,7 @@ public class ExportForm extends TestTemplate
 
 			if (!testRstFile.getName().equalsIgnoreCase(fileName))
 				testRstFile = new File(testRstFile.getParent() + fileName);
-			File testDataFile = new File(testDataFolderName + "\\ExportForm\\" + fileName);
+			File testDataFile = new File(testDataFolderName + "/ExportForm/" + fileName);
 			for (int index = 1; index <= ExcelUtil.getRowNums(testDataFile, null); index++)
 			{
 				ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, index);
@@ -464,7 +464,7 @@ public class ExportForm extends TestTemplate
 					formInstancePage.closeFormInstance();
 
 					String saveFolderString = new File(exportFilePath).getParent();
-					exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+					exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 
 					List<String> sheets = ExcelUtil.getAllSheets(new File(exportFilePath));
 
@@ -483,8 +483,8 @@ public class ExportForm extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -507,7 +507,7 @@ public class ExportForm extends TestTemplate
 
 		if (!testRstFile.getName().equalsIgnoreCase(fileName))
 			testRstFile = new File(testRstFile.getParent() + fileName);
-		File testDataFile = new File(testDataFolderName + "\\ExportForm\\" + fileName);
+		File testDataFile = new File(testDataFolderName + "/ExportForm/" + fileName);
 		for (int index = 1; index <= ExcelUtil.getRowNums(testDataFile, null); index++)
 		{
 			ArrayList<String> rowValue = ExcelUtil.getRowValueFromExcel(testDataFile, null, index);

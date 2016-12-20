@@ -20,7 +20,7 @@ public class UpdateCaseInQC
 		try
 		{
 			String path = System.getProperty("user.dir").toLowerCase().replace("rpsel", "");
-			String exeFilePath = "\"" + path + "public\\extension\\UpdateQC\\UpdateQCCase.exe" + "\"";
+			String exeFilePath = "\"" + path + "public/extension/UpdateQC/UpdateQCCase.exe" + "\"";
 			logger.info("Exe file:" + exeFilePath);
 			String testFilePath = "\"" + testResultFile + "\"";
 
@@ -33,7 +33,8 @@ public class UpdateCaseInQC
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
+			logger.warn("warn", e);
 		}
 	}
 

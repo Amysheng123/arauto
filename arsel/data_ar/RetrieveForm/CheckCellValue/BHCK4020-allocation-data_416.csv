@@ -1,3 +1,4 @@
-"Calculated","Calendar_Date","Customer_Code","D_USED_DATE","Drill_Ref","Drill_Table","Eop_Bal_Rcy","N_USED_1","N_USED_2","Org_Structure_Entity_Code","Par_Entity_Name","Rep_Line_Cd","Run_Skey","Scenario_Cd","V_USED_1"
-"4869","30/09/2014 00:00:00","EZXEBBB2","21/03/2016 21:38:58","229","FRY9C","4869138000","252","640","0001"," Bank USA ","629000029","804","416",""
-"4869","30/09/2014 00:00:00","0FYK7RS8","21/03/2016 21:38:58","230","FRY9C","4869138000","253","641","0001"," Bank USA ","629000029","804","416",""
+"Condition:"
+"Calculated","Customer_Code","Drill_Ref","Drill_Table","Calendar_Date","D_USED_DATE","Eop_Bal_Rcy","Rep_Line_Cd","Run_Skey","Scenario_Cd","N_USED_1","N_USED_2","Org_Structure_Entity_Code","Par_Entity_Name","V_USED_1"
+"4869","EZXEBBB2","229","FRY9C","30/09/2014","21/03/2016","4869138000","629000029","100","416","252","640","0001"," Bank USA ",""
+"4869","0FYK7RS8","230","FRY9C","30/09/2014","21/03/2016","4869138000","629000029","100","416","253","641","0001"," Bank USA ",""

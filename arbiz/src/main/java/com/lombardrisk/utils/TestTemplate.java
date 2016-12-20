@@ -24,35 +24,38 @@ import com.lombardrisk.utils.fileService.XMLUtil;
 
 public class TestTemplate extends TestBase
 {
-	protected static String targetLogFolder = System.getProperty("user.dir") + "\\target\\result\\logs\\";
+	protected static String targetLogFolder = System.getProperty("user.dir") + "/target/result/logs/";
 	protected static String testDataFolderName = PropHelper.getProperty("data.type").trim();
 	protected static boolean startService = Boolean.parseBoolean(PropHelper.getProperty("test.startService").trim());
+	protected static boolean setOriginalName = Boolean.parseBoolean(PropHelper.getProperty("getOriginalName").trim());
 	protected static String envPath = PropHelper.getProperty("test.environment.path").trim();
 	protected static boolean httpDownload = Boolean.parseBoolean(PropHelper.getProperty("download.enable").trim());
-	protected static String testdata_admin = null;
-	protected static String testdata_DeleteReturn = null;
-	protected static String testdata_edition = null;
-	protected static String testdata_editForm = null;
-	protected static String testdata_highlight = null;
-	protected static String testdata_Utility = null;
-	protected static String testdata_Workflow = null;
+	protected static String testData_admin = null;
+	protected static String testData_DeleteReturn = null;
+	protected static String testData_edition = null;
+	protected static String testData_editForm = null;
+	protected static String testData_highlight = null;
+	protected static String testData_Utility = null;
+	protected static String testData_Workflow = null;
 	protected static File editFormLogData = null;
 	protected static String jobData = null;
-	protected static String testdata_General = null;
+	protected static String testData_General = null;
 	protected static File testRstFile = null;
-	protected static String testdata_updateForm = null;
-	protected static String testdata_OtherModule = null;
-	protected static String testdata_FormVariable = null;
-	protected static String testdata_RowLimit = null;
-	protected static String testdata_Threshold = null;
-	protected static String testdata_DropDown = null;
-	protected static String testdata_GridWithinGrid = null;
-	protected static String testdata_Contextual = null;
-	protected static String testdata_Calendar = null;
-	protected static String testdata_ReturnList = null;
-	protected static String testdata_importExportFormat = null;
-	protected static String testdata_Export_External = null;
-	protected static String testdata_BatchRun = null;
+	protected static String testData_updateForm = null;
+	protected static String testData_OtherModule = null;
+	protected static String testData_FormVariable = null;
+	protected static String testData_RowLimit = null;
+	protected static String testData_Threshold = null;
+	protected static String testData_DropDown = null;
+	protected static String testData_GridWithinGrid = null;
+	protected static String testData_Contextual = null;
+	protected static String testData_Calendar = null;
+	protected static String testData_ReturnList = null;
+	protected static String testData_importExportFormat = null;
+	protected static String testData_Export_External = null;
+	protected static String testData_BatchRun = null;
+	protected static String parentPath = null;
+	protected static String testData_ExportForm2 = null;
 
 	protected static String format = "";
 	protected static String userName = "";
@@ -95,6 +98,7 @@ public class TestTemplate extends TestBase
 				Thread.sleep(1000 * 90);
 			}
 		}
+
 		nameFile = new File("target/result/Names.txt");
 		if (nameFile.exists())
 		{
@@ -118,31 +122,34 @@ public class TestTemplate extends TestBase
 			ConnectDBType = "toolSet";
 		}
 
-		testdata_admin = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Admin\\Admin.xml";
-		testdata_DeleteReturn = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\DeleteReturn\\DeleteReturn.xml";
-		testdata_edition = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Edition\\Edition.xml";
-		testdata_editForm = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\EditForm\\EditForm.xml";
-		editFormLogData = new File(testdata_editForm.replace("EditForm.xml", "EditForm_Data_Log.xlsx"));
-		testdata_highlight = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\HighLight\\HighLight.xml";
-		testdata_Utility = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Utility\\Utility.xml";
-		testdata_Workflow = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Workflow\\Workflow.xml";
-		testdata_General = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\GeneralFunction\\GeneralFunction.xml";
-		jobData = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Job\\Job.xml";
-		testdata_updateForm = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\UpdateForm\\UpdateForm.xml";
-		testdata_OtherModule = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\OtherModule\\OtherModule.xml";
-		testdata_FormVariable = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Admin\\FormVariable.xml";
-		testdata_RowLimit = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\RowLimit\\RowLimit.xml";
-		testdata_Threshold = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Threshold\\Threshold.xml";
-		testdata_DropDown = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\DropDown\\DropDown.xml";
-		testdata_GridWithinGrid = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\GridWithinGrid\\GridWithinGrid.xml";
-		testdata_Contextual = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Contextual\\Contextual.xml";
-		testdata_Calendar = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\Admin\\Calendar.xml";
-		testdata_ReturnList = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ReturnList\\ReturnList.xml";
-		testdata_importExportFormat = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ImportExportFormat\\ImportExportFormat.xml";
-		testdata_Export_External = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\ExportForm_External\\ExportForm_External.xml";
-		testdata_BatchRun = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\BatchRun\\BatchRun.xml";
+		testData_admin = System.getProperty("user.dir") + "/" + testDataFolderName + "/Admin/Admin.xml";
+		testData_DeleteReturn = System.getProperty("user.dir") + "/" + testDataFolderName + "/DeleteReturn/DeleteReturn.xml";
+		testData_edition = System.getProperty("user.dir") + "/" + testDataFolderName + "/Edition/Edition.xml";
+		testData_editForm = System.getProperty("user.dir") + "/" + testDataFolderName + "/EditForm/EditForm.xml";
+		editFormLogData = new File(testData_editForm.replace("EditForm.xml", "EditForm_Data_Log.xlsx"));
+		testData_highlight = System.getProperty("user.dir") + "/" + testDataFolderName + "/HighLight/HighLight.xml";
+		testData_Utility = System.getProperty("user.dir") + "/" + testDataFolderName + "/Utility/Utility.xml";
+		testData_Workflow = System.getProperty("user.dir") + "/" + testDataFolderName + "/Workflow/Workflow.xml";
+		testData_General = System.getProperty("user.dir") + "/" + testDataFolderName + "/GeneralFunction/GeneralFunction.xml";
+		jobData = System.getProperty("user.dir") + "/" + testDataFolderName + "/Job/Job.xml";
+		testData_updateForm = System.getProperty("user.dir") + "/" + testDataFolderName + "/UpdateForm/UpdateForm.xml";
+		testData_OtherModule = System.getProperty("user.dir") + "/" + testDataFolderName + "/OtherModule/OtherModule.xml";
+		testData_FormVariable = System.getProperty("user.dir") + "/" + testDataFolderName + "/Admin/FormVariable.xml";
+		testData_RowLimit = System.getProperty("user.dir") + "/" + testDataFolderName + "/RowLimit/RowLimit.xml";
+		testData_Threshold = System.getProperty("user.dir") + "/" + testDataFolderName + "/Threshold/Threshold.xml";
+		testData_DropDown = System.getProperty("user.dir") + "/" + testDataFolderName + "/DropDown/DropDown.xml";
+		testData_GridWithinGrid = System.getProperty("user.dir") + "/" + testDataFolderName + "/GridWithinGrid/GridWithinGrid.xml";
+		testData_Contextual = System.getProperty("user.dir") + "/" + testDataFolderName + "/Contextual/Contextual.xml";
+		testData_Calendar = System.getProperty("user.dir") + "/" + testDataFolderName + "/Admin/Calendar.xml";
+		testData_ReturnList = System.getProperty("user.dir") + "/" + testDataFolderName + "/ReturnList/ReturnList.xml";
+		testData_importExportFormat = System.getProperty("user.dir") + "/" + testDataFolderName + "/ImportExportFormat/ImportExportFormat.xml";
+		testData_Export_External = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm_External/ExportForm_External.xml";
+		testData_BatchRun = System.getProperty("user.dir") + "/" + testDataFolderName + "/BatchRun/BatchRun.xml";
+		testData_ExportForm2 = System.getProperty("user.dir") + "/" + testDataFolderName + "/ExportForm2/ExportForm2.xml";
 
-		File testRstFolder = new File("target\\TestResult");
+		parentPath = new File(new File(System.getProperty("user.dir")).getParent()).getParent().toString();
+
+		File testRstFolder = new File("target/TestResult");
 		if (!testRstFolder.exists())
 			testRstFolder.mkdir();
 
@@ -219,7 +226,7 @@ public class TestTemplate extends TestBase
 		}
 		catch (Exception e)
 		{
-			logger.error(e.getMessage());
+			logger.error("error", e);
 		}
 
 	}
@@ -237,13 +244,13 @@ public class TestTemplate extends TestBase
 	@AfterSuite
 	public void SyncQC() throws Exception
 	{
-		File from = new File(System.getProperty("user.dir") + "\\" + "target\\TestResult");
-		File to = new File("C:\\ARAutoTestResult");
+		File from = new File(System.getProperty("user.dir") + "/" + "target/TestResult");
+		File to = new File("C:/ARAutoTestResult");
 		FileUtils.copyDirectory(from, to);
 
 		if (PropHelper.getProperty("qc.sync").trim().equalsIgnoreCase("y"))
 		{
-			String TestStatusFile = System.getProperty("user.dir") + "\\" + "target\\TestResult\\" + curDate + "\\TestStatus.xlsx";
+			String TestStatusFile = System.getProperty("user.dir") + "/" + "target/TestResult/" + curDate + "/TestStatus.xlsx";
 			logger.info("Reading data from " + TestStatusFile);
 			UpdateCaseInQC.setStatus(TestStatusFile);
 		}
@@ -269,45 +276,45 @@ public class TestTemplate extends TestBase
 		logger.info("Begin setup test folder and test data");
 		List<String> Files = new ArrayList<String>();
 		List<String> FuncList = Arrays.asList("CheckRule", "CreateForm", "ExportForm", "ImportForm", "RetrieveForm", "ImportExport", "Precision", "ComputeForm", "DataSchedule", "RowLimit",
-				"Threshold", "DropDown", "GridWithinGrid", "Contextual", "ReturnList", "ExportForm_External");
+				"Threshold", "DropDown", "GridWithinGrid", "Contextual", "ReturnList", "ExportForm_External", "BatchRun");
 
 		if (FuncList.contains(Function))
 		{
-			String testDataFolderString = System.getProperty("user.dir") + "\\" + testDataFolderName + "\\" + Function + "\\";
+			String testDataFolderString = System.getProperty("user.dir") + "/" + testDataFolderName + "/" + Function + "/";
 			String testFile = null;
 			if (fileName != null)
 				testFile = testDataFolderString + fileName;
 			String testDataFolder;
 			if (Function.equals("CheckRule"))
-				testDataFolder = testDataFolderString + "TestData\\";
+				testDataFolder = testDataFolderString + "TestData/";
 			else
-				testDataFolder = testDataFolderString + "CheckCellValue\\";
+				testDataFolder = testDataFolderString + "CheckCellValue/";
 
 			// add test data folder
 			Files.add(testDataFolder);
 
-			String currentDayFolderString = System.getProperty("user.dir") + "\\" + "target\\TestResult\\" + curDate;
+			String currentDayFolderString = System.getProperty("user.dir") + "/" + "target/TestResult/" + curDate;
 			File currentDayFolder = new File(currentDayFolderString);
 			if (!currentDayFolder.exists())
 				currentDayFolder.mkdir();
 
-			String testResultFolderString = currentDayFolderString + "\\" + Function;
+			String testResultFolderString = currentDayFolderString + "/" + Function;
 			File testResultFolder = new File(testResultFolderString);
 			if (!testResultFolder.exists())
 				testResultFolder.mkdir();
 
 			File checkDataFolder;
 			if (Function.equals("CheckRule"))
-				checkDataFolder = new File(testResultFolder + "\\" + "TestData\\");
+				checkDataFolder = new File(testResultFolder + "/" + "TestData/");
 			else
-				checkDataFolder = new File(testResultFolder + "\\" + "CheckCellValue\\");
+				checkDataFolder = new File(testResultFolder + "/" + "CheckCellValue/");
 
 			if (!checkDataFolder.exists())
 				checkDataFolder.mkdir();
 			// add test result check data folder
-			Files.add(checkDataFolder.getAbsolutePath() + "\\");
+			Files.add(checkDataFolder.getAbsolutePath() + "/");
 
-			testRstFile = new File(testResultFolder + "\\" + fileName);
+			testRstFile = new File(testResultFolder + "/" + fileName);
 			if (!testRstFile.exists() && fileName != null)
 				FileUtils.copyFile(new File(testFile), testRstFile);
 
@@ -369,7 +376,7 @@ public class TestTemplate extends TestBase
 	 * @param extendCell
 	 * @return Cell type
 	 */
-	public String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell)
+	public String getCellType(String Regulator, String formCode, String version, String cellName, String extendCell) throws Exception
 	{
 
 		if (ConnectDBType.equalsIgnoreCase("ar"))
@@ -424,7 +431,7 @@ public class TestTemplate extends TestBase
 	 * @param Regulator
 	 * @return IDRangeStart
 	 */
-	public String getRegulatorIDRangeStart(String Regulator)
+	public String getRegulatorIDRangeStart(String Regulator) throws Exception
 	{
 		String SQL = "SELECT \"ID_RANGE_START\" FROM \"CFG_INSTALLED_CONFIGURATIONS\" WHERE \"DESCRIPTION\"='" + Regulator + "'  AND \"STATUS\"='A' ";
 		return DBQuery.queryRecord(SQL);
@@ -437,7 +444,7 @@ public class TestTemplate extends TestBase
 	 * @param Regulator
 	 * @return IDRangeEnd
 	 */
-	public String getRegulatorIDRangEnd(String Regulator)
+	public String getRegulatorIDRangEnd(String Regulator) throws Exception
 	{
 		String SQL = "SELECT \"ID_RANGE_END\" FROM \"CFG_INSTALLED_CONFIGURATIONS\" WHERE \"DESCRIPTION\"='" + Regulator + "' AND \"STATUS\"='A'  ";
 		return DBQuery.queryRecord(SQL);
@@ -452,7 +459,7 @@ public class TestTemplate extends TestBase
 	 * @param cellName
 	 * @return GridName
 	 */
-	public String getExtendCellName(String Regulator, String formCode, String version, String cellName)
+	public String getExtendCellName(String Regulator, String formCode, String version, String cellName) throws Exception
 	{
 		if (ConnectDBType.equalsIgnoreCase("ar"))
 		{
@@ -487,7 +494,7 @@ public class TestTemplate extends TestBase
 	 * @param ruleID
 	 * @return DestFld
 	 */
-	public String getDestFldFromSumRule(String Regulator, String formCode, String version, int ruleID)
+	public String getDestFldFromSumRule(String Regulator, String formCode, String version, int ruleID) throws Exception
 	{
 		if (ConnectDBType.equalsIgnoreCase("ar"))
 		{
@@ -518,7 +525,7 @@ public class TestTemplate extends TestBase
 	 * @param ruleID
 	 * @return validation rule
 	 */
-	public String getValidationExpression(String Regulator, String formCode, String version, String ruleType, int ruleID)
+	public String getValidationExpression(String Regulator, String formCode, String version, String ruleType, int ruleID) throws Exception
 	{
 		String SQL = null;
 		if (ConnectDBType.equalsIgnoreCase("ar"))
@@ -562,7 +569,7 @@ public class TestTemplate extends TestBase
 		}
 		catch (Exception e)
 		{
-			logger.warn(e.getMessage());
+			logger.warn("warn", e);
 		}
 	}
 
@@ -590,8 +597,8 @@ public class TestTemplate extends TestBase
 
 		if (caseID.length() > 3)
 		{
-			String source = testDataFolderName + "\\TestStatus.xlsx";
-			File TestStatusFile = new File("target\\TestResult\\" + curDate + "\\TestStatus.xlsx");
+			String source = testDataFolderName + "/TestStatus.xlsx";
+			File TestStatusFile = new File("target/TestResult/" + curDate + "/TestStatus.xlsx");
 			if (!TestStatusFile.exists())
 				FileUtils.copyFile(new File(source), TestStatusFile);
 
@@ -639,8 +646,8 @@ public class TestTemplate extends TestBase
 
 		if (caseID.length() > 3)
 		{
-			String source = testDataFolderName + "\\TestStatus.xlsx";
-			File TestStatusFile = new File("target\\TestResult\\" + curDate + "\\TestStatus.xlsx");
+			String source = testDataFolderName + "/TestStatus.xlsx";
+			File TestStatusFile = new File("target/TestResult/" + curDate + "/TestStatus.xlsx");
 			if (!TestStatusFile.exists())
 			{
 				FileUtils.copyFile(new File(source), TestStatusFile);
@@ -663,11 +670,11 @@ public class TestTemplate extends TestBase
 		logger.info("Copy exported file to TestResult folder");
 		File sourceFile = new File(copyFrom);
 		String fileName = sourceFile.getName();
-		File destFolder = new File("target\\TestResult\\" + curDate + "\\" + Module + "\\ExportedFile\\");
+		File destFolder = new File("target/TestResult/" + curDate + "/" + Module + "/ExportedFile/");
 		if (!destFolder.exists())
 			destFolder.mkdir();
 
-		File destFile = new File("target\\TestResult\\" + curDate + "\\" + Module + "\\ExportedFile\\" + fileName);
+		File destFile = new File("target/TestResult/" + curDate + "/" + Module + "/ExportedFile/" + fileName);
 		FileUtils.copyFile(sourceFile, destFile);
 	}
 
@@ -687,7 +694,8 @@ public class TestTemplate extends TestBase
 		}
 		catch (DocumentException e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
+			logger.warn("warn", e);
 			return "";
 		}
 
@@ -704,7 +712,7 @@ public class TestTemplate extends TestBase
 	public List<String> getElementValueFromXML(String xmlFile, String node) throws Exception
 	{
 		List<String> elementValue = new ArrayList<String>();
-		for (String element : XMLUtil.getelements(xmlFile, node))
+		for (String element : XMLUtil.getElements(xmlFile, node))
 		{
 			elementValue.add(getElementValueFromXML(xmlFile, node, element));
 		}
@@ -786,6 +794,11 @@ public class TestTemplate extends TestBase
 		return format;
 	}
 
+	public boolean isSetOriginalName()
+	{
+		return setOriginalName;
+	}
+
 	/**
 	 * get page name
 	 *
@@ -796,7 +809,7 @@ public class TestTemplate extends TestBase
 	 * @param extendCell
 	 * @return page name
 	 */
-	public String getPageName(String Regulator, String form, String version, String cellName, String extendCell)
+	public String getPageName(String Regulator, String form, String version, String cellName, String extendCell) throws Exception
 	{
 		String SQL;
 		String refTable = "";
@@ -831,7 +844,7 @@ public class TestTemplate extends TestBase
 
 	}
 
-	public List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell)
+	public List<String> getPageNames(String Regulator, String form, String version, String cellName, String extendCell) throws Exception
 	{
 		String SQL, refTable;
 		if (ConnectDBType.equalsIgnoreCase("ar"))
@@ -851,6 +864,13 @@ public class TestTemplate extends TestBase
 		else
 		{
 			String RegPrefix = getToolsetRegPrefix(Regulator);
+			SQL = "SELECT \"USERNAME\",\"SQLENGINE\",\"DB_HOST\",\"DB_INSTANCE\",\"DATABASENAME\" FROM \"ALIASES\" WHERE \"CONFIG_PREFIX\"='" + RegPrefix + "' AND \"ALIAS\"='STB Work'";
+			String server = AR_Server;
+			if (AR_DBType.equalsIgnoreCase("oracle"))
+				server = AR_IP + "@" + AR_SID;
+
+			List<String> dbInfo = DBAction.queryRecord(AR_DBType, server, AR_DBName, SQL).get(0);
+
 			if (extendCell == null)
 				refTable = RegPrefix + "Ref";
 			else
@@ -858,7 +878,30 @@ public class TestTemplate extends TestBase
 			SQL = "select \"PageName\" from \"" + RegPrefix + "List\" " + "where \"ReturnId\" IN(SELECT \"ReturnId\" FROM \"" + RegPrefix + "Rets\" where \"Return\"='" + form + "' "
 					+ "and \"TabName\" in (select \"TabName\" from \"" + refTable + "\" " + "where \"ReturnId\" IN(SELECT \"ReturnId\" FROM \"" + RegPrefix + "Rets\" where \"Return\"='" + form + "' "
 					+ "and \"Version\"='" + version + "') and \"Item\"='" + cellName + "'))";
-			return DBQuery.queryRecords(SQL);
+			List<String> pages = new ArrayList<>();
+			String DB;
+			if (dbInfo.get(1).equalsIgnoreCase("oracle"))
+			{
+				if (dbInfo.get(3) == null)
+					server = dbInfo.get(2) + "@" + dbInfo.get(4);
+				else
+					server = dbInfo.get(2) + "@" + dbInfo.get(3);
+				DB = dbInfo.get(0);
+			}
+			else
+			{
+				if (dbInfo.get(3) == null)
+					server = dbInfo.get(2) + "//" + dbInfo.get(4);
+				else
+					server = dbInfo.get(2) + "//" + dbInfo.get(3);
+				DB = dbInfo.get(4);
+			}
+			List<List<String>> rsts = DBAction.queryRecord(dbInfo.get(1), server, DB, SQL);
+			for (List<String> r : rsts)
+			{
+				pages.add(r.get(0));
+			}
+			return pages;
 		}
 
 	}
@@ -1031,6 +1074,7 @@ public class TestTemplate extends TestBase
 	 */
 	public void refreshPage() throws Exception
 	{
+		logger.info("Refresh page");
 		getWebDriverWrapper().navigate().refresh();
 		Thread.sleep(3000);
 	}
@@ -1040,14 +1084,14 @@ public class TestTemplate extends TestBase
 		String pathWithQuotes = "";
 		if (path.contains(" "))
 		{
-			path = path.replace("\\", "~");
+			path = path.replace("/", "~");
 			for (String part : path.split("~"))
 			{
 				if (part.contains(" "))
 				{
 					part = "\"" + part + "\"";
 				}
-				pathWithQuotes = pathWithQuotes + part + "\\";
+				pathWithQuotes = pathWithQuotes + part + "/";
 			}
 			pathWithQuotes = pathWithQuotes.substring(0, pathWithQuotes.length() - 1);
 		}

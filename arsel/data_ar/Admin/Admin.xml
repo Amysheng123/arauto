@@ -256,6 +256,7 @@
         </C5590>
 
         <C5609>
+       		<OldName>C5589</OldName>
             <NewName>C5609</NewName>
             <NewCode>C56|09</NewCode>
             <NewDesc>restricting characters</NewDesc>

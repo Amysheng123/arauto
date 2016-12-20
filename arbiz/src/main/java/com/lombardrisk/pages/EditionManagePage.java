@@ -28,7 +28,7 @@ public class EditionManagePage extends AbstractPage
 	 */
 	private String findForm(String creationDate) throws Exception
 	{
-		String page_index = "";
+		String page_index;
 		int pageNO = 1;
 		int rowNo = 0;
 		boolean findForm = false;
@@ -55,7 +55,7 @@ public class EditionManagePage extends AbstractPage
 					try
 					{
 						String p_Index = element("edm.nextPage").getAttribute("tabindex");
-						if (!p_Index.equals("-1"))
+						if (!"-1".equals(p_Index))
 						{
 							element("edm.nextPage").click();
 							pageNO++;
@@ -69,9 +69,10 @@ public class EditionManagePage extends AbstractPage
 					}
 					catch (Exception e)
 					{
+						logger.warn("warn", e);
 						nextPageage = false;
 						findForm = true;
-						e.printStackTrace();
+
 					}
 				}
 
@@ -92,17 +93,17 @@ public class EditionManagePage extends AbstractPage
 	public boolean activateForm(String creationDate) throws Exception
 	{
 		boolean state = false;
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if ("1_0".equals(formPosition))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 
 		String status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("ACTIVE"))
+		if ("ACTIVE".equalsIgnoreCase(status))
 		{
-			logger.error("This edition alread activated");
+			logger.error("This edition already activated");
 		}
 		else
 		{
@@ -111,7 +112,7 @@ public class EditionManagePage extends AbstractPage
 		}
 
 		status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("ACTIVE"))
+		if ("ACTIVE".equalsIgnoreCase(status))
 		{
 			state = true;
 			logger.error("Activate edition successfully");
@@ -132,14 +133,14 @@ public class EditionManagePage extends AbstractPage
 	public boolean deactivateForm(String creationDate) throws Exception
 	{
 		boolean state = false;
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if ("1_0".equals(formPosition))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 		String status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("DORMANT"))
+		if ("DORMANT".equalsIgnoreCase(status))
 		{
 			logger.error("This edition is dormant");
 		}
@@ -150,7 +151,7 @@ public class EditionManagePage extends AbstractPage
 		}
 
 		status = element("edm.formState", String.valueOf(rowNo)).getInnerText();
-		if (status.equalsIgnoreCase("DORMANT"))
+		if ("DORMANT".equalsIgnoreCase(status))
 		{
 			state = true;
 			logger.error("Deactivate edition successfully");
@@ -168,12 +169,12 @@ public class EditionManagePage extends AbstractPage
 	 */
 	public FormInstancePage openForm(String creationDate) throws Exception
 	{
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if ("1_0".equals(formPosition))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 		int row = Integer.parseInt(rowNo) - 1;
 		element("edm.formLink", String.valueOf(row)).click();
 		waitStatusDlg();
@@ -189,18 +190,18 @@ public class EditionManagePage extends AbstractPage
 	 */
 	public void deleteEdition(String creationDate) throws Exception
 	{
-		String formPosttion = findForm(creationDate);
-		if (formPosttion.equals("1_0"))
+		String formPosition = findForm(creationDate);
+		if ("1_0".equals(formPosition))
 		{
-			logger.error("The form with creation date=" + creationDate + " deoes not exist!");
+			logger.error("The form with creation date=" + creationDate + " does not exist!");
 		}
-		String rowNo = formPosttion.split("_")[1];
+		String rowNo = formPosition.split("_")[1];
 		int row = Integer.parseInt(rowNo);
 		element("edm.delEdition", String.valueOf(row)).click();
 		waitStatusDlg();
 		element("edm.delEditionConBtn").click();
 		waitStatusDlg();
-		element("edm.delEditionComment").type("Delete by autoamtion");
+		element("edm.delEditionComment").type("Delete by automation");
 		element("edm.deleteBtn").click();
 		waitStatusDlg();
 		waitThat("edm.message").toBeInvisible();
@@ -322,8 +323,9 @@ public class EditionManagePage extends AbstractPage
 			}
 			catch (Exception e)
 			{
+				logger.warn("warn", e);
+				// e.printStackTrace();
 				rst = false;
-				e.printStackTrace();
 			}
 		}
 		return rst;
@@ -341,7 +343,7 @@ public class EditionManagePage extends AbstractPage
 		int amt = (int) element("edm.editionMagForm").getRowCount();
 		for (int i = 1; i <= amt; i++)
 		{
-			if (element("edm.formState", String.valueOf(i)).getInnerText().equalsIgnoreCase("DORMANT"))
+			if ("DORMANT".equalsIgnoreCase(element("edm.formState", String.valueOf(i)).getInnerText()))
 			{
 				String editionNo = element("edm.formLink", String.valueOf(i - 1)).getInnerText();
 				String creationDt = element("edm.createDt", String.valueOf(i)).getInnerText();
@@ -366,7 +368,7 @@ public class EditionManagePage extends AbstractPage
 		int amt = (int) element("edm.editionMagForm").getRowCount();
 		for (int i = 1; i <= amt; i++)
 		{
-			if (element("edm.formState", String.valueOf(i)).getInnerText().equalsIgnoreCase("ACTIVE"))
+			if ("ACTIVE".equalsIgnoreCase(element("edm.formState", String.valueOf(i)).getInnerText()))
 			{
 				String editionNo = element("edm.formLink", String.valueOf(i - 1)).getInnerText();
 				String creationDt = element("edm.createDt", String.valueOf(i)).getInnerText();

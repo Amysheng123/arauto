@@ -29,30 +29,30 @@ public class Utility extends TestTemplate
 		try
 		{
 			String nodeName = "C" + caseID;
-			String Regulator = getElementValueFromXML(testdata_Utility, nodeName, "Regulator");
-			String Group = getElementValueFromXML(testdata_Utility, nodeName, "Group");
-			String Form = getElementValueFromXML(testdata_Utility, nodeName, "Form");
-			String ProcessDate = getElementValueFromXML(testdata_Utility, nodeName, "ProcessDate");
-			String FileName = getElementValueFromXML(testdata_Utility, nodeName, "File");
-			String Cells = getElementValueFromXML(testdata_Utility, nodeName, "CellNames");
-			String Module = getElementValueFromXML(testdata_Utility, nodeName, "Module");
+			String Regulator = getElementValueFromXML(testData_Utility, nodeName, "Regulator");
+			String Group = getElementValueFromXML(testData_Utility, nodeName, "Group");
+			String Form = getElementValueFromXML(testData_Utility, nodeName, "Form");
+			String ProcessDate = getElementValueFromXML(testData_Utility, nodeName, "ProcessDate");
+			String FileName = getElementValueFromXML(testData_Utility, nodeName, "File");
+			String Cells = getElementValueFromXML(testData_Utility, nodeName, "CellNames");
+			String Module = getElementValueFromXML(testData_Utility, nodeName, "Module");
 
 			List<String> cellNames = new ArrayList<>();
 			Collections.addAll(cellNames, Cells.split(","));
 
-			File importFile = new File(testdata_Utility.replace("Utility.xml", caseID + "\\" + FileName));
+			File importFile = new File(testData_Utility.replace("Utility.xml", caseID + "/" + FileName));
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, Form, null);
 			FormInstancePage formInstancePage = listPage.createFormFromExcel(importFile, false, false, true);
 			String exportFilePath = formInstancePage.exportToFile(Group, Form, ProcessDate, "iFile", Module, null);
 			String saveFolderString = new File(exportFilePath).getParent();
-			exportFilePath = saveFolderString + "\\" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
+			exportFilePath = saveFolderString + "/" + FileUtil.unCompress(exportFilePath, saveFolderString).get(0);
 			if (ExcelUtil.isDefinedCellNameExistInExcel(new File(exportFilePath), cellNames))
 				testRst = true;
 		}
 		catch (RuntimeException e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{

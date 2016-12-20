@@ -1,3 +1,4 @@
-"Calendar_Date","Customer_Code","Drill_Ref","Drill_Table","Eop_Bal_Rcy","N_USED_2","Org_Structure_Entity_Code","Par_Entity_Name","Rep_Line_Cd","Run_Skey","Scenario_Cd"
-"30/09/2014 00:00:00","D2DJSQTJ","233","FRY14ASUMM","15471000000","","0001"," Bank USA ","706","805","100"
-"30/09/2014 00:00:00","9Z5NJTA1","234","FRY14ASUMM","15471000000","","0001"," Bank USA ","706","805","100"
+"Condition:"
+"Calendar_Date","Customer_Code","Drill_Ref","Drill_Table","Calendar_Date","Eop_Bal_Rcy","Rep_Line_Cd","Run_Skey","Scenario_Cd","N_USED_2","Org_Structure_Entity_Code","Par_Entity_Name"
+"30/09/2014","D2DJSQTJ","233","FRY14ASUMM","30/09/2014","15471000000","706","100","100","","0001"," Bank USA "
+"30/09/2014","9Z5NJTA1","234","FRY14ASUMM","30/09/2014","15471000000","706","100","100","","0001"," Bank USA "

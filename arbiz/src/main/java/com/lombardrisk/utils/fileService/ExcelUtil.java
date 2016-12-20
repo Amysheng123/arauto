@@ -21,37 +21,33 @@ public class ExcelUtil
 
 	public static int getColumnNums(File file, String sheetName) throws Exception
 	{
-		int nums = 0;
+		int num = 0;
+		Workbook xwb = null;
 		InputStream inp = new FileInputStream(file);
 		try
 		{
-			Workbook xwb = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			xwb = WorkbookFactory.create(inp);
+			Sheet sheet;
 			if (sheetName == null)
 				sheet = xwb.getSheetAt(0);
 			else
 				sheet = xwb.getSheet(sheetName);
-			nums = sheet.getRow(0).getPhysicalNumberOfCells();
+			num = sheet.getRow(0).getPhysicalNumberOfCells();
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (xwb != null)
+				xwb.close();
 		}
-		return nums;
+		return num;
 	}
 
 	public static int getRowAmts(File file, String sheetName) throws Exception
@@ -59,10 +55,11 @@ public class ExcelUtil
 		// logger.info("File is:"+file);
 		int amt = 0;
 		InputStream inp = new FileInputStream(file);
+		Workbook workBook = null;
 		try
 		{
-			Workbook workBook = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			workBook = WorkbookFactory.create(inp);
+			Sheet sheet;
 			if (sheetName != null)
 			{
 				sheet = workBook.getSheet(sheetName);
@@ -75,20 +72,17 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
+			if (workBook != null)
 			{
-				e.printStackTrace();
+				workBook.close();
 			}
 		}
 		// logger.info("There are " + amt + " records");
@@ -99,11 +93,12 @@ public class ExcelUtil
 	{
 		// logger.info("File is:"+file);
 		int amt = 0;
+		Workbook workBook = null;
 		InputStream inp = new FileInputStream(file);
 		try
 		{
-			Workbook workBook = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			workBook = WorkbookFactory.create(inp);
+			Sheet sheet;
 			if (sheetName != null)
 			{
 				sheet = workBook.getSheet(sheetName);
@@ -139,20 +134,17 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
+			if (workBook != null)
 			{
-				e.printStackTrace();
+				workBook.close();
 			}
 		}
 		// logger.info("There are " + amt + " records");
@@ -165,10 +157,11 @@ public class ExcelUtil
 		// is:"+columnID);
 		int amt = 0;
 		InputStream inp = new FileInputStream(file);
+		Workbook xwb = null;
 		try
 		{
-			Workbook xwb = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			xwb = WorkbookFactory.create(inp);
+			Sheet sheet;
 			if (sheetName == null)
 				sheet = xwb.getSheetAt(0);
 			else
@@ -202,20 +195,17 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
+			if (xwb != null)
 			{
-				e.printStackTrace();
+				xwb.close();
 			}
 		}
 		logger.info("There are " + amt + " records");
@@ -223,22 +213,23 @@ public class ExcelUtil
 	}
 
 	@SuppressWarnings("finally")
-	public static ArrayList<String> getSpecficColRowValueFromExcel(File file, String sheetName, int colStart, int rowIndex) throws Exception
+	public static ArrayList<String> getSpecificColRowValueFromExcel(File file, String sheetName, int colStart, int rowIndex) throws Exception
 	{
 		// logger.info("File is:"+file+", sheet is:"+sheetName+" , column
 		// start:"+colStart+" , row start:"+rowIndex);
-		ArrayList<String> rowVal = new ArrayList<String>();
+		ArrayList<String> rowVal = new ArrayList<>();
 		InputStream inp = new FileInputStream(file);
+		Workbook workbook = null;
 		try
 		{
-			Workbook workbook = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			workbook = WorkbookFactory.create(inp);
+			Sheet sheet;
 			if (sheetName == null)
 				sheet = workbook.getSheetAt(0);
 			else
 				sheet = workbook.getSheet(sheetName);
 			Row row = sheet.getRow(rowIndex);
-			Cell cell = null;
+			Cell cell;
 			int colAmt = sheet.getRow(0).getPhysicalNumberOfCells();
 			String cellValue = null;
 			for (int i = colStart - 1; i < colAmt; i++)
@@ -259,23 +250,19 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			return rowVal;
+			if (workbook != null)
+				workbook.close();
+
 		}
+		return rowVal;
 	}
 
 	@SuppressWarnings("finally")
@@ -283,21 +270,22 @@ public class ExcelUtil
 	{
 		// logger.info("File is:"+file+", sheet is:"+sheetName+" , row
 		// is:"+rowIndex);
-		ArrayList<String> rowVal = new ArrayList<String>();
+		ArrayList<String> rowVal = new ArrayList<>();
 		InputStream inp = new FileInputStream(file);
+		Workbook xwb = null;
 		try
 		{
-			Workbook xwb = WorkbookFactory.create(inp);
-			Sheet sheet = null;
+			xwb = WorkbookFactory.create(inp);
+			Sheet sheet;
 			if (sheetName == null)
 				sheet = xwb.getSheetAt(0);
 			else
 				sheet = xwb.getSheet(sheetName);
 			Row row = sheet.getRow(rowIndex);
-			Cell cell = null;
+			Cell cell;
 
 			int colAmt = sheet.getRow(0).getPhysicalNumberOfCells();
-			String cellValue = null;
+			String cellValue;
 			for (int i = 0; i < colAmt; i++)
 			{
 				cell = row.getCell(i);
@@ -314,23 +302,16 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.info("error", e);
 		}
 		finally
 		{
-			try
-			{
-				if (inp != null)
-				{
-					inp.close();
-				}
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-			return rowVal;
+			if (inp != null)
+				inp.close();
+			if (xwb != null)
+				xwb.close();
 		}
+		return rowVal;
 	}
 
 	public static ArrayList<List<String>> getExcelContent(File file, String sheetName, int startColumn, int startRow) throws Exception
@@ -339,7 +320,7 @@ public class ExcelUtil
 		int amt = getRowAmts(file, sheetName);
 		for (int i = startRow; i <= amt; i++)
 		{
-			ArrayList<String> rowContent = ExcelUtil.getSpecficColRowValueFromExcel(file, sheetName, startColumn, i);
+			ArrayList<String> rowContent = ExcelUtil.getSpecificColRowValueFromExcel(file, sheetName, startColumn, i);
 			content.add(rowContent);
 		}
 		return content;
@@ -348,6 +329,7 @@ public class ExcelUtil
 	public static boolean getCellValueForArbitrary(File expectedValueFile, File exportedFile, String targetDataFolder) throws Exception
 	{
 		boolean compareRst = true;
+		Workbook workBook = null;
 		try
 		{
 			File txtFile_iFile = new File(targetDataFolder + "worksheet.txt");
@@ -367,7 +349,7 @@ public class ExcelUtil
 				{
 					if (!sheetName.equals(lastSheet))
 					{
-						System.out.println("Sheet name:" + sheetName);
+						logger.info("Sheet name:" + sheetName);
 						int minColumns = -1;
 						OPCPackage p = OPCPackage.open(exportedFile.getPath(), PackageAccess.READ);
 						XLSX2CSV xlsx2csv = new XLSX2CSV(p, System.out, minColumns);
@@ -387,18 +369,19 @@ public class ExcelUtil
 				else
 				{
 					InputStream inp = new FileInputStream(exportedFile);
-					Workbook workBook = WorkbookFactory.create(inp);
+					workBook = WorkbookFactory.create(inp);
 					Sheet sheet = workBook.getSheet(sheetName);
 					int rowID = Integer.parseInt(cellName.substring(numericPos(cellName))) - 1;
 					int colID = convertColumnID(cellName.substring(0, numericPos(cellName)));
-					Row row = null;
-					Cell cell = null;
+					Row row;
+					Cell cell;
 					row = sheet.getRow(rowID);
 					cell = row.getCell(colID);
 					if (cell != null)
 					{
 						actualValue = getCellValue(cell);
 					}
+
 				}
 				if (actualValue == null)
 				{
@@ -430,8 +413,13 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.info("error", e);
 			compareRst = false;
+		}
+		finally
+		{
+			if (workBook != null)
+				workBook.close();
 		}
 		return compareRst;
 	}
@@ -462,10 +450,11 @@ public class ExcelUtil
 				Name name = workBook.getNameAt(nameIndex);
 				cellNames.add(name.getNameName());
 			}
+			workBook.close();
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.warn("warn", e);
 		}
 
 		return cellNames;
@@ -491,9 +480,10 @@ public class ExcelUtil
 		// logger.info("Get value of cell[" + cellName + ", rowkey=" + rowKey +
 		// ",instance=" + instance + "] in excel");
 		InputStream inp = new FileInputStream(file);
+		Workbook workBook = null;
 		try
 		{
-			Workbook workBook = WorkbookFactory.create(inp);
+			workBook = WorkbookFactory.create(inp);
 			int nameCount = workBook.getNumberOfNames();
 			for (int nameIndex = 0; nameIndex < nameCount; nameIndex++)
 			{
@@ -526,7 +516,7 @@ public class ExcelUtil
 					rowID = rowID + rowNo - 1;
 				}
 			}
-			Row row = null;
+			Row row;
 			Cell cell = null;
 			try
 			{
@@ -535,7 +525,7 @@ public class ExcelUtil
 			}
 			catch (Exception e)
 			{
-
+				logger.warn("warn", e);
 			}
 
 			if (cell != null)
@@ -549,21 +539,17 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
+			logger.warn("warn", e);
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (workBook != null)
+				workBook.close();
 		}
 
 		return cellValue;
@@ -574,9 +560,10 @@ public class ExcelUtil
 		logger.info("Get all names");
 		Map<String, String> names = new HashMap<String, String>();
 		InputStream inp = new FileInputStream(file);
+		Workbook workBook = null;
 		try
 		{
-			Workbook workBook = WorkbookFactory.create(inp);
+			workBook = WorkbookFactory.create(inp);
 			int nameCount = workBook.getNumberOfNames();
 			for (int nameIndex = 0; nameIndex < nameCount; nameIndex++)
 			{
@@ -595,21 +582,16 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.warn("warn", e);
 		}
 		finally
 		{
-			try
+			if (inp != null)
 			{
-				if (inp != null)
-				{
-					inp.close();
-				}
+				inp.close();
 			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (workBook != null)
+				workBook.close();
 		}
 
 		return names;
@@ -628,17 +610,18 @@ public class ExcelUtil
 		logger.info("Get value of cell[" + cellName + "]");
 		String cellValue = null;
 		InputStream inp = new FileInputStream(file);
+		Workbook workBook = null;
 		try
 		{
-			Workbook workBook = WorkbookFactory.create(inp);
+			workBook = WorkbookFactory.create(inp);
 			String nameDetail = getAllNames(file).get(cellName);
 
 			String sheetName = nameDetail.split("#")[0];
 			int rowID = Integer.parseInt(nameDetail.split("#")[1]);
 			int colID = Integer.parseInt(nameDetail.split("#")[2]);
 			Sheet sheet = workBook.getSheet(sheetName);
-			Row row = null;
-			Cell cell = null;
+			Row row;
+			Cell cell;
 			try
 			{
 				row = sheet.getRow(rowID);
@@ -662,21 +645,14 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.warn("warn", e);
 		}
 		finally
 		{
-			try
-			{
-				if (inp != null)
-				{
-					inp.close();
-				}
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (inp != null)
+				inp.close();
+			if (workBook != null)
+				workBook.close();
 		}
 
 		return cellValue;
@@ -687,9 +663,10 @@ public class ExcelUtil
 
 		List<String> sheets = new ArrayList<String>();
 		InputStream inp = new FileInputStream(file);
+		Workbook workbook = null;
 		try
 		{
-			Workbook workbook = WorkbookFactory.create(inp);
+			workbook = WorkbookFactory.create(inp);
 			int count = workbook.getNumberOfSheets();
 
 			for (int index = 0; index < count; index++)
@@ -700,21 +677,14 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 		finally
 		{
-			try
-			{
-				if (inp != null)
-				{
-					inp.close();
-				}
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (inp != null)
+				inp.close();
+			if (workbook != null)
+				workbook.close();
 		}
 
 		return sheets;
@@ -726,9 +696,10 @@ public class ExcelUtil
 		boolean testResult = true;
 		boolean find = false;
 		InputStream inp = new FileInputStream(file);
+		Workbook workbook = null;
 		try
 		{
-			Workbook workbook = WorkbookFactory.create(inp);
+			workbook = WorkbookFactory.create(inp);
 			int nameCount = workbook.getNumberOfNames();
 			for (String cellName : cellNames)
 			{
@@ -750,21 +721,14 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.warn("warn", e);
 		}
 		finally
 		{
-			try
-			{
-				if (inp != null)
-				{
-					inp.close();
-				}
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (inp != null)
+				inp.close();
+			if (workbook != null)
+				workbook.close();
 		}
 
 		return testResult;
@@ -773,9 +737,10 @@ public class ExcelUtil
 	public static void writeToExcel(File fileName, int rowID, int colID, String value) throws Exception
 	{
 		FileInputStream inp = new FileInputStream(fileName);
+		Workbook xwb = null;
 		try
 		{
-			Workbook xwb = WorkbookFactory.create(inp);
+			xwb = WorkbookFactory.create(inp);
 			if (!value.equals(""))
 			{
 				Sheet sheet = xwb.getSheetAt(0);
@@ -799,21 +764,15 @@ public class ExcelUtil
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			logger.warn("warn", e);
 		}
 		finally
 		{
-			try
-			{
-				if (inp != null)
-				{
-					inp.close();
-				}
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			if (inp != null)
+				inp.close();
+
+			if (xwb != null)
+				xwb.close();
 		}
 	}
 
@@ -864,8 +823,8 @@ public class ExcelUtil
 		Workbook workBook = WorkbookFactory.create(inp);
 		Sheet sheet = workBook.getSheetAt(0);
 
-		Row row = null;
-		Cell cell = null;
+		Row row;
+		Cell cell;
 		int rowAmt = sheet.getLastRowNum();
 		for (int i = 1; i <= rowAmt; i++)
 		{
@@ -883,6 +842,7 @@ public class ExcelUtil
 				break;
 			}
 		}
+		workBook.close();
 		return rst;
 
 	}

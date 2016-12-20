@@ -52,7 +52,7 @@ public class RetrieveResultPage extends AbstractPage
 			catch (Exception e)
 			{
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// e.printStackTrace();
 			}
 		}
 		return name;

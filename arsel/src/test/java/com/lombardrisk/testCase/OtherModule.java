@@ -26,7 +26,7 @@ import com.lombardrisk.utils.fileService.ExcelUtil;
 public class OtherModule extends TestTemplate
 {
 
-	String testData = testDataFolderName + "\\OtherModule\\OtherModule.xml";
+	String testData = testDataFolderName + "/OtherModule/OtherModule.xml";
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyMMdd");
 	String curDate = sdf.format(new Date());
 
@@ -41,7 +41,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case 4770========");
 		try
 		{
-			File importFile = new File(testDataFolderName + "\\CreateForm\\ImportFile\\FRY14QCNTPY_v3_G0001_11112015.xlsx");
+			File importFile = new File(testDataFolderName + "/CreateForm/ImportFile/FRY14QCNTPY_v3_G0001_11112015.xlsx");
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, null, null);
 			FormInstancePage formInstancePage = listPage.createFormFromExcel(importFile, false, false, true);
@@ -120,8 +120,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -143,10 +143,10 @@ public class OtherModule extends TestTemplate
 		Form = splitReturn(Form).get(2);
 
 		String caseFolder = "C" + caseID;
-		File folder = new File(testDataFolderName + "\\OtherModule\\" + caseFolder);
+		File folder = new File(testDataFolderName + "/OtherModule/" + caseFolder);
 		if (folder.isDirectory())
 		{
-			File destFolder = new File("target\\TestResult\\" + curDate + "\\OtherModule\\" + caseFolder);
+			File destFolder = new File("target/TestResult/" + curDate + "/OtherModule/" + caseFolder);
 			if (destFolder.exists())
 			{
 				FileUtils.deleteDirectory(destFolder);
@@ -158,9 +158,9 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case 4769========");
 		try
 		{
-			File file = new File("target\\TestResult\\" + curDate + "\\OtherModule\\" + caseFolder + "\\FRY14QCNTPY_v3_ExpectedValue_CheckExcel.xlsx");
-			FileUtils.copyFile(new File(testDataFolderName + "\\OtherModule\\C4769\\FRY14QCNTPY_v3_ExpectedValue_CheckExcel.xlsx"), file);
-			File importFile = new File(testDataFolderName + "\\CreateForm\\ImportFile\\FRY14QCNTPY_v3_G0001_11112015.xlsx");
+			File file = new File("target/TestResult/" + curDate + "/OtherModule/" + caseFolder + "/FRY14QCNTPY_v3_ExpectedValue_CheckExcel.xlsx");
+			FileUtils.copyFile(new File(testDataFolderName + "/OtherModule/C4769/FRY14QCNTPY_v3_ExpectedValue_CheckExcel.xlsx"), file);
+			File importFile = new File(testDataFolderName + "/CreateForm/ImportFile/FRY14QCNTPY_v3_G0001_11112015.xlsx");
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, null, null);
 			FormInstancePage formInstancePage = listPage.createFormFromExcel(importFile, false, false, true);
@@ -181,8 +181,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -228,8 +228,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -330,8 +330,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -383,8 +383,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -439,8 +439,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -502,8 +502,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -598,8 +598,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -626,7 +626,7 @@ public class OtherModule extends TestTemplate
 		{
 			ListPage listPage = super.m.listPage;
 			listPage.getProductListPage(Regulator, Group, null, null);
-			File importFile = new File(testDataFolderName + "\\OtherModule\\C5495\\DSB3ROR_v1_0001_01032015.xlsx");
+			File importFile = new File(testDataFolderName + "/OtherModule/C5495/DSB3ROR_v1_0001_01032015.xlsx");
 			FormInstancePage formInstancePage = listPage.createFormFromExcel(importFile, false, false, true);
 			formInstancePage.selectPage(page1);
 			String actuallValue = formInstancePage.getCellText(cellName1);
@@ -643,8 +643,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -680,8 +680,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -713,8 +713,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -730,7 +730,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 		ListPage listPage = super.m.listPage;
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String NewEntityName = elementValues.get(2);
@@ -751,8 +751,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -771,7 +771,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -811,8 +811,8 @@ public class OtherModule extends TestTemplate
 		catch (RuntimeException e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -828,7 +828,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -855,8 +855,8 @@ public class OtherModule extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -872,7 +872,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -897,8 +897,8 @@ public class OtherModule extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -914,7 +914,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		// String Form = elementValues.get(2);
@@ -926,7 +926,7 @@ public class OtherModule extends TestTemplate
 		String Baseline = elementValues.get(8);
 
 		String caseFolder = "C" + caseID;
-		String path = testDataFolderName + "\\OtherModule\\" + caseFolder + "\\";
+		String path = testDataFolderName + "/OtherModule/" + caseFolder + "/";
 
 		String prefix = "ECR";
 		String SQL = "SELECT \"ID\" FROM \"USR_NATIVE_ENTITY\" WHERE \"ENTITY_NAME\"='" + Entity + "'";
@@ -970,8 +970,8 @@ public class OtherModule extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -988,11 +988,11 @@ public class OtherModule extends TestTemplate
 	{
 		if (reStart)
 			stopService(installPath);
-		File File = new File(installPath + "\\bin\\run.lock");
+		File File = new File(installPath + "/bin/run.lock");
 		if (!File.exists())
 		{
 			logger.info("Start ar service");
-			String cmd = installPath + "\\bin\\start.bat ";
+			String cmd = installPath + "/bin/start.bat ";
 			Runtime.getRuntime().exec("cmd.exe /C start " + cmd);
 			Thread.sleep(1000 * 60);
 		}
@@ -1000,11 +1000,11 @@ public class OtherModule extends TestTemplate
 
 	public void stopService(String installPath) throws Exception
 	{
-		File File = new File(installPath + "\\bin\\run.lock");
+		File File = new File(installPath + "/bin/run.lock");
 		if (File.exists())
 		{
 			logger.info("Stop ar service");
-			String cmd = installPath + "\\bin\\stop.bat ";
+			String cmd = installPath + "/bin/stop.bat ";
 			Runtime.getRuntime().exec(cmd);
 			Thread.sleep(1000 * 15);
 		}
@@ -1018,7 +1018,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -1037,8 +1037,8 @@ public class OtherModule extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -1054,7 +1054,7 @@ public class OtherModule extends TestTemplate
 		logger.info("==========Test case C" + caseID + "========");
 
 		String nodeName = "C" + caseID;
-		List<String> elementValues = getElementValueFromXML(testdata_OtherModule, nodeName);
+		List<String> elementValues = getElementValueFromXML(testData_OtherModule, nodeName);
 		String Regulator = elementValues.get(0);
 		String Entity = elementValues.get(1);
 		String Form = elementValues.get(2);
@@ -1071,8 +1071,8 @@ public class OtherModule extends TestTemplate
 		catch (Exception e)
 		{
 			testRst = false;
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{

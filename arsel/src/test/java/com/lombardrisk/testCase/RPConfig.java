@@ -42,16 +42,16 @@ public class RPConfig extends TestTemplate
 	{
 		logger.info("Begin test add config zip");
 		boolean rst = false;
-		String cmd = installPath + "\\Reporter Portal\\bin\\config.bat  -a " + ZipFile;
+		String cmd = installPath + "/Reporter Portal/bin/config.bat  -a " + ZipFile;
 		logger.info("Upload zip in cmd");
 		getCMDRst(cmd);
-		String path = ZipFile.replace(".zip", "") + "\\";
+		String path = ZipFile.replace(".zip", "") + "/";
 		logger.info("Unzip " + ZipFile + " to " + path);
 
 		logger.info("Unzip  zip file");
 		FileUtil.unCompress(ZipFile, path);
 
-		String xmlFile = path + "\\manifest.xml";
+		String xmlFile = path + "/manifest.xml";
 
 		String prefix = XMLUtil.getElementContentFromXML(xmlFile, "prefix");
 		String version = XMLUtil.getElementContentFromXML(xmlFile, "implementationVersion");
@@ -87,7 +87,7 @@ public class RPConfig extends TestTemplate
 	{
 		boolean rst = false;
 		logger.info("Begin test deactivate");
-		String cmd = installPath + "\\Reporter Portal\\bin\\config.bat  -d " + productPrefix + " -iv " + productVersion;
+		String cmd = installPath + "/Reporter Portal/bin/config.bat  -d " + productPrefix + " -iv " + productVersion;
 		logger.info("Deactivate config in cmd");
 		getCMDRst(cmd);
 
@@ -105,7 +105,7 @@ public class RPConfig extends TestTemplate
 	{
 		boolean rst = false;
 		logger.info("Begin test activate");
-		String cmd = installPath + "\\Reporter Portal\\bin\\config.bat  -t " + productPrefix + " -iv " + productVersion;
+		String cmd = installPath + "/Reporter Portal/bin/config.bat  -t " + productPrefix + " -iv " + productVersion;
 		logger.info("Activate config in cmd");
 		String line = getCMDRst(cmd);
 		if (line.equals("Product configuration is active now"))
@@ -125,7 +125,7 @@ public class RPConfig extends TestTemplate
 	{
 		boolean rst = false;
 		logger.info("Begin test delete");
-		String cmd = installPath + "\\Reporter Portal\\bin\\config.bat  -r " + productPrefix + " -iv " + productVersion;
+		String cmd = installPath + "/Reporter Portal/bin/config.bat  -r " + productPrefix + " -iv " + productVersion;
 		logger.info("Delete config in cmd");
 		getCMDRst(cmd);
 
@@ -146,7 +146,7 @@ public class RPConfig extends TestTemplate
 		try
 		{
 			// String
-			// cmd="D:\\Testing\\Reporter Portal\\bin\\config.bat -list";
+			// cmd="D:/Testing/Reporter Portal/bin/config.bat -list";
 			Process p = Runtime.getRuntime().exec(cmd);
 			br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			String line = null;
@@ -161,8 +161,8 @@ public class RPConfig extends TestTemplate
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
-			logger.error(e.getMessage());
+			// e.printStackTrace();
+			logger.error("error", e);
 		}
 		finally
 		{
@@ -175,8 +175,8 @@ public class RPConfig extends TestTemplate
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
-					logger.error(e.getMessage());
+					// e.printStackTrace();
+					logger.error("error", e);
 				}
 			}
 		}
