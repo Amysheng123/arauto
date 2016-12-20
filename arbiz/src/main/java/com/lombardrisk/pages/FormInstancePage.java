@@ -241,6 +241,9 @@ public class FormInstancePage extends AbstractPage
 			String cellPage = getPageNameByCell(Regulator, formCode, version, instance, cellId, extendCell);
 			logger.info("Cell[" + cellId + "] in page[" + cellPage + "]");
 		}
+		else
+			selectInstance(instance);
+
 		if (extendCell != null)
 			cellName = extendCell;
 		else

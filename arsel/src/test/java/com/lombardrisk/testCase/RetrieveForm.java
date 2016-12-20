@@ -110,7 +110,7 @@ public class RetrieveForm extends TestTemplate
 			if (isJobSuccessed())
 			{
 				openForm = true;
-				logger.info("Retrieve form sucessed");
+				logger.info("Retrieve form succeeded");
 			}
 			else
 				logger.error("Retrieve form failed");
